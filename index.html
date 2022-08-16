@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <title>Pagination</title>
 </head>
 <body>
     <div class="dataTables_length" id="example_length">
-        <label>Show 
+        <label>Showing 
             <select id="count" class="">
                 <option value="10">10</option>
-                <option value="25">25</option>
+                <option value="22">22</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
             </select> entries
@@ -23,7 +24,24 @@
     </div>
         
     <div id="item3"></div>
-
+    <div id="nav-buttons">
+        <nav aria-label="example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
 </html>
