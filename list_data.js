@@ -3,7 +3,7 @@ function listdata(data, istoday) {
     const len = data.length;
     const td = tdatos.querySelectorAll('td');
     let i = 0;
-
+    
     for(let j = (len-1); j >= 0; j--) {
 
         i = 7 * (len - 1) - 7 * j;  

@@ -11,16 +11,15 @@ async function getNumber() {
 let regqty = await getNumber();
 console.log('Cantidad de registros: '+regqty.n);
 
-//este número tengo que enviar como parámetro, es el número registros a mostrar
+//este número tengo que enviarlo como parámetro, es el número registros a mostrar
 let count = document.getElementById('count').value;
-//console.log('count: '+count); 
-
+//cantida de página que tendrá la lista
 let pages = Math.ceil(parseFloat(regqty.n) / parseFloat(count));
 
 buildpagebuttons(pages);
 
-//este número tengo que enviar como parámetro, es el número de página
-let page = 10;
+const page =1;
+//este número tengo que enviarlo como parámetro, es el número de página a mostrar
 let offset = (page - 1) * count;
 console.log('Mostrando '+count+' ítems de '+regqty.n);
 console.log('Página '+page+ ' de '+pages);

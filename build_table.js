@@ -17,7 +17,7 @@ function buildtable(len) {
     tabla.appendChild(tbody);
     const rowh = document.createElement('tr')
     rowh.innerHTML += `
-                    <th>id</th>
+                    <th><a href="#">id</a></th>
                     <th>name</th>
                     <th>last name</th>
                     <th>position</th>
