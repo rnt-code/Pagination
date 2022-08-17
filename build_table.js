@@ -1,6 +1,11 @@
 function buildtable(len) {
 
     const item3_el = document.getElementById("item3");
+    const istable = !!item3_el.children[0];
+    if(istable) {
+        item3_el.children[0].remove();
+    }
+
     const tabla = document.createElement("table");
     tabla.className = 'table table-sm table-hover'
     tabla.id = 'tdatos'
