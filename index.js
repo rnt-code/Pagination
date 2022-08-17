@@ -1,5 +1,6 @@
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
+import { buildpagebuttons } from './buildPageButtons.js'
 
 async function getNumber() {
     const response = await fetch(`./getRecordQty.php`);
@@ -16,23 +17,8 @@ let count = document.getElementById('count').value;
 
 let pages = Math.ceil(parseFloat(regqty.n) / parseFloat(count));
 
-const pagination = document.querySelector('.pagination');
-console.log(pagination);
-const li = document.createElement('li');
-const a = document.createElement('a');
-li.classList.add('page-item');
-a.classList.add('page-link');
-a.href = '#';
-li.appendChild(a);
+buildpagebuttons(pages);
 
-console.log(li);
-
-for(let i = 1; i <= pages; i++) {
-
-    pagination.appendChild(li);
-    console.log(i);
-
-}
 //este número tengo que enviar como parámetro, es el número de página
 let page = 10;
 let offset = (page - 1) * count;
