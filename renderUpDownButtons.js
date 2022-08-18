@@ -1,7 +1,4 @@
-function buildpagebuttons(from, to) {
-
-    const li_btn = [];
-    const a_btn = [];
+function renderupdownbuttons() {
 
     //container para los botones
     const nav_buttons = document.getElementById('nav-buttons');
@@ -9,7 +6,6 @@ function buildpagebuttons(from, to) {
     //borro lo que haya en el contenedor nav_buttons
     const isbuttons = !!nav_buttons.children[0];
     if(isbuttons) {
-        console.log('removed');
         nav_buttons.children[0].remove();
     }
 
@@ -29,46 +25,30 @@ function buildpagebuttons(from, to) {
     //creo el primer list item
     const li_prev = document.createElement('li');
     li_prev.classList.add('page-item');
+    li_prev.id = 'page-down';
     pagination.appendChild(li_prev);
 
     //creo el botón de avance a la izquierda <<
     const a_prev = document.createElement('a');
     a_prev.classList.add('page-link');
-    a_prev.id = 'page-down';
+    //a_prev.id = 'page-down';
     a_prev.innerText = '<<';
     a_prev.href = '#';
     li_prev.appendChild(a_prev);
 
-    //console.log('from, to : ', from, to);
-    renderpagebuttons(from, to);
-    
     //creo el último list item
     const li_nxt = document.createElement('li');
     li_nxt.classList.add('page-item');
+    li_nxt.id = 'page-up';
     pagination.appendChild(li_nxt);
 
     //creo el boton de avance a la derecha >>
     const a_nxt = document.createElement('a');
     a_nxt.classList.add('page-link');
-    a_nxt.id = 'page-up';
+    
     a_nxt.innerText = '>>';
     a_nxt.href = '#';
     li_nxt.appendChild(a_nxt);
 
-    function renderpagebuttons(start_page, end_page) {
-
-        for(let i = start_page; i <= end_page; i++) {
-
-            li_btn[i] = document.createElement('li');
-            li_btn[i].classList.add('page-item');
-            a_btn[i] = document.createElement('a');
-            a_btn[i].classList.add('page-link');
-            a_btn[i].href = '#';
-            a_btn[i].innerText = i;
-            li_btn[i].appendChild(a_btn[i]);
-            pagination.appendChild(li_btn[i]);
-        }
-    }
 }
-
-export { buildpagebuttons }
+export { renderupdownbuttons }
