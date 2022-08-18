@@ -1,4 +1,7 @@
-function buildpagebuttons(pages) {
+function buildpagebuttons(from, to) {
+
+    const li_btn = [];
+    const a_btn = [];
 
     //container para los botones
     const nav_buttons = document.getElementById('nav-buttons');
@@ -6,6 +9,7 @@ function buildpagebuttons(pages) {
     //borro lo que haya en el contenedor nav_buttons
     const isbuttons = !!nav_buttons.children[0];
     if(isbuttons) {
+        console.log('removed');
         nav_buttons.children[0].remove();
     }
 
@@ -35,25 +39,9 @@ function buildpagebuttons(pages) {
     a_prev.href = '#';
     li_prev.appendChild(a_prev);
 
-    let layers = 0;
-    console.log('pages: ', pages);
+    //console.log('from, to : ', from, to);
+    renderpagebuttons(from, to);
     
-    //creo los botones de páginas
-    if(Number.isInteger(pages / 10)) {
-        layers = pages / 10;
-    }
-    else {
-        layers = Math.floor(pages / 10) + 1;
-    }
-    console.log('layers: ', layers);
-
-    if(pages <= 10) {
-        renderpagebuttons(1, pages);
-    }
-    else {
-        renderpagebuttons(1, 10);
-    }
-
     //creo el último list item
     const li_nxt = document.createElement('li');
     li_nxt.classList.add('page-item');
@@ -68,13 +56,11 @@ function buildpagebuttons(pages) {
     li_nxt.appendChild(a_nxt);
 
     function renderpagebuttons(start_page, end_page) {
-        const li_btn = [];
-        const a_btn = [];
 
         for(let i = start_page; i <= end_page; i++) {
 
-            li_btn[i] = document.createElement('li')
-            li_btn[i].classList.add('page-item')
+            li_btn[i] = document.createElement('li');
+            li_btn[i].classList.add('page-item');
             a_btn[i] = document.createElement('a');
             a_btn[i].classList.add('page-link');
             a_btn[i].href = '#';
