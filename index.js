@@ -5,6 +5,7 @@ import { renderbuttons } from "./renderButtons.js";
 //**------------------------------------Página inicial----------------------------------- *//
 console.log('*****Página inicial');
 
+let count = 0;
 //Referencia a la cantidad de registros a mostrar elegida por el usuario
 let count_el = document.getElementById('count');
 
@@ -23,10 +24,17 @@ async function getNumber() {
 }
 let regqty = (await getNumber()).n;
 
-//Cantidad de páginas que se generarán según la cant. de registros totales y a los registros a mostrar eelegida por el usuario
-let pages = Math.ceil(regqty / count_el.value);
+if(count_el.value > regqty) {
+    count = regqty;
+}
+else {
+    count = count_el.value;
+}
 
-info.innerHTML = `Pagina 1 de ${pages} página(s) . Mostrando ${count_el.value} registros de ${regqty}`;
+//Cantidad de páginas que se generarán según la cant. de registros totales y a los registros a mostrar eelegida por el usuario
+let pages = Math.ceil(regqty / count);
+
+info.innerHTML = `Pagina 1 de ${pages} página(s) . Mostrando ${count} registros de ${regqty}`;
 
 //Renderizo la tabla en su primera página
 rendertable(1, pages);
@@ -71,9 +79,16 @@ count_el.addEventListener("change", async function (event) {
     
     //Cantidad de registros a mostrar que elige el operador
     const count_el = document.getElementById('count');
+
+    if(count_el.value > regqty) {
+        count = regqty;
+    }
+    else {
+        count = count_el.value;
+    }
     
     //Cantidad de páginas que se generarán según la cant. de registros totales y a los registros a mostrar eelegida por el usuario
-    let pages = Math.ceil(regqty / count_el.value);
+    let pages = Math.ceil(regqty / count);
 
     //Calculo cuantas capas (layers) de botones habrá
     if(Number.isInteger(pages / 10)) {
@@ -86,7 +101,7 @@ count_el.addEventListener("change", async function (event) {
     
     let page_number = 1
 
-    info.innerHTML = `Pagina ${page_number} de ${pages} página(s) . Mostrando ${count_el.value} registros de ${regqty}`;
+    info.innerHTML = `Pagina ${page_number} de ${pages} página(s) . Mostrando ${count} registros de ${regqty}`;
 
     if(pages <= 10) {
         from = 1;
