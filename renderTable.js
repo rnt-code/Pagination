@@ -1,27 +1,24 @@
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-async function rendertable(page_number, pages) {
+async function rendertable(page_number, pages, count) {
 
-    //Cantidad de registros a mostrar elegido por el usuario
-    let count_el = document.getElementById('count');
-
-    //verifico que page_number esté dentro de su dominio
+    //Verifico que page_number esté dentro de su dominio
     if(page_number < 0) page_number = 1;
     if(page_number > pages) page_number = pages;
 
     //Desde qué registros comenzaremos la lista a mostrar(offset)
-    let offset = (page_number - 1) * count_el.value;
+    let offset = (page_number - 1) * count;
 
     //Traigo los datos a mostrar
     async function getData() {
-        const response = await fetch(`./getData.php?offset=${offset}&count=${count_el.value}`);
+        const response = await fetch(`./getData.php?offset=${offset}&count=${count}`);
         const data = await response.json();
         return data;
     }
     const data = await getData();
 
-    //construyo la tabla y mustro los datos
+    //Construyo la tabla y mustro los datos
     buildtable(data.length);
     listdata(data, true);
 }

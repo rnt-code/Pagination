@@ -1,6 +1,8 @@
 function renderbuttons(from, to) {
 
     if(from !=0 && to !=0 ) {
+
+        //Referencia a los botones up y down
         const page_up = document.getElementById('page-up');
         const pagination = document.querySelector('.pagination');
 

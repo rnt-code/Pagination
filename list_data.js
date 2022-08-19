@@ -5,7 +5,7 @@ function listdata(data, istoday) {
     let i = 0;
     
     /*
-    DESC mode
+    //DESC mode
     for(let j = (len-1); j >= 0; j--) {
 
         i = 7 * (len - 1) - 7 * j;  

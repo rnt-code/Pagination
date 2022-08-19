@@ -3,11 +3,10 @@ import { renderupdownbuttons } from "./renderUpDownButtons.js";
 import { renderbuttons } from "./renderButtons.js";
 
 //**------------------------------------Página inicial----------------------------------- *//
-console.log('*****Página inicial');
-
 let count = 0;
+let pages = 0;
 //Referencia a la cantidad de registros a mostrar elegida por el usuario
-let count_el = document.getElementById('count');
+const count_el = document.getElementById('count');
 
 //renderizo los botones up/down
 renderupdownbuttons();
@@ -24,20 +23,26 @@ async function getNumber() {
 }
 let regqty = (await getNumber()).n;
 
-if(count_el.value > regqty) {
+//Cantidad de registros a mostrar que elige el operador
+if(parseInt(count_el.value) > regqty) {
     count = regqty;
 }
 else {
-    count = count_el.value;
+    count = parseInt(count_el.value);
 }
 
-//Cantidad de páginas que se generarán según la cant. de registros totales y a los registros a mostrar eelegida por el usuario
-let pages = Math.ceil(regqty / count);
+//Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
+if(Number.isInteger(parseInt(regqty) / count)) {
+    pages = regqty / count;
+}
+else {
+    pages = Math.floor(parseInt(regqty) / count) + 1;
+}
 
-info.innerHTML = `Pagina 1 de ${pages} página(s) . Mostrando ${count} registros de ${regqty}`;
+info.innerHTML = `Página 1 de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
 //Renderizo la tabla en su primera página
-rendertable(1, pages);
+rendertable(1, pages, count);
 
 //Renderizo los botones
 if(pages <= 10) {
@@ -57,8 +62,7 @@ if(Number.isInteger(pages / 10)) {
 else {
     layers = Math.floor(pages / 10) + 1;
 }
-console.log('layers: ', layers);
-console.log('*****Fin página inicial');
+//console.log('layers: ', layers);
 //**----------------------------------Fin página inicial----------------------------------*//
 
 //Listener de cambios en la cantidad de registros a mostrar
@@ -67,6 +71,7 @@ count_el.addEventListener("change", async function (event) {
 
     let from = 0;
     let to = 0;
+    let pages = 0;
     layer_counter = 1
 
     //Consulto la cantidad total de registros en la tabla. 
@@ -79,16 +84,20 @@ count_el.addEventListener("change", async function (event) {
     
     //Cantidad de registros a mostrar que elige el operador
     const count_el = document.getElementById('count');
-
-    if(count_el.value > regqty) {
+    if(parseInt(count_el.value) > regqty) {
         count = regqty;
     }
     else {
-        count = count_el.value;
+        count = parseInt(count_el.value);
     }
     
-    //Cantidad de páginas que se generarán según la cant. de registros totales y a los registros a mostrar eelegida por el usuario
-    let pages = Math.ceil(regqty / count);
+    //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
+    if(Number.isInteger(parseInt(regqty) / count)) {
+        pages = regqty / count;
+    }
+    else {
+        pages = Math.floor(parseInt(regqty) / count) + 1;
+    }
 
     //Calculo cuantas capas (layers) de botones habrá
     if(Number.isInteger(pages / 10)) {
@@ -97,11 +106,10 @@ count_el.addEventListener("change", async function (event) {
     else {
         layers = Math.floor(pages / 10) + 1;
     }
-    console.log('layers: ', layers);
     
     let page_number = 1
 
-    info.innerHTML = `Pagina ${page_number} de ${pages} página(s) . Mostrando ${count} registros de ${regqty}`;
+    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
     if(pages <= 10) {
         from = 1;
@@ -112,10 +120,11 @@ count_el.addEventListener("change", async function (event) {
         to = 10;
     }
 
-    rendertable(page_number, pages);
+    rendertable(page_number, pages, count);
     renderbuttons(from, to);
 })
 
+//Listener del botón DOWN
 page_down.addEventListener("click", function (event) {
     event.preventDefault();
     //console.log('down');
@@ -130,6 +139,7 @@ page_down.addEventListener("click", function (event) {
     
 })
 
+//Listener del botón UP
 page_up.addEventListener("click", function (event) {
     event.preventDefault();
     //console.log('up');
