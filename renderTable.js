@@ -13,9 +13,6 @@ async function rendertable(page_number, pages) {
     //Desde qué registros comenzaremos la lista a mostrar(offset)
     let offset = (page_number - 1) * count_el.value;
 
-    //console.log('offset: ', offset);
-    //console.log('count:le.value: ', count_el.value);
-
     //Traigo los datos a mostrar
     async function getData() {
         const response = await fetch(`./getData.php?offset=${offset}&count=${count_el.value}`);

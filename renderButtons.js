@@ -13,7 +13,7 @@ function renderbuttons(from, to) {
         //Dibujo los botones
         const li_btn = [];
         const a_btn = [];
-        //console.log('from, to : ', from, to);
+
         for(let i = from; i <= to; i++) {
 
             li_btn[i] = document.createElement('li');
