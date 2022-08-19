@@ -108,7 +108,7 @@ page_down.addEventListener("click", function (event) {
     if(layer_counter >= 1) { 
         if(layer_counter != 1) {
             layer_counter--;
-            console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
+            //console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
             renderbuttons(layer_counter*10-9, layer_counter*10);
         }
     }
@@ -122,7 +122,7 @@ page_up.addEventListener("click", function (event) {
     if(layer_counter <= layers) {
         if(layer_counter != layers) {
             layer_counter++;
-            console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
+            //console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
             renderbuttons(layer_counter*10-9, layer_counter*10);
         }
     }
