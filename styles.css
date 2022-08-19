@@ -3,6 +3,26 @@ body {
     color: white;
 }
 
+#head-controls {
+   display: grid;
+   grid-template-columns: auto auto;
+}
+#example_length {
+    justify-self: start;
+}
+#example_filter {
+    justify-self: end;
+}
+
+
+.dataTables_length {
+    display:inline-block;
+}
+
+.dataTables_filter {
+    display:inline-block;
+}
+
 #info {
     display: flex;
     justify-content: center;

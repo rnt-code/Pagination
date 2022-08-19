@@ -1,18 +1,17 @@
 function buildtable(len) {
 
     const item3_el = document.getElementById("item3");
-    const istable = !!item3_el.children[0];
+
+    const istable = !!item3_el.children[1].children[0];
     if(istable) {
-        item3_el.children[0].remove();
+        item3_el.children[1].children[0].remove();
     }
 
     const tabla = document.createElement("table");
     tabla.className = 'table table-sm table-hover'
     tabla.id = 'tdatos'
-    const div = document.createElement("div");
-    item3_el.appendChild(div);
-    div.className = 'container'
-    div.appendChild(tabla);
+
+    document.getElementById('datatable').appendChild(tabla);
 
     const thead = document.createElement("thead");
     thead.id = 'table-head';

@@ -1,10 +1,13 @@
 import { rendertable } from "./renderTable.js";
 import { renderupdownbuttons } from "./renderUpDownButtons.js";
 import { renderbuttons } from "./renderButtons.js";
+import { tablecontainer } from "./view_table_container.js";
 
 //**------------------------------------Página inicial----------------------------------- *//
 let count = 0;
 let pages = 0;
+tablecontainer();
+
 //Referencia a la cantidad de registros a mostrar elegida por el usuario
 const count_el = document.getElementById('count');
 
@@ -39,8 +42,6 @@ else {
     pages = Math.floor(parseInt(regqty) / count) + 1;
 }
 
-info.innerHTML = `Página 1 de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
-
 //Renderizo la tabla en su primera página
 rendertable(1, pages, count);
 
@@ -51,6 +52,9 @@ if(pages <= 10) {
 else {
     renderbuttons(1, 10);
 }
+
+//renderfootcontrols();
+info.innerHTML = `Página 1 de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
 //Calculo cuantas capas (layers) de botones habrá, inicilizo el contador de capas
 let layers = 0;
