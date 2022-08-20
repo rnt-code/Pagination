@@ -39,7 +39,6 @@ function tablecontainer() {
             </div>
             <div id="example_filter" class="dataTables_filter">
                 <label class="">Buscar:<input type="search" placeholder="" aria-controls="example"></label>
-                
             </div>
         `
     }
