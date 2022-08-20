@@ -171,8 +171,7 @@ function navbuttonlistenner() {
 
         nav_button.addEventListener('click', function(event) {
             event.preventDefault();
-    
-            console.log(nav_button.innerText);
+
             page_number = parseInt(nav_button.innerText);
             info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
             rendertable(page_number, pages, count);
