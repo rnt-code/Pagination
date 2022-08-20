@@ -7,7 +7,7 @@ async function rendertable(page_number, pages, count) {
     if(page_number < 0) page_number = 1;
     if(page_number > pages) page_number = pages;
 
-    //Desde qué registros comenzaremos la lista a mostrar(offset)
+    //Desde qué registros comenzaremos la lista a mostrar (offset)
     let offset = (page_number - 1) * count;
 
     //Traigo los datos a mostrar
@@ -18,7 +18,7 @@ async function rendertable(page_number, pages, count) {
     }
     const data = await getData();
 
-    //Construyo la tabla y mustro los datos
+    //Construyo la tabla y muestro los datos
     buildtable(data.length);
     listdata(data, true);
 }

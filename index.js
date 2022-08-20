@@ -26,11 +26,6 @@ const page_down = document.getElementById('page-down');
 const page_up = document.getElementById('page-up');
 
 //Traigo la cantidad de registros en la tabla
-async function getNumber() {
-    const response = await fetch(`./getRecordQty.php`);
-    const regqty = await response.json();
-    return regqty;
-}
 let regqty = parseInt((await getNumber()).n);
 
 //Cantidad de registros a mostrar al iniciar la página
@@ -85,11 +80,6 @@ count_el.addEventListener("change", async function (event) {
     page_number = 1;
 
     //Consulto la cantidad total de registros en la tabla. 
-    async function getNumber() {
-        const response = await fetch(`./getRecordQty.php`);
-        const regqty = await response.json();
-        return regqty;
-    }
     let regqty = parseInt((await getNumber()).n);
     
     //Cantidad de registros a mostrar que elige el operador
@@ -136,7 +126,6 @@ count_el.addEventListener("change", async function (event) {
 //Listener del botón DOWN
 page_down.addEventListener("click", function (event) {
     event.preventDefault();
-    //console.log('down');
     
     if(layer_counter >= 1) { 
         if(layer_counter != 1) {
@@ -149,8 +138,7 @@ page_down.addEventListener("click", function (event) {
 //Listener del botón UP
 page_up.addEventListener("click", function (event) {
     event.preventDefault();
-    //console.log('up');
-    
+
     if(layer_counter <= layers) {
         if(layer_counter != layers) {
             layer_counter++;
@@ -158,3 +146,9 @@ page_up.addEventListener("click", function (event) {
         }
     }
 })
+
+async function getNumber() {
+    const response = await fetch(`./getRecordQty.php`);
+    const regqty = await response.json();
+    return regqty;
+}
