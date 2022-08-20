@@ -6,6 +6,7 @@ import { tablecontainer } from "./view_table_container.js";
 //**------------------------------------Página inicial----------------------------------- *//
 let count = 0;
 let pages = 0;
+const number_of_buttons = 6;
 tablecontainer();
 
 //Referencia a la cantidad de registros a mostrar elegida por el usuario
@@ -24,7 +25,7 @@ async function getNumber() {
     const regqty = await response.json();
     return regqty;
 }
-let regqty = (await getNumber()).n;
+let regqty = parseInt((await getNumber()).n);
 
 //Cantidad de registros a mostrar que elige el operador
 if(parseInt(count_el.value) > regqty) {
@@ -35,38 +36,36 @@ else {
 }
 
 //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
-if(Number.isInteger(parseInt(regqty) / count)) {
+if(Number.isInteger(regqty / count)) {
     pages = regqty / count;
 }
 else {
-    pages = Math.floor(parseInt(regqty) / count) + 1;
+    pages = Math.floor(regqty / count) + 1;
 }
 
 //Renderizo la tabla en su primera página
 rendertable(1, pages, count);
 
 //Renderizo los botones
-if(pages <= 10) {
+if(pages <= number_of_buttons) {
     renderbuttons(1, pages);
 }
 else {
-    renderbuttons(1, 10);
+    renderbuttons(1, number_of_buttons);
 }
 
-//renderfootcontrols();
 info.innerHTML = `Página 1 de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
 //Calculo cuantas capas (layers) de botones habrá, inicilizo el contador de capas
 let layers = 0;
 let layer_counter = 1;
 
-if(Number.isInteger(pages / 10)) {
-    layers = pages / 10;
+if(Number.isInteger(pages / number_of_buttons)) {
+    layers = pages / number_of_buttons;
 }
 else {
-    layers = Math.floor(pages / 10) + 1;
+    layers = Math.floor(pages / number_of_buttons) + 1;
 }
-//console.log('layers: ', layers);
 //**----------------------------------Fin página inicial----------------------------------*//
 
 //Listener de cambios en la cantidad de registros a mostrar
@@ -84,7 +83,7 @@ count_el.addEventListener("change", async function (event) {
         const regqty = await response.json();
         return regqty;
     }
-    let regqty = (await getNumber()).n;
+    let regqty = parseInt((await getNumber()).n);
     
     //Cantidad de registros a mostrar que elige el operador
     const count_el = document.getElementById('count');
@@ -96,33 +95,34 @@ count_el.addEventListener("change", async function (event) {
     }
     
     //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
-    if(Number.isInteger(parseInt(regqty) / count)) {
+    if(Number.isInteger(regqty / count)) {
         pages = regqty / count;
     }
     else {
-        pages = Math.floor(parseInt(regqty) / count) + 1;
+        pages = Math.floor(regqty / count) + 1;
     }
 
     //Calculo cuantas capas (layers) de botones habrá
-    if(Number.isInteger(pages / 10)) {
-        layers = pages / 10;
+    if(Number.isInteger(pages / number_of_buttons)) {
+        layers = pages / number_of_buttons;
     }
     else {
-        layers = Math.floor(pages / 10) + 1;
+        layers = Math.floor(pages / number_of_buttons) + 1;
     }
     
     let page_number = 1
 
-    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
-
-    if(pages <= 10) {
+    if(pages <= number_of_buttons) {
         from = 1;
         to = pages;
     }
     else {
         from = 1;
-        to = 10;
+        to = number_of_buttons;
     }
+    let offset = (pages - 1) * count;
+    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
+    //info.innerHTML = `Mostrando ${offset} de ${count} de ${regqty} registros `;
 
     rendertable(page_number, pages, count);
     renderbuttons(from, to);
@@ -136,8 +136,7 @@ page_down.addEventListener("click", function (event) {
     if(layer_counter >= 1) { 
         if(layer_counter != 1) {
             layer_counter--;
-            //console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
-            renderbuttons(layer_counter*10-9, layer_counter*10);
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
     
@@ -151,8 +150,7 @@ page_up.addEventListener("click", function (event) {
     if(layer_counter <= layers) {
         if(layer_counter != layers) {
             layer_counter++;
-            //console.log('layer_count = ', layer_counter, ', range: ',layer_counter*10-9,layer_counter*10);
-            renderbuttons(layer_counter*10-9, layer_counter*10);
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
     
