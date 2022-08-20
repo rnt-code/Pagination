@@ -3,7 +3,8 @@ import { renderupdownbuttons } from "./renderUpDownButtons.js";
 import { renderbuttons } from "./renderButtons.js";
 import { tablecontainer } from "./view_table_container.js";
 
-//**------------------------------------Página inicial----------------------------------- *//
+tablecontainer();
+
 let count = 0;
 let pages = 0;
 let from = 0;
@@ -12,8 +13,6 @@ let layers = 0;
 let layer_counter = 1;
 let page_number = 1;
 const number_of_buttons = 6;
-
-tablecontainer();
 
 //Referencia a la cantidad de registros a mostrar al iniciar la página
 const count_el = document.getElementById('count');
@@ -24,6 +23,9 @@ renderupdownbuttons();
 //Referencias a los botones up/down
 const page_down = document.getElementById('page-down');
 const page_up = document.getElementById('page-up');
+
+//**------------------------------------Página inicial----------------------------------- *//
+
 
 //Traigo la cantidad de registros en la tabla
 let regqty = parseInt((await getNumber()).n);
@@ -79,7 +81,6 @@ count_el.addEventListener("change", async function (event) {
     to = 0;
     pages = 0;
     layer_counter = 1;
-    page_number = 1;
 
     //Consulto la cantidad total de registros en la tabla. 
     let regqty = parseInt((await getNumber()).n);
@@ -118,11 +119,11 @@ count_el.addEventListener("change", async function (event) {
         to = number_of_buttons;
     }
     
-    let offset = (pages - 1) * count;
     info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
     rendertable(page_number, pages, count);
     renderbuttons(from, to);
+    navbuttonlistenner();
 })
 
 //Listener del botón DOWN
@@ -171,6 +172,8 @@ function navbuttonlistenner() {
             event.preventDefault();
     
             console.log(nav_button.innerText);
+            page_number = parseInt(nav_button.innerText);
+            rendertable(page_number, pages, count);
         })
     })
 }
