@@ -60,7 +60,7 @@ else {
 }
 renderbuttons(from, to);
 
-info.innerHTML = `Página 1 de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
+info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
 //Calculo cuantas capas (layers) de botones habrá
 if(Number.isInteger(pages / number_of_buttons)) {
@@ -77,6 +77,7 @@ navbuttonlistenner();
 count_el.addEventListener("change", async function (event) {
     event.preventDefault();
 
+    page_number = 1;
     from = 0;
     to = 0;
     pages = 0;
@@ -173,6 +174,7 @@ function navbuttonlistenner() {
     
             console.log(nav_button.innerText);
             page_number = parseInt(nav_button.innerText);
+            info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
             rendertable(page_number, pages, count);
         })
     })
