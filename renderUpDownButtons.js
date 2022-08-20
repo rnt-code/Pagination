@@ -21,12 +21,14 @@ function renderupdownbuttons() {
     nav.appendChild(ul);
 
     const pagination = document.querySelector('.pagination');
+    //const footcontrols = document.getElementById('foot-controls');
 
     //creo el primer list item
     const li_prev = document.createElement('li');
     li_prev.classList.add('page-item');
     li_prev.id = 'page-down';
     pagination.appendChild(li_prev);
+    //footcontrols.appendChild(li_prev);
 
     //creo el botón de avance a la izquierda <<
     const a_prev = document.createElement('a');
@@ -41,6 +43,7 @@ function renderupdownbuttons() {
     li_nxt.classList.add('page-item');
     li_nxt.id = 'page-up';
     pagination.appendChild(li_nxt);
+    //footcontrols.appendChild(li_nxt);
 
     //creo el boton de avance a la derecha >>
     const a_nxt = document.createElement('a');

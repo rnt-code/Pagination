@@ -13,12 +13,15 @@ function buildtable(len) {
 
     document.getElementById('datatable').appendChild(tabla);
 
-    const thead = document.createElement("thead");
+    const thead = document.createElement('thead');
     thead.id = 'table-head';
-    const tbody = document.createElement("tbody");
+    const tbody = document.createElement('tbody');
+    const tfoot = document.createElement('tfoot')
     
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
+    tabla.appendChild(tfoot)
+    
     const rowh = document.createElement('tr')
     rowh.innerHTML += `
                     <th><a href="#">id</a></th>
@@ -30,7 +33,6 @@ function buildtable(len) {
                     <th>start date</th>
                     `;
     thead.appendChild(rowh)
-
     if(len === 0) {
         const row1 = document.createElement('tr')
         row1.innerHTML += `
@@ -72,6 +74,17 @@ function buildtable(len) {
             tbody.appendChild(row)      
         }; 
     }
+    const rowf = document.createElement('tr')
+    rowf.innerHTML += `
+                    <td><a href="#">id</a></td>
+                    <td>name</td>
+                    <td>last name</td>
+                    <td>position</td>
+                    <td>office</td>
+                    <td>age</td>
+                    <td>start date</td>
+                    `;
+    tfoot.appendChild(rowf)
 }
 
 export { buildtable }

@@ -14,17 +14,18 @@ body {
     justify-self: end;
 }
 
-
-.dataTables_length {
-    display:inline-block;
+#foot-controls {
+    display: grid;
+    grid-template-columns: auto auto;
 }
-
-.dataTables_filter {
-    display:inline-block;
-}
-
 #info {
-    display: flex;
-    justify-content: center;
+    justify-self: start;
+}
+#nav-buttons {
+    justify-self: end;
+}
+
+tfoot {
+    font-weight: bold;
 }
 

@@ -23,7 +23,7 @@ function tablecontainer() {
     function renderhead() {
         head_controls.innerHTML = `
             <div class="dataTables_length" id="example_length">
-                <label>Showing 
+                <label>Mostrando 
                     <select id="count">
                         <option value="5">5</option>
                         <option value="10" selected>10</option>
@@ -34,12 +34,12 @@ function tablecontainer() {
                         <option value="300">300</option>
                         <option value="500">500</option>
                         <option value="1000">1000</option>
-                    </select> entries
+                    </select> registros
                 </label>
             </div>
             <div id="example_filter" class="dataTables_filter">
-                <label>Search:<input type="search" class="" placeholder="" aria-controls="example">
-                </label>
+                <label class="">Buscar:<input type="search" placeholder="" aria-controls="example"></label>
+                
             </div>
         `
     }
@@ -47,7 +47,7 @@ function tablecontainer() {
     function renderfoot() {
         foot_controls.innerHTML = `
             <div id="info"></div>
-            <div></div>
+            <div id="nav-buttons"></div>
         `
     }
 }
