@@ -69,6 +69,8 @@ else {
 }
 //**----------------------------------Fin página inicial----------------------------------*//
 
+navbuttonlistenner();
+
 //Listener de cambios en la cantidad de registros a mostrar
 count_el.addEventListener("change", async function (event) {
     event.preventDefault();
@@ -133,6 +135,7 @@ page_down.addEventListener("click", function (event) {
             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
+    navbuttonlistenner();
 })
 
 //Listener del botón UP
@@ -142,13 +145,32 @@ page_up.addEventListener("click", function (event) {
     if(layer_counter <= layers) {
         if(layer_counter != layers) {
             layer_counter++;
-            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            if(layer_counter * number_of_buttons > pages) {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
+            }
+            else {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            }
         }
     }
+    navbuttonlistenner();
 })
 
 async function getNumber() {
     const response = await fetch(`./getRecordQty.php`);
     const regqty = await response.json();
     return regqty;
+}
+
+function navbuttonlistenner() {
+    const nav_buttons = document.querySelectorAll('.pagei');
+
+    nav_buttons.forEach(function(nav_button) {
+
+        nav_button.addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            console.log(nav_button.innerText);
+        })
+    })
 }
