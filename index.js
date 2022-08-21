@@ -1,10 +1,12 @@
-import { rendertable } from "./renderTable.js";
 import { renderupdownbuttons } from "./renderUpDownButtons.js";
 import { renderbuttons } from "./renderButtons.js";
 import { tablecontainer } from "./view_table_container.js";
+import { buildtable } from "./build_table.js";
+import { listdata } from "./list_data.js"
 
 tablecontainer();
 
+let data = [];
 let count = 0;
 let pages = 0;
 let from = 0;
@@ -47,7 +49,7 @@ else {
 }
 
 //Renderizo la tabla (la página 1)
-rendertable(page_number, pages, count);
+rendertable();
 
 //Renderizo los botones
 if(pages <= number_of_buttons) {
@@ -59,8 +61,6 @@ else {
     to = number_of_buttons;
 }
 renderbuttons(from, to);
-
-info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
 //Calculo cuantas capas (layers) de botones habrá
 if(Number.isInteger(pages / number_of_buttons)) {
@@ -119,10 +119,8 @@ count_el.addEventListener("change", async function (event) {
         from = page_number;
         to = number_of_buttons;
     }
-    
-    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
 
-    rendertable(page_number, pages, count);
+    rendertable();
     renderbuttons(from, to);
     navbuttonlistenner();
 })
@@ -173,8 +171,31 @@ function navbuttonlistenner() {
             event.preventDefault();
 
             page_number = parseInt(nav_button.innerText);
-            info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${count} registros de ${regqty}`;
-            rendertable(page_number, pages, count);
+            rendertable();
         })
     })
+}
+
+async function rendertable() {
+
+    //Verifico que page_number esté dentro de su dominio
+    // if(page_number < 0) page_number = 1;
+    // if(page_number > pages) page_number = pages;
+
+    //Desde qué registros comenzaremos la lista a mostrar (offset)
+    let offset = (page_number - 1) * count;
+
+    //Traigo los datos a mostrar
+    async function getData() {
+        const response = await fetch(`./getData.php?offset=${offset}&count=${count}`);
+        const data = await response.json();
+        return data;
+    }
+    data = await getData();
+
+    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${data.length} registros de ${regqty}`;
+    
+    //Construyo la tabla y muestro los datos
+    buildtable(data.length);
+    listdata(data, true);
 }
