@@ -26,8 +26,8 @@ function tablecontainer() {
                 <label>Mostrando 
                     <select id="count">
                         <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="20" selected>20</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
                         <option value="30">30</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
@@ -46,7 +46,7 @@ function tablecontainer() {
     function renderfoot() {
         foot_controls.innerHTML = `
             <div id="info"></div>
-            <div id="nav-buttons"></div>
+            <div id="paginate"></div>
         `
     }
 }

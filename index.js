@@ -1,5 +1,5 @@
 import { renderupdownbuttons } from "./renderUpDownButtons.js";
-import { renderbuttons } from "./renderButtons.js";
+import { renderpagebuttons } from "./renderPageButtons.js";
 import { tablecontainer } from "./view_table_container.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
@@ -30,22 +30,22 @@ const page_up = document.getElementById('page-up');
 
 
 //Traigo la cantidad de registros en la tabla
-let regqty = parseInt((await getNumber()).n);
+let register_qty = parseInt((await getregisterqty()).n);
 
 //Cantidad de registros a mostrar al iniciar la página
-if(parseInt(count_el.value) > regqty) {
-    count = regqty;
+if(parseInt(count_el.value) > register_qty) {
+    count = register_qty;
 }
 else {
     count = parseInt(count_el.value);
 }
 
 //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
-if(Number.isInteger(regqty / count)) {
-    pages = regqty / count;
+if(Number.isInteger(register_qty / count)) {
+    pages = register_qty / count;
 }
 else {
-    pages = Math.floor(regqty / count) + 1;
+    pages = Math.floor(register_qty / count) + 1;
 }
 
 //Renderizo la tabla (la página 1)
@@ -60,7 +60,7 @@ else {
     from = page_number;
     to = number_of_buttons;
 }
-renderbuttons(from, to);
+renderpagebuttons(from, to);
 
 //Calculo cuantas capas (layers) de botones habrá
 if(Number.isInteger(pages / number_of_buttons)) {
@@ -84,23 +84,23 @@ count_el.addEventListener("change", async function (event) {
     layer_counter = 1;
 
     //Consulto la cantidad total de registros en la tabla. 
-    let regqty = parseInt((await getNumber()).n);
+    let register_qty = parseInt((await getregisterqty()).n);
     
     //Cantidad de registros a mostrar que elige el operador
     const count_el = document.getElementById('count');
-    if(parseInt(count_el.value) > regqty) {
-        count = regqty;
+    if(parseInt(count_el.value) > register_qty) {
+        count = register_qty;
     }
     else {
         count = parseInt(count_el.value);
     }
     
     //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
-    if(Number.isInteger(regqty / count)) {
-        pages = regqty / count;
+    if(Number.isInteger(register_qty / count)) {
+        pages = register_qty / count;
     }
     else {
-        pages = Math.floor(regqty / count) + 1;
+        pages = Math.floor(register_qty / count) + 1;
     }
 
     //Calculo cuantas capas (layers) de botones habrá
@@ -121,7 +121,7 @@ count_el.addEventListener("change", async function (event) {
     }
 
     rendertable();
-    renderbuttons(from, to);
+    renderpagebuttons(from, to);
     navbuttonlistenner();
 })
 
@@ -132,7 +132,7 @@ page_down.addEventListener("click", function (event) {
     if(layer_counter >= 1) { 
         if(layer_counter != 1) {
             layer_counter--;
-            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            renderpagebuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
     navbuttonlistenner();
@@ -146,24 +146,24 @@ page_up.addEventListener("click", function (event) {
         if(layer_counter != layers) {
             layer_counter++;
             if(layer_counter * number_of_buttons > pages) {
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
+                renderpagebuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
             }
             else {
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                renderpagebuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
     }
     navbuttonlistenner();
 })
 
-async function getNumber() {
-    const response = await fetch(`./getRecordQty.php`);
-    const regqty = await response.json();
-    return regqty;
+async function getregisterqty() {
+    const response = await fetch(`./getRegisterQty.php`);
+    const register_qty = await response.json();
+    return register_qty;
 }
 
 function navbuttonlistenner() {
-    const nav_buttons = document.querySelectorAll('.pagei');
+    const nav_buttons = document.querySelectorAll('.paginate-button');
 
     nav_buttons.forEach(function(nav_button) {
 
@@ -178,10 +178,6 @@ function navbuttonlistenner() {
 
 async function rendertable() {
 
-    //Verifico que page_number esté dentro de su dominio
-    // if(page_number < 0) page_number = 1;
-    // if(page_number > pages) page_number = pages;
-
     //Desde qué registros comenzaremos la lista a mostrar (offset)
     let offset = (page_number - 1) * count;
 
@@ -193,7 +189,7 @@ async function rendertable() {
     }
     data = await getData();
 
-    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${data.length} registros de ${regqty}`;
+    info.innerHTML = `Página ${page_number} de ${pages} página(s). Mostrando ${data.length} registros de ${register_qty}`;
     
     //Construyo la tabla y muestro los datos
     buildtable(data.length);
