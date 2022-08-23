@@ -4,12 +4,12 @@ function renderbuttons(from, to) {
 
         //Referencia a los botones up y down
         const page_up = document.getElementById('page-up');
-        const pagination = document.querySelector('.pagination');
+        const pagination_keys= document.querySelector('.pagination-keys');
 
         //Borro los botones que haya en el contenedor pagination
         const pagei_list = document.querySelectorAll('.pagei');
         pagei_list.forEach(function(pagei) {
-            pagination.removeChild(pagei);
+            pagination_keys.removeChild(pagei);
         })
 
         //Dibujo los botones
@@ -19,14 +19,14 @@ function renderbuttons(from, to) {
         for(let i = from; i <= to; i++) {
 
             li_btn[i] = document.createElement('li');
-            li_btn[i].classList.add('page-item');
+            li_btn[i].classList.add('pageitem');
             li_btn[i].classList.add('pagei');
             a_btn[i] = document.createElement('a');
-            a_btn[i].classList.add('page-link');
+            a_btn[i].classList.add('pagelink');
             a_btn[i].href = '#';
             a_btn[i].innerText = i;
             li_btn[i].appendChild(a_btn[i]);
-            pagination.insertBefore(li_btn[i], page_up);
+            pagination_keys.insertBefore(li_btn[i], page_up);
         }
     }
 }
