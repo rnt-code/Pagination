@@ -173,7 +173,7 @@ function navbuttonlistener() {
             event.preventDefault();
             
             console.log('botón presionado: ', button.innerText);
-            button.classList.add('selected');
+            //button.classList.add('selected');
             
             page_number = parseInt(button.innerText);
             paintselectedbutton(page_number)
@@ -204,36 +204,14 @@ async function rendertable() {
 
 function paintselectedbutton(page_number) {
 
-    const button = document.querySelector('.selected');
-    console.log('recibo: ', page_number);
-    console.log('Este botón estaba pintado', button.id);
+    const selected_button = document.querySelector('.selected');
+    const button = document.getElementById(page_number);
 
-    if(!button) {
-        console.log('no hay un selected');
-        //es la primera vez que se inicia la app, siempre comienza en la página 1
-        const button_1 = document.getElementById('1');
-
-        //pinta el botón 1
-        console.log('pinto el botón: ', page_number);
-        button_1.classList.add('selected'); //pongo el 'selected' al link <a>, con esto lo pinto
-        button_1.style.color = 'white' //pinto el número de blanco
+    if(selected_button) {
+        selected_button.style.color = 'rgb(13, 110, 253)'
+        selected_button.classList.remove('selected'); 
     }
-    else {
-        
-        //Averiguo cual es el botón pintado anteriormente
-        //console.log('Este botón estaba pintado', button.id);
-
-        //Deselecciona el botón seleccionado
-        button.classList.remove('selected'); //remuevo el selected
-        button.style.color = 'rgb(44, 44, 207)' //pinto el número a su color original cdo no está seleccionado
-
-        //Pinto el botón presionado
-        //console.log('Este botón debo pintar', page_number);
-        const selected_button = document.getElementById(page_number);
-        
-        console.log('pinto el botón: ', page_number);
-        selected_button.classList.add('selected'); //pongo el 'selected' al link <a>, con esto lo pinto
-        selected_button.style.color = 'white' //pinto el número de blanco
-    }
-
+    
+    button.classList.add('selected'); 
+    button.style.color = 'white';
 }

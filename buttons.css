@@ -9,7 +9,7 @@ li.pagei, li.page-down, li.page-up {
 }
 
 a.selected {
-    background-color: rgb(76, 87, 236);
+    background-color: rgb(13, 110, 253);
 }
 
 a.pagelink {
@@ -17,7 +17,7 @@ a.pagelink {
     text-decoration: none;
     display: inline-block;
     width: 36px;
-    margin-right: 2px;
+    margin-right: 4px;
     text-align: center;
     line-height: 36px;
     /* color: black; */
@@ -29,7 +29,7 @@ li.page-up:last-child a {
 
 a.pagelink:link, a.pagelink:visited, a.pagelink:focus {
     /* background: rgb(255, 255, 255); */
-    color: rgb(44, 44, 207);
+    color: rgb(13, 110, 253);
 }
   
 a.pagelink:hover {
