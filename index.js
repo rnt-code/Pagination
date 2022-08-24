@@ -23,8 +23,8 @@ const count_el = document.getElementById('count');
 renderupdownbuttons();
 
 //Referencias a los botones up/down
-const page_down = document.getElementById('page-down');
-const page_up = document.getElementById('page-up');
+const page_down = document.querySelector('.page-down');
+const page_up = document.querySelector('.page-up');
 
 //**------------------------------------Página inicial----------------------------------- *//
 
@@ -71,7 +71,8 @@ else {
 }
 //**----------------------------------Fin página inicial----------------------------------*//
 
-navbuttonlistenner();
+navbuttonlistener();
+paintselectedbutton(page_number);
 
 //Listener de cambios en la cantidad de registros a mostrar
 count_el.addEventListener("change", async function (event) {
@@ -122,7 +123,8 @@ count_el.addEventListener("change", async function (event) {
 
     rendertable();
     renderbuttons(from, to);
-    navbuttonlistenner();
+    navbuttonlistener();
+    paintselectedbutton(page_number)
 })
 
 //Listener del botón DOWN
@@ -135,7 +137,7 @@ page_down.addEventListener("click", function (event) {
             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
-    navbuttonlistenner();
+    navbuttonlistener();
 })
 
 //Listener del botón UP
@@ -153,7 +155,7 @@ page_up.addEventListener("click", function (event) {
             }
         }
     }
-    navbuttonlistenner();
+    navbuttonlistener();
 })
 
 async function getNumber() {
@@ -162,25 +164,25 @@ async function getNumber() {
     return regqty;
 }
 
-function navbuttonlistenner() {
-    const nav_buttons = document.querySelectorAll('.pagei');
+function navbuttonlistener() {
+    
+    const buttons_list = document.querySelectorAll('.pagei');
+    buttons_list.forEach(function(button) {
 
-    nav_buttons.forEach(function(nav_button) {
-
-        nav_button.addEventListener('click', function(event) {
+        button.addEventListener('click', function(event) {
             event.preventDefault();
-
-            page_number = parseInt(nav_button.innerText);
+            
+            console.log('botón presionado: ', button.innerText);
+            button.classList.add('selected');
+            
+            page_number = parseInt(button.innerText);
+            paintselectedbutton(page_number)
             rendertable();
         })
     })
 }
 
 async function rendertable() {
-
-    //Verifico que page_number esté dentro de su dominio
-    // if(page_number < 0) page_number = 1;
-    // if(page_number > pages) page_number = pages;
 
     //Desde qué registros comenzaremos la lista a mostrar (offset)
     let offset = (page_number - 1) * count;
@@ -198,4 +200,40 @@ async function rendertable() {
     //Construyo la tabla y muestro los datos
     buildtable(data.length);
     listdata(data, true);
+}
+
+function paintselectedbutton(page_number) {
+
+    const button = document.querySelector('.selected');
+    console.log('recibo: ', page_number);
+    console.log('Este botón estaba pintado', button.id);
+
+    if(!button) {
+        console.log('no hay un selected');
+        //es la primera vez que se inicia la app, siempre comienza en la página 1
+        const button_1 = document.getElementById('1');
+
+        //pinta el botón 1
+        console.log('pinto el botón: ', page_number);
+        button_1.classList.add('selected'); //pongo el 'selected' al link <a>, con esto lo pinto
+        button_1.style.color = 'white' //pinto el número de blanco
+    }
+    else {
+        
+        //Averiguo cual es el botón pintado anteriormente
+        //console.log('Este botón estaba pintado', button.id);
+
+        //Deselecciona el botón seleccionado
+        button.classList.remove('selected'); //remuevo el selected
+        button.style.color = 'rgb(44, 44, 207)' //pinto el número a su color original cdo no está seleccionado
+
+        //Pinto el botón presionado
+        //console.log('Este botón debo pintar', page_number);
+        const selected_button = document.getElementById(page_number);
+        
+        console.log('pinto el botón: ', page_number);
+        selected_button.classList.add('selected'); //pongo el 'selected' al link <a>, con esto lo pinto
+        selected_button.style.color = 'white' //pinto el número de blanco
+    }
+
 }

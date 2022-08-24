@@ -8,38 +8,29 @@ function renderupdownbuttons() {
     if(isbuttons) {
         nav_buttons.children[0].remove();
     }
-
-    //creo el contenedor de Boostrap
-    // const nav = document.createElement('nav');
-    // nav.setAttribute('aria-label', 'example');
-    // nav_buttons.appendChild(nav);
     
     //creo la lista desordenada (unordered list)
     const ul = document.createElement('ul');
     ul.classList.add('pagination-keys');
-    //ul.classList.add('justify-content-center');
     nav_buttons.appendChild(ul);
 
     const pagination_keys = document.querySelector('.pagination-keys');
 
     //creo el primer list item
     const li_prev = document.createElement('li');
-    li_prev.classList.add('pageitem');
-    li_prev.id = 'page-down';
+    li_prev.classList.add('page-down');
     pagination_keys.appendChild(li_prev);
 
     //creo el botón de avance a la izquierda <<
     const a_prev = document.createElement('a');
     a_prev.classList.add('pagelink');
-    //a_prev.id = 'page-down';
     a_prev.innerText = '<<';
     a_prev.href = '#';
     li_prev.appendChild(a_prev);
 
     //creo el último list item
     const li_nxt = document.createElement('li');
-    li_nxt.classList.add('pageitem');
-    li_nxt.id = 'page-up';
+    li_nxt.classList.add('page-up');
     pagination_keys.appendChild(li_nxt);
 
     //creo el boton de avance a la derecha >>
