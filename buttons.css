@@ -1,0 +1,42 @@
+ul.pagination-keys {
+    padding: 0;
+    width: 100%;
+}
+  
+li.pagei, li.page-down, li.page-up {
+    display: inline-block;
+    height: 36px;
+}
+
+a.selected {
+    background-color: rgb(13, 110, 253);
+}
+
+a.pagelink {
+    outline: 1px solid rgb(221, 221, 221);
+    text-decoration: none;
+    display: inline-block;
+    width: 36px;
+    margin-right: 4px;
+    text-align: center;
+    line-height: 36px;
+    /* color: black; */
+}
+
+li.page-up:last-child a {
+    margin-right: 0;
+}
+
+a.pagelink:link, a.pagelink:visited, a.pagelink:focus {
+    /* background: rgb(255, 255, 255); */
+    color: rgb(13, 110, 253);
+}
+  
+a.pagelink:hover {
+    background: rgb(211, 211, 211);
+}
+  
+a.pagelink:active {
+    background: rgb(134, 134, 134);
+    color: white;
+}

@@ -1,67 +1,31 @@
-body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
+/* body {
+    background-color: rgb(117, 117, 117);
+    color: white;
+} */
 
 #head-controls {
-   display: grid;
-   grid-template-columns: auto auto;
-}
-#example_length {
-    justify-self: start;
-}
-#example_filter {
-    justify-self: end;
-}
-
-#foot-controls {
     display: grid;
     grid-template-columns: auto auto;
-}
-#info {
-    justify-self: start;
-}
-#nav-buttons {
-    justify-self: end;
-}
-
-tfoot {
-    font-weight: bold;
-}
-
-ul.pagination-buttons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li#page-down {
-    display: inline-block;
-}
-li.pagei {
-    display: inline-block;
-}
-li#page-up {
-    display: inline-block;
-}
-
-li#page-down, li.pagei, li#page-up {
-
-    
-
-    color: black;
-    border: 1px;
-    text-align: center;
-    border-color: rgb(243, 93, 93);
-    width: 40px;
-    height: 40px;
-}
-
-li#page-down:hover, li#page-up:hover {
-    background-color: rgb(122, 141, 224);
-}
-li.pagei:hover {
-    background-color: rgb(211, 211, 211);
-}
-
-
+ }
+ #example_length {
+     justify-self: start;
+ }
+ #example_filter {
+     justify-self: end;
+ }
+ 
+ #foot-controls {
+     display: grid;
+     grid-template-columns: auto auto;
+ }
+ #info {
+     justify-self: start;
+ }
+ #nav-buttons {
+     justify-self: end;
+ }
+ 
+ tfoot {
+     font-weight: bold;
+ }
+ 

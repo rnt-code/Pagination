@@ -46,7 +46,7 @@ function tablecontainer() {
     function renderfoot() {
         foot_controls.innerHTML = `
             <div id="info"></div>
-            <div id="paginate"></div>
+            <div id="nav-buttons"></div>
         `
     }
 }
