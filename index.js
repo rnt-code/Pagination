@@ -182,9 +182,6 @@ function navbuttonlistener() {
         button.addEventListener('click', function(event) {
             event.preventDefault();
             
-            console.log('botón presionado: ', button.innerText);
-            //button.classList.add('selected');
-            
             page_number = parseInt(button.innerText);
             paintselectedbutton(page_number)
             rendertable();
