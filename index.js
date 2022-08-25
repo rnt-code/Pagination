@@ -202,7 +202,7 @@ async function rendertable() {
     }
     data = await getData();
 
-    info.innerHTML = `Página ${page_number} de ${pages}. Registro totales: ${regqty}`;
+    info.innerHTML = `Página ${page_number} de ${pages}. Registros totales: ${regqty}`;
     
     //Construyo la tabla y muestro los datos
     buildtable(data.length);
