@@ -138,9 +138,6 @@ layer_down.addEventListener('click', function(event) {
             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
-    
-    //console.log('down: layer_counter: ', layer_counter);
-    //console.log('page_number: ', page_number);
 
     if(page_number > number_of_buttons) {
         page_number = layer_counter * number_of_buttons;
@@ -163,9 +160,11 @@ page_down.addEventListener("click", function(event) {
             }
         }
     }
+
     if(page_number > 1) {
         page_number--;
     }
+
     navbuttonlistener();
     paintselectedbutton(page_number);
     rendertable();
@@ -184,9 +183,11 @@ page_up.addEventListener("click", function(event) {
             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
     }
+
     if(page_number < pages) {
         page_number++;
     }
+
     navbuttonlistener();
     paintselectedbutton(page_number);
     rendertable();
