@@ -1,6 +1,6 @@
 import { renderupdownbuttons } from "./renderUpDownButtons.js";
 import { renderbuttons } from "./renderButtons.js";
-import { tablecontainer } from "./view_table_container.js";
+import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
