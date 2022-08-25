@@ -29,8 +29,6 @@ const layer_down = document.querySelector('.layer-down');
 const layer_up = document.querySelector('.layer-up');
 
 //**------------------------------------Página inicial----------------------------------- *//
-
-
 //Traigo la cantidad de registros en la tabla
 let regqty = parseInt((await getNumber()).n);
 
@@ -129,6 +127,15 @@ count_el.addEventListener("change", async function(event) {
     paintselectedbutton(page_number)
 })
 
+document.addEventListener('keydown', e => {
+    e = e || window.event;
+    if (e.key === 'ArrowLeft') {
+      slowreverse();
+    } else if (e.key === 'ArrowRight') {
+      slowforward();
+    }
+});
+
 layer_down.addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -152,45 +159,48 @@ layer_down.addEventListener('click', function(event) {
 page_down.addEventListener("click", function(event) {
     event.preventDefault();
     
-    if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
-        if(layer_counter >= 1) { 
-            if(layer_counter != 1) {
-                layer_counter--;
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
-            }
-        }
-    }
+    slowreverse();
+    // if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
+    //     if(layer_counter >= 1) { 
+    //         if(layer_counter != 1) {
+    //             layer_counter--;
+    //             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+    //         }
+    //     }
+    // }
 
-    if(page_number > 1) {
-        page_number--;
-    }
+    // if(page_number > 1) {
+    //     page_number--;
+    // }
 
-    navbuttonlistener();
-    paintselectedbutton(page_number);
-    rendertable();
+    // navbuttonlistener();
+    // paintselectedbutton(page_number);
+    // rendertable();
 })
 
 //Listener del botón UP
 page_up.addEventListener("click", function(event) {
     event.preventDefault();
+
+    slowforward();
     
-    if(page_number === layer_counter * number_of_buttons) {
-        layer_counter++;
-        if(layer_counter * number_of_buttons > pages) {
-            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
-        }
-        else {
-            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
-        }
-    }
+    // if(page_number === layer_counter * number_of_buttons) {
+    //     layer_counter++;
+    //     if(layer_counter * number_of_buttons > pages) {
+    //         renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
+    //     }
+    //     else {
+    //         renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+    //     }
+    // }
 
-    if(page_number < pages) {
-        page_number++;
-    }
+    // if(page_number < pages) {
+    //     page_number++;
+    // }
 
-    navbuttonlistener();
-    paintselectedbutton(page_number);
-    rendertable();
+    // navbuttonlistener();
+    // paintselectedbutton(page_number);
+    // rendertable();
 })
 
 layer_up.addEventListener('click', function(event) {
@@ -273,4 +283,45 @@ function paintselectedbutton(page_number) {
     
     button.classList.add('selected');
     button.style.color = 'white';
+}
+
+function slowforward() {
+
+    if(page_number === layer_counter * number_of_buttons) {
+        layer_counter++;
+        if(layer_counter * number_of_buttons > pages) {
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
+        }
+        else {
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+        }
+    }
+
+    if(page_number < pages) {
+        page_number++;
+    }
+
+    navbuttonlistener();
+    paintselectedbutton(page_number);
+    rendertable();
+}
+
+function slowreverse() {
+
+    if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
+        if(layer_counter >= 1) { 
+            if(layer_counter != 1) {
+                layer_counter--;
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            }
+        }
+    }
+
+    if(page_number > 1) {
+        page_number--;
+    }
+
+    navbuttonlistener();
+    paintselectedbutton(page_number);
+    rendertable();
 }
