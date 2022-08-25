@@ -32,7 +32,7 @@ li.pagei, li.layer-down, li.page-down, li.page-up, li.layer-up {
     height: 36px;
 }
 a.selected {
-    background-color: rgb(13, 110, 253);
+    background-image: linear-gradient(rgb(144, 188, 255), rgb(13, 110, 253), rgb(144, 188, 255));
 }
 a.pagelink {
     outline: 1px solid rgb(221, 221, 221);
