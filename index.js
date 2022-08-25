@@ -25,6 +25,8 @@ renderupdownbuttons();
 //Referencias a los botones up/down
 const page_down = document.querySelector('.page-down');
 const page_up = document.querySelector('.page-up');
+const layer_down = document.querySelector('.layer-down');
+const layer_up = document.querySelector('.layer-up');
 
 //**------------------------------------Página inicial----------------------------------- *//
 
@@ -75,7 +77,7 @@ navbuttonlistener();
 paintselectedbutton(page_number);
 
 //Listener de cambios en la cantidad de registros a mostrar
-count_el.addEventListener("change", async function (event) {
+count_el.addEventListener("change", async function(event) {
     event.preventDefault();
 
     page_number = 1;
@@ -127,8 +129,30 @@ count_el.addEventListener("change", async function (event) {
     paintselectedbutton(page_number)
 })
 
+layer_down.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    if(layer_counter >= 1) { 
+        if(layer_counter != 1) {
+            layer_counter--;
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+        }
+    }
+    
+    //console.log('down: layer_counter: ', layer_counter);
+    //console.log('page_number: ', page_number);
+
+    if(page_number > number_of_buttons) {
+        page_number = layer_counter * number_of_buttons;
+    }
+    
+    navbuttonlistener();
+    paintselectedbutton(page_number);
+    rendertable();
+})
+
 //Listener del botón DOWN
-page_down.addEventListener("click", function (event) {
+page_down.addEventListener("click", function(event) {
     event.preventDefault();
     
     if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
@@ -148,7 +172,7 @@ page_down.addEventListener("click", function (event) {
 })
 
 //Listener del botón UP
-page_up.addEventListener("click", function (event) {
+page_up.addEventListener("click", function(event) {
     event.preventDefault();
     
     if(page_number === layer_counter * number_of_buttons) {
@@ -163,6 +187,33 @@ page_up.addEventListener("click", function (event) {
     if(page_number < pages) {
         page_number++;
     }
+    navbuttonlistener();
+    paintselectedbutton(page_number);
+    rendertable();
+})
+
+layer_up.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    if(layer_counter <= layers) {
+        if(layer_counter != layers) {
+            layer_counter++;
+            if(layer_counter * number_of_buttons > pages) {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, pages);
+            }
+            else {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            }
+        }
+    }
+    
+    if((page_number + number_of_buttons) <= pages) {
+        page_number = number_of_buttons * (layer_counter - 1) + 1;
+    }
+    else {
+        page_number = pages;
+    }
+
     navbuttonlistener();
     paintselectedbutton(page_number);
     rendertable();

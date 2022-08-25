@@ -3,7 +3,7 @@ ul.pagination-keys {
     width: 100%;
 }
   
-li.pagei, li.page-down, li.page-up {
+li.pagei, li.layer-down, li.page-down, li.page-up, li.layer-up {
     display: inline-block;
     height: 36px;
 }
