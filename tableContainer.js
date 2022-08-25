@@ -37,16 +37,19 @@ function tablecontainer() {
                     </select> registros
                 </label>
             </div>
+            <div id="nav-buttons">
+            <!--
             <div id="example_filter" class="dataTables_filter">
                 <label class="">Buscar:<input type="search" placeholder="" aria-controls="example"></label>
             </div>
+            -->
         `
     }
 
     function renderfoot() {
         foot_controls.innerHTML = `
             <div id="info"></div>
-            <div id="nav-buttons"></div>
+            <!--<div id="nav-buttons"></div>-->
         `
     }
 }
