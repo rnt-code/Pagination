@@ -129,12 +129,13 @@ async function builddatatable() {
         paintselectedbutton(page_number)
     })
 
-    document.addEventListener('keydown', e => {
-        e = e || window.event;
-        if (e.key === 'ArrowLeft') {
-        slowreverse();
-        } else if (e.key === 'ArrowRight') {
-        slowforward();
+    document.addEventListener('keydown', function(event) {
+        
+        if (event.key === 'ArrowLeft') {
+            slowreverse();
+        } 
+        else if (event.key === 'ArrowRight') {
+            slowforward();
         }
     });
 
