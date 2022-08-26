@@ -1,6 +1,6 @@
 import { builddatatable } from './buildDataTable.js'
 
-//Datos a listar de la tabla
+//Obtención datos a listar
 async function getData() {
 
     const response = await fetch(`./getData.php`);
@@ -10,4 +10,5 @@ async function getData() {
 
 const data = await getData();
 
+//Entry point
 builddatatable(data);

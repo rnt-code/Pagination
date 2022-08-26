@@ -4,7 +4,7 @@ import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-async function builddatatable(data) {
+function builddatatable(data) {
 
     tablecontainer();
 
@@ -61,7 +61,7 @@ async function builddatatable(data) {
     navbuttonlistener();
     paintselectedbutton(page_number);
 
-    count_el.addEventListener("change", async function(event) {
+    count_el.addEventListener("change", function(event) {
         event.preventDefault();
 
         page_number = 1;
@@ -178,7 +178,7 @@ async function builddatatable(data) {
         rendertable(data);
     })
 
-    async function rendertable(data) {
+    function rendertable(data) {
 
         //Desde qué registro comenzaremos la lista a mostrar (start)
         let start = (page_number - 1) * count;
