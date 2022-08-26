@@ -1,35 +1,38 @@
-function listdata(data, istoday) {
+function listdata(one_page_data, istoday) {
 
-    const len = data.length;
+    const one_page_data_length = one_page_data.length;
+    const headers = Object.keys(one_page_data[0]);
+
     const td = tdatos.querySelectorAll('td');
     let i = 0;
     
     /*
     //DESC mode
-    for(let j = (len-1); j >= 0; j--) {
+    for(let j = (one_page_data_length - 1); j >= 0; j--) {
 
-        i = 7 * (len - 1) - 7 * j;  
-        td[i].innerHTML = data[j].id;
-        td[i+1].innerHTML = data[j].name;
-        td[i+2].innerHTML = data[j].last_name;
-        td[i+3].innerHTML = data[j].position;
-        td[i+4].innerHTML = data[j].office;
-        td[i+5].innerHTML = data[j].age;
-        td[i+6].innerHTML = data[j].start_date;
+        i = headers.length * (data_length - 1) - headers.length * j;  
+        td[i].innerHTML = data[j][headers[0]];
+        td[i+1].innerHTML = data[j][headers[1]];
+        td[i+2].innerHTML = data[j][headers[2]];
+        td[i+3].innerHTML = data[j][headers[3]];
+        td[i+4].innerHTML = data[j][headers[4]];
+        td[i+5].innerHTML = data[j][headers[5]];
+        td[i+6].innerHTML = data[j][headers[6]];
     }
     */
-   
+    
     //ASC mode
-    for(let j = 0; j < len; j++) {
+    for(let j = 0; j < one_page_data_length; j++) {
 
-        i = 7 * j;  
-        td[i].innerHTML = data[j].id;
-        td[i+1].innerHTML = data[j].name;
-        td[i+2].innerHTML = data[j].last_name;
-        td[i+3].innerHTML = data[j].position;
-        td[i+4].innerHTML = data[j].office;
-        td[i+5].innerHTML = data[j].age;
-        td[i+6].innerHTML = data[j].start_date;
+        let i = headers.length * j;
+
+        td[i].innerHTML = one_page_data[j][headers[0]];
+        td[i+1].innerHTML = one_page_data[j][headers[1]];
+        td[i+2].innerHTML = one_page_data[j][headers[2]];
+        td[i+3].innerHTML = one_page_data[j][headers[3]];
+        td[i+4].innerHTML = one_page_data[j][headers[4]];
+        td[i+5].innerHTML = one_page_data[j][headers[5]];
+        td[i+6].innerHTML = one_page_data[j][headers[6]];
     }
 }
 

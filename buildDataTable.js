@@ -4,11 +4,10 @@ import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-async function builddatatable() {
+async function builddatatable(data) {
 
     tablecontainer();
 
-    let data = [];
     let count = 0;
     let pages = 0;
     let from = 0;
@@ -18,10 +17,7 @@ async function builddatatable() {
     let page_number = 1;
     const number_of_buttons = 6;
 
-    //Referencia a la cantidad de registros a mostrar al iniciar la página
-    const count_el = document.getElementById('count');
-
-    //renderizo los botones up/down
+    //Renderizo los botones up/down
     renderupdownbuttons();
 
     //Referencias a los botones up/down
@@ -30,28 +26,18 @@ async function builddatatable() {
     const layer_down = document.querySelector('.layer-down');
     const layer_up = document.querySelector('.layer-up');
 
-    //**------------------------------------Página inicial----------------------------------- *//
-    //Traigo la cantidad de registros en la tabla
-    let regqty = parseInt((await getNumber()).n);
+    //Cantidad de registros en la tabla
+    let records_quantity = data.length;
 
     //Cantidad de registros a mostrar al iniciar la página
-    if(parseInt(count_el.value) > regqty) {
-        count = regqty;
-    }
-    else {
-        count = parseInt(count_el.value);
-    }
+    const count_el = document.getElementById('count');
+    count = parseInt(count_el.value);
 
     //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
-    if(Number.isInteger(regqty / count)) {
-        pages = regqty / count;
-    }
-    else {
-        pages = Math.floor(regqty / count) + 1;
-    }
+    pages = Math.floor(records_quantity / count) + 1;
 
     //Renderizo la tabla (la página 1)
-    rendertable();
+    rendertable(data);
 
     //Renderizo los botones
     if(pages <= number_of_buttons) {
@@ -71,12 +57,10 @@ async function builddatatable() {
     else {
         layers = Math.floor(pages / number_of_buttons) + 1;
     }
-    //**----------------------------------Fin página inicial----------------------------------*//
 
     navbuttonlistener();
     paintselectedbutton(page_number);
 
-    //Listener de cambios en la cantidad de registros a mostrar
     count_el.addEventListener("change", async function(event) {
         event.preventDefault();
 
@@ -85,25 +69,22 @@ async function builddatatable() {
         to = 0;
         pages = 0;
         layer_counter = 1;
-
-        //Consulto la cantidad total de registros en la tabla. 
-        let regqty = parseInt((await getNumber()).n);
         
         //Cantidad de registros a mostrar que elige el operador
         const count_el = document.getElementById('count');
-        if(parseInt(count_el.value) > regqty) {
-            count = regqty;
+        if(parseInt(count_el.value) > records_quantity) {
+            count = records_quantity;
         }
         else {
             count = parseInt(count_el.value);
         }
         
         //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
-        if(Number.isInteger(regqty / count)) {
-            pages = regqty / count;
+        if(Number.isInteger(records_quantity / count)) {
+            pages = records_quantity / count;
         }
         else {
-            pages = Math.floor(regqty / count) + 1;
+            pages = Math.floor(records_quantity / count) + 1;
         }
 
         //Calculo cuantas capas (layers) de botones habrá
@@ -123,7 +104,7 @@ async function builddatatable() {
             to = number_of_buttons;
         }
 
-        rendertable();
+        rendertable(data);
         renderbuttons(from, to);
         navbuttonlistener();
         paintselectedbutton(page_number)
@@ -155,17 +136,15 @@ async function builddatatable() {
         
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable();
+        rendertable(data);
     })
 
-    //Listener del botón DOWN
     page_down.addEventListener("click", function(event) {
         event.preventDefault();
         
         slowreverse();
     })
 
-    //Listener del botón UP
     page_up.addEventListener("click", function(event) {
         event.preventDefault();
 
@@ -196,15 +175,23 @@ async function builddatatable() {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable();
+        rendertable(data);
     })
 
-    async function getNumber() {
-        const response = await fetch(`./getRecordQty.php`);
-        const regqty = await response.json();
-        return regqty;
-    }
+    async function rendertable(data) {
 
+        //Desde qué registro comenzaremos la lista a mostrar (start)
+        let start = (page_number - 1) * count;
+        let end = start + 1 + count;
+
+        const one_page_data = data.slice(start, end);
+        info.innerHTML = `Página ${page_number} de ${pages}. Registros totales: ${records_quantity}`;
+       
+        //Construyo la tabla y muestro los datos
+        buildtable(one_page_data.length);
+        listdata(one_page_data, true);
+    }
+    
     function navbuttonlistener() {
         
         const buttons_list = document.querySelectorAll('.pagei');
@@ -215,29 +202,9 @@ async function builddatatable() {
                 
                 page_number = parseInt(button.innerText);
                 paintselectedbutton(page_number)
-                rendertable();
+                rendertable(data);
             })
         })
-    }
-
-    async function rendertable() {
-
-        //Desde qué registros comenzaremos la lista a mostrar (offset)
-        let offset = (page_number - 1) * count;
-
-        //Traigo los datos a mostrar
-        async function getData() {
-            const response = await fetch(`./getData.php?offset=${offset}&count=${count}`);
-            const data = await response.json();
-            return data;
-        }
-        data = await getData();
-
-        info.innerHTML = `Página ${page_number} de ${pages}. Registros totales: ${regqty}`;
-        
-        //Construyo la tabla y muestro los datos
-        buildtable(data.length);
-        listdata(data, true);
     }
 
     function paintselectedbutton(page_number) {
@@ -272,7 +239,7 @@ async function builddatatable() {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable();
+        rendertable(data);
     }
 
     function slowreverse() {
@@ -292,7 +259,7 @@ async function builddatatable() {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable();
+        rendertable(data);
     }
 }
 

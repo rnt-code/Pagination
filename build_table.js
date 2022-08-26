@@ -1,4 +1,4 @@
-function buildtable(len) {
+function buildtable(data_length) {
 
     const item3_el = document.getElementById("item3");
 
@@ -33,7 +33,7 @@ function buildtable(len) {
                     <th>start date</th>
                     `;
     thead.appendChild(rowh)
-    if(len === 0) {
+    if(data_length === 0) {
         const row1 = document.createElement('tr')
         row1.innerHTML += `
                         <td>-</td>
@@ -60,7 +60,7 @@ function buildtable(len) {
         tbody.appendChild(row2)
     }
     else {   
-        for(let i = 0; i < len; i++) {  
+        for(let i = 0; i < data_length; i++) {  
             const row = document.createElement('tr')
             row.innerHTML += `
                             <td></td>
