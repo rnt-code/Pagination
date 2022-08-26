@@ -1,10 +1,11 @@
 function listdata(one_page_data, istoday) {
 
-    const one_page_data_length = one_page_data.length;
-    const headers = Object.keys(one_page_data[0]);
+    if(one_page_data.length != 0) {
+        const one_page_data_length = one_page_data.length;
+        const headers = Object.keys(one_page_data[0]);
 
-    const td = tdatos.querySelectorAll('td');
-    let i = 0;
+        const td = tdatos.querySelectorAll('td');
+        let i = 0;
     
     /*
     //DESC mode
@@ -34,6 +35,8 @@ function listdata(one_page_data, istoday) {
         td[i+5].innerHTML = one_page_data[j][headers[5]];
         td[i+6].innerHTML = one_page_data[j][headers[6]];
     }
+    }
+    
 }
 
 export { listdata }
