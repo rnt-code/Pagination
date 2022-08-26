@@ -32,27 +32,30 @@ li.pagei, li.layer-down, li.page-down, li.page-up, li.layer-up {
     height: 36px;
 }
 a.selected {
-    background-image: linear-gradient(rgb(144, 188, 255), rgb(13, 110, 253), rgb(144, 188, 255));
+    border: 1px rgb(189, 189, 189) solid;
+    background-image: linear-gradient(white, rgb(194, 194, 194));
 }
 a.pagelink {
-    outline: 1px solid rgb(221, 221, 221);
+    /*outline: 1px solid rgb(221, 221, 221);*/
+    /*outline: none;*/
     text-decoration: none;
     display: inline-block;
-    width: 36px;
+    width: 39px;
     margin-right: 4px;
     text-align: center;
-    line-height: 36px;
+    line-height: 35px;
 }
 li.page-up:last-child a {
     margin-right: 0;
 }
 a.pagelink:link, a.pagelink:visited, a.pagelink:focus {
-    color: rgb(13, 110, 253);
+    color: rgb(0, 0, 0);
 }
 a.pagelink:hover {
-    background: rgb(211, 211, 211);
+    border: 1px rgb(189, 189, 189) solid;
+    background: rgb(184, 184, 184);
 }
 a.pagelink:active {
     background: rgb(134, 134, 134);
-    color: white;
+    /*color: rgb(0, 0, 0);*/
 }

@@ -245,12 +245,12 @@ async function builddatatable() {
         const button = document.getElementById(page_number);
 
         if(selected_button) {
-            selected_button.style.color = 'rgb(13, 110, 253)';
+            selected_button.style.color = 'black';
             selected_button.classList.remove('selected');
         }
         
         button.classList.add('selected');
-        button.style.color = 'white';
+        button.style.color = 'black';
     }
 
     function slowforward() {

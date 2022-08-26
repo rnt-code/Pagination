@@ -24,7 +24,7 @@ function buildtable(len) {
     
     const rowh = document.createElement('tr')
     rowh.innerHTML += `
-                    <th><a href="#">id</a></th>
+                    <th>id</th>
                     <th>name</th>
                     <th>last name</th>
                     <th>position</th>
@@ -76,7 +76,7 @@ function buildtable(len) {
     }
     const rowf = document.createElement('tr')
     rowf.innerHTML += `
-                    <td><a href="#">id</a></td>
+                    <td>id</td>
                     <td>name</td>
                     <td>last name</td>
                     <td>position</td>
