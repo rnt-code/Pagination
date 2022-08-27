@@ -10,5 +10,17 @@ async function getData() {
 
 const data = await getData();
 
+
+/*builddatatable([
+{
+    'id': 3,
+    'name': 'Jose',
+    'last_name': 'Perez',
+    'position': 'Officer',
+    'office': 'San Diego',
+    'age': 56,
+    'start_date': '2001-05-04'
+}]);*/
+
 //Entry point
 builddatatable(data);

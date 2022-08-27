@@ -4,7 +4,7 @@ import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-function builddatatable(data) {
+function builddatatable(data = [], number_of_buttons = 6) {
 
     tablecontainer();
 
@@ -15,7 +15,7 @@ function builddatatable(data) {
     let layers = 0;
     let layer_counter = 1;
     let page_number = 1;
-    const number_of_buttons = 6;
+    //const number_of_buttons = 6;
 
     //Renderizo los botones up/down
     renderupdownbuttons();
@@ -181,8 +181,8 @@ function builddatatable(data) {
     function rendertable(data) {
 
         //Desde qué registro comenzaremos la lista a mostrar (start)
-        let start = (page_number - 1) * count;
-        let end = start + 1 + count;
+        const start = (page_number - 1) * count;
+        const end = start + count;
 
         const one_page_data = data.slice(start, end);
         info.innerHTML = `Página ${page_number} de ${pages}. Registros totales: ${records_quantity}`;
