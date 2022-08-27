@@ -1,6 +1,12 @@
-function buildtable(data_length) {
+function buildtable(one_page_data) {
 
+    const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
+    const headers = [];
+
+    if(one_page_data.length != 0) {
+        headers = Object.keys(one_page_data[0]);
+    }
 
     const istable = !!item3_el.children[1].children[0];
     if(istable) {
@@ -16,35 +22,33 @@ function buildtable(data_length) {
     const thead = document.createElement('thead');
     thead.id = 'table-head';
     const tbody = document.createElement('tbody');
-    const tfoot = document.createElement('tfoot')
+    const tfoot = document.createElement('tfoot');
     
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
-    tabla.appendChild(tfoot)
+    tabla.appendChild(tfoot);
     
-    const rowh = document.createElement('tr')
-    rowh.innerHTML += `
-                    <th>id</th>
-                    <th>name</th>
-                    <th>last name</th>
-                    <th>position</th>
-                    <th>office</th>
-                    <th>age</th>
-                    <th>start date</th>
-                    `;
+    const rowh = document.createElement('tr');
+
+    let th_names = '';
+    for(let i = 0; i < headers.length; i++){
+        th_names = th_names + `<th>${headers[i]}</th>`
+    }
+
+    rowh.innerHTML = th_names;
     thead.appendChild(rowh)
+    
     if(data_length === 0) {
-        const row1 = document.createElement('tr')
-        row1.innerHTML += `
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        `;
+        
+        const row1 = document.createElement('tr');
+        let td_empty = '';
+        for(let i = 0; i < headers.length; i++){
+            td_empty = td_empty + `<td>-</td>`
+        }
+
+        row1.innerHTML = td_empty;
         tbody.appendChild(row1)
+
         const row2 = document.createElement('tr')
         row2.innerHTML += `
                         <td 
@@ -60,30 +64,18 @@ function buildtable(data_length) {
         tbody.appendChild(row2)
     }
     else {   
-        for(let i = 0; i < data_length; i++) {  
-            const row = document.createElement('tr')
-            row.innerHTML += `
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            `;
+        for(let i = 0; i < length; i++) {  
+            const row = document.createElement('tr');
+            let td_data = '';
+            for(let i = 0; i < headers.length; i++){
+                td_data = td_data + `<td></td>`
+            }
+            row.innerHTML += td_data;
             tbody.appendChild(row)      
         }; 
     }
     const rowf = document.createElement('tr')
-    rowf.innerHTML += `
-                    <td>id</td>
-                    <td>name</td>
-                    <td>last name</td>
-                    <td>position</td>
-                    <td>office</td>
-                    <td>age</td>
-                    <td>start date</td>
-                    `;
+    rowf.innerHTML = th_names;
     tfoot.appendChild(rowf)
 }
 

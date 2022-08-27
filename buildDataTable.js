@@ -188,7 +188,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
         info.innerHTML = `Página ${page_number} de ${pages}. Registros totales: ${records_quantity}`;
        
         //Construyo la tabla y muestro los datos
-        buildtable(one_page_data.length);
+        buildtable(one_page_data);
         listdata(one_page_data, true);
     }
     

@@ -23,4 +23,4 @@ const data = await getData();
 }]);*/
 
 //Entry point
-builddatatable(data);
+builddatatable();
