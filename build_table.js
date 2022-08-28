@@ -1,7 +1,13 @@
-function buildtable(len) {
+function buildtable(one_page_data) {
 
+    const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
+    let headers = ['No data found']
 
+    if(data_length != 0) {
+        headers = Object.keys(one_page_data[0]);
+    }
+    
     const istable = !!item3_el.children[1].children[0];
     if(istable) {
         item3_el.children[1].children[0].remove();
@@ -16,35 +22,32 @@ function buildtable(len) {
     const thead = document.createElement('thead');
     thead.id = 'table-head';
     const tbody = document.createElement('tbody');
-    const tfoot = document.createElement('tfoot')
+    const tfoot = document.createElement('tfoot');
     
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
-    tabla.appendChild(tfoot)
+    tabla.appendChild(tfoot);
     
-    const rowh = document.createElement('tr')
-    rowh.innerHTML += `
-                    <th>id</th>
-                    <th>name</th>
-                    <th>last name</th>
-                    <th>position</th>
-                    <th>office</th>
-                    <th>age</th>
-                    <th>start date</th>
-                    `;
+    const rowh = document.createElement('tr');
+
+    let th_names = '';
+    for(let i = 0; i < headers.length; i++){
+        th_names = th_names + `<th>${headers[i]}</th>`
+    }
+    rowh.innerHTML = th_names;
     thead.appendChild(rowh)
-    if(len === 0) {
-        const row1 = document.createElement('tr')
-        row1.innerHTML += `
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        `;
+    
+    if(data_length === 0) {
+        
+        const row1 = document.createElement('tr');
+        let td_empty = '';
+        for(let i = 0; i < headers.length; i++){
+            td_empty = td_empty + `<td></td>`
+        }
+
+        row1.innerHTML = td_empty;
         tbody.appendChild(row1)
+
         const row2 = document.createElement('tr')
         row2.innerHTML += `
                         <td 
@@ -54,36 +57,25 @@ function buildtable(len) {
                                 font-size: 20px; 
                                 font-weight: bold;
                             ">
-                            Sin datos para listar
+                            No se encontraron datos
                         </td>
                         `;
         tbody.appendChild(row2)
     }
     else {   
-        for(let i = 0; i < len; i++) {  
-            const row = document.createElement('tr')
-            row.innerHTML += `
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            `;
+        for(let i = 0; i < data_length; i++) {  
+            const row = document.createElement('tr');
+            let td_data = '';
+            for(let i = 0; i < headers.length; i++){
+                td_data = td_data + `<td></td>`
+            }
+            row.innerHTML = td_data;
             tbody.appendChild(row)      
         }; 
     }
+    
     const rowf = document.createElement('tr')
-    rowf.innerHTML += `
-                    <td>id</td>
-                    <td>name</td>
-                    <td>last name</td>
-                    <td>position</td>
-                    <td>office</td>
-                    <td>age</td>
-                    <td>start date</td>
-                    `;
+    rowf.innerHTML = th_names;
     tfoot.appendChild(rowf)
 }
 

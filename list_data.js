@@ -1,35 +1,30 @@
-function listdata(data, istoday) {
+function listdata(one_page_data, istoday) {
 
-    const len = data.length;
-    const td = tdatos.querySelectorAll('td');
-    let i = 0;
+    if(one_page_data.length != 0) {
+
+        const one_page_data_length = one_page_data.length;
+        const headers = Object.keys(one_page_data[0]);
+        const td = tdatos.querySelectorAll('td');
+        let i = 0;
+        
+        /*
+        //DESC mode
+        for(let j = (one_page_data_length - 1); j >= 0; j--) {
+
+            i = headers.length * (one_page_data.length - 1) - headers.length * j;
+            for(let k = 0; k < headers.length; k++) {
+                td[i + k].innerHTML = one_page_data[j][headers[k]];
+            }
+        }
+        */
     
-    /*
-    //DESC mode
-    for(let j = (len-1); j >= 0; j--) {
-
-        i = 7 * (len - 1) - 7 * j;  
-        td[i].innerHTML = data[j].id;
-        td[i+1].innerHTML = data[j].name;
-        td[i+2].innerHTML = data[j].last_name;
-        td[i+3].innerHTML = data[j].position;
-        td[i+4].innerHTML = data[j].office;
-        td[i+5].innerHTML = data[j].age;
-        td[i+6].innerHTML = data[j].start_date;
-    }
-    */
-   
-    //ASC mode
-    for(let j = 0; j < len; j++) {
-
-        i = 7 * j;  
-        td[i].innerHTML = data[j].id;
-        td[i+1].innerHTML = data[j].name;
-        td[i+2].innerHTML = data[j].last_name;
-        td[i+3].innerHTML = data[j].position;
-        td[i+4].innerHTML = data[j].office;
-        td[i+5].innerHTML = data[j].age;
-        td[i+6].innerHTML = data[j].start_date;
+        //ASC mode
+        for(let j = 0; j < one_page_data_length; j++) {
+            let i = headers.length * j;
+            for(let k = 0; k < headers.length; k++) {
+                td[i + k].innerHTML = one_page_data[j][headers[k]];
+            }
+        }
     }
 }
 
