@@ -1,5 +1,5 @@
 <?php 
-    include('connect_db.php');
+    include('connect_db copy.php');
 
     $query = "SELECT * FROM employees";
     $result = mysqli_query($connection, $query);
