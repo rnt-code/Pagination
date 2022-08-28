@@ -3,16 +3,16 @@ first approach
 
 
 builddatatable(): 
-                    Arrojará 'No data found', 
-                   Se ocultará el contendor de botones, 
-                    Debería ocultarse el selector de registros a listar
-                    También muestrará 'Página 0 de 0. Registros totales: 0'.
+                     Arrojará 'No data found', 
+                     Se ocultará el contendor de botones, 
+                     Debería ocultarse el selector de registros a listar
+                     También muestrará 'Página 0 de 0. Registros totales: 0'.
 
 builddatatable([]): 
                      Idem al anterior.
 
 builddatatable([],0):
-                    Idem al anterior.
+                     Idem al anterior.
 
 builddatatable(data):
                      Si data = [], arrojará un resultado idem al anterior.
