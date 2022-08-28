@@ -2,12 +2,12 @@ function buildtable(one_page_data) {
 
     const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
-    const headers = [];
+    let headers = ['No data found']
 
-    if(one_page_data.length != 0) {
+    if(data_length != 0) {
         headers = Object.keys(one_page_data[0]);
     }
-
+    
     const istable = !!item3_el.children[1].children[0];
     if(istable) {
         item3_el.children[1].children[0].remove();
@@ -34,7 +34,6 @@ function buildtable(one_page_data) {
     for(let i = 0; i < headers.length; i++){
         th_names = th_names + `<th>${headers[i]}</th>`
     }
-
     rowh.innerHTML = th_names;
     thead.appendChild(rowh)
     
@@ -43,7 +42,7 @@ function buildtable(one_page_data) {
         const row1 = document.createElement('tr');
         let td_empty = '';
         for(let i = 0; i < headers.length; i++){
-            td_empty = td_empty + `<td>-</td>`
+            td_empty = td_empty + `<td></td>`
         }
 
         row1.innerHTML = td_empty;
@@ -58,22 +57,23 @@ function buildtable(one_page_data) {
                                 font-size: 20px; 
                                 font-weight: bold;
                             ">
-                            Sin datos para listar
+                            No se encontraron datos
                         </td>
                         `;
         tbody.appendChild(row2)
     }
     else {   
-        for(let i = 0; i < length; i++) {  
+        for(let i = 0; i < data_length; i++) {  
             const row = document.createElement('tr');
             let td_data = '';
             for(let i = 0; i < headers.length; i++){
                 td_data = td_data + `<td></td>`
             }
-            row.innerHTML += td_data;
+            row.innerHTML = td_data;
             tbody.appendChild(row)      
         }; 
     }
+    
     const rowf = document.createElement('tr')
     rowf.innerHTML = th_names;
     tfoot.appendChild(rowf)
