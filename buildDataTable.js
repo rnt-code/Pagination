@@ -4,8 +4,43 @@ import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-function builddatatable(data = [], number_of_buttons = 6) {
+function builddatatable(data = [], number_of_buttons = 6, custom_headers = undefined) {
 
+    let headers = [];
+    let difference = 0;
+    //console.log(data.length);
+    if(data.length != 0) {
+        
+        if(custom_headers === undefined) {
+            headers = Object.keys(data[0]);
+        } 
+        else if(custom_headers.length === 0) {
+            headers = Object.keys(data[0]);
+        }
+        else if(!Array.isArray(custom_headers)) {
+            headers = Object.keys(data[0]);
+        }
+        else {
+            
+            headers = Object.keys(data[0]);
+            difference = Math.abs(headers.length - custom_headers.length);
+
+            //console.log(difference);
+
+            if(custom_headers.length < headers.length) {
+                for(let i = 0; i < difference; i++) {
+                    custom_headers.push('-');
+                }
+            }
+            if(custom_headers.length > headers.length) {
+                for(let i = 0; i < difference; i++) {
+                    custom_headers.pop();
+                }
+            }
+            headers = custom_headers;
+        }
+    }
+    //console.log('headers: ', headers);
     tablecontainer();
 
     let MAX_PAGES = 0;
@@ -45,7 +80,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
     }
 
     //Renderizo la tabla
-    rendertable(data);
+    rendertable(data, headers);
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
@@ -130,7 +165,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
             to = number_of_buttons;
         }
 
-        rendertable(data);
+        rendertable(data, headers);
         renderbuttons(from, to);
         navbuttonlistener();
         paintselectedbutton(page_number)
@@ -161,7 +196,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
         
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable(data);
+        rendertable(data, headers);
     })
 
     page_down.addEventListener("click", function(event) {
@@ -198,10 +233,10 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable(data);
+        rendertable(data, headers);
     })
 
-    function rendertable(data) {
+    function rendertable(data, headers) {
 
         //Desde qué registro comenzaremos la lista a mostrar (start)
         const start = (page_number - 1) * count;
@@ -214,7 +249,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
         //console.log(one_page_data);
 
-        buildtable(one_page_data);
+        buildtable(one_page_data, headers);
         listdata(one_page_data, true);
     }
     
@@ -228,7 +263,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
                 
                 page_number = parseInt(button.innerText);
                 paintselectedbutton(page_number)
-                rendertable(data);
+                rendertable(data, headers);
             })
         })
     }
@@ -276,7 +311,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable(data);
+        rendertable(data, headers);
     }
 
     function slowreverse() {
@@ -294,7 +329,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
         navbuttonlistener();
         paintselectedbutton(page_number);
-        rendertable(data);
+        rendertable(data, headers);
     }
 }
 

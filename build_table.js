@@ -1,11 +1,11 @@
-function buildtable(one_page_data) {
+function buildtable(one_page_data, headers) {
 
     const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
-    let headers = ['No data found']
+    
 
-    if(data_length != 0) {
-        headers = Object.keys(one_page_data[0]);
+    if(data_length === 0) {
+        headers = ['No data found'];
     }
     
     const istable = !!item3_el.children[1].children[0];
