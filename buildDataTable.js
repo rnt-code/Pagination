@@ -14,8 +14,8 @@ function builddatatable(data = [], number_of_buttons = 6) {
     let from = 0;
     let to = 0;
     let layer_counter = 1;
+    
     let page_number = 0;
-
     if(data.length != 0) {
         page_number = 1;
     }
