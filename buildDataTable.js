@@ -35,7 +35,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
     //Cantidad de registros a mostrar al iniciar la página
     const count_el = document.getElementById('count');
     count = parseInt(count_el.value);
-
+    
     //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
     if(Number.isInteger(records_quantity / count)) {
         MAX_PAGES = records_quantity / count;
@@ -85,7 +85,6 @@ function builddatatable(data = [], number_of_buttons = 6) {
     count_el.addEventListener("change", function(event) {
         event.preventDefault();
 
-        //page_number = 0;
         from = 0;
         to = 0;
         layer_counter = 1;
@@ -93,6 +92,7 @@ function builddatatable(data = [], number_of_buttons = 6) {
         //Cantidad de registros a mostrar que elige el operador
         const count_el = document.getElementById('count');
         if(records_quantity != 0) {
+            page_number = 1;
             if(parseInt(count_el.value) > records_quantity) {
                 count = records_quantity;
             }
@@ -101,9 +101,9 @@ function builddatatable(data = [], number_of_buttons = 6) {
             }
         }
         else {
+            page_number = 0;
             count = parseInt(count_el.value);
         }
-        
         
         //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
         if(Number.isInteger(records_quantity / count)) {
