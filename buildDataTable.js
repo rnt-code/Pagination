@@ -150,11 +150,9 @@ function builddatatable(data = [], number_of_buttons = 6) {
     layer_down.addEventListener('click', function(event) {
         event.preventDefault();
 
-        if(layer_counter >= 1) { 
-            if(layer_counter != 1) {
-                layer_counter--;
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
-            }
+        if(layer_counter > 1) { 
+            layer_counter--;
+            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
 
         if(page_number > number_of_buttons) {
@@ -180,16 +178,14 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
     layer_up.addEventListener('click', function(event) {
         event.preventDefault();
-
-        if(layer_counter <= MAX_LAYERS) {
-            if(layer_counter != MAX_LAYERS) {
-                layer_counter++;
-                if(layer_counter * number_of_buttons > MAX_PAGES) {
-                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
-                }
-                else {
-                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
-                }
+      
+        if(layer_counter < MAX_LAYERS) {
+            layer_counter++;
+            if(layer_counter * number_of_buttons > MAX_PAGES) {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
+            }
+            else {
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
         
@@ -265,14 +261,12 @@ function builddatatable(data = [], number_of_buttons = 6) {
 
             if(layer_counter < MAX_LAYERS) {
                 layer_counter++;
-            }
-
-            if(layer_counter * number_of_buttons > MAX_PAGES) {
-                
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
-            }
-            else {
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                if(layer_counter * number_of_buttons > MAX_PAGES) {
+                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
+                }
+                else {
+                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                }
             }
         }
 
@@ -288,11 +282,9 @@ function builddatatable(data = [], number_of_buttons = 6) {
     function slowreverse() {
 
         if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
-            if(layer_counter >= 1) { 
-                if(layer_counter != 1) {
-                    layer_counter--;
-                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
-                }
+            if(layer_counter > 1) { 
+                layer_counter--;
+                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
 
