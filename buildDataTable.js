@@ -21,7 +21,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             headers = Object.keys(data[0]);
         }
         else {
-            
             headers = Object.keys(data[0]);
             difference = Math.abs(headers.length - custom_headers.length);
 
@@ -65,7 +64,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     const layer_up = document.querySelector('.layer-up');
 
     //Cantidad de registros en la tabla
-    let records_quantity = data.length; //candidato a se un const
+    let records_quantity = data.length;
 
     //Cantidad de registros a mostrar al iniciar la página
     const count_el = document.getElementById('count');
@@ -213,6 +212,8 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
     layer_up.addEventListener('click', function(event) {
         event.preventDefault();
+        console.log('layer_counter: ',layer_counter);
+        console.log('MAX_LAYERS: ', MAX_LAYERS);
       
         if(layer_counter < MAX_LAYERS) {
             layer_counter++;
@@ -223,14 +224,19 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
-        
+        console.log('page_number: ', page_number);
+        console.log('number_of_buttons: ', number_of_buttons);
+        console.log('MAX_PAGES: ', MAX_PAGES);
+        console.log('(page_number + number_of_buttons) <= MAX_PAGES: ', (page_number + number_of_buttons) <= MAX_PAGES);
+
         if((page_number + number_of_buttons) <= MAX_PAGES) {
             page_number = number_of_buttons * (layer_counter - 1) + 1;
         }
         else {
+            console.log('nunca entra acá');
             page_number = MAX_PAGES;
         }
-
+        console.log('page_number: ', page_number);
         navbuttonlistener();
         paintselectedbutton(page_number);
         rendertable(data, headers);
