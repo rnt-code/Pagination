@@ -10,8 +10,8 @@ async function getData() {
 }
 
 const data = await getData();
-const number_of_buttons = 2;
+const number_of_buttons = 3;
 const custom_header = ['Id', 'Serial#', 'Resultado', 'Hi-Pot', 'GB', 'Fecha', 'Inicio', 'Final', 'Duración'];
 
 //Entry point
-builddatatable(data, number_of_buttons, custom_header);
+builddatatable(data, number_of_buttons);

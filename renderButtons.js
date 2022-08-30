@@ -4,7 +4,7 @@ function renderbuttons(from, to) {
 
         //Referencia a los botones up y down
         const page_up = document.querySelector('.page-up');
-        const pagination_keys= document.querySelector('.pagination-keys');
+        const pagination_keys = document.querySelector('.pagination-keys');
 
         //Borro los botones que haya en el contenedor pagination
         const pagei_list = document.querySelectorAll('.pagei');

@@ -63,6 +63,12 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     const layer_down = document.querySelector('.layer-down');
     const layer_up = document.querySelector('.layer-up');
 
+    //Habilitar los botones de paginación
+    document.querySelector('.layer-up').classList.remove('disabled');
+    document.querySelector('.layer-down').classList.remove('disabled');
+    document.querySelector('.page-down').classList.remove('disabled');
+    document.querySelector('.page-up').classList.remove('disabled');
+
     //Cantidad de registros en la tabla
     let records_quantity = data.length;
 
@@ -113,6 +119,20 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
     }
 
+    if(MAX_LAYERS === 1) {
+        document.querySelector('.layer-up').classList.add('disabled');
+        document.querySelector('.layer-down').classList.add('disabled');
+        document.querySelector('.page-down').classList.add('disabled');
+    } else if(MAX_LAYERS > 1) {
+        document.querySelector('.layer-up').classList.remove('disabled');
+        document.querySelector('.layer-down').classList.add('disabled');
+        document.querySelector('.page-down').classList.add('disabled');
+    }
+
+    if(page_number === 1 && MAX_PAGES === 1) {
+        document.querySelector('.page-up').classList.add('disabled');
+    }
+
     navbuttonlistener();
     paintselectedbutton(page_number);
 
@@ -122,6 +142,12 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         from = 0;
         to = 0;
         layer_counter = 1;
+
+        //Habilitar los botones de paginación
+        document.querySelector('.layer-up').classList.remove('disabled');
+        document.querySelector('.layer-down').classList.remove('disabled');
+        document.querySelector('.page-down').classList.remove('disabled');
+        document.querySelector('.page-up').classList.remove('disabled');
         
         //Cantidad de registros a mostrar que elige el operador
         const count_el = document.getElementById('count');
@@ -164,6 +190,20 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             to = number_of_buttons;
         }
 
+        if(MAX_LAYERS === 1) {
+            document.querySelector('.layer-up').classList.add('disabled');
+            document.querySelector('.layer-down').classList.add('disabled');
+            document.querySelector('.page-down').classList.add('disabled');
+        } else if(MAX_LAYERS > 1) {
+            document.querySelector('.layer-up').classList.remove('disabled');
+            document.querySelector('.layer-down').classList.add('disabled');
+            document.querySelector('.page-down').classList.add('disabled');
+        }
+    
+        if(page_number === 1 && MAX_PAGES === 1) {
+            document.querySelector('.page-up').classList.add('disabled');
+        }
+
         rendertable(data, headers);
         renderbuttons(from, to);
         navbuttonlistener();
@@ -191,8 +231,20 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
         if(page_number > number_of_buttons) {
             page_number = layer_counter * number_of_buttons;
+            
         }
-        
+
+        if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
+            document.querySelector('.layer-up').classList.remove('disabled')
+            document.querySelector('.layer-down').classList.remove('disabled')
+            if(page_number > 1 && page_number < MAX_PAGES) {
+                document.querySelector('.page-down').classList.remove('disabled');
+                document.querySelector('.page-up').classList.remove('disabled');
+            }
+            if(page_number === 1) document.querySelector('.page-down').classList.add('disabled');
+            if(page_number === MAX_PAGES) document.querySelector('.page-up').classList.add('disabled');
+        }
+
         navbuttonlistener();
         paintselectedbutton(page_number);
         rendertable(data, headers);
@@ -212,11 +264,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
     layer_up.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log('layer_counter: ',layer_counter);
-        console.log('MAX_LAYERS: ', MAX_LAYERS);
       
         if(layer_counter < MAX_LAYERS) {
             layer_counter++;
+
             if(layer_counter * number_of_buttons > MAX_PAGES) {
                 renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
             }
@@ -224,19 +275,27 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
-        console.log('page_number: ', page_number);
-        console.log('number_of_buttons: ', number_of_buttons);
-        console.log('MAX_PAGES: ', MAX_PAGES);
-        console.log('(page_number + number_of_buttons) <= MAX_PAGES: ', (page_number + number_of_buttons) <= MAX_PAGES);
-
-        if((page_number + number_of_buttons) <= MAX_PAGES) {
-            page_number = number_of_buttons * (layer_counter - 1) + 1;
-        }
-        else {
-            console.log('nunca entra acá');
+        console.log('layer_counter = MAX_LAYERS', layer_counter === MAX_LAYERS);
+        
+        if(number_of_buttons * (layer_counter - 1) + 1 === MAX_PAGES) {
             page_number = MAX_PAGES;
         }
-        console.log('page_number: ', page_number);
+        else {
+            page_number = number_of_buttons * (layer_counter - 1) + 1;
+        }
+
+        if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
+            document.querySelector('.layer-up').classList.remove('disabled')
+            document.querySelector('.layer-down').classList.remove('disabled')
+            
+            if(page_number > 1 && page_number < MAX_PAGES) {
+                document.querySelector('.page-down').classList.remove('disabled');
+                document.querySelector('.page-up').classList.remove('disabled');
+            }
+            if(page_number === 1) document.querySelector('.page-down').classList.add('disabled');
+            if(page_number === MAX_PAGES) document.querySelector('.page-up').classList.add('disabled');
+        }
+        
         navbuttonlistener();
         paintselectedbutton(page_number);
         rendertable(data, headers);
@@ -268,6 +327,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 event.preventDefault();
                 
                 page_number = parseInt(button.innerText);
+                console.log('pressed button: ', page_number);
                 paintselectedbutton(page_number)
                 rendertable(data, headers);
             })
@@ -315,6 +375,13 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number++;
         }
 
+        if(page_number > 1 && page_number < MAX_PAGES) {
+            document.querySelector('.page-down').classList.remove('disabled');
+            document.querySelector('.page-up').classList.remove('disabled');
+        }
+        if(page_number === 1) document.querySelector('.page-down').classList.add('disabled');
+        if(page_number === MAX_PAGES) document.querySelector('.page-up').classList.add('disabled');
+
         navbuttonlistener();
         paintselectedbutton(page_number);
         rendertable(data, headers);
@@ -332,6 +399,13 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         if(page_number > 1) {
             page_number--;
         }
+
+        if(page_number > 1 && page_number < MAX_PAGES) {
+            document.querySelector('.page-down').classList.remove('disabled');
+            document.querySelector('.page-up').classList.remove('disabled');
+        }
+        if(page_number === 1) document.querySelector('.page-down').classList.add('disabled');
+        if(page_number === MAX_PAGES) document.querySelector('.page-up').classList.add('disabled');
 
         navbuttonlistener();
         paintselectedbutton(page_number);
