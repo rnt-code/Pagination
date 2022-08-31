@@ -83,41 +83,49 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     else {
         MAX_PAGES = Math.floor(records_quantity / count) + 1;
     }
-
+    console.log('MAX_PAGES: ', MAX_PAGES);
     //Renderizo la tabla
     rendertable(data, headers);
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
+        //si lo que ingresa no es un número, toma el valo por defecto
         number_of_buttons = 6;
     }
     else {
+        //Si es un numero queda el valor absoluto del entero menor
         number_of_buttons = Math.abs(Math.floor(number_of_buttons));
     }
 
+    // Si es cero queda en 1, y si es mayor de 10 queda en 10.
     if(number_of_buttons === 0) {
         number_of_buttons = 1;
     } else if(number_of_buttons > 10){
         number_of_buttons = 10;
     }
 
+    //Determino la cantidad de botones a dibujar, que depende de las cantidad de páginas
     if(number_of_buttons >= MAX_PAGES) {
-        from = page_number;
+        from = page_number; //page_number =  1
         to = MAX_PAGES;
     }
     else {
         from = page_number;
         to = number_of_buttons;
     }
-
+    //console.log('number of buttons: ', number_of_buttons);
     renderbuttons(from, to);
+    
+    console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
 
+    //Calculo cuantás capas de botones habrá
     if(Number.isInteger(MAX_PAGES / number_of_buttons)) {
         MAX_LAYERS = MAX_PAGES / number_of_buttons;
     }
     else {
         MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
     }
+    console.log('Init: MAX_LAYERS=', MAX_LAYERS)
 
     //Lógica de habilitar y deshabilitar los botones de paginación
     if(MAX_LAYERS === 1) {
@@ -133,6 +141,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         page_up.classList.add('disabled');
     }
     //---------------------------------------------------------------
+
+    if(layer_counter === 1 && MAX_LAYERS === 1) {
+        console.log('Init: Hay una sola capa de botones');
+    }
 
     navbuttonlistener();
     paintselectedbutton(page_number);
@@ -182,6 +194,8 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
         }
 
+        console.log('count: MAX_LAYERS=', MAX_LAYERS)
+
         if(MAX_PAGES <= number_of_buttons) {
             from = page_number;
             to = MAX_PAGES;
@@ -190,6 +204,8 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             from = page_number;
             to = number_of_buttons;
         }
+
+        console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
 
         //Lógica de habilitar y deshabilitar los botones de paginación
         if(MAX_LAYERS === 1) {
@@ -205,6 +221,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_up.classList.add('disabled');
         }
         //---------------------------------------------------------------
+
+        if(layer_counter === 1 && MAX_LAYERS === 1) {
+            console.log('Count: Hay una sola capa de botones');
+        }
 
         rendertable(data, headers);
         renderbuttons(from, to);
@@ -303,20 +323,22 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             }
         }
         else {
-            console.log('up: estamos en el extremo superior derecho');
-            if(layer_counter === MAX_LAYERS) {
-                if(layer_counter === 1 && page_number > 1) {
-                    //Solo hay una capa
-                    page_down.classList.remove('disabled'); //remove
+            if(layer_counter === 1 && page_number === 1) {
+                console.log('Solo hay una capa');
+                //     page_down.classList.remove('disabled'); //remove
+                //     page_up.classList.add('disabled');
+                //     layer_up.classList.add('disabled');
+                // }
+                // else {
+                //     console.log('Hay más de una capa');
+                //     page_up.classList.remove('disabled'); //remove
+                //     layer_up.classList.add('disabled');
+                //     layer_down.classList.remove('disabled') //remove
+                // }
+            } else if(layer_counter === MAX_LAYERS  && page_number === MAX_PAGES) {
+                console.log('estamos en el estremo derecho');
                     page_up.classList.add('disabled');
                     layer_up.classList.add('disabled');
-                }
-                else {
-                    console.log('Hay más de una capa');
-                    page_up.classList.remove('disabled'); //remove
-                    layer_up.classList.add('disabled');
-                    layer_down.classList.remove('disabled') //remove
-                }
             }
         }
         
@@ -432,7 +454,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
         //----------Lógica para los medios de page_number y layer_counter---------
         if(page_number > 1 && page_number < MAX_PAGES) {
-            //console.log('up: estamos en el medio');
+            console.log('up: estamos en el medio');
             page_down.classList.remove('disabled'); //remove
             page_up.classList.remove('disabled'); //remove
             if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
@@ -440,14 +462,14 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 layer_down.classList.remove('disabled') //remove
             }
             if(layer_counter === MAX_LAYERS) {
-                //console.log('...estamos en la última capa');
+                console.log('...estamos en la última capa');
                 layer_up.classList.add('disabled');
             }
         }
         
         else if(layer_counter === MAX_LAYERS && page_number === MAX_PAGES) {
             
-            //console.log('up: ULTIMA CAPA: estamos en el extremo superior derecho');
+            console.log('up: ULTIMA CAPA: estamos en el extremo superior derecho');
             layer_down.classList.remove('disabled')
             page_down.classList.remove('disabled'); //remove
             page_up.classList.add('disabled');
@@ -473,10 +495,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         if(page_number > 1) {
             page_number--;
         }
-
+        
         //----------Lógica para los medios de page_number y layer_counter----------
         if(page_number > 1 && page_number < MAX_PAGES) {
-            //console.log('down: en el medio');
+            console.log('down: en el medio');
             page_down.classList.remove('disabled'); //remove
             page_up.classList.remove('disabled'); //remove
             if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
@@ -484,13 +506,13 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 layer_down.classList.remove('disabled'); //remove
             } 
             if(layer_counter === 1) {
-                //console.log('...estamos en la capa 1')
+                console.log('...estamos en la capa 1')
                 layer_down.classList.add('disabled');
                 layer_up.classList.remove('disabled'); //remove
             }
         }
         else if(layer_counter === 1 && page_number === 1) {
-                //console.log('up: PRIMERA CAPA: estamos en el extremo inferior izquierdo');
+                console.log('down: PRIMERA CAPA: estamos en el extremo inferior izquierdo');
                 page_down.classList.add('disabled');
                 page_up.classList.remove('disabled'); //remove
                 layer_down.classList.add('disabled');

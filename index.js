@@ -11,7 +11,7 @@ async function getData() {
 
 const data = await getData();
 const number_of_buttons = 3;
-const custom_header = ['Id', 'Serial#', 'Resultado', 'Hi-Pot', 'GB', 'Fecha', 'Inicio', 'Final', 'Duración'];
+const custom_header = ['Id', 'Nombre', 'Apellido', 'Posición', 'Oficina', 'Edad', 'Fecha'];
 
 //Entry point
-builddatatable(data, number_of_buttons);
+builddatatable(data, number_of_buttons, custom_header);
