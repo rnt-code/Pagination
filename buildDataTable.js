@@ -265,7 +265,9 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 document.querySelector('.page-up').classList.remove('disabled');
             }
             
-        }
+        } 
+
+        
 
         if(page_number === 1) document.querySelector('.page-down').classList.add('disabled');
         if(page_number === MAX_PAGES) document.querySelector('.page-up').classList.add('disabled');
@@ -321,25 +323,21 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 document.querySelector('.page-down').classList.remove('disabled');
                 document.querySelector('.page-up').classList.remove('disabled');
             }
+        } 
+        else if(layer_counter === 1 && page_number === 1) {
+            console.log('Solo hay una capa');
+            /** code here */
         }
-        else {
-            if(layer_counter === 1 && page_number === 1) {
-                console.log('Solo hay una capa');
-                //     page_down.classList.remove('disabled'); //remove
-                //     page_up.classList.add('disabled');
-                //     layer_up.classList.add('disabled');
-                // }
-                // else {
-                //     console.log('Hay más de una capa');
-                //     page_up.classList.remove('disabled'); //remove
-                //     layer_up.classList.add('disabled');
-                //     layer_down.classList.remove('disabled') //remove
-                // }
-            } else if(layer_counter === MAX_LAYERS  && page_number === MAX_PAGES) {
-                console.log('estamos en el estremo derecho');
-                    page_up.classList.add('disabled');
-                    layer_up.classList.add('disabled');
-            }
+        else if(layer_counter === MAX_LAYERS && page_number === MAX_PAGES) {
+            console.log('estamos en la última capa y en el extremo derecho');
+            page_up.classList.add('disabled');
+            layer_up.classList.add('disabled');
+            page_down.classList.remove('disabled')
+            layer_down.classList.remove('disabled')
+        }
+        else if(layer_counter === MAX_LAYERS) {
+            console.log('estoy en la última capa')
+            layer_up.classList.add('disabled');
         }
         
         navbuttonlistener();
@@ -452,9 +450,9 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number++;
         }
 
-        //----------Lógica para los medios de page_number y layer_counter---------
+        //----UP----Lógica para los medios de page_number y layer_counter---------
         if(page_number > 1 && page_number < MAX_PAGES) {
-            console.log('up: estamos en el medio');
+            //console.log('up: estamos en el medio');
             page_down.classList.remove('disabled'); //remove
             page_up.classList.remove('disabled'); //remove
             if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
@@ -462,18 +460,25 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 layer_down.classList.remove('disabled') //remove
             }
             if(layer_counter === MAX_LAYERS) {
-                console.log('...estamos en la última capa');
+                console.log('up...estamos en la ULTIMA CAPA');
                 layer_up.classList.add('disabled');
+                if(MAX_LAYERS < 2) {
+                    console.log('up...y solo hay una capa1');
+                    layer_down.classList.add('disabled');
+                }
+                else {
+                    console.log('up...hay más de una capa');
+                    layer_down.classList.remove('disabled'); //remove
+                }
             }
         }
-        
-        else if(layer_counter === MAX_LAYERS && page_number === MAX_PAGES) {
-            
-            console.log('up: ULTIMA CAPA: estamos en el extremo superior derecho');
-            layer_down.classList.remove('disabled')
-            page_down.classList.remove('disabled'); //remove
+        else if(page_number === MAX_PAGES) {
+            console.log('up...estamos en la ULTIMA CAPA y en el extremo derecho');
             page_up.classList.add('disabled');
-            layer_up.classList.add('disabled');
+            if(MAX_LAYERS < 2) {
+                console.log('up...y solo hay una capa2');
+                page_down.classList.remove('disabled'); //remove
+            }
         }
         //-------------------------------------------------------------------------
 
@@ -496,9 +501,9 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number--;
         }
         
-        //----------Lógica para los medios de page_number y layer_counter----------
+        //---DOWN---Lógica para los medios de page_number y layer_counter----------
         if(page_number > 1 && page_number < MAX_PAGES) {
-            console.log('down: en el medio');
+            //console.log('down: en el medio');
             page_down.classList.remove('disabled'); //remove
             page_up.classList.remove('disabled'); //remove
             if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
@@ -506,17 +511,25 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 layer_down.classList.remove('disabled'); //remove
             } 
             if(layer_counter === 1) {
-                console.log('...estamos en la capa 1')
+                console.log('down...estamos en la PRIMERA CAPA')
                 layer_down.classList.add('disabled');
-                layer_up.classList.remove('disabled'); //remove
+                if(MAX_LAYERS < 2) {
+                    console.log('down...y solo hay una capa1');
+                    layer_up.classList.add('disabled');
+                }
+                else {
+                    console.log('down...hay más de una capa');
+                    layer_up.classList.remove('disabled'); //remove
+                }
             }
-        }
-        else if(layer_counter === 1 && page_number === 1) {
-                console.log('down: PRIMERA CAPA: estamos en el extremo inferior izquierdo');
-                page_down.classList.add('disabled');
+        } 
+        else if(page_number === 1 ) {
+            console.log('down...estamos en la PRIMERA CAPA y en el extremo izquierdo');
+            page_down.classList.add('disabled');
+            if(MAX_LAYERS < 2) {
+                console.log('down...y solo hay una capa2');
                 page_up.classList.remove('disabled'); //remove
-                layer_down.classList.add('disabled');
-                layer_up.classList.remove('disabled'); //remove
+            }
         }
         //-------------------------------------------------------------------------
 
