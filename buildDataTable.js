@@ -518,15 +518,16 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             }
         }
         else if(page_number === MAX_PAGES) {
-            //console.log('up...estamos en la ULTIMA CAPA y en el extremo derecho');
+            console.log('up...estamos en la ULTIMA CAPA y en el extremo derecho');
             page_up.classList.add('disabled');
             if(MAX_LAYERS < 2) {
-                //console.log('up...y solo hay una capa2');
+                console.log('up...y solo hay una capa2');
                 page_down.classList.remove('disabled'); //remove
             }
             else {
-                //console.log('up...hay más de una capa2');
-                layer_down.classList.add('disabled');
+                console.log('up...hay más de una capa2');
+                layer_down.classList.remove('disabled');
+                layer_up.classList.add('disabled');
             }
         }
         //-------------------------------------------------------------------------//
@@ -584,8 +585,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 page_up.classList.remove('disabled'); //remove
             }
             else {
-                console.log('up...hay más de una capa2');
-                layer_up.classList.add('disabled');
+                console.log('down...hay más de una capa2');
+                layer_up.classList.remove('disabled');
+                layer_down.classList.add('disabled');
+
             }
         }
         //-------------------------------------------------------------------------//
