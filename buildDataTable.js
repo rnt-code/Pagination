@@ -467,7 +467,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                     layer_down.classList.add('disabled');
                 }
                 else {
-                    console.log('up...hay más de una capa');
+                    console.log('up...hay más de una capa1');
                     layer_down.classList.remove('disabled'); //remove
                 }
             }
@@ -478,6 +478,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             if(MAX_LAYERS < 2) {
                 console.log('up...y solo hay una capa2');
                 page_down.classList.remove('disabled'); //remove
+            }
+            else {
+                console.log('up...hay más de una capa2');
+                layer_down.classList.add('disabled');
             }
         }
         //-------------------------------------------------------------------------//
@@ -518,7 +522,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                     layer_up.classList.add('disabled');
                 }
                 else {
-                    console.log('down...hay más de una capa');
+                    console.log('down...hay más de una capa1');
                     layer_up.classList.remove('disabled'); //remove
                 }
             }
@@ -529,6 +533,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             if(MAX_LAYERS < 2) {
                 console.log('down...y solo hay una capa2');
                 page_up.classList.remove('disabled'); //remove
+            }
+            else {
+                console.log('up...hay más de una capa2');
+                layer_up.classList.add('disabled');
             }
         }
         //-------------------------------------------------------------------------//
