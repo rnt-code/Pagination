@@ -450,7 +450,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number++;
         }
 
-        //----UP----Lógica para los medios de page_number y layer_counter---------
+        //----UP----Lógica para los medios de page_number y layer_counter---------//
         if(page_number > 1 && page_number < MAX_PAGES) {
             //console.log('up: estamos en el medio');
             page_down.classList.remove('disabled'); //remove
@@ -480,7 +480,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 page_down.classList.remove('disabled'); //remove
             }
         }
-        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------//
 
         navbuttonlistener();
         paintselectedbutton(page_number);
@@ -501,7 +501,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number--;
         }
         
-        //---DOWN---Lógica para los medios de page_number y layer_counter----------
+        //---DOWN---Lógica para los medios de page_number y layer_counter----------//
         if(page_number > 1 && page_number < MAX_PAGES) {
             //console.log('down: en el medio');
             page_down.classList.remove('disabled'); //remove
@@ -531,7 +531,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 page_up.classList.remove('disabled'); //remove
             }
         }
-        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------//
 
         navbuttonlistener();
         paintselectedbutton(page_number);
