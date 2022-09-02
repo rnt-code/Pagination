@@ -10,7 +10,7 @@ async function getData() {
 }
 
 const data = await getData();
-const number_of_buttons = 3;
+const number_of_buttons = 6;
 const custom_header = ['Id', 'Nombre', 'Apellido', 'Posición', 'Oficina', 'Edad', 'Fecha'];
 
 //Entry point

@@ -8,7 +8,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
     let headers = [];
     let difference = 0;
-    //console.log(data.length);
+
     if(data.length != 0) {
         
         if(custom_headers === undefined) {
@@ -24,8 +24,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             headers = Object.keys(data[0]);
             difference = Math.abs(headers.length - custom_headers.length);
 
-            //console.log(difference);
-
             if(custom_headers.length < headers.length) {
                 for(let i = 0; i < difference; i++) {
                     custom_headers.push('-');
@@ -39,7 +37,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             headers = custom_headers;
         }
     }
-    //console.log('headers: ', headers);
+
     tablecontainer();
 
     let MAX_PAGES = 0;
@@ -128,12 +126,13 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     }
     //console.log('Init: MAX_LAYERS=', MAX_LAYERS)
 
-    //Lógica de habilitar y deshabilitar los botones de paginación
+    //----Lógica de encendido y apagado de botones de navegación-----//
     if(MAX_LAYERS === 1) {
         layer_up.classList.add('disabled');
         layer_down.classList.add('disabled');
         page_down.classList.add('disabled');
-    } else if(MAX_LAYERS > 1) {
+    } 
+    else if(MAX_LAYERS > 1) {
         layer_up.classList.remove('disabled'); //remove
         layer_down.classList.add('disabled');
         page_down.classList.add('disabled');
@@ -141,7 +140,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     if(page_number === 1 && MAX_PAGES === 1) {
         page_up.classList.add('disabled');
     }
-    //---------------------------------------------------------------
+    //---------------------------------------------------------------//
 
     // if(layer_counter === 1 && MAX_LAYERS === 1) {
     //     console.log('Init: Hay una sola capa de botones');
@@ -208,7 +207,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
         //console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
 
-        //Lógica de habilitar y deshabilitar los botones de paginación
+        //----Lógica de encendido y apagado de botones de navegación-----//
         if(MAX_LAYERS === 1) {
             layer_up.classList.add('disabled');
             layer_down.classList.add('disabled');
@@ -221,7 +220,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         if(page_number === 1 && MAX_PAGES === 1) {
             page_up.classList.add('disabled');
         }
-        //---------------------------------------------------------------
+        //---------------------------------------------------------------//
 
         // if(layer_counter === 1 && MAX_LAYERS === 1) {
         //     console.log('Count: Hay una sola capa de botones');
@@ -256,7 +255,8 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number = layer_counter * number_of_buttons;
             
         }
-        //----LAYER DOWN---Lógica para los botones de paginación------------------//
+
+        //---LAYER DOWN---Lógica de encendido y apagado de botones de navegación---//
         if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
             layer_up.classList.remove('disabled')
             layer_down.classList.remove('disabled')
@@ -266,7 +266,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 page_up.classList.remove('disabled');
             }
         } 
-
         if(layer_counter === 1) {
             //console.log('downLayer...estamos en la primera capa');
             layer_down.classList.add('disabled');
@@ -329,7 +328,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number = number_of_buttons * (layer_counter - 1) + 1;
         }
         
-        //-----LAYER UP-----Lógica para los botones de paginación------------------//
+        //---LAYER UP---Lógica de encendido y apagado de botones de navegación-----//
         if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
             //console.log('up: estamos en el medio');
             layer_up.classList.remove('disabled')
@@ -340,7 +339,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 page_up.classList.remove('disabled');
             }
         }
-        
         if(layer_counter === MAX_LAYERS) {
             //console.log('upLayer...estamos en la última capa');
             layer_up.classList.add('disabled');
@@ -364,6 +362,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             }
         }
         //-------------------------------------------------------------------------//
+
         navbuttonlistener();
         paintselectedbutton(page_number);
         rendertable(data, headers);
@@ -377,10 +376,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
         const one_page_data = data.slice(start, end);
         info.innerHTML = `Página ${page_number} de ${MAX_PAGES}. Registros totales: ${records_quantity}`;
-       
-        //Construyo la tabla y muestro los datos
-
-        //console.log(one_page_data);
 
         buildtable(one_page_data, headers);
         listdata(one_page_data, true);
@@ -474,7 +469,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number++;
         }
 
-        //----UP----Lógica para los medios de page_number y layer_counter---------//
+        //----UP----Lógica de encendido y apagado de botones de navegación---------//
         if(page_number > 1 && page_number < MAX_PAGES) {
             //console.log('up: estamos en el medio');
             page_down.classList.remove('disabled'); //remove
@@ -534,7 +529,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             page_number--;
         }
         
-        //---DOWN---Lógica para los medios de page_number y layer_counter----------//
+        //---DOWN---Lógica de encendido y apagado de botones de navegaciónr--------//
         if(page_number > 1 && page_number < MAX_PAGES) {
             //console.log('down: en el medio');
             page_down.classList.remove('disabled'); //remove
