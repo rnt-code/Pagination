@@ -22,11 +22,45 @@ En la image de abajo se puede observar el resultado de la paginación para una b
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
 
-Elpunto de entrada al paginador es la funcion 
+Elpunto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
-
+data, es una array de la la forma;
+```javascript
+data = [
+    {
+      key1: value11,
+      key2: value12,
+      key3: value13,
+       .
+       .
+       .
+      keym: value1m
+    },
+    {
+      key1: value21,
+      key2: value22,
+      key3: value23,
+       .
+       .
+       .
+      keym: value2m
+    },
+    .
+    .
+    .
+    {
+      key1: valuen1,
+      key2: valuen2,
+      key3: valuen3,
+       .
+       .
+       .
+      keym: valuenm
+    }   
+]
+```
 
 
 
