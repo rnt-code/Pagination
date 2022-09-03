@@ -7,7 +7,10 @@ El proyecto al que va destinado este plug-in no posee más de 1000 registros, po
 
 El plug-in no hace consultas SQL, solo recibe los datos pre-procesados como un array de objetos.
 
-El formato del diseño se hizo estéticamente similar al ofrecido por el plug-in de DataTables© (https://datatables.net/), la idea fue desarrollar las funcionalidades básicas que se muestran en su web: Paginación, Búsqueda Instantánea y Ordenación muti columna
+El formato del diseño se hizo estéticamente similar al ofrecido por el plug-in de DataTables© (https://datatables.net/), la idea fue desarrollar las funcionalidades básicas que se muestran en su web: Paginación, Búsqueda Instantánea y Ordenación muti columna.
+
+![imagen](https://user-images.githubusercontent.com/51080618/188278866-4b421521-7c49-42b1-8462-20bb70597556.png)
+
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188278634-9b507515-b5ff-42b1-8331-af2d8f0803cc.png)
 
