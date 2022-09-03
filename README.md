@@ -2,13 +2,13 @@
 
 ### Este plug-in está diseñado para poder paginar datos presentados en una tabla de hasta 12 columnas. Surge de la necesidad de paginar datos de otro proyecto Web-App.
 
-El enfoque de este plug-in es la paginación offset-based sobre datos estáticos, es decir no se consulta la base de datos por cada página que se muestra, se traen todos los datos de una sola vez, es el plug-in que se encarga de paginar sobre los datos ya obtenidos. Es al revés de lo que se hace normalmente, la paginación debería ser hecha a nivel de consulta SQL y enviar solamente los datos de cada página a presentar, es lo óptimo cuando la base de datos posee una gran cantidad de información.
+El enfoque de este plug-in es la paginación offset-based sobre datos estáticos, es decir no se consulta la base de datos por cada página que se muestra, se traen todos los datos de una sola vez, y es el plug-in el que se encarga de paginar sobre los datos ya obtenidos. Es al revés de lo que se hace normalmente, la paginación debería ser hecha a nivel de consulta SQL y enviar solamente los datos de cada página a presentar, lo óptimo cuando la base de datos posee una gran cantidad de información.
 
-El proyecto al que va destinado este plug-in posee una base de datos de no más de 1000 registros, por lo que no representa una carga de procesamiento traer todos los datos de una sola vez. El plug-in recibe los datos disponibles en la base de datos (como un array de objetos) y opera con ellos para la paginación; si hay una actualización (de los datos) hay que hacer un re-fresh de la web para mostrarlos.
+El proyecto al que va destinado este plug-in posee una base de datos de no más de 1000 registros, por lo que no representa una alta carga de procesamiento traer todos los datos de una sola vez. El plug-in recibe los datos disponibles en la base de datos (como un array de objetos) y opera con ellos para la paginación; si hay una actualización (de los datos) hay que hacer un re-fresh de la web para mostrarlos.
 
-Hecha esta aclaración, queda claro que el plug-in no hace consultas SQL, solo recibe los datos pre-procesados como un array de objetos. De igual modo podría modificarse este plug-in para que el paginado sea hecho a nivel SQL, no requiere mucho trabajo llegar a este enfoque.
+Queda claro entonces que el plug-in no hace consultas a nivel SQL, solo recibe los datos pre-procesados como un array de objetos. De igual modo podría modificarse este plug-in para que el paginado sea hecho a nivel SQL, no requiere mucho trabajo llegar a este enfoque.
 
-El formato del diseño se hizo estéticamente similar al ofrecido por el plug-in de DataTables© (https://datatables.net/), la idea fue desarrollar las funcionalidades básicas que se muestran en su web: Paginación, Búsqueda Instantánea y Ordenación muti columna.
+El formato del diseño se hizo estéticamente similar al ofrecido por el plug-in de DataTables© (https://datatables.net/), la idea fue desarrollar las funcionalidades básicas que se muestran en su web: **Paginación**, **Búsqueda instantánea** y **Ordenación muticolumna**.
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188278866-4b421521-7c49-42b1-8462-20bb70597556.png)
 
