@@ -17,9 +17,11 @@ Características básicas del paginador de DataTables©
 ![imagen](https://user-images.githubusercontent.com/51080618/188278634-9b507515-b5ff-42b1-8331-af2d8f0803cc.png)
 
 # Mi paginador
-Mi plug-in de momento solo ofrece el paginado, quedando para más adelante el desarrollo de la búsqueda parameétrica y la ordenación por columnas.
-En la imagen puede observarse el resultado de la paginación para una base de datos de ejemplo. En la parte superior están los controles: a la izquierda: el selector para elegir la cantidad de registros a mostrar por página, a la derecha: los botones de navegación para avance rápido (<<  >>), con ellos se avanza por bloque de páginas, por ej., de 6 en 6. Los botones de avance de página página (<  >); también se pueden vanzar de página a página con las teclas derecha e izquierda del teclado. Y por último, también se puede elegir la página a mostrar haciendo click en el botón corresponiente del grupo de botones mostrados.
-El el medio está la tabla de datos mostrando la página actual, que tendrá la cantidad de registros según se haya seleccionado arriba. En la parte inferior está los datos de la página que se muestra, la cantidad total de páginas y la cantidad total de registros.
+Mi plug-in de momento solo ofrece el paginado básico quedando para más adelante el desarrollo de la búsqueda paramétrica y la ordenación por columnas.
+
+En la imagen puede observarse el resultado de la paginación para una base de datos de ejemplo. En la **parte superior** están los controles: a la izquierda: el selector para elegir la cantidad de registros a mostrar por página, a la derecha: los botones de navegación para avance rápido (<<  >>), con ellos se avanza por bloque de páginas, por ej., de 6 en 6, los botones de avance de página en página (<  >); también se pueden vanzar de página a página con las teclas derecha e izquierda del teclado. Y por último, también se puede elegir la página a mostrar haciendo click en el botón corresponiente del grupo de botones mostrados.
+El la **parte central** está la tabla de datos mostrando la página actual, que tendrá la cantidad de registros según se haya seleccionado arriba. 
+Y en la **parte inferior** están: el número de la página que se muestra, la cantidad total de páginas y la cantidad total de registros.
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
 
