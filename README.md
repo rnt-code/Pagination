@@ -2,7 +2,7 @@
 
 ### Este plug-in está diseñado para poder paginar una tabla de datos de hasta 12 columnas. Surge de la necesidad de paginar los datos presentados en otro proyecto de una app-web.
 
-##### El enfoque de este plug-in es la paginación offset-based sobre datos estáticos. El proyecto al que fue destinado este plug-in posee no más de 1000 registros, por lo que no representa una gran carga de procesamiento, el plug-in recibe los datos disponibles en la base de datos (como un array de objetos) y opera con ellos para la paginación; si hay una actualización (de los datos) hay que hacer un re-fresh de la web para mostrarlos.
+El enfoque de este plug-in es la paginación offset-based sobre datos estáticos. El proyecto al que fue destinado este plug-in posee no más de 1000 registros, por lo que no representa una gran carga de procesamiento, el plug-in recibe los datos disponibles en la base de datos (como un array de objetos) y opera con ellos para la paginación; si hay una actualización (de los datos) hay que hacer un re-fresh de la web para mostrarlos.
 
 El plug-in no hace consultas SQL, solo recibe los datos pre-procesados como un array de objetos, como se verá más adelante.
 
