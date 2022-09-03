@@ -1,4 +1,4 @@
-import { builddatatable } from './buildDataTable.js'
+import { builddatatable } from './pagination_modules/buildDataTable.js'
 
 //Obtención datos a listar
 async function getData() {
@@ -10,8 +10,8 @@ async function getData() {
 }
 
 const data = await getData();
-const number_of_buttons = 6;
+const number_of_buttons = 4;
 const custom_header = ['Id', 'Nombre', 'Apellido', 'Posición', 'Oficina', 'Edad', 'Fecha'];
 
 //Entry point
-builddatatable(data, number_of_buttons, custom_header);
+builddatatable(data, number_of_buttons);

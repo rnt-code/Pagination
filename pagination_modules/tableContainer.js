@@ -22,7 +22,7 @@ function tablecontainer() {
     
     function renderhead() {
         head_controls.innerHTML = `
-            <div class="dataTables_length">
+            <div id="records_length">
                 <label>Mostrando 
                     <select id="count">
                         <option value="5">5</option>
@@ -39,8 +39,8 @@ function tablecontainer() {
             </div>
             <div id="nav-buttons">
             <!--
-            <div class="dataTables_filter">
-                <label class="">Buscar:<input type="search" placeholder=""></label>
+            <div id="search_filter">
+                <label class="">Buscar:<input type="search" placeholder="ingrese parametro" aria-controls="search"></label>
             </div>
             -->
         `

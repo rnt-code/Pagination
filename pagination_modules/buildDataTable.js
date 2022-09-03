@@ -372,9 +372,9 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         const end = start + count;
 
         const one_page_data = data.slice(start, end);
-        info.innerHTML = `Página ${page_number} de ${MAX_PAGES}. Registros totales: ${records_quantity}`;
-
+        
         buildtable(one_page_data, headers);
+        document.getElementById('metrics').innerHTML = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`;
         listdata(one_page_data, true);
     }
     
@@ -387,7 +387,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 event.preventDefault();
                 
                 page_number = parseInt(button.innerText);
-                console.log('pressed button: ', page_number);
 
                 //Lógica de habilitación/deshabilitación de botones de navegación 
                 if(page_number === 1) {

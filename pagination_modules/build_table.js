@@ -13,7 +13,7 @@ function buildtable(one_page_data, headers) {
     }
 
     const tabla = document.createElement("table");
-    tabla.className = 'table table-sm table-hover' //Boostrap classes
+    tabla.className = 'table table-sm table-bordered table-hover table-striped' //Boostrap classes
     tabla.id = 'tdatos'
 
     document.getElementById('datatable').appendChild(tabla);
@@ -22,8 +22,11 @@ function buildtable(one_page_data, headers) {
     thead.id = 'table-head';
     const tbody = document.createElement('tbody');
     const tfoot = document.createElement('tfoot');
+    const caption = document.createElement('caption')
     
     tabla.appendChild(thead);
+    tabla.appendChild(caption);
+    caption.id = 'metrics';
     tabla.appendChild(tbody);
     tabla.appendChild(tfoot);
     

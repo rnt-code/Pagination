@@ -2,10 +2,10 @@
     display: grid;
     grid-template-columns: auto auto;
 }
-#example_length {
+#records_length {
     justify-self: start;
 }
-#example_filter {
+#search_filter {
     justify-self: end;
 }
 #foot-controls {
@@ -38,6 +38,7 @@ a.selected {
 a.pagelink {
     /*outline: 1px solid rgb(221, 221, 221);*/
     /*outline: none;*/
+    border-radius: 4px;
     text-decoration: none;
     display: inline-block;
     width: 39px;
@@ -57,9 +58,8 @@ a.pagelink:hover {
 }
 a.pagelink:active {
     background: rgb(134, 134, 134);
-    /*color: rgb(0, 0, 0);*/
 }
 .disabled {
-    pointer-events:none; /*This makes it not clickable*/
-    opacity:0.3;         /*This grays it out to look disabled*/
+    pointer-events: none; 
+    opacity:0.3;
 }
