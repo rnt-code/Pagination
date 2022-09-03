@@ -26,38 +26,38 @@ Elpunto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
-data, es una array de la la forma;
+data, es una array de objetos de la la forma:
 ```javascript
 data = [
     {
-      key1: value11,
-      key2: value12,
-      key3: value13,
+      key_1: value_11,
+      key_2: value_12,
+      key_3: value_13,
        .
        .
        .
-      keym: value1m
+      key_m: value_1m
     },
     {
-      key1: value21,
-      key2: value22,
-      key3: value23,
+      key_1: value_21,
+      key_2: value_22,
+      key_3: value_23,
        .
        .
        .
-      keym: value2m
+      key_m: value_2m
     },
     .
     .
     .
     {
-      key1: valuen1,
-      key2: valuen2,
-      key3: valuen3,
+      key_1: value_n1,
+      key_2: value_n2,
+      key_3: value_n3,
        .
        .
        .
-      keym: valuenm
+      key_m: value_nm
     }   
 ]
 ```
