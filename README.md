@@ -120,31 +120,31 @@ builddatatable(data):
                      ]
                      El plug-in dibujará una tabla de la forma:
  
-                     |  key1   |  key2   |  key3   | . . . |  keym   |
-                     |---------|---------|---------|-------|---------|
-                     | value11 | value12 | value13 | . . . | value1m |
-                     | value21 | value22 | value23 | . . . | value2m |
-                     |    .    |    .    |    .    |   .   |    .    |
-                     |    .    |    .    |    .    |   .   |    .    |
-                     |    .    |    .    |    .    |   .   |    .    |
-                     | valuen1 | valuen2 | valuen3 | . . . | valuenm |
-                     |---------|---------|---------|-------|---------|
-                     |  key1   |  key2   |  key3   | . . . |  keym   |
+ |  key1   |  key2   |  key3   | . . . |  keym   |
+ |---------|---------|---------|-------|---------|
+ | value11 | value12 | value13 | . . . | value1m |
+ | value21 | value22 | value23 | . . . | value2m |
+ |    .    |    .    |    .    |   .   |    .    |
+ |    .    |    .    |    .    |   .   |    .    |
+ |    .    |    .    |    .    |   .   |    .    |
+ | valuen1 | valuen2 | valuen3 | . . . | valuenm |
+ |---------|---------|---------|-------|---------|
+ |  key1   |  key2   |  key3   | . . . |  keym   |
                      
  
-                     Dibujará 6 botones de navegación, con botones para avanace por página y avance rápido 
-                     cada 6 páginas. La teclas de izq y der del teclado también sirven para el avance por 
-                     página.
-                      
-                     NOTA: Si data no es de la forma descripta, los resultados pueden ser inesperados.
+ Dibujará 6 botones de navegación, con botones para avanace por página y avance rápido 
+ cada 6 páginas. La teclas de izq y der del teclado también sirven para el avance por 
+ página.
+
+ NOTA: Si data no es de la forma descripta, los resultados pueden ser inesperados.
  
 builddatatable(data, number_of_buttons):
                      
-                      number_of_buttons, debería ser cualquier número entero entre 1 y 10. 
-                      Si no se especifica, por defecto, es 6. 
-                      Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
-                      Si es 0, tomará el valor 1.
-                      Si es mayor que 10, tomará el valor 10.
-                      Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
-                      Si es un decimal mayor a 10, tomará el valor 10.
-                      Si es no es un número, tomará el valor por defecto.
+number_of_buttons, debería ser cualquier número entero entre 1 y 10. 
+Si no se especifica, por defecto, es 6. 
+Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
+Si es 0, tomará el valor 1.
+Si es mayor que 10, tomará el valor 10.
+Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
+Si es un decimal mayor a 10, tomará el valor 10.
+Si es no es un número, tomará el valor por defecto.
