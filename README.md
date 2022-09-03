@@ -1,8 +1,10 @@
-# Paginación con javaScipt puro
+# Paginación
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
 
-first approach
+Este plug-in está diseñado para poder paginar una tabla de datos de hasta 12 columnas. Surge de la necesidad de paginar los datos presentados en otro proyecto de una app-web.
+
+
 
 
 builddatatable(): 
