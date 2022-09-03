@@ -1,4 +1,7 @@
-# Pagination
+# Paginación con javaScipt puro
+
+![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
+
 first approach
 
 
