@@ -1,6 +1,6 @@
 # Paginación
 
-### Este plug-in está diseñado para poder paginar datos presentados en una tabla 
+###Plug-in diseñado en javaScript para poder paginar un data-set, y presentarlos en una tabla.
 
 Este plug-in ofrece paginación offset-based sobre un data-set estático, es decir, no hay una consulta a la base de datos por cada página que se muestra, se traen todos los datos (todas las páginas) de una sola vez, y es el plug-in el que se encarga de paginar sobre los datos ya obtenidos. Es al revés de lo que se hace normalmente, la paginación con la estrategia offset debe ser hecha a nivel de consulta SQL, solo se solicitan los datos de la página que se quiere mostrar (datos por partes), esta estrategia es la óptima cuando la base de datos posee una gran cantidad de información.
 
