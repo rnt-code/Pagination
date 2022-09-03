@@ -23,7 +23,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         else {
             headers = Object.keys(data[0]);
             difference = Math.abs(headers.length - custom_headers.length);
-
             if(custom_headers.length < headers.length) {
                 for(let i = 0; i < difference; i++) {
                     custom_headers.push('-');
@@ -250,7 +249,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             layer_counter--;
             renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
-
         if(page_number > number_of_buttons) {
             page_number = layer_counter * number_of_buttons;
             
@@ -258,9 +256,9 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
         //---LAYER DOWN---Lógica de encendido y apagado de botones de navegación---//
         if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
+            
             layer_up.classList.remove('disabled')
             layer_down.classList.remove('disabled')
-
             if(page_number > 1 && page_number < MAX_PAGES) {
                 page_down.classList.remove('disabled');
                 page_up.classList.remove('disabled');
@@ -281,7 +279,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                     page_up.classList.remove('disabled');
                 }
             }
-
             if(page_number === 1) {
                 //console.log('upLayer...y ahora en el extremo izquierdo2');
                 page_down.classList.add('disabled');
@@ -566,7 +563,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                 //console.log('down...hay más de una capa2');
                 layer_up.classList.remove('disabled');
                 layer_down.classList.add('disabled');
-
             }
         }
         //-------------------------------------------------------------------------//

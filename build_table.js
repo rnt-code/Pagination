@@ -3,7 +3,6 @@ function buildtable(one_page_data, headers) {
     const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
     
-
     if(data_length === 0) {
         headers = ['No data found'];
     }
@@ -14,7 +13,7 @@ function buildtable(one_page_data, headers) {
     }
 
     const tabla = document.createElement("table");
-    tabla.className = 'table table-sm table-hover'
+    tabla.className = 'table table-sm table-hover' //Boostrap classes
     tabla.id = 'tdatos'
 
     document.getElementById('datatable').appendChild(tabla);

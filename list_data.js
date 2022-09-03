@@ -10,7 +10,6 @@ function listdata(one_page_data, istoday) {
         /*
         //DESC mode
         for(let j = (one_page_data_length - 1); j >= 0; j--) {
-
             i = headers.length * (one_page_data.length - 1) - headers.length * j;
             for(let k = 0; k < headers.length; k++) {
                 td[i + k].innerHTML = one_page_data[j][headers[k]];
