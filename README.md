@@ -10,12 +10,13 @@ Queda claro entonces que el plug-in no hace consultas a nivel SQL, solo recibe l
 
 El formato del diseño se hizo estéticamente similar al ofrecido por el plug-in de DataTables© (https://datatables.net/), la idea fue desarrollar las funcionalidades básicas que se muestran en su web: **Paginación**, **Búsqueda instantánea** y **Ordenación muticolumna**.
 
+Imagen capturada de la página web de DataTables©
 ![imagen](https://user-images.githubusercontent.com/51080618/188278866-4b421521-7c49-42b1-8462-20bb70597556.png)
 
-
+Características básicas del paginador de DataTables©
 ![imagen](https://user-images.githubusercontent.com/51080618/188278634-9b507515-b5ff-42b1-8331-af2d8f0803cc.png)
 
-
+# Mi paginador
 Mi plug-in de momento solo ofrece el paginado, quedando para más adelante el desarrollo de la búsqueda parameétrica y la ordenación por columnas.
 En la image de abajo se puede observar el resultado de la paginación para una base de datos de ejemplo.
 ![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
