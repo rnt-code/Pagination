@@ -29,7 +29,7 @@ Y en la **parte inferior** están: el número de la página que se muestra, la c
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188276244-87cf15dd-06a3-42ed-9c70-3c1701df96e2.png)
 
-Elpunto de entrada al paginador es la funcion:
+El punto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
