@@ -30,34 +30,34 @@ data, es una array de objetos de la la forma:
 ```javascript
 data = [
     {
-      key_1: value_11,
-      key_2: value_12,
-      key_3: value_13,
+      key_1: 'value_11',
+      key_2: 'value_12',
+      key_3: 'value_13',
        .
        .
        .
-      key_m: value_1m
+      key_m: 'value_1m'
     },
     {
-      key_1: value_21,
-      key_2: value_22,
-      key_3: value_23,
+      key_1: 'value_21',
+      key_2: 'value_22',
+      key_3: 'value_23',
        .
        .
        .
-      key_m: value_2m
+      key_m: 'value_2m'
     },
     .
     .
     .
     {
-      key_1: value_n1,
-      key_2: value_n2,
-      key_3: value_n3,
+      key_1: 'value_n1',
+      key_2: 'value_n2',
+      key_3: 'value_n3',
        .
        .
        .
-      key_m: value_nm
+      key_m: 'value_nm'
     }   
 ]
 ```
