@@ -78,13 +78,13 @@ El plug-in dibujará una tabla de la forma:
  
  |  key<sub>1</sub>   |  key<sub>2</sub>   |  key<sub>3</sub>   |.|.|.|  key<sub>m</sub>   |
  |---------|---------|---------|-|-|-|---------|
- | value11 | value12 | value13 |.|.|.| value1m |
- | value21 | value22 | value23 |.|.|.| value2m |
+ | value<sub>11</sub> | value<sub>12</sub> | value<sub>13</sub> |.|.|.| value<sub>1m</sub> |
+ | value<sub>21</sub> | value<sub>22</sub> | value<sub>23</sub> |.|.|.| value<sub>2m</sub> |
  |    .    |    .    |    .    |.|.|.|    .    |
  |    .    |    .    |    .    |.|.|.|    .    |
  |    .    |    .    |    .    |.|.|.|    .    |
- | valuen1 | valuen2 | valuen3 |.|.|.| valuenm |
- |  **key1**   |  **key2**   |  **key3**   |.|.|.|  **keym**   |
+ | value<sub>n1</sub> | value<sub>n2</sub> | value<sub>n3</sub> |.|.|.| value<sub>nm</sub> |
+ |  **key<sub>1</sub>**   |  **key<sub>2</sub>**   |  **key<sub>3</sub>**   |.|.|.|  **key<sub>m</sub>**   |
 
 `m` es el número de títulos de la cabecera de la tabla, que no debería ser mayor a 12. Podrían obtenerse resultados no esperados si `m` es mayor a 12.
 
