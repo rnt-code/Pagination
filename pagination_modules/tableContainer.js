@@ -1,4 +1,4 @@
-function tablecontainer() {
+function tablecontainer(datalength) {
 
     const item3_el = document.getElementById("item3");
 
@@ -6,6 +6,11 @@ function tablecontainer() {
     head_controls.classList.add("container");
     head_controls.id = 'head-controls';
     item3_el.appendChild(head_controls);
+    head_controls.hidden = false;
+
+    if(datalength === 0 ) {
+        head_controls.hidden = true;
+    }
 
     const table_container = document.createElement('div');
     table_container.classList.add("container");

@@ -37,7 +37,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         }
     }
 
-    tablecontainer();
+    tablecontainer(data.length);
 
     let MAX_PAGES = 0;
     let MAX_LAYERS = 0;
@@ -87,7 +87,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
-        //si lo que ingresa no es un número, toma el valo por defecto
+        //si lo que ingresa no es un número, toma el valor por defecto
         number_of_buttons = 6;
     }
     else {
@@ -112,11 +112,12 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         to = number_of_buttons;
     }
     //console.log('number of buttons: ', number_of_buttons);
+    // si from = to = 0, no dibuja los botones
     renderbuttons(from, to);
     
     //console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
 
-    //Calculo cuantás capas de botones habrá
+    //Calculo cuantas capas de botones habrá
     if(Number.isInteger(MAX_PAGES / number_of_buttons)) {
         MAX_LAYERS = MAX_PAGES / number_of_buttons;
     }
@@ -126,6 +127,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     //console.log('Init: MAX_LAYERS=', MAX_LAYERS)
 
     //----Lógica de encendido y apagado de botones de navegación-----//
+    //Si MAX_LAYERS = 0 no se ejecuta esta parte
     if(MAX_LAYERS === 1) {
         layer_up.classList.add('disabled');
         layer_down.classList.add('disabled');
@@ -146,7 +148,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     // }
 
     navbuttonlistener();
-    paintselectedbutton(page_number);
+    paintselectedbutton(page_number); //si page_number = 0, oculta los botones
 
     count_el.addEventListener("change", function(event) {
         event.preventDefault();
@@ -390,13 +392,13 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
 
                 //Lógica de habilitación/deshabilitación de botones de navegación 
                 if(page_number === 1) {
-                    //extremo inferior, estamos en el layer_couenter=1
+                    //extremo inferior, estamos en el layer_counter=1
                     page_down.classList.add('disabled');
                     page_up.classList.remove('disabled');
                     layer_down.classList.add('disabled');
                 } 
                 else if(page_number === MAX_PAGES) {
-                    //extremo superior, estamos en layer_coeunter=MAX_LAYERS
+                    //extremo superior, estamos en layer_counter=MAX_LAYERS
                     page_up.classList.add('disabled');
                     page_down.classList.remove('disabled');
                     layer_up.classList.add('disabled');
@@ -441,6 +443,7 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             button.style.color = 'black';
         }
         else {
+            //si page = 0, oculta nav-buttons
             document.getElementById('nav-buttons').hidden = true;
         }
     }
