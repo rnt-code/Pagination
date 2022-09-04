@@ -117,4 +117,4 @@ Si es un decimal mayor a 10, tomará el valor 10.
 Si es no es un número, tomará el valor por defecto.
 
 `custom_header`
-Arriba se especificó el formato para los títulos, si este no se especibica la funcion `builddatatable()` intentará obtenerlos de las cabeceras por defecto de `data`. Las cabeceras por defecto son las claves de los objetos.
+Arriba se especificó el formato para los títulos, si este no se especifica la funcion `builddatatable()` intentará obtenerlos de las cabeceras por defecto de `data`. Las cabeceras por defecto son las claves de los objetos.
