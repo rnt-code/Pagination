@@ -92,7 +92,7 @@ El plug-in dibujará una tabla de la forma:
 
 NOTA: Desde el enfoque matricial del álgebra, la tabla sería una matriz de `n x m` (table<sub>n x m</sub>), donde `n` son las filas y `m` las columnas.
 
-##Posibles valores de los parámetros
+## Posibles valores de los parámetros
 
 `data`
 Arriba ya se especificó el formato para del data-set.
