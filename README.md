@@ -68,6 +68,17 @@ data = [
     }   
 ]
 ```
+`number_of_buttons` debebiera ser entero entre 1 y 10.
+`custom_header` es un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
+
+, si no se especifica, por defecto, será 6. 
+
+Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
+Si es 0, tomará el valor 1.
+Si es mayor que 10, tomará el valor 10.
+Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
+Si es un decimal mayor a 10, tomará el valor 10.
+Si es no es un número, tomará el valor por defecto.
 Si no le paso el data-set a la función `builddatatable()`, arrojará:
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188292340-f026cba8-7a4c-4432-a8aa-3b2060f2b4f7.png)
@@ -96,11 +107,4 @@ El plug-in dibujará una tabla de la forma:
  
 builddatatable(data, number_of_buttons):
                      
-number_of_buttons, debería ser cualquier número entero entre 1 y 10. 
-Si no se especifica, por defecto, es 6. 
-Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
-Si es 0, tomará el valor 1.
-Si es mayor que 10, tomará el valor 10.
-Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
-Si es un decimal mayor a 10, tomará el valor 10.
-Si es no es un número, tomará el valor por defecto.
+
