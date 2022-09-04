@@ -69,6 +69,7 @@ data = [
 ]
 ```
 `number_of_buttons` debebiera ser entero entre 1 y 10.
+
 `custom_header` es un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
 
 , si no se especifica, por defecto, será 6. 
