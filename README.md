@@ -69,58 +69,14 @@ data = [
 ]
 ```
 Si no le paso el data-set a la función ```builddatatable()```, arrojará:
+
 ![imagen](https://user-images.githubusercontent.com/51080618/188292340-f026cba8-7a4c-4432-a8aa-3b2060f2b4f7.png)
 
+No habrá botones de navegación ni el selector de registros.
 
+Igual efecto tendrá si le paso un array vacío: ```builddatatable([])``` o ```builddatatable([], 0)```
 
-builddatatable(): 
-                     Arrojará 'No data found', 
-                     Se ocultará el contendor de botones, 
-                     Debería ocultarse el selector de registros a listar
-                     También muestrará 'Página 0 de 0. Registros totales: 0'.
-
-builddatatable([]): 
-                     Idem al anterior.
-
-builddatatable([],0):
-                     Idem al anterior.
-
-builddatatable(data):
-                     Si data = [], arrojará un resultado idem al anterior.
-                     Si data no es array vacío, debería ser un array de (objetos) json de la forma siguiente: 
-                     [
-                          {
-                              'key1': value11,
-                              'key2': value12,
-                              'key3': value13,
-                               .
-                               .
-                               .
-                              'keym': value1m
-                          },
-                          {
-                              'key1': value21,
-                              'key2': value22,
-                              'key3': value23,
-                               .
-                               .
-                               .
-                              'keym': value2m
-                          },
-                          .
-                          .
-                          .
-                          {
-                              'key1': valuen1,
-                              'key2': valuen2,
-                              'key3': valuen3,
-                               .
-                               .
-                               .
-                              'keym': valuenm
-                          }   
-                     ]
-                     El plug-in dibujará una tabla de la forma:
+El plug-in dibujará una tabla de la forma:
  
  |  key1   |  key2   |  key3   | . . . |  keym   |
  |---------|---------|---------|-------|---------|
@@ -133,7 +89,6 @@ builddatatable(data):
  |---------|---------|---------|-------|---------|
  |  key1   |  key2   |  key3   | . . . |  keym   |
                      
- 
  Dibujará 6 botones de navegación, con botones para avanace por página y avance rápido 
  cada 6 páginas. La teclas de izq y der del teclado también sirven para el avance por 
  página.
