@@ -4,7 +4,6 @@ import { builddatatable } from './pagination_modules/buildDataTable.js'
 async function getData() {
 
     const response = await fetch(`./getData.php`);
-    //const response = await fetch(`./getDataToList.php?idqry=2007grl-l&inidate=2022-07-20&enddate=2022-07-20&turno=mañana&linesd=16`);
     const data = await response.json();
     return data;
 }
@@ -16,4 +15,4 @@ const custom_header = ['Id', 'Nombre', 'Apellido', 'Posición', 'Oficina', 'Edad
 console.log(data);
 
 //Entry point
-builddatatable();
+builddatatable(data);
