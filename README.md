@@ -37,7 +37,7 @@ builddatatables(data, [[number_of_buttons], [custom_header]]);
 ```javascript
 data = [
     {
-      key 1: 'value 11',
+      key 1: 'value<sub>11<sub>',
       key 2: 'value 12',
       key 3: 'value 13',
        .
