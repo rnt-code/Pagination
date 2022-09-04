@@ -37,40 +37,40 @@ builddatatables(data, [[number_of_buttons], [custom_header]]);
 ```javascript
 data = [
     {
-      key_1: 'value_11',
-      key_2: 'value_12',
-      key_3: 'value_13',
+      key 1: 'value 11',
+      key 2: 'value 12',
+      key 3: 'value 13',
        .
        .
        .
-      key_m: 'value_1m'
+      key m: 'value 1m'
     },
     {
-      key_1: 'value_21',
-      key_2: 'value_22',
-      key_3: 'value_23',
+      key 1: 'value 21',
+      key 2: 'value 22',
+      key 3: 'value 23',
        .
        .
        .
-      key_m: 'value_2m'
+      key m: 'value 2m'
     },
     .
     .
     .
     {
-      key_1: 'value_n1',
-      key_2: 'value_n2',
-      key_3: 'value_n3',
+      key 1: 'value n1',
+      key 2: 'value n2',
+      key 3: 'value n3',
        .
        .
        .
-      key_m: 'value_nm'
+      key m: 'value nm'
     }   
 ]
 ```
 `number_of_buttons` debería ser entero entre 1 y 10.
 
-`custom_header` debería ser un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
+`custom_header` debería ser un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... , 'titlem']`.
 
 NOTA: Una vez especificado `data`, `number_of_buttons` y `custom_header` son opcionales.
 
@@ -85,6 +85,14 @@ El plug-in dibujará una tabla de la forma:
  |    .    |    .    |    .    |.|.|.|    .    |
  | valuen1 | valuen2 | valuen3 |.|.|.| valuenm |
  |  **key1**   |  **key2**   |  **key3**   |.|.|.|  **keym**   |
+
+`m` es el número de títulos de la cabecera de la tabla, que no debería ser mayor a 12. Podrían obtenerse resultados no esperados si `m` es mayor a 12.
+
+`n` es la cantidad de registros a listar por página. Normalmente este valor se elige con el selector, y está limitado a unos cuantos valores por defecto: 10, 15, 20, 50, 100, 500. El listado por defecto tiene una vlaor de `n = 10`.
+
+NOTA: Desde el enfoque matricial del álgebra, la tabla sería una matriz de `n x m`, donde `n` son las filas y `m` las columnas.
+
+
 
 Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
 Si es 0, tomará el valor 1.
