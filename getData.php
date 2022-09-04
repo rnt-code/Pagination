@@ -1,5 +1,5 @@
 <?php 
-    include('connect_db copy.php');
+    include('connect_db.php');
 
     $query = "SELECT * FROM employees_73_12col";
     $result = mysqli_query($connection, $query);
