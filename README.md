@@ -33,7 +33,7 @@ El punto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
-data es el data-set, y es una array de objetos de la la forma:
+```data``` es el data-set, y es una array de objetos de la la forma:
 ```javascript
 data = [
     {
