@@ -13,6 +13,7 @@ function tablecontainer(datalength) {
     }
 
     const table_container = document.createElement('div');
+    table_container.style = 'overflow-x:auto';
     table_container.classList.add("container");
     table_container.id = 'datatable';
     item3_el.appendChild(table_container);

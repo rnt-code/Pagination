@@ -1,6 +1,15 @@
+/* #item3 {
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+} */
 #head-controls {
+    width: 70%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: auto auto;
+    
 }
 #records_length {
     justify-self: start;
@@ -20,6 +29,33 @@
 }
 tfoot {
     font-weight: bold;
+}
+
+/*datatable*/
+#tdatos {
+    /* margin:0 auto; */
+    width: 75%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* #tdatos, th, td {
+    border: 1px solid;
+} */
+#tdatos {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    border-bottom: 1px rgb(209, 209, 209) solid;
+}
+tr:hover {
+    background-color: rgb(212, 255, 209);
+}
+tr:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+}
+#metrics {
+    text-align:left;
+    caption-side: bottom;
 }
 
 /*Botones de avance y retroceso*/

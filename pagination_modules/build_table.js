@@ -24,9 +24,9 @@ function buildtable(one_page_data, headers) {
     const tfoot = document.createElement('tfoot');
     const caption = document.createElement('caption')
     
-    tabla.appendChild(thead);
     tabla.appendChild(caption);
     caption.id = 'metrics';
+    tabla.appendChild(thead);
     tabla.appendChild(tbody);
     tabla.appendChild(tfoot);
     

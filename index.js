@@ -10,9 +10,9 @@ async function getData() {
 
 const data = await getData();
 const number_of_buttons = 4;
-const custom_header = ['Id', 'Nombre', 'Apellido', 'Posición', 'Oficina', 'Edad', 'Fecha'];
+const custom_header = ['Id', 'Nombre', 'Apellido', 'Dirección', 'Ciudad', 'Teléfono', 'e-mail','Compañia', 'Posición', 'Oficina', 'Edad', 'Fecha inicio'];
 
-console.log(data);
+//console.log(data);
 
 //Entry point
-builddatatable(data);
+builddatatable(data, 6, custom_header);
