@@ -37,7 +37,7 @@ builddatatables(data, [[number_of_buttons], [custom_header]]);
 ```javascript
 data = [
     {
-      key 1: 'value<sub>11<sub>',
+      key 1: 'value 11',
       key 2: 'value 12',
       key 3: 'value 13',
        .
@@ -90,7 +90,7 @@ El plug-in dibujará una tabla de la forma:
 
 `n` es la cantidad de registros a listar por página. Normalmente este valor se elige con el selector, y está limitado a unos cuantos valores por defecto: 10, 15, 20, 50, 100, 500. El listado por defecto tiene una valor de `n = 10`.
 
-NOTA: Desde el enfoque matricial del álgebra, la tabla sería una matriz de `n x m`, donde `n` son las filas y `m` las columnas.
+NOTA: Desde el enfoque matricial del álgebra, la tabla sería una matriz de `n x m` (Table<sub>n<sub>x</sub>m</sub>), donde `n` son las filas y `m` las columnas.
 
 
 
