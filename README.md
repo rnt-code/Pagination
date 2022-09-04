@@ -33,7 +33,7 @@ El punto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
-```data``` es el data-set, y es una array de objetos de la la forma:
+`data` es el data-set, y es una array de objetos de la la forma:
 ```javascript
 data = [
     {
@@ -68,13 +68,13 @@ data = [
     }   
 ]
 ```
-Si no le paso el data-set a la función ```builddatatable()```, arrojará:
+Si no le paso el data-set a la función `builddatatable()`, arrojará:
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188292340-f026cba8-7a4c-4432-a8aa-3b2060f2b4f7.png)
 
 No habrá botones de navegación ni el selector de registros.
 
-Igual efecto tendrá si le paso un array vacío: ```builddatatable([])``` o ```builddatatable([], 0)```
+Igual efecto tendrá si le paso un array vacío: `builddatatable([])` o `builddatatable([], 0)`
 
 El plug-in dibujará una tabla de la forma:
  
