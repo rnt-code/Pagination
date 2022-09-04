@@ -33,7 +33,7 @@ El punto de entrada al paginador es la funcion:
 ```javascript 
 builddatatables(data, number_of_buttons, custom_header);
 ```
-data es el data-set, y es una array de objetos de la la forma:
+`data` es el data-set, y es una array de objetos de la la forma:
 ```javascript
 data = [
     {
@@ -68,13 +68,25 @@ data = [
     }   
 ]
 ```
-Si no le paso el data-set a la función ```builddatatable()```, arrojará:
+`number_of_buttons` debebiera ser entero entre 1 y 10.
+
+`custom_header` es un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
+
+, si no se especifica, por defecto, será 6. 
+
+Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
+Si es 0, tomará el valor 1.
+Si es mayor que 10, tomará el valor 10.
+Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
+Si es un decimal mayor a 10, tomará el valor 10.
+Si es no es un número, tomará el valor por defecto.
+Si no le paso el data-set a la función `builddatatable()`, arrojará:
 
 ![imagen](https://user-images.githubusercontent.com/51080618/188292340-f026cba8-7a4c-4432-a8aa-3b2060f2b4f7.png)
 
 No habrá botones de navegación ni el selector de registros.
 
-Igual efecto tendrá si le paso un array vacío: ```builddatatable([])``` o ```builddatatable([], 0)```
+Igual efecto tendrá si le paso un array vacío: `builddatatable([])` o `builddatatable([], 0)`
 
 El plug-in dibujará una tabla de la forma:
  
@@ -96,11 +108,4 @@ El plug-in dibujará una tabla de la forma:
  
 builddatatable(data, number_of_buttons):
                      
-number_of_buttons, debería ser cualquier número entero entre 1 y 10. 
-Si no se especifica, por defecto, es 6. 
-Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
-Si es 0, tomará el valor 1.
-Si es mayor que 10, tomará el valor 10.
-Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
-Si es un decimal mayor a 10, tomará el valor 10.
-Si es no es un número, tomará el valor por defecto.
+
