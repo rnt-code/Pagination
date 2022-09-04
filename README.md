@@ -31,7 +31,7 @@ Y en la **parte inferior** están: el número de la página que se muestra, la c
 
 El punto de entrada al paginador es la funcion:
 ```javascript 
-builddatatables(data, number_of_buttons, custom_header);
+builddatatables(data, [[number_of_buttons], [custom_header]]);
 ```
 `data` es el data-set, y es una array de objetos de la la forma:
 ```javascript
@@ -68,11 +68,11 @@ data = [
     }   
 ]
 ```
-`number_of_buttons` debebiera ser entero entre 1 y 10.
+`number_of_buttons` debería ser entero entre 1 y 10.
 
-`custom_header` es un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
+`custom_header` debería ser un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
 
-, si no se especifica, por defecto, será 6. 
+NOTA: Una vez especificado `data`, `number_of_buttons` y `custom_header` son opcionales. 
 
 Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
 Si es 0, tomará el valor 1.
