@@ -86,8 +86,7 @@ El plug-in dibujará una tabla de la forma:
  |    .    |    .    |    .    |   .   |    .    |
  |    .    |    .    |    .    |   .   |    .    |
  | valuen1 | valuen2 | valuen3 | . . . | valuenm |
- |---------|---------|---------|-------|---------|
- |  key1   |  key2   |  key3   | . . . |  keym   |
+ |  **key1**   |  **key2**   |  **key3**   | . . . |  **keym**   |
                      
  Dibujará 6 botones de navegación, con botones para avanace por página y avance rápido 
  cada 6 páginas. La teclas de izq y der del teclado también sirven para el avance por 
