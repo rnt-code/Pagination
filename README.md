@@ -72,7 +72,19 @@ data = [
 
 `custom_header` debería ser un array con los títulos de la cabecera, tendrá la forma: `['title1', 'title2', ... 'title12']`.
 
-NOTA: Una vez especificado `data`, `number_of_buttons` y `custom_header` son opcionales. 
+NOTA: Una vez especificado `data`, `number_of_buttons` y `custom_header` son opcionales.
+
+El plug-in dibujará una tabla de la forma:
+ 
+ |  key1   |  key2   |  key3   |.|.|.|  keym   |
+ |---------|---------|---------|-|-|-|---------|
+ | value11 | value12 | value13 |.|.|.| value1m |
+ | value21 | value22 | value23 |.|.|.| value2m |
+ |    .    |    .    |    .    |.|.|.|    .    |
+ |    .    |    .    |    .    |.|.|.|    .    |
+ |    .    |    .    |    .    |.|.|.|    .    |
+ | valuen1 | valuen2 | valuen3 |.|.|.| valuenm |
+ |  **key1**   |  **key2**   |  **key3**   |.|.|.|  **keym**   |
 
 Si es un número negativo entre -10 y -1, tomará el valor del entero positivo correspondiente.
 Si es 0, tomará el valor 1.
@@ -88,17 +100,7 @@ No habrá botones de navegación ni el selector de registros.
 
 Igual efecto tendrá si le paso un array vacío: `builddatatable([])` o `builddatatable([], 0)`
 
-El plug-in dibujará una tabla de la forma:
- 
- |  key1   |  key2   |  key3   |.|.|.|  keym   |
- |---------|---------|---------|-|-|-|---------|
- | value11 | value12 | value13 |.|.|.| value1m |
- | value21 | value22 | value23 |.|.|.| value2m |
- |    .    |    .    |    .    |.|.|.|    .    |
- |    .    |    .    |    .    |.|.|.|    .    |
- |    .    |    .    |    .    |.|.|.|    .    |
- | valuen1 | valuen2 | valuen3 |.|.|.| valuenm |
- |  **key1**   |  **key2**   |  **key3**   |.|.|.|  **keym**   |
+
                      
  Dibujará 6 botones de navegación, con botones para avanace por página y avance rápido 
  cada 6 páginas. La teclas de izq y der del teclado también sirven para el avance por 
