@@ -68,6 +68,8 @@ data = [
     }   
 ]
 ```
+Si no le paso el data-set a la función ```builddatatable()```, arrojará:
+![imagen](https://user-images.githubusercontent.com/51080618/188292340-f026cba8-7a4c-4432-a8aa-3b2060f2b4f7.png)
 
 
 
