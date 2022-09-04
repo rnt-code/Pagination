@@ -91,7 +91,7 @@ Igual efecto tendrá si le paso un array vacío: `builddatatable([])` o `buildda
 El plug-in dibujará una tabla de la forma:
  
  |  key1   |  key2   |  key3   |.|.|.|  keym   |
- |---------|---------|---------|-----|---------|
+ |---------|---------|---------|-|-|-|---------|
  | value11 | value12 | value13 |.|.|.| value1m |
  | value21 | value22 | value23 |.|.|.| value2m |
  |    .    |    .    |    .    |.|.|.|    .    |
