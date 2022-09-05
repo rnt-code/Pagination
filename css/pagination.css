@@ -12,6 +12,8 @@
 }
 #records_length {
     justify-self: start;
+    display: flex;
+    align-items: center
 }
 #search_filter {
     justify-self: end;
@@ -39,9 +41,6 @@ tfoot {
     width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* #tdatos, th, td {
-    border: 1px solid;
-} */
 #tdatos {
     border-collapse: collapse;
 }
