@@ -1,66 +1,35 @@
+/*contenedor principal*/
 #item3 {
     display: flex;
     flex-direction: column;
     grid-template-rows: auto auto auto;
     align-items: center;
 }
+
+/*Contenedor superior, class="container"*/
 #head-controls {
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: auto auto;
 }
-#records_length {
+
+
+/*-Elementos de 2º nivel dentro de head-controls-*/
+#records-length {
     justify-self: start;
     display: flex;
     align-items: center
 }
-#search_filter {
-    justify-self: end;
-}
-#foot-controls {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-#info {
-    justify-self: start;
-}
 #nav-buttons {
     justify-self: end;
 }
-tfoot {
-    font-weight: bold;
+/*-Elementos de 3º nivel dentro de records-length-*/
+#count {
+    font-size: 16px;  /*el select*/
 }
-
-/*datatable*/
-#datatable {
-    width: 70%;
-}
-#tdatos {
-    /* margin:0 auto; */
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-#tdatos {
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    border-bottom: 1px rgb(209, 209, 209) solid;
-}
-tr:hover {
-    background-color: rgb(253, 255, 130);
-}
-tr:nth-child(even) {
-    background-color: rgb(238, 238, 238);
-}
-#metrics {
-    text-align:left;
-    caption-side: bottom;
-}
-
-/*Botones de avance y retroceso*/
-ul.pagination-keys {
+/*-Elementos de 3º nivel dentro de nav-buttons-*/
+ul.pagination-keys {  /*Botones de avance y retroceso*/
     padding: 0;
     width: 100%;
 }
@@ -100,7 +69,60 @@ a.pagelink:active {
     pointer-events: none; 
     opacity:0.3;
 }
+/*-----------------------------------*/
+
+
+/*Contenedor medio, class="container"*/
+#datatable {
+    width: 70%;
+}
+
+/*-Elementos de 2º nivel dentro de datatable-*/
+#tdatos {
+    /* margin:0 auto; */
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#tdatos {
+    border-collapse: collapse;
+}
+/*-Elementos de 4º nivel dentro de datatable-*/
+th, td {
+    padding: 5px;
+    border-bottom: 1px rgb(209, 209, 209) solid;
+}
+tr:hover {
+    background-color: rgb(253, 255, 130);
+}
+tr:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+}
+#metrics {
+    text-align:left;
+    caption-side: bottom;
+}
+/*-----------------------------------*/
+
+/*Contenedor inferior, class="container"*/
+#foot-controls {
+    display: grid;
+    grid-template-columns: auto auto;
+}
 #foot-controls {
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+/*-Elementos de 2º nivel dentro de foot-controls-*/
+#info {
+    justify-self: start;
+}
+/*-----------------------------------*/
+
+/* no se esta usando este elemento por ahora
+#search_filter {
+    justify-self: end;
+tfoot {
+    font-weight: bold;
+}
+
+}*/

@@ -13,7 +13,7 @@ function buildtable(one_page_data, headers) {
     }
 
     const tabla = document.createElement("table");
-    tabla.className = 'table table-sm table-bordered table-hover table-striped' //Boostrap classes
+    //tabla.className = 'table table-sm table-bordered table-hover table-striped' //Boostrap classes
     tabla.id = 'tdatos'
 
     document.getElementById('datatable').appendChild(tabla);

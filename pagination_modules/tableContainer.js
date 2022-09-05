@@ -3,7 +3,7 @@ function tablecontainer(datalength) {
     const item3_el = document.getElementById("item3");
 
     const head_controls = document.createElement('div');
-    head_controls.classList.add("container");
+    head_controls.classList.add("container"); //Bootstrap class
     head_controls.id = 'head-controls';
     item3_el.appendChild(head_controls);
     head_controls.hidden = false;
@@ -14,12 +14,12 @@ function tablecontainer(datalength) {
 
     const table_container = document.createElement('div');
     table_container.style = 'overflow-x:auto';
-    table_container.classList.add("container");
+    table_container.classList.add("container"); //Bootstrap class
     table_container.id = 'datatable';
     item3_el.appendChild(table_container);
 
     const foot_controls = document.createElement('div');
-    foot_controls.classList.add("container");
+    foot_controls.classList.add("container"); //Bootstrap class
     foot_controls.id = 'foot-controls';
     item3_el.appendChild(foot_controls);
 
@@ -28,7 +28,7 @@ function tablecontainer(datalength) {
     
     function renderhead() {
         head_controls.innerHTML = `
-            <div id="records_length">
+            <div id="records-length">
                 <label>Mostrando 
                     <select id="count">
                         <option value="5">5</option>
