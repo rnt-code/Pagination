@@ -87,14 +87,14 @@ a.pagelink:active {
     border-collapse: collapse;
 }
 /*-Elementos de 4º nivel dentro de datatable-*/
-th, td {
+#tr-headers > th, #tr-data > td {
     padding: 5px;
     border-bottom: 1px rgb(209, 209, 209) solid;
 }
-tr:hover {
+#tr-data:hover {
     background-color: rgb(253, 255, 130);
 }
-tr:nth-child(even) {
+#tr-data:nth-child(odd) {
     background-color: rgb(238, 238, 238);
 }
 #metrics {

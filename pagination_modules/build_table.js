@@ -21,7 +21,9 @@ function buildtable(one_page_data, headers) {
     const thead = document.createElement('thead');
     thead.id = 'table-head';
     const tbody = document.createElement('tbody');
+    tbody.id = 'table-body'
     const tfoot = document.createElement('tfoot');
+    tfoot.id = 'table-foot'
     const caption = document.createElement('caption')
     
     tabla.appendChild(caption);
@@ -30,28 +32,32 @@ function buildtable(one_page_data, headers) {
     tabla.appendChild(tbody);
     tabla.appendChild(tfoot);
     
+    //table header
     const rowh = document.createElement('tr');
-
-    let th_names = '';
+    rowh.id = 'tr-headers'
+    let th_titles = '';
     for(let i = 0; i < headers.length; i++){
-        th_names = th_names + `<th>${headers[i]}</th>`
+        th_titles = th_titles + `<th>${headers[i]}</th>`
     }
-    rowh.innerHTML = th_names;
+    rowh.innerHTML = th_titles;
     thead.appendChild(rowh)
     
+    //table body
     if(data_length === 0) {
-        
-        const row1 = document.createElement('tr');
+        //data = no data
+        const rowd1 = document.createElement('tr');
+        rowd1.id = 'tr-data'
         let td_empty = '';
         for(let i = 0; i < headers.length; i++){
-            td_empty = td_empty + `<td></td>`
+            td_empty = td_empty + `<td class="tdata"></td>`
         }
 
-        row1.innerHTML = td_empty;
-        tbody.appendChild(row1)
+        rowd1.innerHTML = td_empty;
+        tbody.appendChild(rowd1)
 
-        const row2 = document.createElement('tr')
-        row2.innerHTML += `
+        const rowd2 = document.createElement('tr');
+        rowd2.id = 'tr-data'
+        rowd2.innerHTML += `
                         <td 
                             colspan="9" 
                             style="
@@ -62,22 +68,26 @@ function buildtable(one_page_data, headers) {
                             No se encontraron datos
                         </td>
                         `;
-        tbody.appendChild(row2)
+        tbody.appendChild(rowd2)
     }
-    else {   
+    else {
+        //full data 
         for(let i = 0; i < data_length; i++) {  
-            const row = document.createElement('tr');
+            const rowd = document.createElement('tr');
+            rowd.id = 'tr-data'
             let td_data = '';
             for(let i = 0; i < headers.length; i++){
                 td_data = td_data + `<td></td>`
             }
-            row.innerHTML = td_data;
-            tbody.appendChild(row)      
+            rowd.innerHTML = td_data;
+            tbody.appendChild(rowd)      
         }; 
     }
     
+    //table-foot
     const rowf = document.createElement('tr')
-    rowf.innerHTML = th_names;
+    rowf.id = 'tr-foot'
+    rowf.innerHTML = th_titles;
     tfoot.appendChild(rowf)
 }
 
