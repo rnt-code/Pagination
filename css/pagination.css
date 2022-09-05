@@ -1,15 +1,14 @@
-/* #item3 {
+#item3 {
     display: flex;
     flex-direction: column;
     grid-template-rows: auto auto auto;
-    justify-items: center;
-} */
+    align-items: center;
+}
 #head-controls {
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: auto auto;
-    
 }
 #records_length {
     justify-self: start;
@@ -32,9 +31,12 @@ tfoot {
 }
 
 /*datatable*/
+#datatable {
+    width: 70%;
+}
 #tdatos {
     /* margin:0 auto; */
-    width: 75%;
+    width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* #tdatos, th, td {
@@ -48,7 +50,7 @@ th, td {
     border-bottom: 1px rgb(209, 209, 209) solid;
 }
 tr:hover {
-    background-color: rgb(212, 255, 209);
+    background-color: rgb(253, 255, 130);
 }
 tr:nth-child(even) {
     background-color: rgb(238, 238, 238);
@@ -98,4 +100,8 @@ a.pagelink:active {
 .disabled {
     pointer-events: none; 
     opacity:0.3;
+}
+#foot-controls {
+    width: 70%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
