@@ -2,6 +2,13 @@ function tablecontainer(datalength) {
 
     const item3_el = document.getElementById("item3");
 
+    //borro lo que haya en item3
+    if(item3_el.hasChildNodes()) {
+        while (item3_el.firstChild) {
+            item3_el.removeChild(item3_el.firstChild);
+        }
+    }
+
     const head_controls = document.createElement('div');
     head_controls.classList.add("container"); //Bootstrap class
     head_controls.id = 'head-controls';
@@ -31,8 +38,8 @@ function tablecontainer(datalength) {
             <div id="records-length">
                 <label>Mostrando 
                     <select id="count">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="30">30</option>
                         <option value="50">50</option>

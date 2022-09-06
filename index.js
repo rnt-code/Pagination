@@ -8,11 +8,19 @@ async function getData() {
     return data;
 }
 
-const data = await getData();
-const number_of_buttons = 6;
-const custom_header = ['Id', 'Nombre', 'Apellido', 'Dirección', 'Ciudad', 'Teléfono', 'e-mail','Compañia', 'Posición', 'Oficina', 'Edad', 'Fecha inicio'];
+const refresh_button = document.getElementById('refresh-button');
 
-//console.log(data);
+refresh_button.addEventListener('click', async function(event) {
+    event.preventDefault();
 
-//Entry point
-builddatatable(data, number_of_buttons, custom_header);
+    const data = await getData();
+    const number_of_buttons = 6;
+    const custom_header = ['Id', 'Nombre', 'Apellido', 'Dirección', 'Ciudad', 'Teléfono', 'e-mail','Compañia', 'Posición', 'Oficina', 'Edad', 'Fecha inicio'];
+
+    //console.log(data);
+
+    //Entry point
+    builddatatable(data, number_of_buttons, custom_header);
+
+})
+
