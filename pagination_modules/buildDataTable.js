@@ -404,18 +404,24 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
                     layer_up.classList.add('disabled');
                 } 
                 else {
-                    //en el medio
-                    if(layer_counter === 1) {
-                        layer_up.classList.remove('disabled');
-                        layer_down.classList.add('disabled');
+                    if(MAX_LAYERS > 2) {
+                        //hay más de una capa
+                        if(layer_counter === 1) {
+                            layer_up.classList.remove('disabled');
+                            layer_down.classList.add('disabled');
+                        }
+                        if(layer_counter === MAX_LAYERS) {
+                            layer_down.classList.remove('disabled');
+                            layer_up.classList.add('disabled');
+                        }
                     }
-                    if(layer_counter === MAX_LAYERS) {
-                        layer_down.classList.remove('disabled');
+                    else {
+                        //hay una capa
+                        layer_down.classList.add('disabled');
                         layer_up.classList.add('disabled');
                     }
                     page_down.classList.remove('disabled');
                     page_up.classList.remove('disabled');
-                    
                 }
                 //---------------------------------------------------------------
 
