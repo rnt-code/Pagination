@@ -1,4 +1,3 @@
-bootstrap/
-icons/
+/bootstrap
+/icons
 connect_db.php
-getData.php
