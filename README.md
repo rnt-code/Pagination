@@ -86,7 +86,7 @@ El plug-in dibujará una tabla de la forma:
  | value<sub>n1</sub> | value<sub>n2</sub> | value<sub>n3</sub> |.|.|.| value<sub>nm</sub> |
  |  **key<sub>1</sub>**   |  **key<sub>2</sub>**   |  **key<sub>3</sub>**   |.|.|.|  **key<sub>m</sub>**   |
 
-`m` es el número de títulos de la cabecera de la tabla, que no debería ser mayor a 12. Podrían obtenerse resultados no esperados si `m` es mayor a 12.
+`m` es el número de títulos de la cabecera de la tabla, que no debería ser mayor a 12. Podrían obtenerse resultados inesperados si `m` es mayor a 12.
 
 `n` es la cantidad de registros a listar por página. Normalmente este valor se elige con el selector, y está limitado a unos cuantos valores por defecto: 10, 15, 20, 50, 100, 500. El listado por defecto tiene una valor de `n = 10`.
 
@@ -115,6 +115,8 @@ Si es mayor que 10, tomará el valor 10.
 Si es un decimal mayor que cero y menor a 10, tomará el valor del entero menor.
 Si es un decimal mayor a 10, tomará el valor 10.
 Si es no es un número, tomará el valor por defecto.
+
+NOTA: De igual modo, el plug-in siempre determina automáticamente la cantidad de botones necesarios según la cantidad de registros. 
 
 `custom_header`
 Arriba se especificó el formato para los títulos, si este no se especifica, la funcion `builddatatable()` intentará obtenerlos de las cabeceras de `data`. Las cabeceras son las claves de los objetos.
