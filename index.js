@@ -1024,6 +1024,8 @@ const data = [
       "start_date": "2016-03-02"
     }
 ]
+
+//const data = [];
 const number_of_buttons = 6;
 const custom_header = [
     'Id', 
@@ -1042,7 +1044,7 @@ const custom_header = [
 
 const refresh_button = document.getElementById('refresh-button');
 
-refresh_button.addEventListener('click', async function(event) {
+refresh_button.addEventListener('click', function(event) {
     event.preventDefault();
     //console.log(data);
     //Entry point
