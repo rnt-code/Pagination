@@ -80,7 +80,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     else {
         MAX_PAGES = Math.floor(records_quantity / count) + 1;
     }
-    //console.log('MAX_PAGES: ', MAX_PAGES);
 
     //Renderizo la tabla
     rendertable(data, headers);
@@ -111,12 +110,10 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         from = page_number;
         to = number_of_buttons;
     }
-    //console.log('number of buttons: ', number_of_buttons);
+
     // si from = to = 0, no dibuja los botones
     renderbuttons(from, to);
     
-    //console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
-
     //Calculo cuantas capas de botones habrá
     if(Number.isInteger(MAX_PAGES / number_of_buttons)) {
         MAX_LAYERS = MAX_PAGES / number_of_buttons;
@@ -124,7 +121,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     else {
         MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
     }
-    //console.log('Init: MAX_LAYERS=', MAX_LAYERS)
 
     //----Lógica de encendido y apagado de botones de navegación-----//
     //Si MAX_LAYERS = 0 no se ejecuta esta parte
@@ -142,10 +138,6 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
         page_up.classList.add('disabled');
     }
     //---------------------------------------------------------------//
-
-    // if(layer_counter === 1 && MAX_LAYERS === 1) {
-    //     console.log('Init: Hay una sola capa de botones');
-    // }
 
     navbuttonlistener();
     paintselectedbutton(page_number); //si page_number = 0, oculta los botones
