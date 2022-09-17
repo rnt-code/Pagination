@@ -23,7 +23,7 @@ En la imagen de abajo puede observarse el resultado de la paginación para una b
 
 En la **parte superior** están los controles. A la izquierda: el selector para elegir la cantidad de registros a mostrar por página, a la derecha: los botones de navegación para avance rápido (<<  >>) por bloque de páginas, por ej., de 6 en 6. Los botones de avance lento de página en página (<  >); también se pueden vanzar de página a página con las teclas derecha e izquierda del teclado. Y los botones de página, con los que se puede elegir una página en particular haciendo click en el botón corresponiente.
 
-El la **parte central** está la tabla de datos mostrando la página actual, que tendrá la cantidad de registros según se haya seleccionado arriba. 
+En la **parte central** está la tabla de datos mostrando la página actual, que tendrá la cantidad de registros según se haya seleccionado arriba. 
 
 En la **parte inferior** están: el número de la página que se muestra, la cantidad total de páginas y la cantidad total de registros.
 
