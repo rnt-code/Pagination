@@ -31,15 +31,15 @@ function tablecontainer(datalength) {
     item3_el.appendChild(foot_controls);
 
     renderhead();
-    renderfoot();
+    //renderfoot();
     
     function renderhead() {
         head_controls.innerHTML = `
             <div id="records-length">
                 <label>Mostrando 
                     <select id="count">
-                        <option value="5" selected>5</option>
-                        <option value="10">10</option>
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
                         <option value="20">20</option>
                         <option value="30">30</option>
                         <option value="50">50</option>
@@ -59,12 +59,12 @@ function tablecontainer(datalength) {
         `
     }
 
-    function renderfoot() {
-        foot_controls.innerHTML = `
-            <div id="info">foot controls</div>
-            <!--<div id="nav-buttons"></div>-->
-        `
-    }
+    // function renderfoot() {
+    //     foot_controls.innerHTML = `
+    //         <div id="info">foot controls</div>
+    //         <!--<div id="nav-buttons"></div>-->
+    //     `
+    // }
 }
 
 export { tablecontainer }

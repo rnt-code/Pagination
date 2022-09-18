@@ -1,12 +1,11 @@
-function buildtable(one_page_data, headers, idqry) {
+function buildtable(one_page_data, headers) {
 
     const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
-
+    
     if(data_length === 0) {
         headers = ['No data found'];
     }
-    console.log('headers-length:', headers.length);
     
     const istable = !!item3_el.children[1].children[0];
     if(istable) {
@@ -14,7 +13,7 @@ function buildtable(one_page_data, headers, idqry) {
     }
 
     const tabla = document.createElement("table");
-    tabla.className = 'table table-sm table-hover';
+    //tabla.className = 'table table-sm table-bordered table-hover table-striped' //Boostrap classes
     tabla.id = 'tdatos'
 
     document.getElementById('datatable').appendChild(tabla);
@@ -26,7 +25,7 @@ function buildtable(one_page_data, headers, idqry) {
     const tfoot = document.createElement('tfoot');
     tfoot.id = 'table-foot'
     const caption = document.createElement('caption');
-
+    
     tabla.appendChild(caption);
     caption.id = 'metrics';
     tabla.appendChild(thead);
@@ -42,7 +41,7 @@ function buildtable(one_page_data, headers, idqry) {
     }
     rowh.innerHTML = th_titles;
     thead.appendChild(rowh)
-
+    
     //table body
     if(data_length === 0) {
         //data = no data
@@ -84,24 +83,12 @@ function buildtable(one_page_data, headers, idqry) {
             tbody.appendChild(rowd)      
         }; 
     }
-
-    const tablehead = document.getElementById('table-head');
-    const tdatos = document.getElementById('tdatos');
-
-    tdatos.style.fontSize = '14px';
-
-    if(idqry === '2007grl-l' || idqry === '2004rts-l') {
-        tablehead.style.color = 'black';
-        tablehead.style.backgroundColor = 'rgb(255,243,205)';
-    }
-    if(idqry === '2001fpy-l') {
-        tablehead.style.color = 'black';
-        tablehead.style.backgroundColor = 'rgb(207,244,252)';
-    }
-    if(idqry === '3001box-l') {
-        tablehead.style.color = 'white';
-        tablehead.style.backgroundColor = 'rgb(161,0,161)';
-    }
+    
+    //table-foot
+    const rowf = document.createElement('tr')
+    rowf.id = 'tr-foot'
+    rowf.innerHTML = th_titles;
+    tfoot.appendChild(rowf)
 }
 
 export { buildtable }

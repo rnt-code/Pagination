@@ -21,18 +21,18 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
             headers = Object.keys(data[0]);
         }
         else {
-            headers = Object.keys(data[0]);
-            difference = Math.abs(headers.length - custom_headers.length);
-            if(custom_headers.length < headers.length) {
-                for(let i = 0; i < difference; i++) {
-                    custom_headers.push('-');
-                }
-            }
-            if(custom_headers.length > headers.length) {
-                for(let i = 0; i < difference; i++) {
-                    custom_headers.pop();
-                }
-            }
+            // headers = Object.keys(data[0]);
+            // difference = Math.abs(headers.length - custom_headers.length);
+            // if(custom_headers.length < headers.length) {
+            //     for(let i = 0; i < difference; i++) {
+            //         custom_headers.push('-');
+            //     }
+            // }
+            // if(custom_headers.length > headers.length) {
+            //     for(let i = 0; i < difference; i++) {
+            //         custom_headers.pop();
+            //     }
+            // }
             headers = custom_headers;
         }
     }
