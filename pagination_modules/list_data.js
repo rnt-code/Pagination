@@ -23,9 +23,9 @@ function listdata(one_page_data, istoday) {
         let countpass = 0;
         let countfail = 0;
 
-        for(let j = (data_length - 1); j >= 0; j--) {
+        for(let j = 0; j < data_length; j++) {
             
-            i = 7 * (data_length - 1) - 7 * j; 
+            i = 7 * j; 
             td[i].innerHTML = one_page_data[j].id_es_test_report;
             td[i+1].innerHTML = one_page_data[j].start_time;
             td[i+2].innerHTML = (parseFloat(one_page_data[j].test_time)).toFixed(3);

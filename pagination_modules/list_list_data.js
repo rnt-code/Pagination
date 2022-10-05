@@ -19,7 +19,7 @@ function listdata(one_page_data, istoday) {
     
         //ASC mode
         for(let j = 0; j < one_page_data_length; j++) {
-            let i = headers.length * j;
+            i = headers.length * j;
             for(let k = 0; k < headers.length; k++) {
                 td[i + k].innerHTML = one_page_data[j][headers[k]];
             }
