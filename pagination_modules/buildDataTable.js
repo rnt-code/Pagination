@@ -4,7 +4,7 @@ import { tablecontainer } from "./tableContainer.js";
 import { buildtable } from "./build_table.js";
 import { listdata } from "./list_data.js"
 
-function builddatatable(data = [], number_of_buttons = 6, custom_headers = undefined) {
+function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undefined) {
 
     let headers = [];
     let difference = 0;
@@ -580,4 +580,4 @@ function builddatatable(data = [], number_of_buttons = 6, custom_headers = undef
     }
 }
 
-export { builddatatable }
+export { buildDataTable }

@@ -1,4 +1,4 @@
-import { builddatatable } from './pagination_modules/buildDataTable.js'
+import { buildDataTable } from './pagination_modules/buildDataTable.js'
 
 /*
 const data = [
@@ -11157,5 +11157,5 @@ const refresh_button = document.getElementById('refresh-button');
 
 refresh_button.addEventListener('click', function(event) {
     event.preventDefault();
-    builddatatable(data, number_of_buttons, custom_header);
+    buildDataTable(data, number_of_buttons, custom_header);
 })

@@ -38,8 +38,9 @@ function tablecontainer(datalength) {
             <div id="records-length">
                 <label>Mostrando 
                     <select id="count">
-                        <option value="5" selected>5</option>
+                        <option value="5">5</option>
                         <option value="10">10</option>
+                        <option value="15" selected>15</option>
                         <option value="20">20</option>
                         <option value="30">30</option>
                         <option value="50">50</option>
