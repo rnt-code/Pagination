@@ -1,4 +1,4 @@
-import { buildDataTable } from './pagination_modules/buildDataTable.js'
+import { buildDataTable } from './modules/buildDataTable.js'
 
 /*
 const data = [
