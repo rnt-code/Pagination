@@ -1,4 +1,4 @@
-function tablecontainer(datalength) {
+function tableContainer(datalength) {
 
     const item3_el = document.getElementById("item3");
 
@@ -68,4 +68,4 @@ function tablecontainer(datalength) {
     }
 }
 
-export { tablecontainer }
+export { tableContainer }

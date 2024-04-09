@@ -1,4 +1,4 @@
-function renderbuttons(from, to) {
+function renderButtons(from, to) {
 
     if(from !=0 && to !=0 ) {
 
@@ -31,4 +31,4 @@ function renderbuttons(from, to) {
     }
 }
 
-export { renderbuttons }
+export { renderButtons }

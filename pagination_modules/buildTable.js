@@ -1,4 +1,4 @@
-function buildtable(one_page_data, headers) {
+function buildTable(one_page_data, headers) {
 
     const data_length = one_page_data.length;
     const item3_el = document.getElementById("item3");
@@ -91,4 +91,4 @@ function buildtable(one_page_data, headers) {
     tfoot.appendChild(rowf)
 }
 
-export { buildtable }
+export { buildTable }

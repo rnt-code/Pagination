@@ -1,4 +1,4 @@
-function listdata(one_page_data, istoday) {
+function listData(one_page_data, istoday) {
 
     if(one_page_data.length != 0) {
 
@@ -27,4 +27,4 @@ function listdata(one_page_data, istoday) {
     }
 }
 
-export { listdata }
+export { listData }

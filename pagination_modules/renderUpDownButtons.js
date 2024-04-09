@@ -1,4 +1,4 @@
-function renderupdownbuttons() {
+function renderUpDownButtons() {
 
     //container para los botones
     const nav_buttons = document.getElementById('nav-buttons');
@@ -71,4 +71,4 @@ function renderupdownbuttons() {
     li_layu.appendChild(a_layu);
     /**--------------------fin botón layer up--------------------- */
 }
-export { renderupdownbuttons }
+export { renderUpDownButtons }

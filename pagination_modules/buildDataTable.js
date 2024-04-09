@@ -1,8 +1,8 @@
-import { renderupdownbuttons } from "./renderUpDownButtons.js";
-import { renderbuttons } from "./renderButtons.js";
-import { tablecontainer } from "./tableContainer.js";
-import { buildtable } from "./build_table.js";
-import { listdata } from "./list_data.js"
+import { renderUpDownButtons } from "./renderUpDownButtons.js";
+import { renderButtons } from "./renderButtons.js";
+import { tableContainer } from "./tableContainer.js";
+import { buildTable } from "./buildTable.js";
+import { listData } from "./listData.js"
 
 function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undefined) {
 
@@ -37,7 +37,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
     }
 
-    tablecontainer(data.length);
+    tableContainer(data.length);
 
     let MAX_PAGES = 0;
     let MAX_LAYERS = 0;
@@ -52,7 +52,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     }
 
     //Renderizo los botones up/down
-    renderupdownbuttons();
+    renderUpDownButtons();
 
     //Referencias a los botones up/down
     const page_down = document.querySelector('.page-down');
@@ -112,7 +112,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     }
 
     // si from = to = 0, no dibuja los botones
-    renderbuttons(from, to);
+    renderButtons(from, to);
     
     //Calculo cuantas capas de botones habrá
     if(Number.isInteger(MAX_PAGES / number_of_buttons)) {
@@ -220,7 +220,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         // }
 
         rendertable(data, headers);
-        renderbuttons(from, to);
+        renderButtons(from, to);
         navbuttonlistener();
         paintselectedbutton(page_number)
     })
@@ -241,7 +241,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
 
         if(layer_counter > 1) { 
             layer_counter--;
-            renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+            renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
         }
         if(page_number > number_of_buttons) {
             page_number = layer_counter * number_of_buttons;
@@ -305,10 +305,10 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             layer_counter++;
 
             if(layer_counter * number_of_buttons > MAX_PAGES) {
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
+                renderButtons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
             }
             else {
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
         
@@ -367,9 +367,9 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
 
         const one_page_data = data.slice(start, end);
         
-        buildtable(one_page_data, headers);
+        buildTable(one_page_data, headers);
         document.getElementById('metrics').innerHTML = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`;
-        listdata(one_page_data, true);
+        listData(one_page_data, true);
     }
     
     function navbuttonlistener() {
@@ -461,10 +461,10 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             if(layer_counter < MAX_LAYERS) {
                 layer_counter++;
                 if(layer_counter * number_of_buttons > MAX_PAGES) {
-                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
+                    renderButtons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
                 }
                 else {
-                    renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                    renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
                 }
             }
         }
