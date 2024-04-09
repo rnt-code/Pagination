@@ -1027,7 +1027,6 @@ const data = [
 ]
 */
 
-
 const data = [
   {
     "id_es_test_report": "1066675",
@@ -11139,7 +11138,6 @@ const data = [
     "gb_test_result": "PASS"
   }
 ]
-
 const number_of_buttons = 6;
 const custom_header = [
     'idPrueba',
@@ -11149,8 +11147,8 @@ const custom_header = [
     'N° de serie',
     'Puesto',
     'Resultado',
-    'HP result',
-    'GB result'
+    'HP result.',
+    'GB result.'
 ];
 
 const refresh_button = document.getElementById('refresh-button');
