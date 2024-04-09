@@ -1029,6 +1029,292 @@ const data = [
 
 const data = [
   {
+    "id_es_test_report": "1066718",
+    "test_date": "09/04/2024",
+    "start_time": "14:54:36",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403893B",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066716",
+    "test_date": "09/04/2024",
+    "start_time": "14:54:11",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403892Y",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066715",
+    "test_date": "09/04/2024",
+    "start_time": "14:53:53",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403891D",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066714",
+    "test_date": "09/04/2024",
+    "start_time": "14:53:31",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403885A",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066711",
+    "test_date": "09/04/2024",
+    "start_time": "14:53:08",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403890E",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066710",
+    "test_date": "09/04/2024",
+    "start_time": "14:52:44",
+    "test_time": "5.55",
+    "serial_number": "BQXHP7XX403889R",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066709",
+    "test_date": "09/04/2024",
+    "start_time": "14:52:22",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403888M",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066707",
+    "test_date": "09/04/2024",
+    "start_time": "14:51:59",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403887L",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066706",
+    "test_date": "09/04/2024",
+    "start_time": "14:51:33",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403886K",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066705",
+    "test_date": "09/04/2024",
+    "start_time": "14:51:07",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403884X",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066704",
+    "test_date": "09/04/2024",
+    "start_time": "14:50:22",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403883F",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066703",
+    "test_date": "09/04/2024",
+    "start_time": "14:50:01",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403876R",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066700",
+    "test_date": "09/04/2024",
+    "start_time": "14:49:28",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403881V",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066699",
+    "test_date": "09/04/2024",
+    "start_time": "14:48:59",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403880B",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066696",
+    "test_date": "09/04/2024",
+    "start_time": "14:48:13",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403879Z",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066695",
+    "test_date": "09/04/2024",
+    "start_time": "14:47:52",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403877N",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066691",
+    "test_date": "09/04/2024",
+    "start_time": "14:46:39",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403875M",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066690",
+    "test_date": "09/04/2024",
+    "start_time": "14:46:14",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403874L",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066688",
+    "test_date": "09/04/2024",
+    "start_time": "14:45:53",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403873K",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066686",
+    "test_date": "09/04/2024",
+    "start_time": "14:45:32",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403872A",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066685",
+    "test_date": "09/04/2024",
+    "start_time": "14:44:43",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403812X",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066684",
+    "test_date": "09/04/2024",
+    "start_time": "14:45:07",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403800A",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066681",
+    "test_date": "09/04/2024",
+    "start_time": "14:43:46",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403851N",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066680",
+    "test_date": "09/04/2024",
+    "start_time": "14:43:25",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403844E",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066679",
+    "test_date": "09/04/2024",
+    "start_time": "14:44:22",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403840Z",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
+    "id_es_test_report": "1066678",
+    "test_date": "09/04/2024",
+    "start_time": "14:44:05",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403798M",
+    "test_station": "Línea",
+    "test_result": "PASS",
+    "hp_test_result": "PASS",
+    "gb_test_result": "PASS"
+  },
+  {
     "id_es_test_report": "1066675",
     "test_date": "09/04/2024",
     "start_time": "14:42:20",
@@ -11138,6 +11424,7 @@ const data = [
     "gb_test_result": "PASS"
   }
 ]
+
 const number_of_buttons = 6;
 const custom_header = [
     'idPrueba',
