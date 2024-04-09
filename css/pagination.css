@@ -91,6 +91,11 @@ a.pagelink:active {
     padding: 5px;
     border-bottom: 1px rgb(209, 209, 209) solid;
 }
+
+#tr-data {
+    text-align: center;
+    vertical-align: middle;
+}
 #tr-data:hover {
     background-color: rgb(253, 255, 130);
 }
