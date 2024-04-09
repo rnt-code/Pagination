@@ -30,10 +30,10 @@ function tableContainer(datalength) {
     foot_controls.id = 'foot-controls';
     item3_el.appendChild(foot_controls);
 
-    renderhead();
-    renderfoot();
+    renderHead();
+    renderFoot();
     
-    function renderhead() {
+    function renderHead() {
         head_controls.innerHTML = `
             <div id="records-length">
                 <label>Mostrando 
@@ -60,7 +60,7 @@ function tableContainer(datalength) {
         `
     }
 
-    function renderfoot() {
+    function renderFoot() {
         foot_controls.innerHTML = `
             <div id="info">foot controls</div>
             <!--<div id="nav-buttons"></div>-->

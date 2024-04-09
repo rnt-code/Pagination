@@ -82,7 +82,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     }
 
     //Renderizo la tabla
-    rendertable(data, headers);
+    renderTable(data, headers);
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
@@ -139,8 +139,8 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     }
     //---------------------------------------------------------------//
 
-    navbuttonlistener();
-    paintselectedbutton(page_number); //si page_number = 0, oculta los botones
+    navButtonListener();
+    paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
     count_el.addEventListener("change", function(event) {
         event.preventDefault();
@@ -219,20 +219,20 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         //     console.log('Count: Hay una sola capa de botones');
         // }
 
-        rendertable(data, headers);
+        renderTable(data, headers);
         renderButtons(from, to);
-        navbuttonlistener();
-        paintselectedbutton(page_number)
+        navButtonListener();
+        paintSelectedButton(page_number)
     })
 
     document.addEventListener('keydown', function(event) {
         event.preventDefault();
         
         if (event.key === 'ArrowLeft') {
-            slowreverse();
+            slowReverse();
         } 
         else if (event.key === 'ArrowRight') {
-            slowforward();
+            slowForward();
         }
     });
 
@@ -281,21 +281,21 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
         //-------------------------------------------------------------------------//
 
-        navbuttonlistener();
-        paintselectedbutton(page_number);
-        rendertable(data, headers);
+        navButtonListener();
+        paintSelectedButton(page_number);
+        renderTable(data, headers);
     })
 
     page_down.addEventListener("click", function(event) {
         event.preventDefault();
         
-        slowreverse();
+        slowReverse();
     })
 
     page_up.addEventListener("click", function(event) {
         event.preventDefault();
 
-        slowforward();
+        slowForward();
     })
 
     layer_up.addEventListener('click', function(event) {
@@ -354,12 +354,12 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
         //-------------------------------------------------------------------------//
 
-        navbuttonlistener();
-        paintselectedbutton(page_number);
-        rendertable(data, headers);
+        navButtonListener();
+        paintSelectedButton(page_number);
+        renderTable(data, headers);
     })
 
-    function rendertable(data, headers) {
+    function renderTable(data, headers) {
 
         //Desde qué registro comenzaremos la lista a mostrar (start)
         const start = (page_number - 1) * count;
@@ -372,7 +372,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         listData(one_page_data, true);
     }
     
-    function navbuttonlistener() {
+    function navButtonListener() {
        
         const buttons_list = document.querySelectorAll('.pagei');
         buttons_list.forEach(function(button) {
@@ -424,13 +424,13 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
                     }
                 }
 
-                paintselectedbutton(page_number)
-                rendertable(data, headers);
+                paintSelectedButton(page_number)
+                renderTable(data, headers);
             })
         })
     }
 
-    function paintselectedbutton(page_number) {
+    function paintSelectedButton(page_number) {
 
         if(page_number != 0) {
 
@@ -453,8 +453,8 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
     }
 
-    //Avance (--->) de 1 pagina en 1
-    function slowforward() {
+    //Avance (--->) de 1 página en 1
+    function slowForward() {
 
         if(page_number === layer_counter * number_of_buttons) {
 
@@ -514,13 +514,13 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
         //-------------------------------------------------------------------------//
 
-        navbuttonlistener();
-        paintselectedbutton(page_number);
-        rendertable(data, headers);
+        navButtonListener();
+        paintSelectedButton(page_number);
+        renderTable(data, headers);
     }
 
     //Retroceso (<---) de 1 página en 1
-    function slowreverse() {
+    function slowReverse() {
 
         if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
             if(layer_counter > 1) { 
@@ -574,9 +574,9 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
         //-------------------------------------------------------------------------//
 
-        navbuttonlistener();
-        paintselectedbutton(page_number);
-        rendertable(data, headers);
+        navButtonListener();
+        paintSelectedButton(page_number);
+        renderTable(data, headers);
     }
 }
 
