@@ -143,7 +143,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
     count_el.addEventListener("change", function(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
         from = 0;
         to = 0;
@@ -226,7 +226,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     })
 
     document.addEventListener('keydown', function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         
         if (event.key === 'ArrowLeft') {
             slowReverse();
@@ -237,7 +237,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     });
 
     layer_down.addEventListener('click', function(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
         if(layer_counter > 1) { 
             layer_counter--;
@@ -287,19 +287,19 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     })
 
     page_down.addEventListener("click", function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         
         slowReverse();
     })
 
     page_up.addEventListener("click", function(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
         slowForward();
     })
 
     layer_up.addEventListener('click', function(event) {
-        event.preventDefault();
+        //event.preventDefault();
       
         if(layer_counter < MAX_LAYERS) {
             layer_counter++;
@@ -378,7 +378,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         buttons_list.forEach(function(button) {
 
             button.addEventListener('click', function(event) {
-                event.preventDefault();
+                //event.preventDefault();
                 
                 page_number = parseInt(button.innerText);
                 if(MAX_LAYERS >= 2) {
