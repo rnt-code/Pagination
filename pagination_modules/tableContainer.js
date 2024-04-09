@@ -62,8 +62,8 @@ function tableContainer(datalength) {
 
     function renderFoot() {
         foot_controls.innerHTML = `
-            <div id="info">foot controls</div>
-            <!--<div id="nav-buttons"></div>-->
+        <!--<div id="info">foot controls</div>
+            <div id="nav-buttons"></div>-->
         `
     }
 }

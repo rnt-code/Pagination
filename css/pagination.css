@@ -92,10 +92,17 @@ a.pagelink:active {
     border-bottom: 1px rgb(209, 209, 209) solid;
 }
 
+/*alinear los tr de datos en el centro del campo*/
 #tr-data {
     text-align: center;
     vertical-align: middle;
 }
+
+/*dar un margen a las métricas del piso de la tabla*/
+#metrics {
+    margin-top: 18px;
+}
+
 #tr-data:hover {
     background-color: rgb(253, 255, 130);
 }
