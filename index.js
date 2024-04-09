@@ -1,5 +1,6 @@
 import { builddatatable } from './pagination_modules/buildDataTable.js'
 
+/*
 const data = [
     {
       "id": "1",
@@ -1024,29 +1025,7116 @@ const data = [
       "start_date": "2016-03-02"
     }
 ]
+*/
 
-//const data = [];
+const data = [
+  {
+    "id_es_test_report": "1066270",
+    "start_time": "12:37:58",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403667B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066269",
+    "start_time": "12:37:38",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403666Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066268",
+    "start_time": "12:37:20",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403618E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066267",
+    "start_time": "12:36:57",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403664E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066266",
+    "start_time": "12:36:35",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403663H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066265",
+    "start_time": "12:36:08",
+    "test_time": "5.54",
+    "serial_number": "BQXHP7XX403615T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066264",
+    "start_time": "12:35:37",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403661T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066263",
+    "start_time": "12:34:44",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403660Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066262",
+    "start_time": "12:34:25",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403659A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066261",
+    "start_time": "12:33:58",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403658X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066260",
+    "start_time": "12:33:19",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403657F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066259",
+    "start_time": "12:32:56",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403656J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066258",
+    "start_time": "12:32:32",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403655V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066257",
+    "start_time": "12:32:09",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403654B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066256",
+    "start_time": "12:31:48",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403652D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066255",
+    "start_time": "12:31:32",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403653Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066254",
+    "start_time": "12:30:35",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403650H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066253",
+    "start_time": "12:30:59",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403625N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066252",
+    "start_time": "12:29:47",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403648L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066251",
+    "start_time": "12:30:12",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403620A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066250",
+    "start_time": "12:29:25",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403647K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066249",
+    "start_time": "12:29:04",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403646A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066248",
+    "start_time": "12:28:42",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403645X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066247",
+    "start_time": "12:28:19",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403644F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066243",
+    "start_time": "12:27:38",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403643J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066242",
+    "start_time": "12:27:59",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403585W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066239",
+    "start_time": "12:27:05",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403642V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066238",
+    "start_time": "12:26:35",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403641B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066237",
+    "start_time": "12:26:16",
+    "test_time": "5.07",
+    "serial_number": "BQXHP7XX403640Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066233",
+    "start_time": "12:25:26",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403639P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066232",
+    "start_time": "12:25:08",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403638N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066229",
+    "start_time": "12:24:44",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403637R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066228",
+    "start_time": "12:24:00",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403636M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066227",
+    "start_time": "12:24:22",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403622L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066223",
+    "start_time": "12:23:43",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403635L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066222",
+    "start_time": "12:23:19",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403634K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066221",
+    "start_time": "12:22:57",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403633A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066218",
+    "start_time": "12:22:39",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403632X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066217",
+    "start_time": "12:22:12",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403631F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066216",
+    "start_time": "12:21:50",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403630J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066215",
+    "start_time": "12:21:33",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403629W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066212",
+    "start_time": "12:21:12",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403628T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066211",
+    "start_time": "12:20:40",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403627Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066207",
+    "start_time": "12:20:20",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403626P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066206",
+    "start_time": "12:19:56",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403623M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066204",
+    "start_time": "12:18:51",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403624R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066200",
+    "start_time": "12:17:42",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403621K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066199",
+    "start_time": "12:18:01",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403590K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066198",
+    "start_time": "12:17:00",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403619D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066197",
+    "start_time": "12:16:38",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403617H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066194",
+    "start_time": "12:15:57",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403616W",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066193",
+    "start_time": "12:15:50",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403616W",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066192",
+    "start_time": "12:15:05",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403614Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066187",
+    "start_time": "12:14:38",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403613P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066186",
+    "start_time": "12:14:13",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403612N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066185",
+    "start_time": "12:13:53",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403611R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066182",
+    "start_time": "12:13:29",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403610M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066181",
+    "start_time": "12:13:10",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403609V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066180",
+    "start_time": "12:12:46",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403608B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066177",
+    "start_time": "12:12:22",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403607Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066176",
+    "start_time": "12:11:58",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403606D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066173",
+    "start_time": "12:11:33",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403605E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066172",
+    "start_time": "12:11:10",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403604H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066171",
+    "start_time": "12:10:50",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403580R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066167",
+    "start_time": "12:10:26",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403603W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066166",
+    "start_time": "12:09:53",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403602T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066163",
+    "start_time": "12:09:18",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403601Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066162",
+    "start_time": "12:08:56",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403600P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066161",
+    "start_time": "12:08:31",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403599H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066159",
+    "start_time": "12:08:08",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403598W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066158",
+    "start_time": "12:07:48",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403597T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066156",
+    "start_time": "12:07:29",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403595P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066153",
+    "start_time": "12:06:58",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403596Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066151",
+    "start_time": "12:05:58",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403594N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066149",
+    "start_time": "12:05:33",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403593R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066148",
+    "start_time": "12:05:08",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403592M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066145",
+    "start_time": "12:04:44",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403591L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066144",
+    "start_time": "12:03:54",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403575D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066141",
+    "start_time": "12:03:32",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403589Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066140",
+    "start_time": "12:03:09",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403588D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066137",
+    "start_time": "12:01:47",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403587E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066135",
+    "start_time": "12:00:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403586H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066134",
+    "start_time": "11:00:00",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403572W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066133",
+    "start_time": "10:59:35",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403584T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066132",
+    "start_time": "10:59:12",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403583Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066130",
+    "start_time": "10:58:50",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403582P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066129",
+    "start_time": "10:58:27",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403581N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066126",
+    "start_time": "10:57:42",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403579J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066125",
+    "start_time": "10:57:20",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403578V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066123",
+    "start_time": "10:57:02",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403577B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066122",
+    "start_time": "10:56:40",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403576Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066118",
+    "start_time": "10:55:30",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403569A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066117",
+    "start_time": "10:56:19",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403544K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066116",
+    "start_time": "10:55:53",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403514H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066113",
+    "start_time": "10:55:12",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403574E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066112",
+    "start_time": "10:54:49",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403573H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066111",
+    "start_time": "10:54:24",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403541F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066108",
+    "start_time": "10:54:03",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403571T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066107",
+    "start_time": "10:53:42",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403570Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066105",
+    "start_time": "10:53:24",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403507J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066102",
+    "start_time": "10:53:01",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403568X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066101",
+    "start_time": "10:52:38",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403567F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066100",
+    "start_time": "10:52:15",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403566J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066097",
+    "start_time": "10:51:51",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403565V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066096",
+    "start_time": "10:51:28",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403564B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066095",
+    "start_time": "10:51:02",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403563Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066091",
+    "start_time": "10:50:41",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403562D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066090",
+    "start_time": "10:50:18",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403561E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066089",
+    "start_time": "10:49:54",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403560H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066086",
+    "start_time": "10:49:34",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403559M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066085",
+    "start_time": "10:49:13",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403558L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066084",
+    "start_time": "10:48:54",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403557K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066080",
+    "start_time": "10:48:32",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403556A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066079",
+    "start_time": "10:48:10",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403555X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066078",
+    "start_time": "10:47:47",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403553J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066074",
+    "start_time": "10:47:29",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403554F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066073",
+    "start_time": "10:47:01",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403552V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066071",
+    "start_time": "10:46:19",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403551B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066070",
+    "start_time": "10:45:56",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403550Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066069",
+    "start_time": "10:45:32",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403549P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066066",
+    "start_time": "10:45:12",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403548N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066065",
+    "start_time": "10:44:47",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403547R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066064",
+    "start_time": "10:44:25",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403546M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066061",
+    "start_time": "10:44:04",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403545L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066060",
+    "start_time": "10:43:14",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403543A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066057",
+    "start_time": "10:42:50",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403542X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066056",
+    "start_time": "10:42:17",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403540J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066054",
+    "start_time": "10:41:53",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403539W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066053",
+    "start_time": "10:41:24",
+    "test_time": "5.37",
+    "serial_number": "BQXHP7XX403538T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066052",
+    "start_time": "10:41:07",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403537Z",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066049",
+    "start_time": "10:40:46",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403536P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066048",
+    "start_time": "10:39:48",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403535N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066046",
+    "start_time": "10:40:06",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403522N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066045",
+    "start_time": "10:40:28",
+    "test_time": "5.10",
+    "serial_number": "BQXHP7XX403333W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066043",
+    "start_time": "10:39:28",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403534R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066042",
+    "start_time": "10:38:47",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403533M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066041",
+    "start_time": "10:39:06",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403478X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066039",
+    "start_time": "10:38:22",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403532L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066037",
+    "start_time": "10:37:04",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403531K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066036",
+    "start_time": "10:36:40",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403530A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066033",
+    "start_time": "10:36:14",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403529D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066032",
+    "start_time": "10:35:33",
+    "test_time": "5.54",
+    "serial_number": "BQXHP7XX403527H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066029",
+    "start_time": "10:35:04",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403526W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066028",
+    "start_time": "10:34:42",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403525T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066027",
+    "start_time": "10:34:20",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403524Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066025",
+    "start_time": "10:33:50",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403523P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066022",
+    "start_time": "10:33:07",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403521R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066021",
+    "start_time": "10:32:44",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403520M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066020",
+    "start_time": "10:32:17",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403519V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066016",
+    "start_time": "10:31:50",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403518B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066015",
+    "start_time": "10:30:59",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403517Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066014",
+    "start_time": "10:31:28",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403516D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066011",
+    "start_time": "10:30:19",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403515E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066008",
+    "start_time": "10:28:57",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403513W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066007",
+    "start_time": "10:29:22",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403503D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066003",
+    "start_time": "10:28:35",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403512T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066002",
+    "start_time": "10:28:15",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403511Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1066001",
+    "start_time": "10:27:53",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403510P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065998",
+    "start_time": "10:27:31",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403509X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065997",
+    "start_time": "10:27:09",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403508F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065994",
+    "start_time": "10:25:56",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403506V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065993",
+    "start_time": "10:25:33",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403505B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065992",
+    "start_time": "10:26:17",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403344Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065989",
+    "start_time": "10:25:15",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403504Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065988",
+    "start_time": "10:24:50",
+    "test_time": "5.54",
+    "serial_number": "BQXHP7XX403493Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065986",
+    "start_time": "10:23:47",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403502E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065985",
+    "start_time": "10:23:28",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403501H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065982",
+    "start_time": "10:22:49",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403500W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065981",
+    "start_time": "10:22:27",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403499Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065978",
+    "start_time": "10:22:04",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403498D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065977",
+    "start_time": "10:21:37",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403497E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065976",
+    "start_time": "10:21:17",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403496H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065973",
+    "start_time": "10:20:19",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403495W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065972",
+    "start_time": "10:19:55",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403494T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065971",
+    "start_time": "10:20:43",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403454K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065969",
+    "start_time": "10:19:12",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403492P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065968",
+    "start_time": "10:18:51",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403491N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065964",
+    "start_time": "10:18:33",
+    "test_time": "5.35",
+    "serial_number": "BQXHP7XX403490R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065963",
+    "start_time": "10:17:37",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403466A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065962",
+    "start_time": "10:17:59",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403452X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065961",
+    "start_time": "10:18:16",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403421Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065958",
+    "start_time": "10:16:58",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403489J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065957",
+    "start_time": "10:16:39",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403488V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065955",
+    "start_time": "10:17:20",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403467K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065951",
+    "start_time": "10:15:08",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403487B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065950",
+    "start_time": "10:14:38",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403486Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065947",
+    "start_time": "10:14:15",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403485D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065946",
+    "start_time": "10:13:54",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403484E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065944",
+    "start_time": "10:13:32",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403483H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065943",
+    "start_time": "10:13:13",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403482W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065941",
+    "start_time": "10:12:52",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403481T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065940",
+    "start_time": "10:12:31",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403480Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065939",
+    "start_time": "10:12:13",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403479A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065936",
+    "start_time": "10:11:57",
+    "test_time": "1.27",
+    "serial_number": "BQXHP7XX403478X",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065935",
+    "start_time": "10:11:51",
+    "test_time": "1.26",
+    "serial_number": "BQXHP7XX403478X",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065934",
+    "start_time": "10:10:57",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403477F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065932",
+    "start_time": "10:10:36",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403476J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065931",
+    "start_time": "10:10:21",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403475V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065930",
+    "start_time": "10:10:02",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403474B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065929",
+    "start_time": "10:09:39",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403473Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065928",
+    "start_time": "10:09:11",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403435T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065927",
+    "start_time": "10:08:44",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403151Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065925",
+    "start_time": "10:07:57",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403472D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065924",
+    "start_time": "10:07:37",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403471E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065923",
+    "start_time": "10:08:24",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403445N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065919",
+    "start_time": "10:07:11",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403470H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065918",
+    "start_time": "10:06:48",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403469M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065915",
+    "start_time": "10:06:12",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403468L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065914",
+    "start_time": "10:05:44",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403442L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065910",
+    "start_time": "10:05:13",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403465X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065909",
+    "start_time": "10:04:57",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403464F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065907",
+    "start_time": "10:04:33",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403463J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065905",
+    "start_time": "10:04:10",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403462V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065904",
+    "start_time": "10:03:50",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403461B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065902",
+    "start_time": "10:03:23",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403460Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065899",
+    "start_time": "10:02:19",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403459P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065896",
+    "start_time": "10:01:50",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403458N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065895",
+    "start_time": "10:01:28",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403457R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065893",
+    "start_time": "10:01:04",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403456M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065891",
+    "start_time": "10:00:41",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403455L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065889",
+    "start_time": "09:59:58",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403453A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065888",
+    "start_time": "10:00:22",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403443M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065885",
+    "start_time": "09:59:15",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403451F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065884",
+    "start_time": "09:58:51",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403450J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065882",
+    "start_time": "09:58:26",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403449W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065881",
+    "start_time": "09:58:00",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403448T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065880",
+    "start_time": "09:57:39",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403447Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065876",
+    "start_time": "09:57:16",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403446P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065875",
+    "start_time": "09:56:30",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403444R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065873",
+    "start_time": "09:55:21",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403441K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065872",
+    "start_time": "09:56:10",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403411H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065871",
+    "start_time": "09:55:44",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403271F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065868",
+    "start_time": "09:54:55",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403440A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065866",
+    "start_time": "09:54:31",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403439D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065863",
+    "start_time": "09:53:41",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403438E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065862",
+    "start_time": "09:53:10",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403437H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065859",
+    "start_time": "09:52:47",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403436W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065858",
+    "start_time": "09:52:22",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403418F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065856",
+    "start_time": "09:51:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403434Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065855",
+    "start_time": "09:51:29",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403433P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065854",
+    "start_time": "09:51:07",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403432N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065850",
+    "start_time": "09:50:39",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403431R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065849",
+    "start_time": "09:50:16",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403430M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065848",
+    "start_time": "09:49:49",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403429V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065845",
+    "start_time": "09:49:28",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403428B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065844",
+    "start_time": "09:49:02",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403427Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065843",
+    "start_time": "09:48:44",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403426D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065840",
+    "start_time": "09:48:16",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403425E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065839",
+    "start_time": "09:47:50",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403424H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065837",
+    "start_time": "09:47:26",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403423W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065836",
+    "start_time": "09:47:02",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403422T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065835",
+    "start_time": "09:46:25",
+    "test_time": "5.35",
+    "serial_number": "BQXHP7XX403420P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065833",
+    "start_time": "09:46:42",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403277R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065830",
+    "start_time": "09:46:03",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403419X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065829",
+    "start_time": "09:45:41",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403293Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065826",
+    "start_time": "09:45:06",
+    "test_time": "5.55",
+    "serial_number": "BQXHP7XX403417J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065825",
+    "start_time": "09:44:40",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403416V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065823",
+    "start_time": "09:44:21",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403415B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065820",
+    "start_time": "09:43:52",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403414Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065818",
+    "start_time": "09:43:34",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403413D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065817",
+    "start_time": "09:43:14",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403412E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065814",
+    "start_time": "09:42:23",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403410W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065813",
+    "start_time": "09:42:01",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403409L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065809",
+    "start_time": "09:41:36",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403408K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065808",
+    "start_time": "09:41:09",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403407A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065806",
+    "start_time": "09:40:46",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403406X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065804",
+    "start_time": "09:39:33",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403405F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065803",
+    "start_time": "09:39:02",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403404J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065800",
+    "start_time": "09:38:34",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403403V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065799",
+    "start_time": "09:38:15",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403402B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065798",
+    "start_time": "09:37:50",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403401Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065795",
+    "start_time": "09:37:28",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403400D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065794",
+    "start_time": "09:37:11",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403399J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065793",
+    "start_time": "09:36:47",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403398V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065789",
+    "start_time": "09:36:20",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403397B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065788",
+    "start_time": "09:35:59",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403396Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065787",
+    "start_time": "09:35:42",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403395D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065786",
+    "start_time": "09:35:21",
+    "test_time": "3.82",
+    "serial_number": "BQXHP7XX403395D",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_NULL",
+    "gb_test_result": "GB_FAIL"
+  },
+  {
+    "id_es_test_report": "1065785",
+    "start_time": "09:35:21",
+    "test_time": "5.10",
+    "serial_number": "BQXHP7XX403394E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065782",
+    "start_time": "09:34:54",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403393H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065781",
+    "start_time": "09:34:35",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403392W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065780",
+    "start_time": "09:34:13",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403391T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065778",
+    "start_time": "09:33:51",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403390Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065777",
+    "start_time": "09:33:25",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403389A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065776",
+    "start_time": "09:33:00",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403388X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065772",
+    "start_time": "09:32:39",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403387F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065771",
+    "start_time": "09:32:16",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403386J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065770",
+    "start_time": "09:31:53",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403385V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065767",
+    "start_time": "09:31:31",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403384B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065766",
+    "start_time": "09:31:09",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403383Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065764",
+    "start_time": "09:30:50",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403382D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065762",
+    "start_time": "09:30:30",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403381E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065761",
+    "start_time": "09:30:09",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403380H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065760",
+    "start_time": "09:29:52",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403379M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065757",
+    "start_time": "09:29:18",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403378L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065756",
+    "start_time": "09:28:58",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403372V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065751",
+    "start_time": "09:27:37",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403377K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065750",
+    "start_time": "09:27:59",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403367R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065748",
+    "start_time": "09:27:15",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403376A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065747",
+    "start_time": "09:26:51",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403375X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065746",
+    "start_time": "09:26:27",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403374F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065744",
+    "start_time": "09:26:05",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403373J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065743",
+    "start_time": "09:25:26",
+    "test_time": "5.54",
+    "serial_number": "BQXHP7XX403371B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065739",
+    "start_time": "09:25:00",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403370Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065738",
+    "start_time": "09:24:06",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403369P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065737",
+    "start_time": "09:24:27",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403325B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065734",
+    "start_time": "09:23:43",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403368N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065733",
+    "start_time": "09:23:15",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403366M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065729",
+    "start_time": "09:22:46",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403365L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065728",
+    "start_time": "09:22:14",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403364K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065725",
+    "start_time": "09:21:48",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403363A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065724",
+    "start_time": "09:21:24",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403362X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065723",
+    "start_time": "09:20:59",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403361F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065720",
+    "start_time": "09:20:27",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403360J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065719",
+    "start_time": "09:20:01",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403359W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065718",
+    "start_time": "09:19:37",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403358T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065716",
+    "start_time": "09:19:13",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403357Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065715",
+    "start_time": "09:18:51",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403356P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065712",
+    "start_time": "09:18:27",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403355N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065711",
+    "start_time": "09:17:59",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403354R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065710",
+    "start_time": "09:17:34",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403353M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065708",
+    "start_time": "09:17:11",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403352L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065707",
+    "start_time": "09:16:52",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403351K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065706",
+    "start_time": "09:16:29",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403350A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065703",
+    "start_time": "09:16:00",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403349D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065702",
+    "start_time": "09:15:40",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403348E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065701",
+    "start_time": "09:15:17",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403347H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065698",
+    "start_time": "09:14:57",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403346W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065697",
+    "start_time": "09:14:34",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403345T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065696",
+    "start_time": "09:14:16",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403344Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065695",
+    "start_time": "09:13:47",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403343P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065694",
+    "start_time": "09:13:27",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403342N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065693",
+    "start_time": "09:13:07",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403341R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065692",
+    "start_time": "09:12:42",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403340M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065691",
+    "start_time": "09:12:00",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403272X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065688",
+    "start_time": "09:11:36",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403339V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065687",
+    "start_time": "09:11:22",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403275L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065686",
+    "start_time": "09:10:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403267Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065683",
+    "start_time": "09:10:35",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403338B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065682",
+    "start_time": "09:10:11",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403337Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065681",
+    "start_time": "09:09:45",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403336D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065678",
+    "start_time": "09:09:24",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403335E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065677",
+    "start_time": "09:09:00",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403334H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065676",
+    "start_time": "09:08:38",
+    "test_time": "1.27",
+    "serial_number": "BQXHP7XX403333W",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065673",
+    "start_time": "09:07:44",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403332T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065670",
+    "start_time": "09:06:35",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403331Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065668",
+    "start_time": "09:06:10",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403330P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065667",
+    "start_time": "09:05:53",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403329X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065666",
+    "start_time": "09:05:28",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403328F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065663",
+    "start_time": "09:05:04",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403327J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065662",
+    "start_time": "09:04:42",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403326V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065661",
+    "start_time": "09:04:16",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403225F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065658",
+    "start_time": "09:03:58",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403324Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065657",
+    "start_time": "09:03:35",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403323D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065656",
+    "start_time": "09:03:15",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403322E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065655",
+    "start_time": "09:02:50",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403321H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065652",
+    "start_time": "09:02:32",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403320W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065651",
+    "start_time": "09:02:09",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403319L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065650",
+    "start_time": "09:01:49",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403318K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065647",
+    "start_time": "09:01:26",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403317A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065646",
+    "start_time": "09:01:07",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403316X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065645",
+    "start_time": "09:00:41",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403315F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065642",
+    "start_time": "09:00:16",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403314J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065641",
+    "start_time": "08:59:56",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403313V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065639",
+    "start_time": "08:59:32",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403312B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065638",
+    "start_time": "08:59:10",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403311Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065636",
+    "start_time": "08:58:50",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403310D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065635",
+    "start_time": "08:58:25",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403309N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065632",
+    "start_time": "08:58:03",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403308R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065631",
+    "start_time": "08:57:38",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403307M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065630",
+    "start_time": "08:57:14",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403306L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065628",
+    "start_time": "08:56:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403305K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065627",
+    "start_time": "08:56:31",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403304A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065626",
+    "start_time": "08:56:14",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403303X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065623",
+    "start_time": "08:55:50",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403302F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065622",
+    "start_time": "08:55:32",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403301J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065621",
+    "start_time": "08:55:03",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403300V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065618",
+    "start_time": "08:54:43",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403299A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065617",
+    "start_time": "08:54:22",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403298X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065616",
+    "start_time": "08:54:00",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403227A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065613",
+    "start_time": "08:53:42",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403297F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065612",
+    "start_time": "08:53:20",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403296J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065611",
+    "start_time": "08:52:56",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403226X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065608",
+    "start_time": "08:52:35",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403295V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065607",
+    "start_time": "08:52:06",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403294B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065604",
+    "start_time": "08:51:30",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403292D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065603",
+    "start_time": "08:51:04",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403291E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065602",
+    "start_time": "08:50:39",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403290H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065600",
+    "start_time": "08:50:20",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403289M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065599",
+    "start_time": "08:49:55",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403288L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065598",
+    "start_time": "08:49:35",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403287K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065595",
+    "start_time": "08:49:10",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403286A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065594",
+    "start_time": "08:48:43",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403285X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065593",
+    "start_time": "08:48:22",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403284F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065590",
+    "start_time": "08:47:55",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403283J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065589",
+    "start_time": "08:47:27",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403282V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065588",
+    "start_time": "08:47:06",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403281B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065585",
+    "start_time": "08:46:47",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403280Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065584",
+    "start_time": "08:46:21",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403279P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065583",
+    "start_time": "08:46:00",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403278N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065580",
+    "start_time": "08:45:10",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403276M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065577",
+    "start_time": "08:44:25",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403274K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065576",
+    "start_time": "08:44:01",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403273A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065573",
+    "start_time": "08:42:57",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403270J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065570",
+    "start_time": "08:42:31",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403269W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065569",
+    "start_time": "08:42:11",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403268T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065568",
+    "start_time": "08:41:48",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403249V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065565",
+    "start_time": "08:41:08",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403266P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065564",
+    "start_time": "08:40:43",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403265N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065561",
+    "start_time": "08:40:20",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403264R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065560",
+    "start_time": "08:40:00",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403263M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065559",
+    "start_time": "08:39:38",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403262L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065557",
+    "start_time": "08:39:14",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403261K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065556",
+    "start_time": "08:38:50",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403260A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065554",
+    "start_time": "08:38:28",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403259D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065552",
+    "start_time": "08:38:03",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403258E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065550",
+    "start_time": "08:37:25",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403256W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065549",
+    "start_time": "08:36:56",
+    "test_time": "4.16",
+    "serial_number": "BQXHP7XX403256W",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_NULL",
+    "gb_test_result": "GB_FAIL"
+  },
+  {
+    "id_es_test_report": "1065548",
+    "start_time": "08:37:40",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403250M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065545",
+    "start_time": "08:36:56",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403255T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065544",
+    "start_time": "08:36:35",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403254Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065543",
+    "start_time": "08:36:11",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403253P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065540",
+    "start_time": "08:35:50",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403252N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065539",
+    "start_time": "08:34:54",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403251R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065537",
+    "start_time": "08:34:33",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403243W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065536",
+    "start_time": "08:33:52",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403238F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065535",
+    "start_time": "08:34:13",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403207P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065534",
+    "start_time": "08:33:29",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403248B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065533",
+    "start_time": "08:32:44",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403247Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065532",
+    "start_time": "08:33:10",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403208Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065531",
+    "start_time": "08:32:24",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403246D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065530",
+    "start_time": "08:32:05",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403245E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065529",
+    "start_time": "08:31:42",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403244H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065528",
+    "start_time": "08:30:58",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403242T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065527",
+    "start_time": "08:31:24",
+    "test_time": "1.29",
+    "serial_number": "BQXHP7XX403209T",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065525",
+    "start_time": "08:31:17",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403209T",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065522",
+    "start_time": "08:30:07",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403241Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065521",
+    "start_time": "08:29:47",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403240P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065520",
+    "start_time": "08:29:24",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403239X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065518",
+    "start_time": "08:28:38",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403237J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065517",
+    "start_time": "08:28:17",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403236V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065516",
+    "start_time": "08:28:59",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403214A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065515",
+    "start_time": "08:28:00",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403235B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065514",
+    "start_time": "08:27:32",
+    "test_time": "5.55",
+    "serial_number": "BQXHP7XX403234Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065513",
+    "start_time": "08:27:09",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403204M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065511",
+    "start_time": "08:26:46",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403233D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065510",
+    "start_time": "08:26:26",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403232E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065509",
+    "start_time": "08:26:02",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403231H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065508",
+    "start_time": "08:25:38",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403230W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065507",
+    "start_time": "08:25:18",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403229L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065506",
+    "start_time": "08:24:49",
+    "test_time": "4.24",
+    "serial_number": "BQXHP7XX403229L",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_NULL",
+    "gb_test_result": "GB_FAIL"
+  },
+  {
+    "id_es_test_report": "1065505",
+    "start_time": "08:24:49",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403228K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065503",
+    "start_time": "08:24:22",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403181F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065502",
+    "start_time": "08:24:00",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403176P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065501",
+    "start_time": "08:23:18",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403224J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065500",
+    "start_time": "08:22:54",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403223V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065499",
+    "start_time": "08:22:35",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403222B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065498",
+    "start_time": "08:22:13",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403221Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065497",
+    "start_time": "08:21:46",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403220D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065496",
+    "start_time": "08:21:25",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403219N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065494",
+    "start_time": "08:21:02",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403218R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065493",
+    "start_time": "08:20:44",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403217M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065492",
+    "start_time": "08:20:19",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403216L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065491",
+    "start_time": "08:19:57",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403215K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065490",
+    "start_time": "08:19:12",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403213X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065487",
+    "start_time": "08:14:11",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403212F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065454",
+    "start_time": "07:59:45",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403211J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065453",
+    "start_time": "07:58:57",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403210V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065452",
+    "start_time": "07:59:23",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403192V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065447",
+    "start_time": "07:57:26",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403206N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065446",
+    "start_time": "07:57:01",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403205R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065445",
+    "start_time": "07:56:34",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403177Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065444",
+    "start_time": "07:56:09",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403203L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065443",
+    "start_time": "07:55:45",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403202K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065441",
+    "start_time": "07:55:20",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403201A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065440",
+    "start_time": "07:54:56",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403200X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065439",
+    "start_time": "07:54:38",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403199M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065438",
+    "start_time": "07:54:11",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403198L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065437",
+    "start_time": "07:53:49",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403197K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065436",
+    "start_time": "07:53:27",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403196A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065435",
+    "start_time": "07:53:07",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403195X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065434",
+    "start_time": "07:52:44",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403194F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065433",
+    "start_time": "07:52:24",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403193J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065431",
+    "start_time": "07:51:35",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403191B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065430",
+    "start_time": "07:51:15",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403190Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065429",
+    "start_time": "07:50:53",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403160M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065428",
+    "start_time": "07:50:32",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403189P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065427",
+    "start_time": "07:50:14",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403188N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065426",
+    "start_time": "07:49:51",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403187R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065423",
+    "start_time": "07:49:26",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403186M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065422",
+    "start_time": "07:48:59",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403150P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065419",
+    "start_time": "07:48:34",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403185L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065418",
+    "start_time": "07:48:17",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403184K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065417",
+    "start_time": "07:47:54",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403183A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065414",
+    "start_time": "07:47:32",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403182X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065413",
+    "start_time": "07:47:03",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403163P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065412",
+    "start_time": "07:46:39",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403130D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065410",
+    "start_time": "07:46:15",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403180J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065409",
+    "start_time": "07:45:57",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403179W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065407",
+    "start_time": "07:45:16",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403178T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065406",
+    "start_time": "07:44:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX400604A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065405",
+    "start_time": "07:44:32",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX400347A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065403",
+    "start_time": "07:44:05",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX300004T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065401",
+    "start_time": "07:43:01",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403175N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065400",
+    "start_time": "07:42:35",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403174R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065399",
+    "start_time": "07:42:15",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403173M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065395",
+    "start_time": "07:41:49",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403172L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065394",
+    "start_time": "07:41:27",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403171K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065393",
+    "start_time": "07:41:10",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403170A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065392",
+    "start_time": "07:40:14",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403169D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065391",
+    "start_time": "07:39:54",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403168E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065390",
+    "start_time": "07:39:28",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403167H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065387",
+    "start_time": "07:39:09",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403166W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065386",
+    "start_time": "07:38:47",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403165T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065383",
+    "start_time": "07:38:23",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403164Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065382",
+    "start_time": "07:37:41",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403162N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065379",
+    "start_time": "07:37:20",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403161R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065372",
+    "start_time": "07:30:16",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403159V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065371",
+    "start_time": "07:29:57",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403158B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065370",
+    "start_time": "07:29:34",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403157Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065369",
+    "start_time": "07:29:13",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403154H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065368",
+    "start_time": "07:28:48",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403153W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065367",
+    "start_time": "07:28:26",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403095L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065365",
+    "start_time": "07:28:05",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403148F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065364",
+    "start_time": "07:27:42",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403145B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065363",
+    "start_time": "07:27:15",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403138K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065362",
+    "start_time": "07:26:05",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403155E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065361",
+    "start_time": "07:26:31",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403147J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065360",
+    "start_time": "07:26:47",
+    "test_time": "5.39",
+    "serial_number": "BQXHP7XX403146V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065358",
+    "start_time": "07:25:39",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403156D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065357",
+    "start_time": "07:24:55",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403152T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065356",
+    "start_time": "07:25:18",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403149X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065355",
+    "start_time": "07:24:32",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403141H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065354",
+    "start_time": "07:24:06",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403140W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065353",
+    "start_time": "07:23:42",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403139L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065352",
+    "start_time": "07:23:23",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403144Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065351",
+    "start_time": "07:22:59",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403143D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065348",
+    "start_time": "07:22:33",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403142E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065347",
+    "start_time": "07:22:11",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403136X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065345",
+    "start_time": "07:21:06",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403135F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065344",
+    "start_time": "07:20:42",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403134J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065342",
+    "start_time": "07:20:20",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403133V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065341",
+    "start_time": "07:20:04",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403132B",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065339",
+    "start_time": "07:19:58",
+    "test_time": "1.27",
+    "serial_number": "BQXHP7XX403132B",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065338",
+    "start_time": "07:19:28",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403131Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065336",
+    "start_time": "07:19:08",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403137A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065335",
+    "start_time": "07:18:38",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403129N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065334",
+    "start_time": "07:18:19",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403128R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065333",
+    "start_time": "07:17:53",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403127M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065332",
+    "start_time": "07:17:27",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403126L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065331",
+    "start_time": "07:17:06",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403125K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065329",
+    "start_time": "07:16:40",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403124A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065328",
+    "start_time": "07:16:11",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403123X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065324",
+    "start_time": "07:15:49",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403122F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065323",
+    "start_time": "07:15:27",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403121J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065322",
+    "start_time": "07:15:07",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403120V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065321",
+    "start_time": "07:14:42",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403119T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065320",
+    "start_time": "07:14:23",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403118Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065319",
+    "start_time": "07:14:03",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403117P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065318",
+    "start_time": "07:13:40",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403116N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065317",
+    "start_time": "07:13:10",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403115R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065316",
+    "start_time": "07:12:49",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403114M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065314",
+    "start_time": "07:12:24",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403113L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065313",
+    "start_time": "07:11:44",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403112K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065311",
+    "start_time": "07:11:20",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403111A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065310",
+    "start_time": "07:10:55",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403110X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065309",
+    "start_time": "07:10:31",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403109E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065306",
+    "start_time": "07:09:51",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403108H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065305",
+    "start_time": "07:09:27",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403107W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065302",
+    "start_time": "07:09:04",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403106T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065301",
+    "start_time": "07:08:42",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403105Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065300",
+    "start_time": "07:08:20",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403104P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065298",
+    "start_time": "07:07:50",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403103N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065297",
+    "start_time": "07:07:25",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403102R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065296",
+    "start_time": "07:07:07",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403101M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065291",
+    "start_time": "07:06:45",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403100L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065290",
+    "start_time": "07:06:20",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403099P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065289",
+    "start_time": "07:05:59",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403098N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065288",
+    "start_time": "07:05:36",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403097R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065287",
+    "start_time": "07:05:11",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403096M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065282",
+    "start_time": "07:04:10",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403094K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065281",
+    "start_time": "07:03:42",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403093A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065280",
+    "start_time": "07:04:34",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403056V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065277",
+    "start_time": "07:03:22",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403092X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065276",
+    "start_time": "07:02:58",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403091F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065275",
+    "start_time": "07:02:38",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403090J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065271",
+    "start_time": "07:02:16",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403089W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065270",
+    "start_time": "07:01:52",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403088T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065269",
+    "start_time": "07:01:35",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403087Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065266",
+    "start_time": "07:01:19",
+    "test_time": "1.27",
+    "serial_number": "BQXHP7XX403086P",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065265",
+    "start_time": "07:01:12",
+    "test_time": "1.28",
+    "serial_number": "BQXHP7XX403086P",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065264",
+    "start_time": "07:00:51",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403085N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065262",
+    "start_time": "07:00:25",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403084R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065260",
+    "start_time": "06:59:59",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403083M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065258",
+    "start_time": "06:59:23",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403082L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065255",
+    "start_time": "06:58:58",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403081K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065254",
+    "start_time": "06:58:13",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403080A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065252",
+    "start_time": "06:58:39",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX402764E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065250",
+    "start_time": "06:57:52",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403079D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065248",
+    "start_time": "06:57:25",
+    "test_time": "5.09",
+    "serial_number": "BQXHP7XX403078E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065243",
+    "start_time": "06:54:52",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403077H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065240",
+    "start_time": "06:54:32",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403076W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065239",
+    "start_time": "06:54:08",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403075T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065237",
+    "start_time": "06:53:45",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403074Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065234",
+    "start_time": "06:53:21",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403073P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065233",
+    "start_time": "06:52:59",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403072N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065232",
+    "start_time": "06:52:34",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403071R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065229",
+    "start_time": "06:52:08",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403070M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065228",
+    "start_time": "06:51:44",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403069V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065225",
+    "start_time": "06:51:23",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403068B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065224",
+    "start_time": "06:51:03",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403067Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065222",
+    "start_time": "06:50:38",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403066D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065220",
+    "start_time": "06:50:11",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403065E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065218",
+    "start_time": "06:49:37",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403064H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065215",
+    "start_time": "06:49:06",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403063W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065213",
+    "start_time": "06:48:39",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403062T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065212",
+    "start_time": "06:48:19",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403061Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065208",
+    "start_time": "06:47:40",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403060P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065207",
+    "start_time": "06:47:21",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403059X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065206",
+    "start_time": "06:46:58",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403058F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065201",
+    "start_time": "06:46:31",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403057J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065200",
+    "start_time": "06:46:12",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403055B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065197",
+    "start_time": "06:45:22",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403054Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065196",
+    "start_time": "06:45:00",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403053D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065195",
+    "start_time": "06:45:43",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403048K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065191",
+    "start_time": "06:44:40",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403052E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065190",
+    "start_time": "06:44:16",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403051H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065189",
+    "start_time": "06:43:50",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403050W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065187",
+    "start_time": "06:43:28",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403049L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065186",
+    "start_time": "06:42:01",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403047A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065185",
+    "start_time": "06:41:30",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403046X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065184",
+    "start_time": "06:41:05",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403045F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065183",
+    "start_time": "06:39:53",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403044J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065182",
+    "start_time": "06:39:28",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403029T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065179",
+    "start_time": "06:39:12",
+    "test_time": "1.29",
+    "serial_number": "BQXHP7XX403043V",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065178",
+    "start_time": "06:39:05",
+    "test_time": "1.26",
+    "serial_number": "BQXHP7XX403043V",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_FAIL",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065177",
+    "start_time": "06:38:47",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403042B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065176",
+    "start_time": "06:38:24",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403041Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065173",
+    "start_time": "06:37:57",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403040D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065172",
+    "start_time": "06:37:36",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403039N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065171",
+    "start_time": "06:37:10",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403038R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065168",
+    "start_time": "06:36:39",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403037M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065167",
+    "start_time": "06:36:16",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX403025R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065164",
+    "start_time": "06:35:35",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403036L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065163",
+    "start_time": "06:35:15",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403035K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065162",
+    "start_time": "06:34:51",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403034A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065159",
+    "start_time": "06:33:59",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX402995J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065158",
+    "start_time": "06:34:22",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX402994V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065155",
+    "start_time": "06:33:16",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403033X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065154",
+    "start_time": "06:32:57",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403032F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065151",
+    "start_time": "06:32:03",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403031J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065150",
+    "start_time": "06:31:40",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX403030V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065147",
+    "start_time": "06:30:52",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403028Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065144",
+    "start_time": "06:30:22",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403027P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065143",
+    "start_time": "06:29:58",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403026N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065140",
+    "start_time": "06:29:09",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403024M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065139",
+    "start_time": "06:28:40",
+    "test_time": "5.38",
+    "serial_number": "BQXHP7XX403023L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065138",
+    "start_time": "06:28:24",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403022K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065135",
+    "start_time": "06:27:51",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403021A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065134",
+    "start_time": "06:27:29",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403020X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065131",
+    "start_time": "06:27:04",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403019E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065130",
+    "start_time": "06:26:41",
+    "test_time": "5.56",
+    "serial_number": "BQXHP7XX403018H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065129",
+    "start_time": "06:26:16",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403017W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065126",
+    "start_time": "06:25:56",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX403016T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065125",
+    "start_time": "06:25:35",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403015Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065124",
+    "start_time": "06:25:14",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403014P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065122",
+    "start_time": "06:24:55",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX403013N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065120",
+    "start_time": "06:24:32",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX403012R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065119",
+    "start_time": "06:24:05",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX403011M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065116",
+    "start_time": "06:23:31",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403010L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065115",
+    "start_time": "06:23:09",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX403009B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065114",
+    "start_time": "06:22:47",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403008Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065111",
+    "start_time": "06:22:19",
+    "test_time": "5.52",
+    "serial_number": "BQXHP7XX403007D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065110",
+    "start_time": "06:21:54",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX403006E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065109",
+    "start_time": "06:21:32",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX403005H",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065106",
+    "start_time": "06:20:52",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX403004W",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065105",
+    "start_time": "06:20:32",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX403003T",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065101",
+    "start_time": "06:18:59",
+    "test_time": "4.21",
+    "serial_number": "BQXHP7XX403003T",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_NULL",
+    "gb_test_result": "GB_FAIL"
+  },
+  {
+    "id_es_test_report": "1065099",
+    "start_time": "06:18:59",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403002Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065098",
+    "start_time": "06:18:34",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX403001P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065094",
+    "start_time": "06:18:07",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX403000N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065093",
+    "start_time": "06:17:38",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX402999K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065090",
+    "start_time": "06:16:48",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX402998A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065088",
+    "start_time": "06:16:22",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX402997X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065086",
+    "start_time": "06:15:59",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX402996F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065083",
+    "start_time": "06:14:48",
+    "test_time": "5.44",
+    "serial_number": "BQXHP7XX402993B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065082",
+    "start_time": "06:14:24",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX402992Y",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065081",
+    "start_time": "06:14:01",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX402991D",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065079",
+    "start_time": "06:13:38",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX402990E",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065077",
+    "start_time": "06:13:16",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX402989R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065076",
+    "start_time": "06:12:52",
+    "test_time": "5.40",
+    "serial_number": "BQXHP7XX402988M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065073",
+    "start_time": "06:12:28",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX402987L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065072",
+    "start_time": "06:12:04",
+    "test_time": "5.43",
+    "serial_number": "BQXHP7XX402986K",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065071",
+    "start_time": "06:11:46",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX402985A",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065068",
+    "start_time": "06:11:15",
+    "test_time": "5.03",
+    "serial_number": "BQXHP7XX402985A",
+    "code": "LIN",
+    "test_result": "FAIL",
+    "hp_test_result": "HP_NULL",
+    "gb_test_result": "GB_FAIL"
+  },
+  {
+    "id_es_test_report": "1065067",
+    "start_time": "06:11:15",
+    "test_time": "5.42",
+    "serial_number": "BQXHP7XX402984X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065066",
+    "start_time": "06:10:50",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX402983F",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065064",
+    "start_time": "06:10:00",
+    "test_time": "5.41",
+    "serial_number": "BQXHP7XX402982J",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065063",
+    "start_time": "06:09:41",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX402981V",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065062",
+    "start_time": "06:10:23",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX402966Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065061",
+    "start_time": "06:09:12",
+    "test_time": "5.46",
+    "serial_number": "BQXHP7XX402980B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065060",
+    "start_time": "06:08:42",
+    "test_time": "5.51",
+    "serial_number": "BQXHP7XX402979Z",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065059",
+    "start_time": "06:08:16",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX402978P",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065058",
+    "start_time": "06:07:51",
+    "test_time": "5.53",
+    "serial_number": "BQXHP7XX402977N",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065057",
+    "start_time": "06:07:24",
+    "test_time": "5.48",
+    "serial_number": "BQXHP7XX402938X",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065055",
+    "start_time": "06:06:17",
+    "test_time": "5.45",
+    "serial_number": "BQXHP7XX402976R",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065054",
+    "start_time": "06:07:01",
+    "test_time": "5.49",
+    "serial_number": "BQXHP7XX402844B",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065052",
+    "start_time": "06:04:59",
+    "test_time": "5.47",
+    "serial_number": "BQXHP7XX402975M",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  },
+  {
+    "id_es_test_report": "1065051",
+    "start_time": "06:04:05",
+    "test_time": "5.50",
+    "serial_number": "BQXHP7XX402974L",
+    "code": "LIN",
+    "test_result": "PASS",
+    "hp_test_result": "HP_PASS",
+    "gb_test_result": "GB_PASS"
+  }
+]
+
 const number_of_buttons = 6;
 const custom_header = [
-    'Id', 
-    'Nombre', 
-    'Apellido', 
-    'Dirección', 
-    'Ciudad', 
-    'Teléfono', 
-    'e-mail',
-    'Compañia', 
-    'Posición', 
-    'Oficina', 
-    'Edad', 
-    'Fecha inicio'
+    'id Prueba', 
+    'Hora de Prueba', 
+    'Duración [seg]',
+    'N° de serie',
+    'Puesto',
+    'Resultado',
+    'HP result', 
+    'GB result' 
 ];
 
 const refresh_button = document.getElementById('refresh-button');
 
 refresh_button.addEventListener('click', function(event) {
     event.preventDefault();
-    //console.log(data);
-    //Entry point
     builddatatable(data, number_of_buttons, custom_header);
 })
