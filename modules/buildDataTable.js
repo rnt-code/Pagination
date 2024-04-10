@@ -1,6 +1,7 @@
 import { renderUpDownButtons } from "../view/renderUpDownButtons.js";
 import { renderButtons } from "../view/renderButtons.js";
 import { buildContainers } from "../view/buildContainers.js";
+import { paintSelectedButton } from '../view/paintSelectedButton.js'
 import { buildTable } from "../view/buildTable.js";
 import { listData } from "./listData.js"
 
@@ -142,6 +143,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
     navButtonListener();
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
+    /**--------------Enventos de los botones--------------*/
     count_el.addEventListener("change", function(event) {
         //event.preventDefault();
 
@@ -352,23 +354,6 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         renderTable(data, headers);
     })
 
-    function renderTable(data, headers) {
-
-        //Desde qué registro comenzaremos la lista a mostrar (start)
-        const start = (page_number - 1) * count;
-        const end = start + count;
-
-        const one_page_data = data.slice(start, end);
-        
-        buildTable(one_page_data, headers);
-        const metrics = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`
-
-        document.getElementById('metrics-top').innerHTML = metrics;
-        document.getElementById('metrics-bottom').innerHTML = metrics;
-
-        listData(one_page_data);
-    }
-    
     function navButtonListener() {
        
         const buttons_list = document.querySelectorAll('.pagei');
@@ -426,28 +411,24 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             })
         })
     }
+    /**------------Fin Enventos de los botones------------*/
+    
+    /**-----------------Funciones locales-----------------*/
+    function renderTable(data, headers) {
 
-    function paintSelectedButton(page_number) {
-
-        if(page_number != 0) {
-
-            document.getElementById('nav-buttons').hidden = false;
-
-            const selected_button = document.querySelector('.selected');
-            const button = document.getElementById(page_number);
-
-            if(selected_button) {
-                selected_button.style.color = 'black';
-                selected_button.classList.remove('selected');
-            }
-            
-            button.classList.add('selected');
-            button.style.color = 'black';
-        }
-        else {
-            //si page = 0, oculta nav-buttons
-            document.getElementById('nav-buttons').hidden = true;
-        }
+        //Desde qué registro comenzaremos la lista a mostrar (start)
+        const start = (page_number - 1) * count;
+        const end = start + count;
+    
+        const one_page_data = data.slice(start, end);
+        
+        buildTable(one_page_data, headers);
+        const metrics = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`
+    
+        document.getElementById('metrics-top').innerHTML = metrics;
+        document.getElementById('metrics-bottom').innerHTML = metrics;
+    
+        listData(one_page_data);
     }
 
     //Avance (--->) de 1 página en 1
@@ -575,6 +556,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         paintSelectedButton(page_number);
         renderTable(data, headers);
     }
+    /**---------------Fin Funciones locales---------------*/
 }
 
 export { buildDataTable }
