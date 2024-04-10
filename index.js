@@ -11441,6 +11441,6 @@ const custom_header = [
 const refresh_button = document.getElementById('refresh-button');
 
 refresh_button.addEventListener('click', function(event) {
-    event.preventDefault();
+    //event.preventDefault();
     buildDataTable(data, number_of_buttons, custom_header);
 })

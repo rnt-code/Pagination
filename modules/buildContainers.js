@@ -1,13 +1,10 @@
 function buildContainers(datalength) {
 
+    console.log('llamada a buildContainers')
     const item3_el = document.getElementById("item3");
 
     //borro lo que haya en item3
-    if(item3_el.hasChildNodes()) {
-        while (item3_el.firstChild) {
-            item3_el.removeChild(item3_el.firstChild);
-        }
-    }
+    item3_el.innerHTML = '';
 
     //build head-controls container
     const head_controls = document.createElement('div');
