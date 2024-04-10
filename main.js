@@ -10407,6 +10407,8 @@ const data3 = [
   }
 ]
 
+const data4 = []
+
 const number_of_buttons = 6;
 const custom_header = [
     'idPrueba',
@@ -10423,6 +10425,7 @@ const custom_header = [
 const refresh_button1 = document.getElementById('refresh-button1');
 const refresh_button2 = document.getElementById('refresh-button2');
 const refresh_button3 = document.getElementById('refresh-button3');
+const refresh_button4 = document.getElementById('refresh-button4');
 
 refresh_button1.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_header);
@@ -10435,4 +10438,8 @@ refresh_button2.addEventListener('click', function() {
 refresh_button3.addEventListener('click', function() {
     buildDataTable(data3, number_of_buttons, custom_header);
     title.textContent = 'Lista 3'
+})
+refresh_button4.addEventListener('click', function() {
+    buildDataTable(data4, number_of_buttons, custom_header);
+    title.textContent = 'Lista 4'
 })

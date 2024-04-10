@@ -54,13 +54,7 @@ function buildTable(one_page_data, headers) {
         const rowd2 = document.createElement('tr');
         rowd2.id = 'tr-data'
         rowd2.innerHTML += `
-                        <td 
-                            colspan="9" 
-                            style="
-                                color: red; 
-                                font-size: 20px; 
-                                font-weight: bold;
-                            ">
+                        <td class="no-data-found" colspan="${headers.length}">
                             No se encontraron datos
                         </td>
                         `;

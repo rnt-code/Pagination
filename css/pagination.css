@@ -137,6 +137,12 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
+.no-data-found {
+    color: red; 
+    font-size: 20px; 
+    font-weight: bold;     
+}
+
 /*Contenedor inferior, class="container"*/
 #foot-controls {
     align-self: center;
