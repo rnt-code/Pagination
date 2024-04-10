@@ -94,7 +94,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         number_of_buttons = Math.abs(Math.floor(number_of_buttons));
     }
 
-    // Si es cero queda en 1, y si es mayor de 10 queda en 10.
+    //Si es cero queda en 1, y si es mayor de 10 queda en 10.
     if(number_of_buttons === 0) {
         number_of_buttons = 1;
     } else if(number_of_buttons > 10){
@@ -111,7 +111,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         to = number_of_buttons;
     }
 
-    // si from = to = 0, no dibuja los botones
+    //si from = to = 0, no dibuja los botones
     renderButtons(from, to);
     
     //Calculo cuantas capas de botones habrá
@@ -171,7 +171,8 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             count = parseInt(count_el.value);
         }
         
-        //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar elegidos por el usuario
+        //Cantidad de páginas que se generarán según la cant. de registros y los registros
+        //a mostrar elegidos por el usuario
         if(Number.isInteger(records_quantity / count)) {
             MAX_PAGES = records_quantity / count;
         }
@@ -187,8 +188,6 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
         }
 
-        //console.log('count: MAX_LAYERS=', MAX_LAYERS)
-
         if(MAX_PAGES <= number_of_buttons) {
             from = page_number;
             to = MAX_PAGES;
@@ -197,8 +196,6 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             from = page_number;
             to = number_of_buttons;
         }
-
-        //console.log('Botones iniciales que se imprimirán en pantalla: ', to - from + 1);
 
         //----Lógica de encendido y apagado de botones de navegación-----//
         if(MAX_LAYERS === 1) {
@@ -214,10 +211,6 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
             page_up.classList.add('disabled');
         }
         //---------------------------------------------------------------//
-
-        // if(layer_counter === 1 && MAX_LAYERS === 1) {
-        //     console.log('Count: Hay una sola capa de botones');
-        // }
 
         renderTable(data, headers);
         renderButtons(from, to);
