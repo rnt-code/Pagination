@@ -369,7 +369,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         
         buildTable(one_page_data, headers);
         document.getElementById('metrics').innerHTML = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`;
-        listData(one_page_data, true);
+        listData(one_page_data);
     }
     
     function navButtonListener() {
@@ -525,7 +525,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
             if(layer_counter > 1) { 
                 layer_counter--;
-                renderbuttons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
             }
         }
 

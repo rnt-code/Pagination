@@ -1,4 +1,4 @@
-function listData(one_page_data, istoday) {
+function listData(one_page_data) {
 
     if(one_page_data.length != 0) {
 
