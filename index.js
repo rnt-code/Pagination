@@ -10423,15 +10423,12 @@ const refresh_button1 = document.getElementById('refresh-button1');
 const refresh_button2 = document.getElementById('refresh-button2');
 const refresh_button3 = document.getElementById('refresh-button3');
 
-refresh_button1.addEventListener('click', function(event) {
-
+refresh_button1.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_header);
 })
-refresh_button2.addEventListener('click', function(event) {
-
+refresh_button2.addEventListener('click', function() {
     buildDataTable(data2, number_of_buttons, custom_header);
 })
-refresh_button3.addEventListener('click', function(event) {
-    
+refresh_button3.addEventListener('click', function() {
     buildDataTable(data3, number_of_buttons, custom_header);
 })
