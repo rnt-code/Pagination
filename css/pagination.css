@@ -83,6 +83,13 @@ a.pagelink:active {
 #tdatos {
     border-collapse: collapse;
 }
+
+/*------------------------*/
+#tr-headers, #tr-foot {
+    text-align: center;
+}
+/*------------------------*/
+
 /*-Elementos de 4º nivel dentro de datatable-*/
 #tr-headers > th, #tr-data > td {
     padding: 5px;
