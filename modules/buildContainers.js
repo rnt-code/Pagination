@@ -7,7 +7,6 @@ function buildContainers(datalength) {
 
     //build head-controls container
     const head_controls = document.createElement('div');
-    head_controls.classList.add("container"); //Bootstrap class
     head_controls.id = 'head-controls';
     place_for_list.appendChild(head_controls);
     head_controls.hidden = false;
@@ -27,7 +26,6 @@ function buildContainers(datalength) {
     //build datatable container
     const table_container = document.createElement('div');
     table_container.style = 'overflow-x:auto';
-    table_container.classList.add("container"); //Bootstrap class
     table_container.id = 'datatable';
     place_for_list.appendChild(table_container);
 
@@ -41,7 +39,6 @@ function buildContainers(datalength) {
 
     //build foot-controls container
     const foot_controls = document.createElement('div');
-    foot_controls.classList.add("container"); //Bootstrap class
     foot_controls.id = 'foot-controls';
     place_for_list.appendChild(foot_controls);
 
