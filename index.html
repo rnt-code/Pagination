@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/pagination.css">
-    <title>Pagination</title>
-</head>
-<body>
-    <br>
-    <label>Press buttons to list: </label>
-    <input type="button" value="Lista 1" id="refresh-button1">
-    <input type="button" value="Lista 2" id="refresh-button2">
-    <input type="button" value="Lista 3" id="refresh-button3">
-    <br>
-    <hr>
-    <div id="place-for-list"></div>
-    <script type="module" src="./main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/pagination.css">
+        <title>Pagination</title>
+    </head>
+    <body>
+        <header>
+            <h1>Aplicación para el paginado de datos</h1>
+            <label>Ejemplo de un array de objetos con el que funciona esta app:</label><br>
+            <section>
+                <code>
+                    data = [
+                </code><br>
+                <code>{ key 1: 'value 11', key 2: 'value 12', key 3: 'value 13',
+                    ...
+                    key m: 'value 1m'
+                    },</code><br>
+                <code>{ key 1: 'value 21', key 2: 'value 22', key 3: 'value 23',
+                    ...
+                    key m: 'value 2m'
+                    },</code><br>
+                    <code>.</code><br>
+                    <code>.</code><br>
+                    <code>.</code><br>
+                    <code>{ key 1: 'value n1', key 2: 'value n2', key 3: 'value n3',
+                    ...
+                    key m: 'value nm'
+                    }</code><br>   
+                    <code>
+                    ]</code>
+            </section>
+            <label>Más info en: <code><a href="https://github.com/rnt-code/Pagination" target="_blank">https://github.com/rnt-code/Pagination</a></code></label>
+        </header>
+        <hr>
+        <nav>
+            <label>Press buttons to list: </label>
+            <input type="button" value="Lista 1" id="refresh-button1">
+            <input type="button" value="Lista 2" id="refresh-button2">
+            <input type="button" value="Lista 3" id="refresh-button3">
+        </nav>
+        <section>
+            <div id="place-for-list">
+            </div>
+        </section>
+        <footer></footer>
+        <script type="module" src="./main.js"></script>
+    </body>
 </html>
