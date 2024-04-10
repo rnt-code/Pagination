@@ -10419,7 +10419,6 @@ const custom_header = [
     'GB result.'
 ];
 
-const item3_el = document.getElementById('item3')
 const refresh_button1 = document.getElementById('refresh-button1');
 const refresh_button2 = document.getElementById('refresh-button2');
 const refresh_button3 = document.getElementById('refresh-button3');

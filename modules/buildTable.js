@@ -1,19 +1,19 @@
 function buildTable(one_page_data, headers) {
 
     const data_length = one_page_data.length;
-    const item3_el = document.getElementById("item3");
+    const place_for_list = document.getElementById("place-for-list");
     
     if(data_length === 0) {
         headers = ['No data found'];
     }
     
-    const istable = !!item3_el.children[2].children[0];
+    const istable = !!place_for_list.children[2].children[0];
     if(istable) {
-        item3_el.children[2].children[0].remove();
+        place_for_list.children[2].children[0].remove();
     }
 
     const tabla = document.createElement("table");
-    //tabla.className = 'table table-sm table-bordered table-hover table-striped' //Boostrap classes
+  
     tabla.id = 'tdatos'
 
     document.getElementById('datatable').appendChild(tabla);
@@ -41,7 +41,6 @@ function buildTable(one_page_data, headers) {
     
     //table body
     if(data_length === 0) {
-        //data = no data
         const rowd1 = document.createElement('tr');
         rowd1.id = 'tr-data'
         let td_empty = '';

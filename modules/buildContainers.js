@@ -1,15 +1,15 @@
 function buildContainers(datalength) {
 
-    const item3_el = document.getElementById("item3");
+    const place_for_list = document.getElementById("place-for-list");
 
-    //borro lo que haya en item3
-    item3_el.innerHTML = '';
+    //borro lo que haya en place-for-list
+    place_for_list.innerHTML = '';
 
     //build head-controls container
     const head_controls = document.createElement('div');
     head_controls.classList.add("container"); //Bootstrap class
     head_controls.id = 'head-controls';
-    item3_el.appendChild(head_controls);
+    place_for_list.appendChild(head_controls);
     head_controls.hidden = false;
 
     if(datalength === 0 ) {
@@ -22,14 +22,14 @@ function buildContainers(datalength) {
     const label_top = document.createElement('label')
     label_top.id = 'metrics-top'
     top_metrics_container.appendChild(label_top)
-    item3_el.appendChild(top_metrics_container)
+    place_for_list.appendChild(top_metrics_container)
 
     //build datatable container
     const table_container = document.createElement('div');
     table_container.style = 'overflow-x:auto';
     table_container.classList.add("container"); //Bootstrap class
     table_container.id = 'datatable';
-    item3_el.appendChild(table_container);
+    place_for_list.appendChild(table_container);
 
     //build bottom-metrics container
     const bottom_metrics_container = document.createElement('div')
@@ -37,13 +37,13 @@ function buildContainers(datalength) {
     const label_bottom = document.createElement('label')
     label_bottom.id = 'metrics-bottom'
     bottom_metrics_container.appendChild(label_bottom)
-    item3_el.appendChild(bottom_metrics_container)
+    place_for_list.appendChild(bottom_metrics_container)
 
     //build foot-controls container
     const foot_controls = document.createElement('div');
     foot_controls.classList.add("container"); //Bootstrap class
     foot_controls.id = 'foot-controls';
-    item3_el.appendChild(foot_controls);
+    place_for_list.appendChild(foot_controls);
 
     renderHead();
     renderFoot();
