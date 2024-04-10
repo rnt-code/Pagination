@@ -1,7 +1,7 @@
-import { renderUpDownButtons } from "./renderUpDownButtons.js";
-import { renderButtons } from "./renderButtons.js";
-import { buildContainers } from "./buildContainers.js";
-import { buildTable } from "./buildTable.js";
+import { renderUpDownButtons } from "../view/renderUpDownButtons.js";
+import { renderButtons } from "../view/renderButtons.js";
+import { buildContainers } from "../view/buildContainers.js";
+import { buildTable } from "../view/buildTable.js";
 import { listData } from "./listData.js"
 
 function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undefined) {
