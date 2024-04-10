@@ -1,6 +1,5 @@
 function buildContainers(datalength) {
 
-    console.log('llamada a buildContainers')
     const item3_el = document.getElementById("item3");
 
     //borro lo que haya en item3
