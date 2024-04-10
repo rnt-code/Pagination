@@ -2,12 +2,13 @@
 #item3 {
     display: flex;
     flex-direction: column;
-    grid-template-rows: auto auto auto;
-    align-items: center;
+    /* grid-template-rows: auto auto auto; */
+    /* align-items: center; */
 }
 
 /*Contenedor superior, class="container"*/
 #head-controls {
+    align-self: center;
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
@@ -74,6 +75,7 @@ a.pagelink:active {
 
 /*Contenedor medio, class="container"*/
 #datatable {
+    align-self: center;
     width: 70%;
 }
 
@@ -97,11 +99,10 @@ a.pagelink:active {
     text-align: center;
     vertical-align: middle;
 }
-
+/*--------------------------------*/
 /*dar un margen a las métricas del piso de la tabla*/
-#metrics {
-    margin-top: 18px;
-}
+
+/*--------------------------------*/
 
 #tr-data:hover {
     background-color: rgb(253, 255, 130);
@@ -109,25 +110,42 @@ a.pagelink:active {
 #tr-data:nth-child(odd) {
     background-color: rgb(238, 238, 238);
 }
-#metrics {
-    text-align:left;
-    caption-side: bottom;
+/*-----------------------------------*/
+
+
+/*-----------------------------------*/
+#top-info, #bottom-info {
+    width: 70%;
+    align-self: center;
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#metrics-top, #metrics-bottom {
+    color: rgb(109, 109, 109);
+    font-size: 13px;
+}
+#top-info {
+    margin-bottom: 10px;
+}
+#bottom-info {
+    margin-top: 10px;
 }
 /*-----------------------------------*/
 
 /*Contenedor inferior, class="container"*/
 #foot-controls {
+    align-self: center;
     display: grid;
     grid-template-columns: auto auto;
 }
-#foot-controls {
+/* #foot-controls {
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+} */
 /*-Elementos de 2º nivel dentro de foot-controls-*/
-#info {
+/* #info {
     justify-self: start;
-}
+} */
 /*-----------------------------------*/
 
 /* no se esta usando este elemento por ahora

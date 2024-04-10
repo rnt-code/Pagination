@@ -1,6 +1,6 @@
 import { renderUpDownButtons } from "./renderUpDownButtons.js";
 import { renderButtons } from "./renderButtons.js";
-import { tableContainer } from "./tableContainer.js";
+import { buildContainers } from "./buildContainers.js";
 import { buildTable } from "./buildTable.js";
 import { listData } from "./listData.js"
 
@@ -37,7 +37,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         }
     }
 
-    tableContainer(data.length);
+    buildContainers(data.length);
 
     let MAX_PAGES = 0;
     let MAX_LAYERS = 0;
@@ -361,7 +361,11 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         const one_page_data = data.slice(start, end);
         
         buildTable(one_page_data, headers);
-        document.getElementById('metrics').innerHTML = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`;
+        const metrics = `Página ${page_number} de ${MAX_PAGES}. Total registros: ${records_quantity}`
+
+        document.getElementById('metrics-top').innerHTML = metrics;
+        document.getElementById('metrics-bottom').innerHTML = metrics;
+
         listData(one_page_data);
     }
     

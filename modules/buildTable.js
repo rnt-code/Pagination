@@ -7,9 +7,9 @@ function buildTable(one_page_data, headers) {
         headers = ['No data found'];
     }
     
-    const istable = !!item3_el.children[1].children[0];
+    const istable = !!item3_el.children[2].children[0];
     if(istable) {
-        item3_el.children[1].children[0].remove();
+        item3_el.children[2].children[0].remove();
     }
 
     const tabla = document.createElement("table");
@@ -24,14 +24,11 @@ function buildTable(one_page_data, headers) {
     tbody.id = 'table-body'
     const tfoot = document.createElement('tfoot');
     tfoot.id = 'table-foot'
-    const caption = document.createElement('caption')
-    
-    tabla.appendChild(caption);
-    caption.id = 'metrics';
+
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
     tabla.appendChild(tfoot);
-    
+
     //table header
     const rowh = document.createElement('tr');
     rowh.id = 'tr-headers'

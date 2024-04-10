@@ -1,4 +1,4 @@
-function tableContainer(datalength) {
+function buildContainers(datalength) {
 
     const item3_el = document.getElementById("item3");
 
@@ -9,6 +9,7 @@ function tableContainer(datalength) {
         }
     }
 
+    //build head-controls container
     const head_controls = document.createElement('div');
     head_controls.classList.add("container"); //Bootstrap class
     head_controls.id = 'head-controls';
@@ -19,12 +20,30 @@ function tableContainer(datalength) {
         head_controls.hidden = true;
     }
 
+    //build top-metrics container
+    const top_metrics_container = document.createElement('div')
+    top_metrics_container.id = 'top-info'
+    const label_top = document.createElement('label')
+    label_top.id = 'metrics-top'
+    top_metrics_container.appendChild(label_top)
+    item3_el.appendChild(top_metrics_container)
+
+    //build datatable container
     const table_container = document.createElement('div');
     table_container.style = 'overflow-x:auto';
     table_container.classList.add("container"); //Bootstrap class
     table_container.id = 'datatable';
     item3_el.appendChild(table_container);
 
+    //build bottom-metrics container
+    const bottom_metrics_container = document.createElement('div')
+    bottom_metrics_container.id = 'bottom-info'
+    const label_bottom = document.createElement('label')
+    label_bottom.id = 'metrics-bottom'
+    bottom_metrics_container.appendChild(label_bottom)
+    item3_el.appendChild(bottom_metrics_container)
+
+    //build foot-controls container
     const foot_controls = document.createElement('div');
     foot_controls.classList.add("container"); //Bootstrap class
     foot_controls.id = 'foot-controls';
@@ -68,4 +87,4 @@ function tableContainer(datalength) {
     }
 }
 
-export { tableContainer }
+export { buildContainers }
