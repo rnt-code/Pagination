@@ -1,5 +1,6 @@
 import { buildDataTable } from './modules/buildDataTable.js'
 
+const title = document.getElementById('title');
 
 const data1 = [
   {
@@ -10425,10 +10426,13 @@ const refresh_button3 = document.getElementById('refresh-button3');
 
 refresh_button1.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_header);
+    title.textContent = 'Lista 1'
 })
 refresh_button2.addEventListener('click', function() {
     buildDataTable(data2, number_of_buttons, custom_header);
+    title.textContent = 'Lista 2'
 })
 refresh_button3.addEventListener('click', function() {
     buildDataTable(data3, number_of_buttons, custom_header);
+    title.textContent = 'Lista 3'
 })

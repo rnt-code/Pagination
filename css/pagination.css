@@ -1,7 +1,10 @@
 /*contenedor principal*/
-#place-for-list {
+#place-for-list, #list-title {
     display: flex;
     flex-direction: column;
+}
+#title {
+    align-self: center;
 }
 
 /*Contenedor superior, class="container"*/
@@ -149,12 +152,3 @@ a.pagelink:active {
     justify-self: start;
 } */
 /*-----------------------------------*/
-
-/* no se esta usando este elemento por ahora
-#search_filter {
-    justify-self: end;
-tfoot {
-    font-weight: bold;
-}
-
-}*/
