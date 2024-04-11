@@ -1,4 +1,4 @@
-/*contenedor principal*/
+/*contenedor principal de la app*/
 #place-for-list, #list-title {
     display: flex;
     flex-direction: column;
@@ -6,8 +6,9 @@
 #title {
     align-self: center;
 }
+/*-----------------------------------*/
 
-/*Contenedor superior, class="container"*/
+/*Contenedor superior*/
 #head-controls {
     align-self: center;
     width: 70%;
@@ -15,7 +16,6 @@
     display: grid;
     grid-template-columns: auto auto;
 }
-
 
 /*-Elementos de 2º nivel dentro de head-controls-*/
 #records-length {
@@ -71,7 +71,6 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
-
 /*Contenedor medio, class="container"*/
 #datatable {
     align-self: center;
@@ -88,6 +87,7 @@ a.pagelink:active {
 }
 
 /*------------------------*/
+/*títulos de cabecera y pie de la tabla*/
 #tr-headers, #tr-foot {
     text-align: center;
 }
@@ -106,7 +106,6 @@ a.pagelink:active {
 }
 /*--------------------------------*/
 
-
 /*--------------------------------*/
 
 #tr-data:hover {
@@ -117,8 +116,7 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
-
-/*-----------------------------------*/
+/*Contenedores de top-info y bottom-info*/
 #top-info, #bottom-info {
     width: 70%;
     align-self: center;
@@ -137,6 +135,7 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
+/*cuando no hay datos para listar*/
 .no-data-found {
     color: red; 
     font-size: 20px; 
@@ -149,10 +148,10 @@ a.pagelink:active {
     display: grid;
     grid-template-columns: auto auto;
 }
-/* #foot-controls {
+#foot-controls {
     width: 70%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-} */
+}
 /*-Elementos de 2º nivel dentro de foot-controls-*/
 /* #info {
     justify-self: start;
