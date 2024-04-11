@@ -2,8 +2,13 @@ function buildContainers(datalength) {
 
     const place_for_list = document.getElementById("place-for-list");
 
-    //borro lo que haya en el div place-for-list
-    place_for_list.innerHTML = '';
+    //El código de borrado puede usarse en caso que en la aplicación 
+    //principal no se haga el borrado del contenedor item3. 
+    //El borrado debe hacerse en alguno de los dos puntos: en esta función
+    //o en la aplicación principal.
+    while(place_for_list.firstChild){
+    	place_for_list.removeChild(place_for_list.firstChild);
+    }
 
     //build head-controls container
     const head_controls = document.createElement('div');
