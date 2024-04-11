@@ -1,6 +1,10 @@
 import { buildDataTable } from './modules/buildDataTable.js'
 
 const title = document.getElementById('title');
+const refresh_button1 = document.getElementById('refresh-button1');
+const refresh_button2 = document.getElementById('refresh-button2');
+const refresh_button3 = document.getElementById('refresh-button3');
+const refresh_button4 = document.getElementById('refresh-button4');
 
 const data1 = [
   {
@@ -10421,11 +10425,6 @@ const custom_header = [
     'HP result.',
     'GB result.'
 ];
-
-const refresh_button1 = document.getElementById('refresh-button1');
-const refresh_button2 = document.getElementById('refresh-button2');
-const refresh_button3 = document.getElementById('refresh-button3');
-const refresh_button4 = document.getElementById('refresh-button4');
 
 refresh_button1.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_header);
