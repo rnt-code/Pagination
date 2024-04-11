@@ -2,7 +2,7 @@ function buildContainers(datalength) {
 
     const place_for_list = document.getElementById("place-for-list");
 
-    //borro lo que haya en place-for-list
+    //borro lo que haya en el div place-for-list
     place_for_list.innerHTML = '';
 
     //build head-controls container
