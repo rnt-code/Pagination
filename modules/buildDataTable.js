@@ -82,8 +82,13 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
         MAX_PAGES = Math.floor(records_quantity / count) + 1;
     }
 
+    //**----------------------------------------------------------------------------- */
     //Renderizo la tabla
+    //si data = [], buildtable() muestra el mensaje de No data Found
     renderTable(data, headers);
+
+    //NOTA acá debería haber un condicional para no continuar en caso que data = []   //
+    //**----------------------------------------------------------------------------- */
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
