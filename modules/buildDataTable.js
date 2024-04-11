@@ -84,11 +84,8 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undef
 
     //**----------------------------------------------------------------------------- */
     //Renderizo la tabla
-    //si data = [], buildtable() muestra el mensaje de No data Found
+    //si data = [], buildtable() muestra el mensaje 'No data Found'
     renderTable(data, headers);
-
-    //NOTA acá debería haber un condicional para no continuar en caso que data = []   //
-    //**----------------------------------------------------------------------------- */
 
     //Renderizo los botones
     if(typeof(number_of_buttons) != 'number') {
