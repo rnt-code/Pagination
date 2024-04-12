@@ -120,3 +120,26 @@ NOTA: De igual modo, el plug-in siempre determina automáticamente la cantidad d
 
 `custom_header`
 Arriba se especificó el formato para los títulos, si este no se especifica, la funcion `builddatatable()` intentará obtenerlos de las cabeceras de `data`. Las cabeceras son las claves de los objetos.
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./css/pagination.css">
+        <title>Pagination</title>
+    </head>
+    <body>
+        <header>
+            <h1>Aplicación para el paginado de datos</h1>
+        </header>
+        <main>
+            <div id="place-for-list"></div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+```
