@@ -1,18 +1,18 @@
 function renderUpDownButtons() {
 
     //container para los botones
-    const nav_buttons = document.getElementById('nav-buttons');
+    const head_nav_buttons = document.getElementById('head-nav-buttons');
 
     //borro lo que haya en el contenedor nav_buttons
-    const isbuttons = !!nav_buttons.children[0];
+    const isbuttons = !!head_nav_buttons.children[0];
     if(isbuttons) {
-        nav_buttons.children[0].remove();
+        head_nav_buttons.children[0].remove();
     }
     
     //creo la lista desordenada (unordered list), class='pagination-keys'
     const ul = document.createElement('ul');
     ul.classList.add('pagination-keys');
-    nav_buttons.appendChild(ul);
+    head_nav_buttons.appendChild(ul);
 
     const pagination_keys = document.querySelector('.pagination-keys');
 

@@ -1,44 +1,58 @@
+
+import { getTableHeadTitles } from '../helpers/getTableHeadTitles.js'
+import { buildContainers } from "../view/buildContainers.js";
+import { renderFootControlsContent } from "../view/renderFootControlsContent.js";
+import { renderHeadControlsContent } from "../view/renderHeadControlsContent.js";
 import { renderUpDownButtons } from "../view/renderUpDownButtons.js";
 import { renderButtons } from "../view/renderButtons.js";
-import { buildContainers } from "../view/buildContainers.js";
 import { paintSelectedButton } from '../view/paintSelectedButton.js'
 import { buildTable } from "../view/buildTable.js";
 import { listData } from "./listData.js"
 
-function buildDataTable(data = [], number_of_buttons = 6, custom_headers = undefined) {
 
-    let headers = [];
-    let difference = 0;
 
-    if(data.length != 0) {
+function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = undefined) {
+
+    let headers = getTableHeadTitles(custom_head_titles, data);
+
+    // if(data.length != 0) {
         
-        if(custom_headers === undefined) {
-            headers = Object.keys(data[0]);
-        } 
-        else if(custom_headers.length === 0) {
-            headers = Object.keys(data[0]);
-        }
-        else if(!Array.isArray(custom_headers)) {
-            headers = Object.keys(data[0]);
-        }
-        else {
-            headers = Object.keys(data[0]);
-            difference = Math.abs(headers.length - custom_headers.length);
-            if(custom_headers.length < headers.length) {
-                for(let i = 0; i < difference; i++) {
-                    custom_headers.push('-');
-                }
-            }
-            if(custom_headers.length > headers.length) {
-                for(let i = 0; i < difference; i++) {
-                    custom_headers.pop();
-                }
-            }
-            headers = custom_headers;
-        }
-    }
+    //     if(custom_headers === undefined) {
+    //         headers = Object.keys(data[0]);
+    //     } 
+    //     else if(custom_headers.length === 0) {
+    //         headers = Object.keys(data[0]);
+    //     }
+    //     else if(!Array.isArray(custom_headers)) {
+    //         headers = Object.keys(data[0]);
+    //     }
+    //     else {
+    //         headers = Object.keys(data[0]);
+    //         difference = Math.abs(headers.length - custom_headers.length);
+    //         if(custom_headers.length < headers.length) {
+    //             for(let i = 0; i < difference; i++) {
+    //                 custom_headers.push('-');
+    //             }
+    //         }
+    //         if(custom_headers.length > headers.length) {
+    //             for(let i = 0; i < difference; i++) {
+    //                 custom_headers.pop();
+    //             }
+    //         }
+    //         headers = custom_headers;
+    //     }
+    // }
 
-    buildContainers(data.length);
+    
+    buildContainers();
+    const head_controls = document.getElementById('head-controls')
+    if(data.length === 0) {
+        head_controls.hidden = true;
+    }
+    renderHeadControlsContent();
+    renderFootControlsContent();
+    
+    
 
     let MAX_PAGES = 0;
     let MAX_LAYERS = 0;
