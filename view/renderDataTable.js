@@ -6,7 +6,6 @@ function renderDataTable(one_page_data, headers) {
     const data_length = one_page_data.length;
 
     removeDataTableContent();
-
     buildTable();
 
     const thead = document.getElementById('table-head');

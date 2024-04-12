@@ -1,4 +1,4 @@
-import { buildDataTable } from './modules/buildDataTable.js'
+import { buildDataTable } from './buildDataTable.js'
 
 const title = document.getElementById('title');
 const refresh_button1 = document.getElementById('refresh-button1');

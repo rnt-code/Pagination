@@ -1,12 +1,12 @@
-import { getTableHeadTitles } from '../helpers/getTableHeadTitles.js'
-import { buildContainers } from "../view/buildContainers.js";
-import { renderUpDownButtons } from "../view/renderUpDownButtons.js";
-import { renderButtons } from "../view/renderButtons.js";
-import { paintSelectedButton } from '../view/paintSelectedButton.js'
-import { renderDataTable } from "../view/renderDataTable.js";
-import { listData } from "./listData.js"
-import { renderNoDataFound } from '../view/renderNoDataFound.js';
-import { renderRecordsToShow } from '../view/renderRecordsToShow.js';
+import { getTableHeadTitles } from './helpers/getTableHeadTitles.js'
+import { buildContainers } from "./view/buildContainers.js";
+import { renderUpDownButtons } from "./view/renderUpDownButtons.js";
+import { renderButtons } from "./view/renderButtons.js";
+import { paintSelectedButton } from './view/paintSelectedButton.js'
+import { renderDataTable } from "./view/renderDataTable.js";
+import { listData } from "./modules/listData.js"
+import { renderNoDataFound } from './view/renderNoDataFound.js';
+import { renderRecordsToShow } from './view/renderRecordsToShow.js';
 
 function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = undefined) {
 
@@ -547,7 +547,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
     }
     else {
         //**No es posible correr la app */
-        console.error('No existe el elemento html  para desplegar la app. Ver documentación')
+        console.error('No existe el elemento html para desplegar la app. Ver documentación')
         console.error('El index.html debería contener el elemento: <div id="place-for-list"></div>')
     }
 }
