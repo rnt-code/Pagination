@@ -1,20 +1,23 @@
+import { cleanUpAppContainer } from "../helpers/cleanUpAppContainer.js";
+
 function buildContainers() {
 
-    const exist = !!document.getElementById("place-for-list");
+    const place_for_list = document.getElementById('place-for-list')
+    const exist = !!place_for_list
 
     if(exist) {
-        const place_for_list = document.getElementById("place-for-list");
 
-        while(place_for_list.firstChild){
-            place_for_list.removeChild(place_for_list.firstChild);
-        }
+        cleanUpAppContainer();
 
         //build head-controls container
         const head_controls = document.createElement('div');
         head_controls.id = 'head-controls';
         place_for_list.appendChild(head_controls);
-        head_controls.hidden = false;
-
+        head_controls.innerHTML =
+                                `
+                                <div id="hc-records-selector">
+                                </div><div id="hc-nav-buttons"></div>
+                                `
         //build top-metrics container
         const top_metrics_container = document.createElement('div')
         top_metrics_container.id = 'top-info'
@@ -41,8 +44,14 @@ function buildContainers() {
         const foot_controls = document.createElement('div');
         foot_controls.id = 'foot-controls';
         place_for_list.appendChild(foot_controls);
+        foot_controls.innerHTML =
+                                `
+                                <div id="fc-info"></div>
+                                <div id="fc-nav-buttons"></div>
+                                `
     }
     else {
+        //**No se pudo armar el esqueleto para la app */
         console.error('No existe el elemento html para desplegar la lista. Ver documentación')
     }
 }

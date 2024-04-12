@@ -2,7 +2,7 @@ function paintSelectedButton(page_number) {
 
     if(page_number != 0) {
 
-        document.getElementById('head-nav-buttons').hidden = false;
+        document.getElementById('hc-nav-buttons').hidden = false;
 
         const selected_button = document.querySelector('.selected');
         const button = document.getElementById(page_number);

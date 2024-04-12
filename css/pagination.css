@@ -20,7 +20,7 @@
 /*-Elementos de 2º nivel dentro de head-controls-*/
 #records-length {
     justify-self: start;
-    display: flex;
+    /* display: flex; */
     align-items: center
 }
 #nav-buttons {
