@@ -49,8 +49,8 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
         let records_quantity = data.length;
 
         //Cantidad de registros a mostrar al iniciar la página
-        const count_el = document.getElementById('records-to-show');
-        count = parseInt(count_el.value);
+        const records_to_show = document.getElementById('records-to-show');
+        count = parseInt(records_to_show.value);
         
         //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
         if(Number.isInteger(records_quantity / count)) {
@@ -123,7 +123,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
         paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
         /**--------------Enventos de los botones--------------*/
-        count_el.addEventListener("change", function(event) {
+        records_to_show.addEventListener("change", function(event) {
             //event.preventDefault();
 
             from = 0;
@@ -137,19 +137,19 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
             page_up.classList.remove('disabled');
             
             //Cantidad de registros a mostrar que elige el operador
-            const count_el = document.getElementById('count');
+            const records_to_show = document.getElementById('records-to-show');
             if(records_quantity != 0) {
                 page_number = 1;
-                if(parseInt(count_el.value) > records_quantity) {
+                if(parseInt(records_to_show.value) > records_quantity) {
                     count = records_quantity;
                 }
                 else {
-                    count = parseInt(count_el.value);
+                    count = parseInt(records_to_show.value);
                 }
             }
             else {
                 page_number = 0;
-                count = parseInt(count_el.value);
+                count = parseInt(records_to_show.value);
             }
             
             //Cantidad de páginas que se generarán según la cant. de registros y los registros
