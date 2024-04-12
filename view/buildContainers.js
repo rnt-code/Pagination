@@ -1,25 +1,20 @@
-function buildContainers(datalength) {
+import { cleanUpAppContainer } from "../helpers/cleanUpAppContainer.js";
 
-    const place_for_list = document.getElementById("place-for-list");
+function buildContainers() {
 
-    //El código de borrado puede usarse en caso que en la aplicación 
-    //principal no se haga el borrado del contenedor item3. 
-    //El borrado debe hacerse en alguno de los dos puntos: en esta función
-    //o en la aplicación principal.
-    while(place_for_list.firstChild){
-    	place_for_list.removeChild(place_for_list.firstChild);
-    }
+    cleanUpAppContainer();
 
+    const place_for_list = document.getElementById('place-for-list');
+    
     //build head-controls container
     const head_controls = document.createElement('div');
     head_controls.id = 'head-controls';
     place_for_list.appendChild(head_controls);
-    head_controls.hidden = false;
-
-    if(datalength === 0 ) {
-        head_controls.hidden = true;
-    }
-
+    head_controls.innerHTML =
+                            `
+                            <div id="hc-records-selector">
+                            </div><div id="hc-nav-buttons"></div>
+                            `
     //build top-metrics container
     const top_metrics_container = document.createElement('div')
     top_metrics_container.id = 'top-info'
@@ -46,43 +41,11 @@ function buildContainers(datalength) {
     const foot_controls = document.createElement('div');
     foot_controls.id = 'foot-controls';
     place_for_list.appendChild(foot_controls);
-
-    renderHead();
-    renderFoot();
-    
-    function renderHead() {
-        head_controls.innerHTML = `
-            <div id="records-length">
-                <label>Mostrando 
-                    <select id="count">
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="15" selected>15</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                        <option value="300">300</option>
-                        <option value="500">500</option>
-                        <option value="1000">1000</option>
-                    </select> registros
-                </label>
-            </div>
-            <div id="nav-buttons">
-            <!--
-            <div id="search_filter">
-                <label class="">Buscar:<input type="search" placeholder="ingrese parametro" aria-controls="search"></label>
-            </div>
-            -->
-        `
-    }
-
-    function renderFoot() {
-        foot_controls.innerHTML = `
-        <!--<div id="info">foot controls</div>
-            <div id="nav-buttons"></div>-->
-        `
-    }
+    foot_controls.innerHTML =
+                            `
+                            <div id="fc-info"></div>
+                            <div id="fc-nav-buttons"></div>
+                            `
 }
 
 export { buildContainers }
