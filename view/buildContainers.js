@@ -4,6 +4,8 @@ function buildContainers() {
 
     cleanUpAppContainer();
 
+    const place_for_list = document.getElementById('place-for-list');
+    
     //build head-controls container
     const head_controls = document.createElement('div');
     head_controls.id = 'head-controls';

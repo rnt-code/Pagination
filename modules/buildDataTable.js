@@ -10,8 +10,8 @@ import { renderRecordsToShow } from '../view/renderRecordsToShow.js';
 
 function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = undefined) {
 
-    const place_for_list = document.getElementById('place-for-list')
-    const exist = !!place_for_list
+    const place_for_list = document.getElementById('place-for-list');
+    const exist = !!place_for_list;
     if(exist) {
         let headers = getTableHeadTitles(custom_head_titles, data);
 
