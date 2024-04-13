@@ -203,13 +203,20 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 return false;
             })
 
+            //botones del teclado: arrow-left y arrow-rigth
             document.addEventListener('keydown', function(event) {
                 
-                if (event.key === 'ArrowLeft') {
-                    slowReverse();
-                } 
-                else if (event.key === 'ArrowRight') {
-                    slowForward();
+                if(event.repeat){
+                    event.preventDefault();
+                    return false;
+                }
+                else {
+                    if (event.key === 'ArrowLeft') {                    
+                        slowReverse();
+                    } 
+                    if (event.key === 'ArrowRight') {
+                        slowForward();
+                    }
                 }
                 return false
             });
@@ -274,7 +281,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
 
             page_up.addEventListener("click", function(event) {
                 event.preventDefault()
-                
+
                 slowForward();
                 return false
             })
