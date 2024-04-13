@@ -1,10 +1,11 @@
 import { buildDataTable } from './buildDataTable.js'
 
 const title = document.getElementById('title');
-const refresh_button1 = document.getElementById('refresh-button1');
-const refresh_button2 = document.getElementById('refresh-button2');
-const refresh_button3 = document.getElementById('refresh-button3');
-const refresh_button4 = document.getElementById('refresh-button4');
+const refresh_button1_el = document.getElementById('refresh-button1');
+const refresh_button2_el = document.getElementById('refresh-button2');
+const refresh_button3_el = document.getElementById('refresh-button3');
+const refresh_button4_el = document.getElementById('refresh-button4');
+const cleanUp_el = document.getElementById('cleanUp');
 
 const data1 = [
   {
@@ -4765,19 +4766,25 @@ const data4 = []
 
 const number_of_buttons = 6;
 
-refresh_button1.addEventListener('click', function() {
+refresh_button1_el.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_head_titles1);
     title.textContent = 'Lista 1'
 })
-refresh_button2.addEventListener('click', function() {
+refresh_button2_el.addEventListener('click', function() {
     buildDataTable(data2, number_of_buttons, custom_head_titles2);
     title.textContent = 'Lista 2'
 })
-refresh_button3.addEventListener('click', function() {
+refresh_button3_el.addEventListener('click', function() {
     buildDataTable(data3, number_of_buttons, custom_head_titles3);
     title.textContent = 'Lista 3'
 })
-refresh_button4.addEventListener('click', function() {
+refresh_button4_el.addEventListener('click', function() {
     buildDataTable(data4, number_of_buttons, );
     title.textContent = 'Lista 4'
+})
+cleanUp_el.addEventListener('click', function() {
+    const place_for_list_el = document.getElementById('place-for-list');
+    const title_el = document.getElementById('title');
+    place_for_list_el.innerHTML = ''
+    title_el.innerHTML = ''
 })
