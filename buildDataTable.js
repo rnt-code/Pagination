@@ -1,10 +1,10 @@
-import { getTableHeadTitles } from './helpers/getTableHeadTitles.js'
+import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
 import { buildContainers } from "./build/buildContainers.js";
 import { renderUpDownButtons } from "./templates/renderUpDownButtons.js";
 import { renderButtons } from "./templates/renderButtons.js";
 import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
 import { renderDataTable } from "./templates/renderDataTable.js";
-import { listData } from "./modules/listData.js"
+import { tableFiller } from './utility/tableFiller.js'
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderRecordsToShow } from './templates/renderRecordsToShow.js';
 
@@ -410,7 +410,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 document.getElementById('metrics-top').innerHTML = metrics;
                 document.getElementById('metrics-bottom').innerHTML = metrics;
             
-                listData(one_page_data);
+                tableFiller(one_page_data);
             }
 
             //Avance (--->) de 1 página en 1

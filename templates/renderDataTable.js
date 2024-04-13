@@ -1,4 +1,4 @@
-import { cleanUpDataTableContent } from "../helpers/cleanUpDataTableContent.js";
+import { cleanUpDataTableContent } from '../utility/cleanUpDataTableContent.js';
 import { buildTable } from "../build/buildTable.js";
 
 function renderDataTable(one_page_data, headers) {

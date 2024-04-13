@@ -1,4 +1,4 @@
-function listData(one_page_data) {
+function tableFiller(one_page_data) {
 
     if(one_page_data.length != 0) {
 
@@ -27,4 +27,4 @@ function listData(one_page_data) {
     }
 }
 
-export { listData }
+export { tableFiller }
