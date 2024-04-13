@@ -203,7 +203,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 return false;
             })
 
-            //botones del teclado: arrow-left y arrow-rigth
+            //botones del teclado: arrow-left '<-' y arrow-rigth '->'
             document.addEventListener('keydown', function(event) {
                 
                 if(event.repeat){
