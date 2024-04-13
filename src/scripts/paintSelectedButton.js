@@ -2,10 +2,11 @@ function paintSelectedButton(page_number) {
 
     if(page_number != 0) {
 
+        console.log('paintSelectedButton, page_number = ', page_number)
         document.getElementById('hc-nav-buttons').hidden = false;
 
         const selected_button = document.querySelector('.selected');
-        const button = document.getElementById(page_number);
+        const button = document.getElementById(`${page_number}`);
 
         if(selected_button) {
             selected_button.style.color = 'black';
@@ -17,7 +18,7 @@ function paintSelectedButton(page_number) {
     }
     else {
         //si page = 0, oculta nav-buttons
-        document.getElementById('head-nav-buttons').hidden = true;
+        document.getElementById('hc-nav-buttons').hidden = true;
     }
     return false
 }
