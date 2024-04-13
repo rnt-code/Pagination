@@ -4,6 +4,7 @@ function cleanUpDataTableContent() {
     while(dataTable.firstChild){
         dataTable.removeChild(dataTable.firstChild);
     }
+    return false
 }
 
 export { cleanUpDataTableContent }

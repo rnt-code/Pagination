@@ -25,6 +25,7 @@ function tableFiller(one_page_data) {
             }
         }
     }
+    return false
 }
 
 export { tableFiller }

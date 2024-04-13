@@ -4,6 +4,7 @@ function cleanUpAppContainer() {
     while(place_for_list.firstChild){
         place_for_list.removeChild(place_for_list.firstChild);
     }
+    return false
 }
 
 export { cleanUpAppContainer }

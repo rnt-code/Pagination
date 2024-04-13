@@ -70,5 +70,6 @@ function renderUpDownButtons() {
     a_layu.href = '#';
     li_layu.appendChild(a_layu);
     /**--------------------fin botón layer up--------------------- */
+    return false
 }
 export { renderUpDownButtons }

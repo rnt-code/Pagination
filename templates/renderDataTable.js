@@ -39,6 +39,7 @@ function renderDataTable(one_page_data, headers) {
     rowf.id = 'tr-foot'
     rowf.innerHTML = th_titles;
     tfoot.appendChild(rowf)
+    return false
 }
 
 export { renderDataTable }

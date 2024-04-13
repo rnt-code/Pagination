@@ -19,6 +19,7 @@ function paintSelectedButton(page_number) {
         //si page = 0, oculta nav-buttons
         document.getElementById('head-nav-buttons').hidden = true;
     }
+    return false
 }
 
 export { paintSelectedButton }

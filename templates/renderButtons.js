@@ -29,6 +29,7 @@ function renderButtons(from, to) {
             pagination_keys.insertBefore(li_btn[i], page_up);
         }
     }
+    return false
 }
 
 export { renderButtons }

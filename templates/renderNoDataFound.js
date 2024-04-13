@@ -33,6 +33,7 @@ function renderNoDataFound() {
     rowf.id = 'tr-foot'
     rowf.innerHTML = title;
     tfoot.appendChild(rowf)
+    return false
 }
 
 export { renderNoDataFound }

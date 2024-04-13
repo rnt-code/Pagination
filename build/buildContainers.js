@@ -46,6 +46,7 @@ function buildContainers() {
                             <div id="fc-info"></div>
                             <div id="fc-nav-buttons"></div>
                             `
+    return false
 }
 
 export { buildContainers }

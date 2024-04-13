@@ -127,7 +127,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
 
             /**--------------Enventos de los botones--------------*/
             records_to_show.addEventListener("change", function(event) {
-                //event.preventDefault();
+                event.preventDefault()
 
                 from = 0;
                 to = 0;
@@ -200,10 +200,10 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 renderButtons(from, to);
                 navButtonListener();
                 paintSelectedButton(page_number)
+                return false;
             })
 
             document.addEventListener('keydown', function(event) {
-                //event.preventDefault();
                 
                 if (event.key === 'ArrowLeft') {
                     slowReverse();
@@ -211,10 +211,11 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 else if (event.key === 'ArrowRight') {
                     slowForward();
                 }
+                return false
             });
 
             layer_down.addEventListener('click', function(event) {
-                //event.preventDefault();
+                event.preventDefault()
 
                 if(layer_counter > 1) { 
                     layer_counter--;
@@ -261,23 +262,26 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, headers);
+                return false
             })
 
-            page_down.addEventListener("click", function(event) {
-                //event.preventDefault();
-                
+            page_down.addEventListener("click", function(event) {               
+                event.preventDefault()
+
                 slowReverse();
+                return false
             })
 
             page_up.addEventListener("click", function(event) {
-                //event.preventDefault();
-
+                event.preventDefault()
+                
                 slowForward();
+                return false
             })
 
             layer_up.addEventListener('click', function(event) {
-                //event.preventDefault();
-            
+                event.preventDefault()
+
                 if(layer_counter < MAX_LAYERS) {
                     layer_counter++;
 
@@ -334,16 +338,17 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, headers);
+                return false
             })
 
             function navButtonListener() {
-            
+
                 const buttons_list = document.querySelectorAll('.pagei');
                 buttons_list.forEach(function(button) {
 
                     button.addEventListener('click', function(event) {
-                        //event.preventDefault();
-                        
+                        event.preventDefault()
+
                         page_number = parseInt(button.innerText);
                         if(MAX_LAYERS >= 2) {
                             if(layer_counter === 1) {
@@ -390,6 +395,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
 
                         paintSelectedButton(page_number)
                         renderTable(data, headers);
+                        return false
                     })
                 })
             }
@@ -411,6 +417,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 document.getElementById('metrics-bottom').innerHTML = metrics;
             
                 tableFiller(one_page_data);
+                return false
             }
 
             //Avance (--->) de 1 página en 1
@@ -477,6 +484,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, headers);
+                return false
             }
 
             //Retroceso (<---) de 1 página en 1
@@ -537,6 +545,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
                 navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, headers);
+                return false
             }
             /**---------------Fin Funciones locales---------------*/
         }
@@ -550,6 +559,7 @@ function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = u
         console.error('No existe el elemento html para desplegar la app. Ver documentación')
         console.error('El index.html debería contener el elemento: <div id="place-for-list"></div>')
     }
+    return false
 }
 
 export { buildDataTable }

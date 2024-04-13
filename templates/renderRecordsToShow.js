@@ -17,6 +17,7 @@ function renderRecordsToShow() {
             </select> registros
         </label>
     `
+    return false
 }
 
 export { renderRecordsToShow }

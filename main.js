@@ -4769,22 +4769,27 @@ const number_of_buttons = 6;
 refresh_button1_el.addEventListener('click', function() {
     buildDataTable(data1, number_of_buttons, custom_head_titles1);
     title.textContent = 'Lista 1'
+    return false
 })
 refresh_button2_el.addEventListener('click', function() {
     buildDataTable(data2, number_of_buttons, custom_head_titles2);
     title.textContent = 'Lista 2'
+    return false
 })
 refresh_button3_el.addEventListener('click', function() {
     buildDataTable(data3, number_of_buttons, custom_head_titles3);
     title.textContent = 'Lista 3'
+    return false
 })
 refresh_button4_el.addEventListener('click', function() {
     buildDataTable(data4, number_of_buttons, );
     title.textContent = 'Lista 4'
+    return false
 })
 cleanUp_el.addEventListener('click', function() {
     const place_for_list_el = document.getElementById('place-for-list');
     const title_el = document.getElementById('title');
     place_for_list_el.innerHTML = ''
     title_el.innerHTML = ''
+    return false
 })
