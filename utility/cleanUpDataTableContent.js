@@ -1,4 +1,4 @@
-function removeDataTableContent() {
+function cleanUpDataTableContent() {
 
     const dataTable = document.getElementById("datatable");
     while(dataTable.firstChild){
@@ -6,4 +6,4 @@ function removeDataTableContent() {
     }
 }
 
-export { removeDataTableContent }
+export { cleanUpDataTableContent }

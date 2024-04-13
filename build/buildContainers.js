@@ -1,4 +1,4 @@
-import { cleanUpAppContainer } from "../helpers/cleanUpAppContainer.js";
+import { cleanUpAppContainer } from '../utility/cleanUpAppContainer.js';
 
 function buildContainers() {
 

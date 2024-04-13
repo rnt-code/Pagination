@@ -1,12 +1,11 @@
-import { removeDataTableContent } from "../helpers/removeDataTableContent.js";
-import { buildTable } from "./buildTable.js";
+import { cleanUpDataTableContent } from '../utility/cleanUpDataTableContent.js';
+import { buildTable } from "../build/buildTable.js";
 
 function renderDataTable(one_page_data, headers) {
 
     const data_length = one_page_data.length;
 
-    removeDataTableContent();
-
+    cleanUpDataTableContent();
     buildTable();
 
     const thead = document.getElementById('table-head');

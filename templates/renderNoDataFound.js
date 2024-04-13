@@ -1,11 +1,11 @@
-import { removeDataTableContent } from "../helpers/removeDataTableContent.js";
-import { buildTable } from "./buildTable.js";
+import { cleanUpDataTableContent } from "../utility/cleanUpDataTableContent.js";
+import { buildTable } from "../build/buildTable.js";
 
 function renderNoDataFound() {
 
     const title = 'No data found';
     
-    removeDataTableContent();
+    cleanUpDataTableContent();
     buildTable();
 
     const thead = document.getElementById('table-head');
