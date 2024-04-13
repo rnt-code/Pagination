@@ -1,12 +1,12 @@
 import { getTableHeadTitles } from './helpers/getTableHeadTitles.js'
-import { buildContainers } from "./view/buildContainers.js";
-import { renderUpDownButtons } from "./view/renderUpDownButtons.js";
-import { renderButtons } from "./view/renderButtons.js";
-import { paintSelectedButton } from './view/paintSelectedButton.js'
-import { renderDataTable } from "./view/renderDataTable.js";
+import { buildContainers } from "./build/buildContainers.js";
+import { renderUpDownButtons } from "./templates/renderUpDownButtons.js";
+import { renderButtons } from "./templates/renderButtons.js";
+import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
+import { renderDataTable } from "./templates/renderDataTable.js";
 import { listData } from "./modules/listData.js"
-import { renderNoDataFound } from './view/renderNoDataFound.js';
-import { renderRecordsToShow } from './view/renderRecordsToShow.js';
+import { renderNoDataFound } from './templates/renderNoDataFound.js';
+import { renderRecordsToShow } from './templates/renderRecordsToShow.js';
 
 function buildDataTable(data = [], number_of_buttons = 6, custom_head_titles = undefined) {
 
