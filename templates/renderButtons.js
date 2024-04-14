@@ -1,6 +1,6 @@
-function renderButtons(from, to) {
+function renderButtons(page_starting_at, page_ending_in) {
 
-    if(from !=0 && to !=0 ) {
+    if(page_starting_at !=0 && page_ending_in !=0 ) {
 
         //Referencia a los botones up y down
         const page_up = document.querySelector('.page-up');
@@ -16,7 +16,7 @@ function renderButtons(from, to) {
         const li_btn = [];
         const a_btn = [];
 
-        for(let i = from; i <= to; i++) {
+        for(let i = page_starting_at; i <= page_ending_in; i++) {
 
             li_btn[i] = document.createElement('li');
             li_btn[i].classList.add('pagei');
