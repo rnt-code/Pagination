@@ -5,9 +5,6 @@ function renderNoDataFound() {
 
     const title = 'No data found';
     
-    cleanUpDataTableContent();
-    buildTable();
-
     const thead = document.getElementById('table-head');
     const tbody = document.getElementById('table-body');
     const tfoot = document.getElementById('table-foot');
@@ -31,6 +28,7 @@ function renderNoDataFound() {
     rowf.id = 'tr-foot'
     rowf.innerHTML = title;
     tfoot.appendChild(rowf)
+    
     return false
 }
 

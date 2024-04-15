@@ -2,48 +2,54 @@ import { cleanUpAppContainer } from '../utility/cleanUpAppContainer.js';
 
 function buildMainContainers() {
 
-    cleanUpAppContainer();
-
-    const place_for_list = document.getElementById('place-for-list');
+    const place_for_list_el = document.getElementById('place-for-list');
     
-    //build head-controls container
-    const head_controls = document.createElement('div');
-    head_controls.id = 'head-controls';
-    place_for_list.appendChild(head_controls);
-    head_controls.innerHTML =
+    //**build head-controls container*/
+    const head_controls_el = document.createElement('div');
+    head_controls_el.id = 'head-controls';
+    place_for_list_el.appendChild(head_controls_el);
+
+    //contenedores para el selector y para los botones de navegación
+    head_controls_el.innerHTML =
                             `
-                            <div id="hc-records"></div>
+                            <div id="hc-records-selector"></div>
                             <div id="hc-nav-buttons"></div>
                             `;
-    //build top-metrics container
-    const top_metrics_container = document.createElement('div');
-    top_metrics_container.id = 'top-info';
-    const label_top = document.createElement('label');
-    label_top.id = 'metrics-top';
-    top_metrics_container.appendChild(label_top);
-    place_for_list.appendChild(top_metrics_container);
+    //**build top-metrics container*/
+    const top_metrics_container_el = document.createElement('div');
+    top_metrics_container_el.id = 'top-info';
 
-    //build datatable container
-    const table_container = document.createElement('div');
-    table_container.style = 'overflow-x:auto';
-    table_container.id = 'datatable';
-    place_for_list.appendChild(table_container);
+    //contenedor para las métricas
+    const label_top_el = document.createElement('label');
+    label_top_el.id = 'metrics-top';
+    top_metrics_container_el.appendChild(label_top_el);
+    place_for_list_el.appendChild(top_metrics_container_el);
 
-    //build bottom-metrics container
-    const bottom_metrics_container = document.createElement('div');
-    bottom_metrics_container.id = 'bottom-info';
-    const label_bottom = document.createElement('label');
-    label_bottom.id = 'metrics-bottom';
-    bottom_metrics_container.appendChild(label_bottom);
-    place_for_list.appendChild(bottom_metrics_container);
+    //**build datatable container*/
+    const table_container_el = document.createElement('div');
+    table_container_el.style = 'overflow-x:auto';
+    table_container_el.id = 'datatable';
+    place_for_list_el.appendChild(table_container_el);
 
-    //build foot-controls container
-    const foot_controls = document.createElement('div');
-    foot_controls.id = 'foot-controls';
-    place_for_list.appendChild(foot_controls);
-    foot_controls.innerHTML =
+    //**build bottom-metrics container*/
+    const bottom_metrics_container_el = document.createElement('div');
+    bottom_metrics_container_el.id = 'bottom-info';
+    
+    //contenedor para las métricas
+    const label_bottom_el = document.createElement('label');
+    label_bottom_el.id = 'metrics-bottom';
+    bottom_metrics_container_el.appendChild(label_bottom_el);
+    place_for_list_el.appendChild(bottom_metrics_container_el);
+
+    //**build foot-controls container*/
+    const foot_controls_el = document.createElement('div');
+    foot_controls_el.id = 'foot-controls';
+    place_for_list_el.appendChild(foot_controls_el);
+
+    //contenedores para el selector y para los botones de navegación
+    foot_controls_el.innerHTML =
                             `
-                            <div id="fc-records"></div>
+                            <div id="fc-records-selector"></div>
                             <div id="fc-nav-buttons"></div>
                             `;
     return false

@@ -21,7 +21,7 @@
 #hc-records-selector {
     justify-self: start;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 #hc-nav-buttons {
     justify-self: end;
@@ -30,6 +30,10 @@
 #records-to-show {
     font-size: 16px;  /*el select*/
 }
+#text1, #text2 {
+    font-size: 16px;
+}
+
 /*-Elementos de 3º nivel dentro de nav-buttons-*/
 ul.pagination-keys {  /*Botones de avance y retroceso*/
     padding: 0;

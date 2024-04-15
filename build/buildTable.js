@@ -13,6 +13,7 @@ function buildTable() {
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
     tabla.appendChild(tfoot);
+    
     return false
 }
 

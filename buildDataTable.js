@@ -15,6 +15,7 @@ import { getOnePageData } from './utility/getOnePageData.js'
 import { buildButtonsContainer } from './build/buildButtonsContainers.js';
 import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
 import { buildTable } from './build/buildTable.js';
+import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -22,6 +23,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
     const exist = !!place_for_list;
     if(exist) {
         let head_titles = getTableHeadTitles(custom_head_titles, data);
+
+        cleanUpAppContainer();
 
         //Cantidad de registros en la tabla
         let records_quantity = data.length;
@@ -44,10 +47,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**Renderizo el selector de registros a mostrar
             renderRecordsToShow()
-
             
-            //**Renderizo los botones up/down
-            //renderUpDownButtons();
+            //**Renderizo los botones up/down '<<'  '<'  '>'  '>>'
+            renderUpDownButtons();
 
             //Armo las referencias a los contenedores <li> de los botones
             //de avance/retroceso de páginas y de avance/retroceso de capas
@@ -75,45 +77,45 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             let one_page_data = getOnePageData(data, page_number, records_to_show)
 
             //**Dibujo la tabla (vacia) en función de one_page_data.length y head_titles.length*/
-            //renderDataTable(one_page_data.length, head_titles.length);
+            renderDataTable(one_page_data.length, head_titles.length);
 
             //**Agrego las métricas a la tabla*/
-            // const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
-            // document.getElementById('metrics-top').innerHTML = metrics;
-            // document.getElementById('metrics-bottom').innerHTML = metrics;
+            const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
+            document.getElementById('metrics-top').innerHTML = metrics;
+            document.getElementById('metrics-bottom').innerHTML = metrics;
             
             //**Lleno la tabla con los datos de una página y con los títulos*/
-            //tableFiller(one_page_data, head_titles);
+            tableFiller(one_page_data, head_titles);
 
             //**Obtengo el número final de botones*/
-            //number_of_buttons = getfinalNumberOfButtons(number_of_buttons)
+            number_of_buttons = getfinalNumberOfButtons(number_of_buttons)
 
             //**Calculo cuantas capas de botones habrá*/
-            //MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
+            MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
             
             //**Obtengo los límites de los botones a dibujar, que depende de las cantidad de páginas*/
-            //let [starting_at, ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
+            let [starting_at, ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
 
             //**Dibujo los botones*/
             //si starting_at = ending_in = 0, no dibuja los botones
-            //renderButtons(starting_at, ending_in);
+            renderButtons(starting_at, ending_in);
 
             //**Lógica de encendido y apagado de botones de navegación*//
             //Son los botones de avance/retroceso de páginas y de capas
             //Si MAX_LAYERS = 0 no se ejecuta esta parte
-            // if(MAX_LAYERS === 1) {
-            //     layer_up_el.classList.add('disabled');
-            //     layer_down_el.classList.add('disabled');
-            //     page_down_el.classList.add('disabled');
-            // } 
-            // else if(MAX_LAYERS > 1) {
-            //     layer_up_el.classList.remove('disabled'); //remove
-            //     layer_down_el.classList.add('disabled');
-            //     page_down_el.classList.add('disabled');
-            // }
-            // if(page_number === 1 && MAX_PAGES === 1) {
-            //     page_up_el.classList.add('disabled');
-            // }
+            if(MAX_LAYERS === 1) {
+                layer_up_el.classList.add('disabled');
+                layer_down_el.classList.add('disabled');
+                page_down_el.classList.add('disabled');
+            } 
+            else if(MAX_LAYERS > 1) {
+                layer_up_el.classList.remove('disabled'); //remove
+                layer_down_el.classList.add('disabled');
+                page_down_el.classList.add('disabled');
+            }
+            if(page_number === 1 && MAX_PAGES === 1) {
+                page_up_el.classList.add('disabled');
+            }
             //---------------------------------------------------------------//
 
             navButtonListener();
