@@ -1,4 +1,4 @@
-function renderUpDownButtons() {
+function buildButtonsContainer() {
 
     //container para los botones
     const hc_nav_buttons = document.getElementById('hc-nav-buttons');
@@ -22,11 +22,11 @@ function renderUpDownButtons() {
     pagination_keys.appendChild(li_layd);
 
     //creo el botón de avance rápido a la izquierda '<<'
-    const a_layd = document.createElement('a');
-    a_layd.classList.add('pagelink');
-    a_layd.innerText = '<<';
-    a_layd.href = '#';
-    li_layd.appendChild(a_layd);
+    // const a_layd = document.createElement('a');
+    // a_layd.classList.add('pagelink');
+    // a_layd.innerText = '<<';
+    // a_layd.href = '#';
+    // li_layd.appendChild(a_layd);
     /**-------------fin contenedor botón layer down--------------- */
 
     /**---------------contenedor botón page down------------------ */
@@ -36,11 +36,11 @@ function renderUpDownButtons() {
     pagination_keys.appendChild(li_prev);
 
     //creo el botón de avance a la izquierda '<'
-    const a_prev = document.createElement('a');
-    a_prev.classList.add('pagelink');
-    a_prev.innerText = '<';
-    a_prev.href = '#';
-    li_prev.appendChild(a_prev);
+    // const a_prev = document.createElement('a');
+    // a_prev.classList.add('pagelink');
+    // a_prev.innerText = '<';
+    // a_prev.href = '#';
+    // li_prev.appendChild(a_prev);
     /**--------------fin contenedor botón page down--------------- */
     
     /**----------------contenedor botón page up------------------- */
@@ -53,9 +53,9 @@ function renderUpDownButtons() {
     const a_nxt = document.createElement('a');
     a_nxt.classList.add('pagelink');
     
-    a_nxt.innerText = '>';
-    a_nxt.href = '#';
-    li_nxt.appendChild(a_nxt);
+    // a_nxt.innerText = '>';
+    // a_nxt.href = '#';
+    // li_nxt.appendChild(a_nxt);
     /**--------------------fin botón page up---------------------- */
 
     /**----------------contenedor botón layer up------------------ */
@@ -64,12 +64,12 @@ function renderUpDownButtons() {
     pagination_keys.appendChild(li_layu);
 
     //creo el botón de avance rápido a la derecha '>>'
-    const a_layu = document.createElement('a');
-    a_layu.classList.add('pagelink');
-    a_layu.innerText = '>>';
-    a_layu.href = '#';
-    li_layu.appendChild(a_layu);
+    // const a_layu = document.createElement('a');
+    // a_layu.classList.add('pagelink');
+    // a_layu.innerText = '>>';
+    // a_layu.href = '#';
+    // li_layu.appendChild(a_layu);
     /**---------------fin contenedor botón layer up--------------- */
     return false
 }
-export { renderUpDownButtons }
+export { buildButtonsContainer }

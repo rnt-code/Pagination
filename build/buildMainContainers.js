@@ -1,6 +1,6 @@
 import { cleanUpAppContainer } from '../utility/cleanUpAppContainer.js';
 
-function buildContainers() {
+function buildMainContainers() {
 
     cleanUpAppContainer();
 
@@ -12,16 +12,16 @@ function buildContainers() {
     place_for_list.appendChild(head_controls);
     head_controls.innerHTML =
                             `
-                            <div id="hc-records-selector">
-                            </div><div id="hc-nav-buttons"></div>
-                            `
+                            <div id="hc-records"></div>
+                            <div id="hc-nav-buttons"></div>
+                            `;
     //build top-metrics container
-    const top_metrics_container = document.createElement('div')
-    top_metrics_container.id = 'top-info'
-    const label_top = document.createElement('label')
-    label_top.id = 'metrics-top'
-    top_metrics_container.appendChild(label_top)
-    place_for_list.appendChild(top_metrics_container)
+    const top_metrics_container = document.createElement('div');
+    top_metrics_container.id = 'top-info';
+    const label_top = document.createElement('label');
+    label_top.id = 'metrics-top';
+    top_metrics_container.appendChild(label_top);
+    place_for_list.appendChild(top_metrics_container);
 
     //build datatable container
     const table_container = document.createElement('div');
@@ -30,12 +30,12 @@ function buildContainers() {
     place_for_list.appendChild(table_container);
 
     //build bottom-metrics container
-    const bottom_metrics_container = document.createElement('div')
-    bottom_metrics_container.id = 'bottom-info'
-    const label_bottom = document.createElement('label')
-    label_bottom.id = 'metrics-bottom'
-    bottom_metrics_container.appendChild(label_bottom)
-    place_for_list.appendChild(bottom_metrics_container)
+    const bottom_metrics_container = document.createElement('div');
+    bottom_metrics_container.id = 'bottom-info';
+    const label_bottom = document.createElement('label');
+    label_bottom.id = 'metrics-bottom';
+    bottom_metrics_container.appendChild(label_bottom);
+    place_for_list.appendChild(bottom_metrics_container);
 
     //build foot-controls container
     const foot_controls = document.createElement('div');
@@ -43,10 +43,10 @@ function buildContainers() {
     place_for_list.appendChild(foot_controls);
     foot_controls.innerHTML =
                             `
-                            <div id="fc-info"></div>
+                            <div id="fc-records"></div>
                             <div id="fc-nav-buttons"></div>
-                            `
+                            `;
     return false
 }
 
-export { buildContainers }
+export { buildMainContainers }

@@ -1,5 +1,5 @@
 import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
-import { buildContainers } from "./build/buildContainers.js";
+import { buildMainContainers } from "./build/buildMainContainers.js";
 import { renderUpDownButtons } from "./templates/renderUpDownButtons.js";
 import { renderButtons } from "./templates/renderButtons.js";
 import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
@@ -11,6 +11,10 @@ import { getMaxPages } from './utility/getMaxPages.js';
 import { getfinalNumberOfButtons } from './utility/getFinalNumberOfButtons.js';
 import { getMaxLayers } from './utility/getMaxLayers.js';
 import { getLimitsOfButtonsToDraw } from './utility/getLimitsOfButtonsToDraw.js';
+import { getOnePageData } from './utility/getOnePageData.js'
+import { buildButtonsContainer } from './build/buildButtonsContainers.js';
+import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
+import { buildTable } from './build/buildTable.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -22,13 +26,15 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         //Cantidad de registros en la tabla
         let records_quantity = data.length;
 
-        //Armo el 'esqueleto' de toda la estructura que contendrá la app
-        buildContainers(); 
+        //**Armo el 'esqueleto' de toda la estructura que contendrá la app*/
+        buildMainContainers();
+        buildButtonsContainer();
+        buildRecordsToShowContainer();
+        buildTable();
         
         //Si hay datos construyo la app, si no, muestro el mesaje de 'No data found'
         if(records_quantity != 0) {
             //Hay datos
-            console.log('cantidad de registros=', records_quantity)
 
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
@@ -36,78 +42,100 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             let layer_counter = 1;
             let page_number = 1;
 
-            //Renderizo el selector de registros a mostrar
+            //**Renderizo el selector de registros a mostrar
             renderRecordsToShow()
 
-            //Renderizo los botones up/down
-            renderUpDownButtons();
+            
+            //**Renderizo los botones up/down
+            //renderUpDownButtons();
 
-            //Referencias a los botones up/down
+            //Armo las referencias a los contenedores <li> de los botones
+            //de avance/retroceso de páginas y de avance/retroceso de capas
             const page_down_el = document.querySelector('.page-down');
             const page_up_el = document.querySelector('.page-up');
             const layer_down_el = document.querySelector('.layer-down');
             const layer_up_el = document.querySelector('.layer-up');
 
-            //Habilitar los botones de paginación
+            //Hacer visibles los contenedores <li> de los botones de
+            //avance/retroceso de páginas y avance/retroceso de capas
             page_down_el.classList.remove('disabled');
             page_up_el.classList.remove('disabled');
             layer_down_el.classList.remove('disabled');
             layer_up_el.classList.remove('disabled');
             
-            //Cantidad de registros a mostrar al iniciar la página
+            //**Cantidad de registros a mostrar al iniciar la página
             const records_to_show_el = document.getElementById('records-to-show');
             records_to_show = parseInt(records_to_show_el.value);
             
-            //Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
+            //**Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
             MAX_PAGES = getMaxPages(records_quantity, records_to_show)
-            console.log('MAX_PAGES=', MAX_PAGES)
 
             //**----------------------------------------------------------------------------- */
-            //**Renderizo la tabla*/
-            renderTable(data, head_titles);
+            //**Obtengo los datos de la página a mostrar*/
+            let one_page_data = getOnePageData(data, page_number, records_to_show)
+
+            //**Dibujo la tabla (vacia) en función de one_page_data.length y head_titles.length*/
+            //renderDataTable(one_page_data.length, head_titles.length);
+
+            //**Agrego las métricas a la tabla*/
+            // const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
+            // document.getElementById('metrics-top').innerHTML = metrics;
+            // document.getElementById('metrics-bottom').innerHTML = metrics;
+            
+            //**Lleno la tabla con los datos de una página y con los títulos*/
+            //tableFiller(one_page_data, head_titles);
 
             //**Obtengo el número final de botones*/
-            number_of_buttons = getfinalNumberOfButtons(number_of_buttons)
-            console.log('number_of_buttons=', number_of_buttons)
-            
-            //**Obtengo la cantidad de botones a dibujar, que depende de las cantidad de páginas*/
-            let [page_starting_at, page_ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
-
-            //**Renderizo los botones*/
-            //si page_starting_at = page_ending_in = 0, no dibuja los botones
-            renderButtons(page_starting_at, page_ending_in);
-            console.log('page_starting_at=', page_starting_at, ', page_ending_in=', page_ending_in)
+            //number_of_buttons = getfinalNumberOfButtons(number_of_buttons)
 
             //**Calculo cuantas capas de botones habrá*/
-            MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
-            console.log('MAX_LAYERS=', MAX_LAYERS)
+            //MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
+            
+            //**Obtengo los límites de los botones a dibujar, que depende de las cantidad de páginas*/
+            //let [starting_at, ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
 
-            //----Lógica de encendido y apagado de botones de navegación-----//
+            //**Dibujo los botones*/
+            //si starting_at = ending_in = 0, no dibuja los botones
+            //renderButtons(starting_at, ending_in);
+
+            //**Lógica de encendido y apagado de botones de navegación*//
+            //Son los botones de avance/retroceso de páginas y de capas
             //Si MAX_LAYERS = 0 no se ejecuta esta parte
-            if(MAX_LAYERS === 1) {
-                layer_up_el.classList.add('disabled');
-                layer_down_el.classList.add('disabled');
-                page_down_el.classList.add('disabled');
-            } 
-            else if(MAX_LAYERS > 1) {
-                layer_up_el.classList.remove('disabled'); //remove
-                layer_down_el.classList.add('disabled');
-                page_down_el.classList.add('disabled');
-            }
-            if(page_number === 1 && MAX_PAGES === 1) {
-                page_up_el.classList.add('disabled');
-            }
+            // if(MAX_LAYERS === 1) {
+            //     layer_up_el.classList.add('disabled');
+            //     layer_down_el.classList.add('disabled');
+            //     page_down_el.classList.add('disabled');
+            // } 
+            // else if(MAX_LAYERS > 1) {
+            //     layer_up_el.classList.remove('disabled'); //remove
+            //     layer_down_el.classList.add('disabled');
+            //     page_down_el.classList.add('disabled');
+            // }
+            // if(page_number === 1 && MAX_PAGES === 1) {
+            //     page_up_el.classList.add('disabled');
+            // }
             //---------------------------------------------------------------//
 
             navButtonListener();
+
+            console.log('---------data----------')
+            console.log('cantidad de registros=', records_quantity)
+            console.log('records_to_show=', records_to_show)
+            console.log('MAX_PAGES=', MAX_PAGES)
+            console.log('-------buttons---------')
             paintSelectedButton(page_number); //si page_number = 0, oculta los botones
+            console.log('number_of_buttons=', number_of_buttons)
+            console.log('starting_at=', starting_at, ', ending_in=', ending_in)
+            console.log('MAX_LAYERS=', MAX_LAYERS)
+            console.log('-----------------------')
+            //---------------------En first page-----------------------------//
 
             /**--------------Enventos de los botones--------------*/
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
-                page_starting_at = 0;
-                page_ending_in = 0;
+                starting_at = 0;
+                ending_in = 0;
                 layer_counter = 1;
 
                 //Habilitar los botones de paginación
@@ -118,46 +146,19 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 
                 //Cantidad de registros a mostrar que elige el operador
                 const records_to_show_el = document.getElementById('records-to-show');
+                records_to_show = parseInt(records_to_show_el.value);
 
-                if(records_quantity != 0) {
-                    page_number = 1;
-                    if(parseInt(records_to_show_el.value) > records_quantity) {
-                        records_to_show = records_quantity;
-                    }
-                    else {
-                        records_to_show = parseInt(records_to_show_el.value);
-                    }
-                }
-                else {
-                    page_number = 0;
-                    records_to_show = parseInt(records_to_show_el.value);
-                }
-                
-                //Cantidad de páginas que se generarán según la cant. de registros y los registros
-                //a mostrar elegidos por el usuario
-                if(Number.isInteger(records_quantity / records_to_show)) {
-                    MAX_PAGES = records_quantity / records_to_show;
-                }
-                else {
-                    MAX_PAGES = Math.floor(records_quantity / records_to_show) + 1;
+                // if(records_quantity != 0) {
+                page_number = 1;
+                if(records_to_show > records_quantity) {
+                    records_to_show = records_quantity;
                 }
 
-                //Calculo cuantas capas (layers) de botones habrá
-                if(Number.isInteger(MAX_PAGES / number_of_buttons)) {
-                    MAX_LAYERS = MAX_PAGES / number_of_buttons;
-                }
-                else {
-                    MAX_LAYERS = Math.floor(MAX_PAGES / number_of_buttons) + 1;
-                }
-
-                if(MAX_PAGES <= number_of_buttons) {
-                    page_starting_at = page_number;
-                    page_ending_in = MAX_PAGES;
-                }
-                else {
-                    page_starting_at = page_number;
-                    page_ending_in = number_of_buttons;
-                }
+                MAX_PAGES = getMaxPages(records_quantity)
+                MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
+                let a = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
+                starting_at = a[0]
+                ending_in = a[1]
 
                 //----Lógica de encendido y apagado de botones de navegación-----//
                 if(MAX_LAYERS === 1) {
@@ -175,7 +176,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 //---------------------------------------------------------------//
 
                 renderTable(data, head_titles);
-                renderButtons(page_starting_at, page_ending_in);
+                renderButtons(starting_at, ending_in);
                 navButtonListener();
                 paintSelectedButton(page_number)
                 return false;

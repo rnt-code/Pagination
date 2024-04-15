@@ -22,9 +22,7 @@ function renderNoDataFound() {
     const rowb = document.createElement('tr');
     rowb.id = 'tr-data'
     rowb.innerHTML += `
-                    <td class="no-data-found">
-                        No se encontraron datos
-                    </td>
+                    <td class="no-data-found">No se encontraron datos</td>
                     `;
     tbody.appendChild(rowb)
     

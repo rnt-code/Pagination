@@ -1,9 +1,7 @@
 import { cleanUpDataTableContent } from '../utility/cleanUpDataTableContent.js';
 import { buildTable } from "../build/buildTable.js";
 
-function renderDataTable(one_page_data, headers) {
-
-    const data_length = one_page_data.length;
+function renderDataTable(one_page_data_length, head_titles_length) {
 
     cleanUpDataTableContent();
     buildTable();
@@ -16,18 +14,18 @@ function renderDataTable(one_page_data, headers) {
     const rowh = document.createElement('tr');
     rowh.id = 'tr-headers'
     let th_titles = '';
-    for(let i = 0; i < headers.length; i++){
-        th_titles = th_titles + `<th>${headers[i]}</th>`
+    for(let i = 0; i < head_titles_length; i++){
+        th_titles = th_titles + `<th></th>`
     }
     rowh.innerHTML = th_titles;
     thead.appendChild(rowh)
     
     //table body
-    for(let i = 0; i < data_length; i++) {  
+    for(let i = 0; i < one_page_data_length; i++) {  
         const rowd = document.createElement('tr');
         rowd.id = 'tr-data'
         let td_data = '';
-        for(let i = 0; i < headers.length; i++){
+        for(let i = 0; i < head_titles_length; i++){
             td_data = td_data + `<td></td>`
         }
         rowd.innerHTML = td_data;
