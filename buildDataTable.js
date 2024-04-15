@@ -413,7 +413,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 let ending_in
 
                 if(page_number === layer_counter * number_of_buttons) {
-
                     if(layer_counter < MAX_LAYERS) {
                         layer_counter++;
                         if(layer_counter * number_of_buttons > MAX_PAGES) {
