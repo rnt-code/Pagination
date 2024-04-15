@@ -16,6 +16,7 @@ import { buildButtonsContainer } from './build/buildButtonsContainers.js';
 import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
 import { buildTable } from './build/buildTable.js';
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
+import { renderMetrics } from './templates/renderMetrics.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -45,6 +46,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             let records_to_show = 0;
             let layer_counter = 1;
             let page_number = 1;
+            let one_page_data
 
             //**Renderizo el selector de registros a mostrar
             renderRecordsToShow()
@@ -75,15 +77,13 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**----------------------------------------------------------------------------- */
             //**Obtengo los datos de la página a mostrar*/
-            let one_page_data = getOnePageData(data, page_number, records_to_show)
+            one_page_data = getOnePageData(data, page_number, records_to_show)
 
             //**Dibujo la tabla (vacia) en función de one_page_data.length y head_titles.length*/
             renderDataTable(one_page_data.length, head_titles.length);
 
             //**Agrego las métricas a la tabla*/
-            const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
-            document.getElementById('metrics-top').innerHTML = metrics;
-            document.getElementById('metrics-bottom').innerHTML = metrics;
+            renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
             
             //**Lleno la tabla con los datos de una página y con los títulos*/
             tableFiller(one_page_data, head_titles);
@@ -100,6 +100,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             //**Dibujo los botones*/
             //si starting_at = ending_in = 0, no dibuja los botones
             renderButtons(starting_at, ending_in);
+            paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
             //**Lógica de encendido y apagado de botones de navegación*//
             //Son los botones de avance/retroceso de páginas y de capas
@@ -126,12 +127,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             console.log('records_to_show=', records_to_show)
             console.log('MAX_PAGES=', MAX_PAGES)
             console.log('-------buttons---------')
-            paintSelectedButton(page_number); //si page_number = 0, oculta los botones
             console.log('number_of_buttons=', number_of_buttons)
             console.log('starting_at=', starting_at, ', ending_in=', ending_in)
             console.log('MAX_LAYERS=', MAX_LAYERS)
             console.log('-----------------------')
-            //---------------------En first page-----------------------------//
+            //---------------------End first page-----------------------------//
 
             /**--------------Enventos de los botones--------------*/
             records_to_show_el.addEventListener("change", function(event) {
@@ -186,19 +186,19 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             })
 
             //botones del teclado: arrow-left '<-' y arrow-rigth '->'
-            document.addEventListener('keydown', function(event) {
+            // document.addEventListener('keydown', function(event) {
 
-                if(page_number <= MAX_PAGES && page_number >= 1) {
-                    console.log('arrow keys: page_number=', page_number)
-                    if (event.key === 'ArrowLeft') {                    
-                        slowReverse();
-                    } 
-                    if (event.key === 'ArrowRight') {
-                        slowForward();
-                    }
-                }
-                return false
-            });
+            //     if(page_number <= MAX_PAGES && page_number >= 1) {
+            //         console.log('arrow keys: page_number=', page_number)
+            //         if (event.key === 'ArrowLeft') {                    
+            //             slowReverse();
+            //         } 
+            //         if (event.key === 'ArrowRight') {
+            //             slowForward();
+            //         }
+            //     }
+            //     return false
+            // });
 
             layer_down_el.addEventListener('click', function(event) {
                 event.preventDefault()
@@ -378,9 +378,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                                 page_up_el.classList.remove('disabled');
                             }
                         }
-
+                        console.log('presionó el botón n°=', page_number)
                         paintSelectedButton(page_number)
-                        renderTable(data, head_titles);
+                        //renderTable(data, head_titles);
                         return false
                     })
                 })
@@ -402,23 +402,29 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 document.getElementById('metrics-top').innerHTML = metrics;
                 document.getElementById('metrics-bottom').innerHTML = metrics;
             
-                tableFiller(one_page_data);
+                tableFiller(one_page_data, head_titles);
                 return false
             }
 
             //Avance (--->) de 1 página en 1
             function slowForward() {
 
+                let starting_at
+                let ending_in
+
                 if(page_number === layer_counter * number_of_buttons) {
 
                     if(layer_counter < MAX_LAYERS) {
                         layer_counter++;
                         if(layer_counter * number_of_buttons > MAX_PAGES) {
-                            renderButtons(number_of_buttons * (layer_counter - 1) + 1, MAX_PAGES);
+                            starting_at = number_of_buttons * (layer_counter - 1) + 1
+                            ending_in = MAX_PAGES;
                         }
                         else {
-                            renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                            starting_at = number_of_buttons * (layer_counter - 1) + 1
+                            ending_in = layer_counter * number_of_buttons;
                         }
+                        renderButtons(starting_at, ending_in);
                     }
                 }
 
@@ -439,7 +445,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                         //console.log('up...estamos en la ULTIMA CAPA');
                         layer_up_el.classList.add('disabled');
                         if(MAX_LAYERS < 2) {
-                            console.log('up...y solo hay una capa1');
+                            //console.log('up...y solo hay una capa1');
                             layer_down_el.classList.add('disabled');
                         }
                         else {
@@ -476,10 +482,16 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             //Retroceso (<---) de 1 página en 1
             function slowReverse() {
 
+                let starting_at
+                let ending_in
+
                 if(page_number === number_of_buttons * (layer_counter - 1) + 1) {
-                    if(layer_counter > 1) { 
+                    if(layer_counter > 1) {
                         layer_counter--;
-                        renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
+                        starting_at = number_of_buttons * (layer_counter - 1) + 1
+                        ending_in = layer_counter * number_of_buttons
+
+                        renderButtons(starting_at, ending_in);
                     }
                 }
 
