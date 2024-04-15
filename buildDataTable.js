@@ -24,9 +24,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
     if(exist) {
         let head_titles = getTableHeadTitles(custom_head_titles, data);
 
+        //**Limpia el contenido*/
         cleanUpAppContainer();
 
-        //Cantidad de registros en la tabla
+        //**Cantidad de registros en la tabla*/
         let records_quantity = data.length;
 
         //**Armo el 'esqueleto' de toda la estructura que contendrá la app*/
@@ -535,7 +536,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             /**---------------Fin Funciones locales---------------*/
         }
         else {
-            //No hay datos, muestro el mensaje 'No data found
+            //**No hay datos, muestro el mensaje 'No data found'*/
             renderNoDataFound()
         }
     }

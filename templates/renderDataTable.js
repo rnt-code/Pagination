@@ -1,5 +1,3 @@
-import { cleanUpDataTableContent } from '../utility/cleanUpDataTableContent.js';
-
 function renderDataTable(one_page_data_length, head_titles_length) {
 
     const thead = document.getElementById('table-head');

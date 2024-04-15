@@ -1,5 +1,3 @@
-import { cleanUpAppContainer } from '../utility/cleanUpAppContainer.js';
-
 function buildMainContainers() {
 
     const place_for_list_el = document.getElementById('place-for-list');

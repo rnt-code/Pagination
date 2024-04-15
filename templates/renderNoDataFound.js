@@ -1,6 +1,3 @@
-import { cleanUpDataTableContent } from "../utility/cleanUpDataTableContent.js";
-import { buildTable } from "../build/buildTable.js";
-
 function renderNoDataFound() {
 
     const title = 'No data found';
