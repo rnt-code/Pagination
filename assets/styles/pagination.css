@@ -3,12 +3,9 @@
     display: flex;
     flex-direction: column;
 }
-#title {
-    align-self: center;
-}
 /*-----------------------------------*/
 
-/*Contenedor superior*/
+/*Contenedor 1, <div id='head-controls'>*/
 #head-controls {
     align-self: center;
     width: 70%;
@@ -17,16 +14,13 @@
     grid-template-columns: auto auto;
 }
 
-/*-Elementos de 2º nivel dentro de head-controls-*/
+/*Contenedor 1 - 2º nivel*/
 #hc-records-selector {
     justify-self: start;
     display: flex;
     align-items: center;
 }
-#hc-nav-buttons {
-    justify-self: end;
-}
-/*-Elementos de 3º nivel dentro de records-length-*/
+/*Contenedor 1 - 3º nivel*/
 #records-to-show {
     font-size: 16px;  /*el select*/
 }
@@ -35,7 +29,14 @@
     font-size: 16px;
 }
 
-/*-Elementos de 3º nivel dentro de nav-buttons-*/
+/*Contenedor 1 - 2º nivel*/
+#hc-nav-buttons {
+    justify-self: end;
+}
+/*-Elementos de 3º nivel dentro de records-length-*/
+
+
+/*Contenedor 1 - 3º nivel dentro de hc nav-buttons-*/
 ul.pagination-keys {  /*Botones de avance y retroceso*/
     padding: 0;
     width: 100%;
@@ -76,51 +77,7 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
-/*Contenedor medio, class="container"*/
-#datatable {
-    align-self: center;
-    width: 70%;
-}
-
-/*-Elementos de 2º nivel dentro de datatable-*/
-#tdatos {
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-#tdatos {
-    border-collapse: collapse;
-}
-
-/*------------------------*/
-/*títulos de cabecera y pie de la tabla*/
-#tr-headers, #tr-foot {
-    text-align: center;
-}
-/*------------------------*/
-
-/*-Elementos de 4º nivel dentro de datatable-*/
-#tr-headers > th, #tr-data > td {
-    padding: 5px;
-    border-bottom: 1px rgb(209, 209, 209) solid;
-}
-
-/*alinear los tr de datos en el centro del campo*/
-#tr-data {
-    text-align: center;
-    vertical-align: middle;
-}
-/*--------------------------------*/
-
-/*--------------------------------*/
-
-#tr-data:hover {
-    background-color: rgb(253, 255, 130);
-}
-#tr-data:nth-child(odd) {
-    background-color: rgb(238, 238, 238);
-}
-/*-----------------------------------*/
-
+/*Contenedor 2 y 4, <div id ='top-info'>*/
 /*Contenedores de top-info y bottom-info*/
 #top-info, #bottom-info {
     width: 70%;
@@ -140,14 +97,52 @@ a.pagelink:active {
 }
 /*-----------------------------------*/
 
-/*cuando no hay datos para listar*/
+/*Contenedor 3, <div id="datatable">*/
+#datatable {
+    align-self: center;
+    width: 70%;
+}
+
+/*-Elementos de 2º nivel dentro de datatable-*/
+#tdatos {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+}
+
+/*títulos de cabecera y pie de la tabla*/
+#tr-headers, #tr-foot {
+    text-align: center;
+}
+
+/*-Elementos de 4º nivel dentro de datatable-*/
+#tr-headers > th, .tr-data > td {
+    padding: 5px;
+    border-bottom: 1px rgb(209, 209, 209) solid;
+}
+
+/*alinear los tr de datos en el centro del campo*/
+.tr-data {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tr-data:hover {
+    background-color: rgb(253, 255, 130);
+}
+.tr-data:nth-child(odd) {
+    background-color: rgb(238, 238, 238);
+}
+
+/*OTROS: cuando no hay datos para listar*/
 .no-data-found {
     color: red; 
     font-size: 20px; 
     font-weight: bold;     
 }
+/*-----------------------------------*/
 
-/*Contenedor inferior, class="container"*/
+/*Contenedor 5, <div id="foot-controls">*/
 #foot-controls {
     align-self: center;
     display: grid;
@@ -162,3 +157,4 @@ a.pagelink:active {
     justify-self: start;
 } */
 /*-----------------------------------*/
+

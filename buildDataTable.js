@@ -17,6 +17,7 @@ import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer
 import { buildTable } from './build/buildTable.js';
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 import { renderMetrics } from './templates/renderMetrics.js';
+import { cleanUpDataTableContent } from './utility/cleanUpDataTableContent.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -39,7 +40,14 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         
         //Si hay datos construyo la app, si no, muestro el mesaje de 'No data found'
         if(records_quantity != 0) {
-            //Hay datos
+
+            const records_to_show_el = document.getElementById('records-to-show');
+            //Armo las referencias a los contenedores <li> de los botones
+            //de avance/retroceso de páginas y de avance/retroceso de capas
+            const page_down_el = document.querySelector('.page-down');
+            const page_up_el = document.querySelector('.page-up');
+            const layer_down_el = document.querySelector('.layer-down');
+            const layer_up_el = document.querySelector('.layer-up');
 
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
@@ -53,29 +61,13 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             
             //**Renderizo los botones up/down '<<'  '<'  '>'  '>>'
             renderUpDownButtons();
-
-            //Armo las referencias a los contenedores <li> de los botones
-            //de avance/retroceso de páginas y de avance/retroceso de capas
-            const page_down_el = document.querySelector('.page-down');
-            const page_up_el = document.querySelector('.page-up');
-            const layer_down_el = document.querySelector('.layer-down');
-            const layer_up_el = document.querySelector('.layer-up');
-
-            //Hacer visibles los contenedores <li> de los botones de
-            //avance/retroceso de páginas y avance/retroceso de capas
-            page_down_el.classList.remove('disabled');
-            page_up_el.classList.remove('disabled');
-            layer_down_el.classList.remove('disabled');
-            layer_up_el.classList.remove('disabled');
             
             //**Cantidad de registros a mostrar al iniciar la página
-            const records_to_show_el = document.getElementById('records-to-show');
             records_to_show = parseInt(records_to_show_el.value);
             
             //**Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
             MAX_PAGES = getMaxPages(records_quantity, records_to_show)
 
-            //**----------------------------------------------------------------------------- */
             //**Obtengo los datos de la página a mostrar*/
             one_page_data = getOnePageData(data, page_number, records_to_show)
 
@@ -104,7 +96,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**Lógica de encendido y apagado de botones de navegación*//
             //Son los botones de avance/retroceso de páginas y de capas
-            //Si MAX_LAYERS = 0 no se ejecuta esta parte
             if(MAX_LAYERS === 1) {
                 layer_up_el.classList.add('disabled');
                 layer_down_el.classList.add('disabled');
@@ -118,9 +109,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             if(page_number === 1 && MAX_PAGES === 1) {
                 page_up_el.classList.add('disabled');
             }
-            //---------------------------------------------------------------//
-
-            navButtonListener();
+            //---------------------End first page-----------------------------//
 
             console.log('---------data----------')
             console.log('cantidad de registros=', records_quantity)
@@ -131,9 +120,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             console.log('starting_at=', starting_at, ', ending_in=', ending_in)
             console.log('MAX_LAYERS=', MAX_LAYERS)
             console.log('-----------------------')
-            //---------------------End first page-----------------------------//
 
             /**--------------Enventos de los botones--------------*/
+            navButtonListener();
+
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
@@ -184,7 +174,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 paintSelectedButton(page_number)
                 return false;
             })
-
+            
+            /*
             //botones del teclado: arrow-left '<-' y arrow-rigth '->'
             // document.addEventListener('keydown', function(event) {
 
@@ -199,7 +190,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             //     }
             //     return false
             // });
-
+            */
+     
+            //botón <<
             layer_down_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
@@ -251,6 +244,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
+            //botón <
             page_down_el.addEventListener("click", function(event) {               
                 event.preventDefault()
 
@@ -258,6 +252,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
+            //botón >
             page_up_el.addEventListener("click", function(event) {
                 event.preventDefault()
 
@@ -265,6 +260,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
+            //botón >>
             layer_up_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
@@ -327,6 +323,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
+            //Listener para botones de página: 1, 2, 3, ....etc
             function navButtonListener() {
 
                 const buttons_list = document.querySelectorAll('.pagei');
@@ -380,6 +377,13 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                         }
                         console.log('presionó el botón n°=', page_number)
                         paintSelectedButton(page_number)
+                        records_to_show = parseInt(records_to_show_el.value);
+                        one_page_data = getOnePageData(data, page_number, records_to_show)
+                        cleanUpDataTableContent()
+                        //renderDataTable(one_page_data.length, head_titles.length);
+                        renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                        tableFiller(one_page_data, head_titles);
+
                         //renderTable(data, head_titles);
                         return false
                     })
@@ -406,7 +410,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             }
 
-            //Avance (--->) de 1 página en 1
+            //Avance (>) de 1 página en 1
             function slowForward() {
 
                 let starting_at
@@ -478,7 +482,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             }
 
-            //Retroceso (<---) de 1 página en 1
+            //Retroceso (<) de 1 página en 1
             function slowReverse() {
 
                 let starting_at
