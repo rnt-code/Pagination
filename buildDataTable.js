@@ -32,7 +32,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         //**Limpia el contenido*/
         cleanUpAppContainer();
 
-        //**Cantidad de registros en la tabla*/
+        //**Obtengo la cantidad de registros que vienen en data, es el crudo*/
         let records_quantity = data.length;
 
         //**Armo el 'esqueleto' de toda la estructura que contendrá la app*/
@@ -44,6 +44,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         //Si hay datos construyo la app, si no, muestro el mesaje de 'No data found'
         if(records_quantity != 0) {
 
+            //**---------------------Rendering the initial page--------------------*/
             const records_to_show_el = document.getElementById('records-to-show');
         
             let MAX_PAGES = 0;
@@ -53,7 +54,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             let page_number = 1;
             let one_page_data
 
-            //**Renderizo el selector de registros a mostrar
+            //**Renderizo el selector de registros a mostrar*/
             renderRecordsToShow();
             
             //**Renderizo los botones up/down '<<'  '<'  '>'  '>>'
@@ -63,10 +64,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             const layer_down_el = document.querySelector('.layer-down'); // '<<'
             const layer_up_el = document.querySelector('.layer-up'); // '>>'
             
-            //**Cantidad de registros a mostrar al iniciar la página
+            //**Cantidad de registros a mostrar al iniciar la página*/
             records_to_show = parseInt(records_to_show_el.value);
             
-            //**Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar
+            //**Cantidad de páginas que se generarán según la cant. de registros y los registros a mostrar*/
             MAX_PAGES = getMaxPages(records_quantity, records_to_show)
 
             //**Obtengo los datos de la página a mostrar*/
@@ -95,7 +96,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             renderButtons(starting_at, ending_in);
             paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
-            //**Lógica de encendido y apagado de botones de navegación para la página inicial*//
+            //**Lógica de encendido y apagado de botones de navegación para la página inicial*/
             //Son los botones de avance/retroceso de páginas y de capas
             if(MAX_LAYERS === 1) {
                 layer_up_el.classList.add('disabled');
@@ -110,10 +111,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             if(page_number === 1 && MAX_PAGES === 1) {
                 page_up_el.classList.add('disabled');
             }
-            //---------------------End first page-----------------------------//
+            //**----------------------End first page rendering --------------------*/
 
-            /**--------------Enventos de los botones--------------*/
-            //**READY 2024*/
+            //**----------------------Enventos de los botones----------------------*/
+            //captura del evento change del selector de registros a mostrar
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
@@ -171,6 +172,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             })
             
             /*
+            //captura del evento keydown de las teclas avance y reversa del teclado físicor
             botones del teclado: arrow-left '<-' y arrow-rigth '->'
             document.addEventListener('keydown', function(event) {
 
@@ -187,7 +189,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             });
             */
      
-            //botón '<<'
+            //captura del evento click del botón '<<'
+            //**READY 2024*/
             layer_down_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
@@ -239,7 +242,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
-            //botón '<'
+            //captura del evento click del botón '<'
+            //**READY 2024*/
             page_down_el.addEventListener("click", function(event) {   
                 console.log('Se activo el botón <')            
                 event.preventDefault()
@@ -248,7 +252,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
-            //botón '>'
+            //captura del evento click del botón '>'
+            //**READY 2024*/
             page_up_el.addEventListener("click", function(event) {
                 console.log('Se activo el botón >')
                 event.preventDefault()
@@ -257,7 +262,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
-            //botón '>>'
+            //captura del evento click del botón '>>'
+            //**READY 2024*/
             layer_up_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
@@ -321,7 +327,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             })
 
             //**READY 2024*/
-            //Listener para botones de página: 1, 2, 3, ....etc
+            //captura del evento click de los botones de página: 1, 2, 3, ....etc
             const buttons_list = document.querySelectorAll('.pagei');
             buttons_list.forEach(function(button) {
 
@@ -406,6 +412,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             }
 
             //Avance (>) de 1 página en 1
+            //**READY 2024*/
             function slowForward() {
 
                 let starting_at
@@ -477,6 +484,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             }
 
             //Retroceso (<) de 1 página en 1
+            //**READY 2024*/
             function slowReverse() {
 
                 let starting_at
