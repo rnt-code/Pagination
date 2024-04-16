@@ -46,10 +46,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             const records_to_show_el = document.getElementById('records-to-show');
             //Armo las referencias a los contenedores <li> de los botones
             //de avance/retroceso de páginas y de avance/retroceso de capas
-            const page_down_el = document.querySelector('.page-down');
-            const page_up_el = document.querySelector('.page-up');
-            const layer_down_el = document.querySelector('.layer-down');
-            const layer_up_el = document.querySelector('.layer-up');
+
+            const page_down_el = document.querySelector('.page-down'); // '<'
+            const page_up_el = document.querySelector('.page-up'); // '>'
+            const layer_down_el = document.querySelector('.layer-down'); // '<<'
+            const layer_up_el = document.querySelector('.layer-up'); // '>>'
 
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
@@ -59,7 +60,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             let one_page_data
 
             //**Renderizo el selector de registros a mostrar
-            renderRecordsToShow()
+            renderRecordsToShow();
             
             //**Renderizo los botones up/down '<<'  '<'  '>'  '>>'
             renderUpDownButtons();
@@ -113,19 +114,20 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             }
             //---------------------End first page-----------------------------//
 
-            console.log('---------data----------')
-            console.log('cantidad de registros=', records_quantity)
-            console.log('records_to_show=', records_to_show)
-            console.log('MAX_PAGES=', MAX_PAGES)
-            console.log('-------buttons---------')
-            console.log('number_of_buttons=', number_of_buttons)
-            console.log('starting_at=', starting_at, ', ending_in=', ending_in)
-            console.log('MAX_LAYERS=', MAX_LAYERS)
-            console.log('-----------------------')
+            // console.log('---------data----------')
+            // console.log('cantidad de registros=', records_quantity)
+            // console.log('records_to_show=', records_to_show)
+            // console.log('MAX_PAGES=', MAX_PAGES)
+            // console.log('-------buttons---------')
+            // console.log('number_of_buttons=', number_of_buttons)
+            // console.log('starting_at=', starting_at, ', ending_in=', ending_in)
+            // console.log('MAX_LAYERS=', MAX_LAYERS)
+            // console.log('-----------------------')
 
             /**--------------Enventos de los botones--------------*/
             navButtonListener();
 
+            //**READY 2024*/
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
@@ -149,7 +151,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     records_to_show = records_quantity;
                 }
 
-                MAX_PAGES = getMaxPages(records_quantity)
+                MAX_PAGES = getMaxPages(records_quantity, records_to_show)
                 MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
                 let a = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
                 starting_at = a[0]
@@ -170,10 +172,15 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //---------------------------------------------------------------//
 
-                renderTable(data, head_titles);
-                renderButtons(starting_at, ending_in);
-                navButtonListener();
                 paintSelectedButton(page_number)
+                records_to_show = parseInt(records_to_show_el.value);
+                one_page_data = getOnePageData(data, page_number, records_to_show)
+                cleanUpDataTableContent()
+                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                buildTableBody()
+                renderTableBody(one_page_data.length, head_titles.length)
+                tableFiller(one_page_data, head_titles);
+
                 return false;
             })
             
@@ -240,9 +247,14 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
-                navButtonListener();
-                paintSelectedButton(page_number);
-                renderTable(data, head_titles);
+                paintSelectedButton(page_number)
+                records_to_show = parseInt(records_to_show_el.value);
+                one_page_data = getOnePageData(data, page_number, records_to_show)
+                cleanUpDataTableContent()
+                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                buildTableBody()
+                renderTableBody(one_page_data.length, head_titles.length)
+                tableFiller(one_page_data, head_titles);
                 return false
             })
 
@@ -250,6 +262,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             page_down_el.addEventListener("click", function(event) {               
                 event.preventDefault()
 
+                console.log('Se activo el botón <')
                 slowReverse();
                 return false
             })
@@ -258,6 +271,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             page_up_el.addEventListener("click", function(event) {
                 event.preventDefault()
 
+                console.log('Se activo el botón >')
                 slowForward();
                 return false
             })
@@ -325,6 +339,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             })
 
+            //**READY 2024*/
             //Listener para botones de página: 1, 2, 3, ....etc
             function navButtonListener() {
 
@@ -385,6 +400,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                         buildTableBody()
                         renderTableBody(one_page_data.length, head_titles.length)
                         tableFiller(one_page_data, head_titles);
+
                         return false
                     })
                 })
