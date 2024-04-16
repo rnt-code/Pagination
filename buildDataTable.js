@@ -45,18 +45,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             const records_to_show_el = document.getElementById('records-to-show');
             
-            //Armo las referencias a los contenedores <li> de los botones
-            //de avance/retroceso de páginas y de avance/retroceso de capas
-            const page_down_el = document.querySelector('.page-down'); // '<'
-            const page_up_el = document.querySelector('.page-up'); // '>'
-            const layer_down_el = document.querySelector('.layer-down'); // '<<'
-            const layer_up_el = document.querySelector('.layer-up'); // '>>'
-
-            console.log('page-down: ', page_down_el)
-            console.log('page-up: ', page_up_el)
-            console.log('layer-down: ', layer_down_el)
-            console.log('layer-up: ', layer_up_el)
-        
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
             let records_to_show = 0;
@@ -69,6 +57,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             
             //**Renderizo los botones up/down '<<'  '<'  '>'  '>>'
             renderUpDownButtons();
+            const page_down_el = document.querySelector('.page-down'); // '<'
+            const page_up_el = document.querySelector('.page-up'); // '>'
+            const layer_down_el = document.querySelector('.layer-down'); // '<<'
+            const layer_up_el = document.querySelector('.layer-up'); // '>>'
             
             //**Cantidad de registros a mostrar al iniciar la página
             records_to_show = parseInt(records_to_show_el.value);
@@ -117,26 +109,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             if(page_number === 1 && MAX_PAGES === 1) {
                 page_up_el.classList.add('disabled');
             }
-
-            console.log('page-down: ', page_down_el)
-            console.log('page-up: ', page_up_el)
-            console.log('layer-down: ', layer_down_el)
-            console.log('layer-up: ', layer_up_el)
-
             //---------------------End first page-----------------------------//
 
-            // console.log('---------data----------')
-            // console.log('cantidad de registros=', records_quantity)
-            // console.log('records_to_show=', records_to_show)
-            // console.log('MAX_PAGES=', MAX_PAGES)
-            // console.log('-------buttons---------')
-            // console.log('number_of_buttons=', number_of_buttons)
-            // console.log('starting_at=', starting_at, ', ending_in=', ending_in)
-            // console.log('MAX_LAYERS=', MAX_LAYERS)
-            // console.log('-----------------------')
-
             /**--------------Enventos de los botones--------------*/
-
             //**READY 2024*/
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
@@ -195,20 +170,20 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             })
             
             /*
-            //botones del teclado: arrow-left '<-' y arrow-rigth '->'
-            // document.addEventListener('keydown', function(event) {
+            botones del teclado: arrow-left '<-' y arrow-rigth '->'
+            document.addEventListener('keydown', function(event) {
 
-            //     if(page_number <= MAX_PAGES && page_number >= 1) {
-            //         console.log('arrow keys: page_number=', page_number)
-            //         if (event.key === 'ArrowLeft') {                    
-            //             slowReverse();
-            //         } 
-            //         if (event.key === 'ArrowRight') {
-            //             slowForward();
-            //         }
-            //     }
-            //     return false
-            // });
+                if(page_number <= MAX_PAGES && page_number >= 1) {
+                    console.log('arrow keys: page_number=', page_number)
+                    if (event.key === 'ArrowLeft') {                    
+                        slowReverse();
+                    } 
+                    if (event.key === 'ArrowRight') {
+                        slowForward();
+                    }
+                }
+                return false
+            });
             */
      
             //botón '<<'
@@ -257,8 +232,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     }
                 }
                 //-------------------------------------------------------------------------//
-
-                navButtonListener();
+  
                 paintSelectedButton(page_number);
                 renderTable(data, head_titles);
                 return false
@@ -340,7 +314,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
-                navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, head_titles);
                 return false
@@ -497,7 +470,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
-                navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, head_titles);
                 return false
@@ -564,7 +536,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
-                navButtonListener();
                 paintSelectedButton(page_number);
                 renderTable(data, head_titles);
                 return false
