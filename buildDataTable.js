@@ -390,9 +390,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     return false
                 })
             })
-            /**------------Fin Enventos de los botones------------*/
+            //**--------------------Fin Enventos de los botones--------------------*/
             
-            /**-----------------Funciones locales-----------------*/
+            //**------------------------Funciones locales--------------------------*/
             function renderTable(data, head_titles) {
 
                 //Desde qué registro comenzaremos la lista a mostrar (start)
@@ -549,7 +549,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 renderTable(data, head_titles);
                 return false
             }
-            /**---------------Fin Funciones locales---------------*/
+            //**----------------------Fin Funciones locales------------------------*/
         }
         else {
             //**No hay datos, muestro el mensaje 'No data found'*/
