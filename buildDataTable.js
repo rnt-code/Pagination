@@ -26,6 +26,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
     const place_for_list = document.getElementById('place-for-list');
     const exist = !!place_for_list;
     if(exist) {
+        
         let head_titles = getTableHeadTitles(custom_head_titles, data);
 
         //**Limpia el contenido*/
@@ -39,12 +40,12 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         buildButtonsContainer();
         buildRecordsToShowContainer();
         buildTable();
-        
+
         //Si hay datos construyo la app, si no, muestro el mesaje de 'No data found'
         if(records_quantity != 0) {
 
             const records_to_show_el = document.getElementById('records-to-show');
-            
+        
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
             let records_to_show = 0;
@@ -119,6 +120,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 starting_at = 0;
                 ending_in = 0;
                 layer_counter = 1;
+                page_number = 1;
 
                 //Habilitar los botones de paginación
                 layer_up_el.classList.remove('disabled');
@@ -130,8 +132,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 const records_to_show_el = document.getElementById('records-to-show');
                 records_to_show = parseInt(records_to_show_el.value);
 
-                // if(records_quantity != 0) {
-                page_number = 1;
                 if(records_to_show > records_quantity) {
                     records_to_show = records_quantity;
                 }
@@ -160,11 +160,12 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 paintSelectedButton(page_number)
                 records_to_show = parseInt(records_to_show_el.value);
                 one_page_data = getOnePageData(data, page_number, records_to_show)
-                cleanUpDataTableContent()
+
+                //cleanUpDataTableContent()
                 renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
-                buildTableBody()
-                renderTableBody(one_page_data.length, head_titles.length)
-                tableFiller(one_page_data, head_titles);
+                //buildTableBody()
+                //renderTableBody(one_page_data.length, head_titles.length)
+                //tableFiller(one_page_data, head_titles);
 
                 return false;
             })
