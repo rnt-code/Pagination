@@ -51,6 +51,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             const page_up_el = document.querySelector('.page-up'); // '>'
             const layer_down_el = document.querySelector('.layer-down'); // '<<'
             const layer_up_el = document.querySelector('.layer-up'); // '>>'
+
+            console.log('page-down: ', page_down_el)
+            console.log('page-up: ', page_up_el)
+            console.log('layer-down: ', layer_down_el)
+            console.log('layer-up: ', layer_up_el)
         
 
             let MAX_PAGES = 0;
@@ -113,6 +118,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             if(page_number === 1 && MAX_PAGES === 1) {
                 page_up_el.classList.add('disabled');
             }
+
+            console.log('page-down: ', page_down_el)
+            console.log('page-up: ', page_up_el)
+            console.log('layer-down: ', layer_down_el)
+            console.log('layer-up: ', layer_up_el)
             //---------------------End first page-----------------------------//
 
             // console.log('---------data----------')
