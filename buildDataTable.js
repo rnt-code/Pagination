@@ -51,6 +51,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             const page_up_el = document.querySelector('.page-up'); // '>'
             const layer_down_el = document.querySelector('.layer-down'); // '<<'
             const layer_up_el = document.querySelector('.layer-up'); // '>>'
+        
 
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
@@ -97,13 +98,13 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             renderButtons(starting_at, ending_in);
             paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
-            //**Lógica de encendido y apagado de botones de navegación*//
+            //**Lógica de encendido y apagado de botones de navegación para la página inicial*//
             //Son los botones de avance/retroceso de páginas y de capas
             if(MAX_LAYERS === 1) {
                 layer_up_el.classList.add('disabled');
                 layer_down_el.classList.add('disabled');
                 page_down_el.classList.add('disabled');
-            } 
+            }
             else if(MAX_LAYERS > 1) {
                 layer_up_el.classList.remove('disabled'); //remove
                 layer_down_el.classList.add('disabled');
@@ -125,7 +126,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             // console.log('-----------------------')
 
             /**--------------Enventos de los botones--------------*/
-            navButtonListener();
 
             //**READY 2024*/
             records_to_show_el.addEventListener("change", function(event) {
@@ -201,10 +201,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             // });
             */
      
-            //botón <<
+            //botón '<<'
             layer_down_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
+                console.log('Se activo el botón <<')
                 if(layer_counter > 1) { 
                     layer_counter--;
                     renderButtons(number_of_buttons * (layer_counter - 1) + 1, layer_counter * number_of_buttons);
@@ -247,39 +248,35 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
-                paintSelectedButton(page_number)
-                records_to_show = parseInt(records_to_show_el.value);
-                one_page_data = getOnePageData(data, page_number, records_to_show)
-                cleanUpDataTableContent()
-                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
-                buildTableBody()
-                renderTableBody(one_page_data.length, head_titles.length)
-                tableFiller(one_page_data, head_titles);
+                navButtonListener();
+                paintSelectedButton(page_number);
+                renderTable(data, head_titles);
                 return false
             })
 
-            //botón <
-            page_down_el.addEventListener("click", function(event) {               
+            //botón '<'
+            page_down_el.addEventListener("click", function(event) {   
+                console.log('Se activo el botón <')            
                 event.preventDefault()
 
-                console.log('Se activo el botón <')
                 slowReverse();
                 return false
             })
 
-            //botón >
+            //botón '>'
             page_up_el.addEventListener("click", function(event) {
+                console.log('Se activo el botón >')
                 event.preventDefault()
 
-                console.log('Se activo el botón >')
                 slowForward();
                 return false
             })
 
-            //botón >>
+            //botón '>>'
             layer_up_el.addEventListener('click', function(event) {
                 event.preventDefault()
 
+                console.log('Se activo el botón >>')
                 if(layer_counter < MAX_LAYERS) {
                     layer_counter++;
 
@@ -341,50 +338,28 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**READY 2024*/
             //Listener para botones de página: 1, 2, 3, ....etc
-            function navButtonListener() {
+            const buttons_list = document.querySelectorAll('.pagei');
+            buttons_list.forEach(function(button) {
 
-                const buttons_list = document.querySelectorAll('.pagei');
-                buttons_list.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault()
 
-                    button.addEventListener('click', function(event) {
-                        event.preventDefault()
-
-                        page_number = parseInt(button.innerText);
-                        if(MAX_LAYERS >= 2) {
-                            if(layer_counter === 1) {
-                                layer_up_el.classList.remove('disabled');
-                                layer_down_el.classList.add('disabled');
-                                if(page_number === 1) {
-                                    page_down_el.classList.add('disabled');
-                                }
-                                else {
-                                    page_down_el.classList.remove('disabled');
-                                }
-                            }
-                            else if(layer_counter === MAX_LAYERS) {
-                                layer_down_el.classList.remove('disabled');
-                                layer_up_el.classList.add('disabled');
-                                if(page_number === MAX_PAGES) {
-                                    page_up_el.classList.add('disabled');
-                                }
-                                else {
-                                    page_up_el.classList.remove('disabled');
-                                }
-                            } 
-                            else {
-                                layer_up_el.classList.remove('disabled');
-                                layer_down_el.classList.remove('disabled');
-                            }
-                        }
-                        else {
+                    page_number = parseInt(button.innerText);
+                    console.log('pagina: ', page_number)
+                    if(MAX_LAYERS >= 2) {
+                        if(layer_counter === 1) {
+                            layer_up_el.classList.remove('disabled');
                             layer_down_el.classList.add('disabled');
-                            layer_up_el.classList.add('disabled');
                             if(page_number === 1) {
                                 page_down_el.classList.add('disabled');
                             }
                             else {
                                 page_down_el.classList.remove('disabled');
                             }
+                        }
+                        else if(layer_counter === MAX_LAYERS) {
+                            layer_down_el.classList.remove('disabled');
+                            layer_up_el.classList.add('disabled');
                             if(page_number === MAX_PAGES) {
                                 page_up_el.classList.add('disabled');
                             }
@@ -392,19 +367,39 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                                 page_up_el.classList.remove('disabled');
                             }
                         } 
-                        paintSelectedButton(page_number)
-                        records_to_show = parseInt(records_to_show_el.value);
-                        one_page_data = getOnePageData(data, page_number, records_to_show)
-                        cleanUpDataTableContent()
-                        renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
-                        buildTableBody()
-                        renderTableBody(one_page_data.length, head_titles.length)
-                        tableFiller(one_page_data, head_titles);
+                        else {
+                            layer_up_el.classList.remove('disabled');
+                            layer_down_el.classList.remove('disabled');
+                        }
+                    }
+                    else {
+                        layer_down_el.classList.add('disabled');
+                        layer_up_el.classList.add('disabled');
+                        if(page_number === 1) {
+                            page_down_el.classList.add('disabled');
+                        }
+                        else {
+                            page_down_el.classList.remove('disabled');
+                        }
+                        if(page_number === MAX_PAGES) {
+                            page_up_el.classList.add('disabled');
+                        }
+                        else {
+                            page_up_el.classList.remove('disabled');
+                        }
+                    } 
+                    paintSelectedButton(page_number)
+                    records_to_show = parseInt(records_to_show_el.value);
+                    one_page_data = getOnePageData(data, page_number, records_to_show)
+                    cleanUpDataTableContent()
+                    renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                    buildTableBody()
+                    renderTableBody(one_page_data.length, head_titles.length)
+                    tableFiller(one_page_data, head_titles);
 
-                        return false
-                    })
+                    return false
                 })
-            }
+            })
             /**------------Fin Enventos de los botones------------*/
             
             /**-----------------Funciones locales-----------------*/
