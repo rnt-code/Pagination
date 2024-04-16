@@ -44,9 +44,9 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         if(records_quantity != 0) {
 
             const records_to_show_el = document.getElementById('records-to-show');
+            
             //Armo las referencias a los contenedores <li> de los botones
             //de avance/retroceso de páginas y de avance/retroceso de capas
-
             const page_down_el = document.querySelector('.page-down'); // '<'
             const page_up_el = document.querySelector('.page-up'); // '>'
             const layer_down_el = document.querySelector('.layer-down'); // '<<'
@@ -57,7 +57,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             console.log('layer-down: ', layer_down_el)
             console.log('layer-up: ', layer_up_el)
         
-
             let MAX_PAGES = 0;
             let MAX_LAYERS = 0;
             let records_to_show = 0;
@@ -123,6 +122,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             console.log('page-up: ', page_up_el)
             console.log('layer-down: ', layer_down_el)
             console.log('layer-up: ', layer_up_el)
+
             //---------------------End first page-----------------------------//
 
             // console.log('---------data----------')

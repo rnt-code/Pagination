@@ -1,6 +1,6 @@
 function renderTableBody(one_page_data_length, head_titles_length) {
 
-    const tbody = document.getElementById('table-body');
+    const tbody_el = document.getElementById('table-body');
     
     //table body
     for(let i = 0; i < one_page_data_length; i++) {  
@@ -11,7 +11,7 @@ function renderTableBody(one_page_data_length, head_titles_length) {
             td_data = td_data + `<td></td>`
         }
         rowd.innerHTML = td_data;
-        tbody.appendChild(rowd)      
+        tbody_el.appendChild(rowd)      
     }; 
     
 }

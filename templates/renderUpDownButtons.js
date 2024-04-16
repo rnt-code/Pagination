@@ -1,18 +1,18 @@
 function renderUpDownButtons() {
 
     //container para los botones
-    const hc_nav_buttons = document.getElementById('hc-nav-buttons');
+    const hc_nav_buttons_el = document.getElementById('hc-nav-buttons');
 
     //borro lo que haya en el contenedor nav_buttons
-    const isbuttons = !!hc_nav_buttons.children[0];
+    const isbuttons = !!hc_nav_buttons_el.children[0];
     if(isbuttons) {
-        hc_nav_buttons.children[0].remove();
+        hc_nav_buttons_el.children[0].remove();
     }
     
     //creo la lista desordenada (unordered list), class='pagination-keys'
     const ul = document.createElement('ul');
     ul.classList.add('pagination-keys');
-    hc_nav_buttons.appendChild(ul);
+    hc_nav_buttons_el.appendChild(ul);
 
     const pagination_keys = document.querySelector('.pagination-keys');
 
