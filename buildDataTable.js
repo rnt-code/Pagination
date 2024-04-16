@@ -18,6 +18,8 @@ import { buildTable } from './build/buildTable.js';
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 import { renderMetrics } from './templates/renderMetrics.js';
 import { cleanUpDataTableContent } from './utility/cleanUpDataTableContent.js';
+import { buildTableBody } from './build/buildTableBody.js';
+import { renderTableBody } from './templates/renderTableBody.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -374,17 +376,15 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                             else {
                                 page_up_el.classList.remove('disabled');
                             }
-                        }
-                        console.log('presionó el botón n°=', page_number)
+                        } 
                         paintSelectedButton(page_number)
                         records_to_show = parseInt(records_to_show_el.value);
                         one_page_data = getOnePageData(data, page_number, records_to_show)
                         cleanUpDataTableContent()
-                        //renderDataTable(one_page_data.length, head_titles.length);
                         renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                        buildTableBody()
+                        renderTableBody(one_page_data.length, head_titles.length)
                         tableFiller(one_page_data, head_titles);
-
-                        //renderTable(data, head_titles);
                         return false
                     })
                 })
