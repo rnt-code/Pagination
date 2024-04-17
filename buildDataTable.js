@@ -20,6 +20,7 @@ import { renderMetrics } from './templates/renderMetrics.js';
 import { cleanUpDataTableContent } from './utility/cleanUpDataTableContent.js';
 import { buildTableBody } from './build/buildTableBody.js';
 import { renderTableBody } from './templates/renderTableBody.js';
+import { cleanUpContainersForRegisters } from './utility/cleanUpContainersForRegisters.js';
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -118,55 +119,63 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
-                starting_at = 0;
-                ending_in = 0;
-                layer_counter = 1;
-                page_number = 1;
+                cleanUpContainersForRegisters()
+                // buildMainContainers();
+                // buildButtonsContainer();
+                // buildRecordsToShowContainer();
+                // buildTable();
 
-                //Habilitar los botones de paginación
-                layer_up_el.classList.remove('disabled');
-                layer_down_el.classList.remove('disabled');
-                page_down_el.classList.remove('disabled');
-                page_up_el.classList.remove('disabled');
+
+                // starting_at = 0;
+                // ending_in = 0;
+                // layer_counter = 1;
+                // page_number = 1;
+
+                // //Habilitar los botones de paginación
+                // layer_up_el.classList.remove('disabled');
+                // layer_down_el.classList.remove('disabled');
+                // page_down_el.classList.remove('disabled');
+                // page_up_el.classList.remove('disabled');
                 
-                //Cantidad de registros a mostrar que elige el operador
-                const records_to_show_el = document.getElementById('records-to-show');
-                records_to_show = parseInt(records_to_show_el.value);
+                // //Cantidad de registros a mostrar que elige el operador
+                // const records_to_show_el = document.getElementById('records-to-show');
+                // records_to_show = parseInt(records_to_show_el.value);
 
-                if(records_to_show > records_quantity) {
-                    records_to_show = records_quantity;
-                }
+                // if(records_to_show > records_quantity) {
+                //     records_to_show = records_quantity;
+                // }
 
-                MAX_PAGES = getMaxPages(records_quantity, records_to_show)
-                MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
-                let a = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
-                starting_at = a[0]
-                ending_in = a[1]
+                // MAX_PAGES = getMaxPages(records_quantity, records_to_show)
+                // MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
+                // let a = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
+                // starting_at = a[0]
+                // ending_in = a[1]
 
-                //----Lógica de encendido y apagado de botones de navegación-----//
-                if(MAX_LAYERS === 1) {
-                    layer_up_el.classList.add('disabled');
-                    layer_down_el.classList.add('disabled');
-                    page_down_el.classList.add('disabled');
-                } else if(MAX_LAYERS > 1) {
-                    layer_up_el.classList.remove('disabled'); //remove
-                    layer_down_el.classList.add('disabled');
-                    page_down_el.classList.add('disabled');
-                }
-                if(page_number === 1 && MAX_PAGES === 1) {
-                    page_up_el.classList.add('disabled');
-                }
-                //---------------------------------------------------------------//
+                // //----Lógica de encendido y apagado de botones de navegación-----//
+                // if(MAX_LAYERS === 1) {
+                //     layer_up_el.classList.add('disabled');
+                //     layer_down_el.classList.add('disabled');
+                //     page_down_el.classList.add('disabled');
+                // } else if(MAX_LAYERS > 1) {
+                //     layer_up_el.classList.remove('disabled'); //remove
+                //     layer_down_el.classList.add('disabled');
+                //     page_down_el.classList.add('disabled');
+                // }
+                // if(page_number === 1 && MAX_PAGES === 1) {
+                //     page_up_el.classList.add('disabled');
+                // }
+                // //---------------------------------------------------------------//
 
-                paintSelectedButton(page_number)
-                records_to_show = parseInt(records_to_show_el.value);
-                one_page_data = getOnePageData(data, page_number, records_to_show)
 
-                //cleanUpDataTableContent()
-                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
-                //buildTableBody()
-                //renderTableBody(one_page_data.length, head_titles.length)
-                //tableFiller(one_page_data, head_titles);
+                // paintSelectedButton(page_number)
+                // records_to_show = parseInt(records_to_show_el.value);
+                // one_page_data = getOnePageData(data, page_number, records_to_show)
+
+                // //cleanUpDataTableContent()
+                // renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                // //buildTableBody()
+                // //renderTableBody(one_page_data.length, head_titles.length)
+                // //tableFiller(one_page_data, head_titles);
 
                 return false;
             })
