@@ -1,26 +1,26 @@
-import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
 import { buildMainContainers } from "./build/buildMainContainers.js";
-import { renderUpDownButtons } from "./templates/renderUpDownButtons.js";
-import { renderButtons } from "./templates/renderButtons.js";
-import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
-import { renderDataTable } from "./templates/renderDataTable.js";
-import { tableFiller } from './utility/tableFiller.js'
-import { renderNoDataFound } from './templates/renderNoDataFound.js';
-import { renderRecordsToShow } from './templates/renderRecordsToShow.js';
+import { buildButtonsContainer } from './build/buildButtonsContainers.js';
+import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
+import { buildTable } from './build/buildTable.js';
+import { buildTableBody } from './build/buildTableBody.js';
+import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
+import { cleanUpDataTableContent } from './utility/cleanUpDataTableContent.js';
+import { cleanUpContainersForRegisters } from './utility/cleanUpContainersForRegisters.js';
+import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
 import { getMaxPages } from './utility/getMaxPages.js';
 import { getfinalNumberOfButtons } from './utility/getFinalNumberOfButtons.js';
 import { getMaxLayers } from './utility/getMaxLayers.js';
 import { getLimitsOfButtonsToDraw } from './utility/getLimitsOfButtonsToDraw.js';
 import { getOnePageData } from './utility/getOnePageData.js'
-import { buildButtonsContainer } from './build/buildButtonsContainers.js';
-import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
-import { buildTable } from './build/buildTable.js';
-import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
+import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
+import { renderUpDownButtons } from "./templates/renderUpDownButtons.js";
+import { renderButtons } from "./templates/renderButtons.js";
+import { renderDataTable } from "./templates/renderDataTable.js";
+import { renderNoDataFound } from './templates/renderNoDataFound.js';
+import { renderRecordsToShow } from './templates/renderRecordsToShow.js';
 import { renderMetrics } from './templates/renderMetrics.js';
-import { cleanUpDataTableContent } from './utility/cleanUpDataTableContent.js';
-import { buildTableBody } from './build/buildTableBody.js';
 import { renderTableBody } from './templates/renderTableBody.js';
-import { cleanUpContainersForRegisters } from './utility/cleanUpContainersForRegisters.js';
+import { tableFiller } from './utility/tableFiller.js'
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
