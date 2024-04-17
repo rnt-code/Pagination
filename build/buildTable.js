@@ -1,18 +1,19 @@
 function buildTable() {
     
-    const tabla = document.createElement("table");
-    tabla.id = 'tdatos'
-    document.getElementById('datatable').appendChild(tabla);
-    const thead = document.createElement('thead');
-    thead.id = 'table-head';
-    const tbody = document.createElement('tbody');
-    tbody.id = 'table-body'
-    const tfoot = document.createElement('tfoot');
-    tfoot.id = 'table-foot'
+    const table_el = document.createElement("table");
+    table_el.id = 'tdatos'
+    document.getElementById('datatable').appendChild(table_el);
 
-    tabla.appendChild(thead);
-    tabla.appendChild(tbody);
-    tabla.appendChild(tfoot);
+    const thead_el = document.createElement('thead');
+    thead_el.id = 'table-head';
+    const tbody_el = document.createElement('tbody');
+    tbody_el.id = 'table-body'
+    const tfoot_el = document.createElement('tfoot');
+    tfoot_el.id = 'table-foot'
+
+    table_el.appendChild(thead_el);
+    table_el.appendChild(tbody_el);
+    table_el.appendChild(tfoot_el);
     
     return false
 }

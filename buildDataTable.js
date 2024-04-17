@@ -21,6 +21,7 @@ import { renderRecordsToShow } from './templates/renderRecordsToShow.js';
 import { renderMetrics } from './templates/renderMetrics.js';
 import { renderTableBody } from './templates/renderTableBody.js';
 import { tableFiller } from './utility/tableFiller.js'
+import { buildTableBodyAndMetricsContainers } from "./build/buildTableBodyAndMetricsContainers.js";
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -124,15 +125,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 records_to_show = parseInt(records_to_show_el.value);
                 MAX_PAGES = getMaxPages(records_quantity, records_to_show)
                 one_page_data = getOnePageData(data, page_number, records_to_show)
+                buildTableBodyAndMetricsContainers();
                 renderTableBody(one_page_data.length, head_titles.length);
-                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity);
+                tableFiller(one_page_data, head_titles);
                 
-
-                // buildMainContainers();
-                // buildButtonsContainer();
-                // buildRecordsToShowContainer();
-                // buildTable();
-
                 // starting_at = 0;
                 // ending_in = 0;
                 // layer_counter = 1;
