@@ -33,8 +33,6 @@
 #hc-nav-buttons {
     justify-self: end;
 }
-/*-Elementos de 3º nivel dentro de records-length-*/
-
 
 /*Contenedor 1 - 3º nivel dentro de hc nav-buttons-*/
 ul.pagination-keys {  /*Botones de avance y retroceso*/
@@ -157,4 +155,3 @@ a.pagelink:active {
     justify-self: start;
 } */
 /*-----------------------------------*/
-
