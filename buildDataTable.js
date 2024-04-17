@@ -119,12 +119,19 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
 
-                cleanUpContainersForRegisters()
+                cleanUpContainersForRegisters();
+                renderUpDownButtons();
+                records_to_show = parseInt(records_to_show_el.value);
+                MAX_PAGES = getMaxPages(records_quantity, records_to_show)
+                one_page_data = getOnePageData(data, page_number, records_to_show)
+                renderTableBody(one_page_data.length, head_titles.length);
+                renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity)
+                
+
                 // buildMainContainers();
                 // buildButtonsContainer();
                 // buildRecordsToShowContainer();
                 // buildTable();
-
 
                 // starting_at = 0;
                 // ending_in = 0;
@@ -165,7 +172,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 //     page_up_el.classList.add('disabled');
                 // }
                 // //---------------------------------------------------------------//
-
 
                 // paintSelectedButton(page_number)
                 // records_to_show = parseInt(records_to_show_el.value);
