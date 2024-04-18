@@ -19,6 +19,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
     const exist = !!place_for_list;
     if(exist) {
         
+        let page_number = 1
         let head_titles = getTableHeadTitles(custom_head_titles, data);
 
         //**Limpia el contenido*/
@@ -91,7 +92,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 layer_up_el.addEventListener('click', function(event) {
                     event.preventDefault()
                     //console.log('Se activo el botón >>')
-                    layerUp()
+                    layerUp(params)
                     navigationButtonsListeners()
                     return false
                 })
@@ -185,6 +186,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             //**READY 2024*/
 
             function layerUp(params) {
+
+                let layer_counter = params[0]
+                let MAX_LAYERS = params[1]
+                let number_of_buttons = params[2]
+                let MAX_PAGES = params[3]
                 
                 console.log('Se activo el botón >>')
                 if(layer_counter < MAX_LAYERS) {
@@ -206,6 +212,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 
                 //---LAYER UP---Lógica de encendido y apagado de botones de navegación-----//
+                const page_down_el = document.querySelector('.page-down'); // '<'
+                const page_up_el = document.querySelector('.page-up'); // '>'
+                const layer_down_el = document.querySelector('.layer-down'); // '<<'
+                const layer_up_el = document.querySelector('.layer-up'); // '>>'
+
                 if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
                     //console.log('up: estamos en el medio');
                     layer_up_el.classList.remove('disabled')
@@ -241,7 +252,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 //-------------------------------------------------------------------------//
 
                 paintSelectedButton(page_number);
-                renderTable(data, head_titles);
+                renderTable(data, head_titles, MAX_PAGES);
             }
 
             // //**READY 2024*/
@@ -315,9 +326,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             // }
 
             //**------------------------Funciones locales--------------------------*/
-            function renderTable(data, head_titles) {
+            function renderTable(data, head_titles, MAX_PAGES) {
 
                 //Desde qué registro comenzaremos la lista a mostrar (start)
+                const records_to_show_el = document.getElementById('records-to-show');
+                let records_to_show = records_to_show_el.value
                 const start = (page_number - 1) * records_to_show;
                 const end = start + records_to_show;
             
@@ -326,7 +339,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 renderDataTable(one_page_data, head_titles);
                 const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
                 
-                pagingButtonsListener();
                 document.getElementById('metrics-top').innerHTML = metrics;
                 document.getElementById('metrics-bottom').innerHTML = metrics;
             
