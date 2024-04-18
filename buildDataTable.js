@@ -114,7 +114,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 page_up_el.classList.add('disabled');
             }
 
-            pageButtonsListener();
+            pagingButtonsListener();
 
             //**----------------------End first page rendering --------------------*/
 
@@ -162,7 +162,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 if(page_number === 1 && MAX_PAGES === 1) {
                     page_up_el.classList.add('disabled');
                 }
-                pageButtonsListener();
+                pagingButtonsListener();
 
                 return false;
             })
@@ -184,7 +184,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 return false
             });
             */
-            
+
             //captura del evento click del botón '<<'
             //**READY 2024*/
             layer_down_el.addEventListener('click', function(event) {
@@ -324,13 +324,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**READY 2024*/
             //captura del evento click de los botones de página: 1, 2, 3, ....etc
-            function pageButtonsListener() {
+            function pagingButtonsListener() {
             
                 console.log('buttonListener')
-                const page_down_el = document.querySelector('.page-down'); // '<'
-                const page_up_el = document.querySelector('.page-up'); // '>'
-                const layer_down_el = document.querySelector('.layer-down'); // '<<'
-                const layer_up_el = document.querySelector('.layer-up'); // '>>'
+
                 const buttons_list = document.querySelectorAll('.pagei');
                 buttons_list.forEach(function(button) {
                     button.addEventListener('click', function(event) {
@@ -407,7 +404,8 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 
                 renderDataTable(one_page_data, head_titles);
                 const metrics = `Página ${page_number} de ${MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
-            
+                
+                pagingButtonsListener();
                 document.getElementById('metrics-top').innerHTML = metrics;
                 document.getElementById('metrics-bottom').innerHTML = metrics;
             
@@ -482,6 +480,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
                 //-------------------------------------------------------------------------//
 
+                
                 paintSelectedButton(page_number);
                 renderTable(data, head_titles);
                 return false
