@@ -124,29 +124,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
             }
            //------------------------End Nav buttons Events-------------------------/
-            // //captura del evento click del botón '<'
-            // //**READY 2024*/
-            // page_down_el.addEventListener("click", function(event) {   
-            //     console.log('Se activo el botón <')            
-            //     event.preventDefault()
-
-            //     slowReverse();
-            //     return false
-            // })
-
-            // //captura del evento click del botón '>'
-            // //**READY 2024*/
-            // page_up_el.addEventListener("click", function(event) {
-            //     console.log('Se activo el botón >')
-            //     event.preventDefault()
-
-            //     slowForward();
-            //     return false
-            // })
-
-            // //captura del evento click del botón '>>'
-            //**READY 2024*/
-
+        
             function renderList() {
 
                 //Desde qué registro comenzaremos la lista a mostrar (start)
