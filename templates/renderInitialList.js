@@ -51,7 +51,7 @@ function renderInitialList(data, head_titles, init_number_of_buttons) {
     let paging_buttons = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, numbButtonsParsed);
     let { starting_at, ending_in, number_of_buttons } = paging_buttons
 
-    console.log('Initial paging buttons:', paging_buttons)
+    //console.log('Initial paging buttons:', paging_buttons)
 
     renderButtons(starting_at, ending_in);
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
