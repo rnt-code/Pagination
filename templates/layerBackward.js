@@ -2,7 +2,7 @@ import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 import { renderButtons } from "./renderButtons.js";
 
 //Retroceso (<<) de 1 capa en 1
-function layerDown(page_parameters) {
+function layerBackward(page_parameters) {
 
     let { page_number, layer_counter, layer_has_changed, MAX_LAYERS, number_of_buttons, MAX_PAGES } = page_parameters
     
@@ -65,4 +65,4 @@ function layerDown(page_parameters) {
     }
 }
 
-export { layerDown }
+export { layerBackward }

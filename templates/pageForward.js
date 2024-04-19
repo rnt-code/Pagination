@@ -2,7 +2,7 @@ import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 import { renderButtons } from "./renderButtons.js";
 
 //Avance (>) de 1 página en 1
-function slowForward(page_parameters) {
+function pageForward(page_parameters) {
 
     let starting_at
     let ending_in
@@ -86,4 +86,4 @@ function slowForward(page_parameters) {
     }
 }
 
-export { slowForward }
+export { pageForward }

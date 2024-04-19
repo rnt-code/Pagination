@@ -76,7 +76,6 @@ function renderInitialList(data, head_titles, init_number_of_buttons) {
     if(page_number === 1 && MAX_PAGES === 1) {
         page_up_el.classList.add('disabled');
     }
-
     let layer_counter = 1;
     return {
         'page_number': page_number,

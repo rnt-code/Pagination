@@ -14,7 +14,6 @@ import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 function renderOnePageList(data, head_titles, init_number_of_buttons, page_number) {
     
     if(page_number) page_number = 1
-    console.log(page_number)
 
     let records_quantity = data.length
     cleanUpContainersForRegisters();
@@ -30,17 +29,14 @@ function renderOnePageList(data, head_titles, init_number_of_buttons, page_numbe
     renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity);
     tableFiller(one_page_data, head_titles);
 
-    let MAX_LAYERS = getMaxLayers(init_number_of_buttons, MAX_PAGES)
+    let MAX_LAYERS = getMaxLayers(init_number_of_buttons, MAX_PAGES);
     let paging_buttons = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, init_number_of_buttons);
-    let { starting_at, ending_in, number_of_buttons } = paging_buttons
-
-    console.log('recordsToShow paging buttons:', paging_buttons)
+    let { starting_at, ending_in, number_of_buttons } = paging_buttons;
 
     renderButtons(starting_at, ending_in);
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
-    //**Lógica de encendido y apagado de botones de navegación para la página inicial*/
-    //Son los botones de avance/retroceso de páginas y de capas
+    //**Lógica de encendido y apagado de botones de navegación*/
     const page_down_el = document.querySelector('.page-down'); // '<'
     const page_up_el = document.querySelector('.page-up'); // '>'
     const layer_down_el = document.querySelector('.layer-down'); // '<<'

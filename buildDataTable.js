@@ -9,10 +9,10 @@ import { renderDataTable } from "./templates/renderDataTable.js";
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderInitialList } from "./templates/renderInitialList.js";
 import { renderOnePageList } from "./templates/renderOnePageList.js";
-import { slowForward } from "./templates/slowForward.js";
-import { slowReverse } from "./templates/slowReverse.js";
-import { layerDown } from "./templates/layerDown.js";
-import { layerUp } from "./templates/layerUp.js";
+import { pageForward } from "./templates/pageForward.js";
+import { pageBackward } from "./templates/pageBackward.js";
+import { layerBackward } from "./templates/layerBackward.js";
+import { layerForward } from "./templates/layerForward.js";
 import { tableFiller } from './utility/tableFiller.js'
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
@@ -56,7 +56,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             const records_to_show_el = document.getElementById('records-to-show');
             records_to_show_el.addEventListener("change", function(event) {
                 event.preventDefault()
-                page_parameters = renderOnePageList(data, head_titles, number_of_buttons, page_number)
+                page_parameters = renderOnePageList(data, head_titles, number_of_buttons, page_parameters.page_number)
                 navigationButtonsListeners()
                 return false
             })
@@ -74,7 +74,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
                 layer_down_el.addEventListener('click', function(event) {
                     event.preventDefault()
-                    page_parameters = layerDown(page_parameters)
+                    page_parameters = layerBackward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
                     renderList();
                     return false
@@ -82,7 +82,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 
                 page_down_el.addEventListener("click", function(event) {   
                     event.preventDefault()
-                    page_parameters = slowReverse(page_parameters)
+                    page_parameters = pageBackward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
                     renderList();
                     return false
@@ -90,7 +90,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             
                 page_up_el.addEventListener("click", function(event) {
                     event.preventDefault()
-                    page_parameters = slowForward(page_parameters);
+                    page_parameters = pageForward(page_parameters);
                     if(page_parameters.layer_has_changed) pagingButtons()
                     renderList();
                     return false
@@ -98,7 +98,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             
                 layer_up_el.addEventListener('click', function(event) {
                     event.preventDefault()
-                    page_parameters = layerUp(page_parameters)
+                    page_parameters = layerForward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
                     renderList();
                     return false
@@ -114,7 +114,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     buttons_list.forEach(function(button) {
                         button.addEventListener('click', function(event) {
                             event.preventDefault()
-
                             page_parameters.page_number = Number(event.target.id)
                             paintSelectedButton(page_parameters.page_number)
                             renderList()

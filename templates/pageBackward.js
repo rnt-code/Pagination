@@ -2,7 +2,7 @@ import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 import { renderButtons } from "./renderButtons.js";
 
 //Retroceso (<) de 1 página en 1
-function slowReverse(page_parameters) {
+function pageBackward(page_parameters) {
 
     let starting_at
     let ending_in
@@ -81,4 +81,4 @@ function slowReverse(page_parameters) {
     }
 }
 
-export { slowReverse }
+export { pageBackward }

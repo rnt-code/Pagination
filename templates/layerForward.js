@@ -2,7 +2,7 @@ import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 import { renderButtons } from "./renderButtons.js";
 
 //Avance (>>) de 1 capa en 1
-function layerUp(page_parameters) {
+function layerForward(page_parameters) {
 
     let { page_number, layer_counter, layer_has_changed, MAX_LAYERS, number_of_buttons, MAX_PAGES } = page_parameters
 
@@ -74,4 +74,4 @@ function layerUp(page_parameters) {
     }
 }
 
-export { layerUp }
+export { layerForward }
