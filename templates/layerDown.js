@@ -17,16 +17,16 @@ function layerDown(page_parameters) {
     }
 
     //---LAYER DOWN---Lógica de encendido y apagado de botones de navegación---//
-    //---LAYER UP---Lógica de encendido y apagado de botones de navegación-----//
     const page_down_el = document.querySelector('.page-down'); // '<'
     const page_up_el = document.querySelector('.page-up'); // '>'
     const layer_down_el = document.querySelector('.layer-down'); // '<<'
     const layer_up_el = document.querySelector('.layer-up'); // '>>'
 
     if(layer_counter > 1 && layer_counter < MAX_LAYERS) {
-        
+        //console.log('up: estamos en el medio');
         layer_up_el.classList.remove('disabled')
         layer_down_el.classList.remove('disabled')
+        
         if(page_number > 1 && page_number < MAX_PAGES) {
             page_down_el.classList.remove('disabled');
             page_up_el.classList.remove('disabled');

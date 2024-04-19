@@ -49,7 +49,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
             //**-----------------------Initial list rendering-----------------------*/
             page_parameters = renderInitialList(data, head_titles, number_of_buttons)
-           //console.log('initial page_parameters:', page_parameters)
             navigationButtonsListeners()
             //-----------------------End Initial list rendering----------------------/
 

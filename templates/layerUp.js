@@ -56,7 +56,6 @@ function layerUp(page_parameters) {
                 page_down_el.classList.remove('disabled');
             }
         }
-        
         if(page_number === MAX_PAGES) {
             //console.log('upLayer...y ahora en el extremo derecho2');
             page_up_el.classList.add('disabled');
