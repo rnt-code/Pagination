@@ -80,7 +80,8 @@ function renderInitialList(data, head_titles, init_number_of_buttons) {
     let layer_counter = 1;
     return {
         'page_number': page_number,
-        'layer_counter': layer_counter, 
+        'layer_counter': layer_counter,
+        'layer_has_changed':false,
         'MAX_LAYERS':MAX_LAYERS, 
         'number_of_buttons': number_of_buttons, 
         'MAX_PAGES':MAX_PAGES
