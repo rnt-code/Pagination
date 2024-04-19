@@ -76,7 +76,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = layerDown(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderTable();
+                    renderList();
                     return false
                 })
                 
@@ -84,7 +84,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = slowReverse(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderTable();
+                    renderList();
                     return false
                 })
             
@@ -92,7 +92,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = slowForward(page_parameters);
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderTable();
+                    renderList();
                     return false
                 })
             
@@ -100,7 +100,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = layerUp(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderTable();
+                    renderList();
                     return false
                 })
                 
@@ -117,7 +117,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
 
                             page_parameters.page_number = Number(event.target.id)
                             paintSelectedButton(page_parameters.page_number)
-                            renderTable()
+                            renderList()
                             return false
                         })
                     })
@@ -147,7 +147,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             // //captura del evento click del botón '>>'
             //**READY 2024*/
 
-            function renderTable() {
+            function renderList() {
 
                 //Desde qué registro comenzaremos la lista a mostrar (start)
                 const records_to_show_el = document.getElementById('records-to-show');
