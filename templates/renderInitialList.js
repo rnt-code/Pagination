@@ -11,7 +11,7 @@ import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js
 import { renderButtons } from "./renderButtons.js";
 import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 
-function renderInitialList(data, head_titles, number_of_buttons) {
+function renderInitialList(data, head_titles, init_number_of_buttons) {
 
     let page_number = 1;
     let records_quantity = data.length;
@@ -42,17 +42,17 @@ function renderInitialList(data, head_titles, number_of_buttons) {
     tableFiller(one_page_data, head_titles);
 
     //**Obtengo el número final de botones*/
-    let number_of_buttons_verified = NumberOfButtonsParser(number_of_buttons)
-    console.log('number_of_buttons_verified:', number_of_buttons_verified)
-
+    let numbButtonsParsed = NumberOfButtonsParser(init_number_of_buttons)
+    
     //**Calculo cuantas capas de botones habrá*/
-    let MAX_LAYERS = getMaxLayers(number_of_buttons_verified, MAX_PAGES)
+    let MAX_LAYERS = getMaxLayers(numbButtonsParsed, MAX_PAGES)
     
     //**Obtengo los límites de los botones a dibujar, que depende de las cantidad de páginas*/
-    let [starting_at, ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons_verified)
-    let final_number_of_buttons = ending_in - starting_at + 1
-    //**Dibujo los botones*/
-    //si starting_at = ending_in = 0, no dibuja los botones
+    let paging_buttons = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, numbButtonsParsed);
+    let { starting_at, ending_in, number_of_buttons } = paging_buttons
+
+    console.log('Initial paging buttons:', paging_buttons)
+
     renderButtons(starting_at, ending_in);
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
@@ -78,7 +78,13 @@ function renderInitialList(data, head_titles, number_of_buttons) {
     }
 
     let layer_counter = 1;
-    return [layer_counter, MAX_LAYERS, final_number_of_buttons, MAX_PAGES]
+    return {
+        'page_number': page_number,
+        'layer_counter': layer_counter, 
+        'MAX_LAYERS':MAX_LAYERS, 
+        'number_of_buttons': number_of_buttons, 
+        'MAX_PAGES':MAX_PAGES
+    }
 }
 
 export { renderInitialList }

@@ -11,9 +11,11 @@ import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js
 import { renderButtons } from "./renderButtons.js";
 import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
 
-function renderOnePageList(data, head_titles, number_of_buttons) {
+function renderOnePageList(data, head_titles, init_number_of_buttons, page_number) {
     
-    let page_number = 1;
+    if(page_number) page_number = 1
+    console.log(page_number)
+
     let records_quantity = data.length
     cleanUpContainersForRegisters();
     renderUpDownButtons();
@@ -28,15 +30,12 @@ function renderOnePageList(data, head_titles, number_of_buttons) {
     renderMetrics(page_number, MAX_PAGES, one_page_data.length, records_quantity);
     tableFiller(one_page_data, head_titles);
 
-    let MAX_LAYERS = getMaxLayers(number_of_buttons, MAX_PAGES)
-    let [starting_at, ending_in] = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons)
-    let final_number_of_buttons = ending_in - starting_at + 1
-    // console.log(
-    //     'number_of_butons_final', ending_in-starting_at+1,
-    //      'starting_at', starting_at, 
-    //      'ending_in', ending_in,
-    //      'number_of_buttons', number_of_buttons
-    // )
+    let MAX_LAYERS = getMaxLayers(init_number_of_buttons, MAX_PAGES)
+    let paging_buttons = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, init_number_of_buttons);
+    let { starting_at, ending_in, number_of_buttons } = paging_buttons
+
+    console.log('recordsToShow paging buttons:', paging_buttons)
+
     renderButtons(starting_at, ending_in);
     paintSelectedButton(page_number); //si page_number = 0, oculta los botones
 
@@ -61,7 +60,13 @@ function renderOnePageList(data, head_titles, number_of_buttons) {
         page_up_el.classList.add('disabled');
     }
     let layer_counter = 1
-    return [layer_counter, MAX_LAYERS, final_number_of_buttons, MAX_PAGES]
+    return {
+        'page_number': page_number,
+        'layer_counter': layer_counter, 
+        'MAX_LAYERS':MAX_LAYERS, 
+        'number_of_buttons': number_of_buttons, 
+        'MAX_PAGES':MAX_PAGES
+    }
 }
 
 export { renderOnePageList }
