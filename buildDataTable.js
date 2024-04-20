@@ -14,6 +14,8 @@ import { layerBackward } from "./templates/layerBackward.js";
 import { layerForward } from "./templates/layerForward.js";
 import { tableFiller } from './utility/tableFiller.js'
 import { buttonLogic } from "./templates/buttonLogic.js";
+import { renderMetrics } from "./templates/renderMetrics.js";
+import { getOnePageData } from "./utility/getOnePageData.js";
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -32,7 +34,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
         
         let head_titles = getTableHeadTitles(custom_head_titles, data);
 
-        //**Limpia el contenido*/
+        //**Limpia el contenedor de la app*/
         cleanUpAppContainer();
 
         //**Obtengo la cantidad de registros que vienen en data, es el crudo*/
@@ -125,24 +127,13 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
             }
            //------------------------End Nav buttons Events-------------------------/
-
+            
             function renderList() {
-
-                //Desde qué registro comenzaremos la lista a mostrar (start)
                 const records_to_show_el = document.getElementById('records-to-show');
                 let records_to_show = Number(records_to_show_el.value)
-
-                const starting_at = (page_parameters.page_number - 1) * records_to_show;
-                const ending_in = starting_at + records_to_show;
-                
-                const one_page_data = data.slice(starting_at, ending_in);
-                
+                const one_page_data = getOnePageData(data, page_parameters.page_number, records_to_show) 
                 renderDataTable(one_page_data, head_titles);
-                const metrics = `Página ${page_parameters.page_number} de ${page_parameters.MAX_PAGES}. Se lista(n) ${one_page_data.length} registro(s) de un total de ${records_quantity}.`
-                
-                document.getElementById('metrics-top').innerHTML = metrics;
-                document.getElementById('metrics-bottom').innerHTML = metrics;
-
+                renderMetrics(page_parameters.page_number, page_parameters.MAX_PAGES, one_page_data.length, records_quantity);
                 tableFiller(one_page_data, head_titles);
             }
         }
