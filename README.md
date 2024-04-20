@@ -143,3 +143,6 @@ Para que app pueda desplegarse, en su `index.html` deberá reservar un div con u
     </body>
 </html>
 ```
+`v1.0`: Primer prototipo, solo es la estructura básica funcional. El código no está optimizado.
+`v1.1`: Primera refactorización del código en vista de optimizar y modularizar el código.
+`v1.2`: Gran refactorización, modularización del código y corrección de errores.
