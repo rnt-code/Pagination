@@ -1,3 +1,5 @@
+import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
+
 function buttonLogic(page_parameters) {
               
     let { page_number, layer_counter, layer_has_changed, MAX_LAYERS, number_of_buttons, MAX_PAGES } = page_parameters
