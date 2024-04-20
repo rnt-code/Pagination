@@ -152,6 +152,8 @@ Y por último en su archivo `main.js` deberá cargar la app con la línea `impor
     </body>
 </html>
 ```
+
+
 ###Versiones
 
 -`v1.0`: Primer prototipo, solo es la estructura básica funcional. El código no está optimizado.
