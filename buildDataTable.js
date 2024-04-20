@@ -2,20 +2,17 @@ import { buildMainContainers } from "./build/buildMainContainers.js";
 import { buildButtonsContainer } from './build/buildButtonsContainers.js';
 import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
 import { buildTable } from './build/buildTable.js';
+import { buttonLogic } from "./templates/buttonLogic.js";
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
-import { renderDataTable } from "./templates/renderDataTable.js";
+import { layerBackward } from "./templates/layerBackward.js";
+import { layerForward } from "./templates/layerForward.js";
+import { pageForward } from "./templates/pageForward.js";
+import { pageBackward } from "./templates/pageBackward.js";
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderInitialList } from "./templates/renderInitialList.js";
 import { renderOnePageList } from "./templates/renderOnePageList.js";
-import { pageForward } from "./templates/pageForward.js";
-import { pageBackward } from "./templates/pageBackward.js";
-import { layerBackward } from "./templates/layerBackward.js";
-import { layerForward } from "./templates/layerForward.js";
-import { tableFiller } from './utility/tableFiller.js'
-import { buttonLogic } from "./templates/buttonLogic.js";
-import { renderMetrics } from "./templates/renderMetrics.js";
-import { getOnePageData } from "./utility/getOnePageData.js";
+import { renderList } from "./templates/renderList.js";
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -78,7 +75,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = layerBackward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderList();
+                    renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
                 
@@ -86,7 +83,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = pageBackward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderList();
+                    renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
             
@@ -94,7 +91,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = pageForward(page_parameters);
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderList();
+                    renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
             
@@ -102,14 +99,10 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     event.preventDefault()
                     page_parameters = layerForward(page_parameters)
                     if(page_parameters.layer_has_changed) pagingButtons()
-                    renderList();
+                    renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
                 
-                //Esta función es llamada cuando se lista por primera vez o ante una cambio del
-                //número de registro a mostrar. Y luego, también se la llama cada vez que ocurre un cambio
-                //de capa de botones. La idea es escanear la nueva capa visible y poder atender
-                //los eventos de los botones de esa nueva capa. 
                 function pagingButtons() {
                     page_parameters.layer_has_changed = false;
                     const buttons_list = document.querySelectorAll('.pagei');
@@ -119,7 +112,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                             if(event.target.id !== '') {
                                 page_parameters.page_number = Number(event.target.id);
                                 buttonLogic(page_parameters);
-                                renderList();
+                                renderList(data, head_titles, page_parameters, records_quantity)
                             }
                             return false
                         })
@@ -127,15 +120,6 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 }
             }
            //------------------------End Nav buttons Events-------------------------/
-            
-            function renderList() {
-                const records_to_show_el = document.getElementById('records-to-show');
-                let records_to_show = Number(records_to_show_el.value)
-                const one_page_data = getOnePageData(data, page_parameters.page_number, records_to_show) 
-                renderDataTable(one_page_data, head_titles);
-                renderMetrics(page_parameters.page_number, page_parameters.MAX_PAGES, one_page_data.length, records_quantity);
-                tableFiller(one_page_data, head_titles);
-            }
         }
         else {
             //**No hay datos, muestro el mensaje 'No data found'*/
