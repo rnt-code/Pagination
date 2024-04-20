@@ -14,12 +14,6 @@ function paintSelectedButton(page_number) {
         button_el.classList.add('selected');
         button_el.style.color = 'black';
     }
-    // else {
-    //     //si page = 0, oculta hc-nav-buttons
-    //     console.log('estoy paando por acá')
-    //     document.getElementById('hc-nav-buttons').hidden = true;
-    // }
-    return false
 }
 
 export { paintSelectedButton }
