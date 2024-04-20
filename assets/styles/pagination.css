@@ -34,7 +34,7 @@
     justify-self: end;
 }
 
-/*Contenedor 1 - 3º nivel dentro de hc nav-buttons-*/
+/*Contenedor 1 - 3º nivel dentro de hc-nav-buttons-*/
 ul.pagination-keys {  /*Botones de avance y retroceso*/
     padding: 0;
     width: 100%;
