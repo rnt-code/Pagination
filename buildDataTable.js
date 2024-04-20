@@ -4,7 +4,6 @@ import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer
 import { buildTable } from './build/buildTable.js';
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
-import { paintSelectedButton } from './src/scripts/paintSelectedButton.js'
 import { renderDataTable } from "./templates/renderDataTable.js";
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderInitialList } from "./templates/renderInitialList.js";
@@ -14,6 +13,7 @@ import { pageBackward } from "./templates/pageBackward.js";
 import { layerBackward } from "./templates/layerBackward.js";
 import { layerForward } from "./templates/layerForward.js";
 import { tableFiller } from './utility/tableFiller.js'
+import { buttonLogic } from "./templates/buttonLogic.js";
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
@@ -109,21 +109,21 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                 //de capa de botones. La idea es escanear la nueva capa visible y poder atender
                 //los eventos de los botones de esa nueva capa. 
                 function pagingButtons() {
-                    page_parameters.layer_has_changed = false
-                    const buttons_list = document.querySelectorAll('.pagei')
+                    page_parameters.layer_has_changed = false;
+                    const buttons_list = document.querySelectorAll('.pagei');
                     buttons_list.forEach(function(button) {
                         button.addEventListener('click', function(event) {
-                            event.preventDefault()
-                            page_parameters.page_number = Number(event.target.id)
-                            paintSelectedButton(page_parameters.page_number)
-                            renderList()
+                            event.preventDefault();
+                            page_parameters.page_number = Number(event.target.id);
+                            buttonLogic(page_parameters);
+                            renderList();
                             return false
                         })
                     })
                 }
             }
            //------------------------End Nav buttons Events-------------------------/
-        
+
             function renderList() {
 
                 //Desde qué registro comenzaremos la lista a mostrar (start)
