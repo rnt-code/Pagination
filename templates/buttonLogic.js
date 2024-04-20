@@ -2,7 +2,7 @@ import { paintSelectedButton } from "../templates/paintSelectedButton.js";
 
 function buttonLogic(page_parameters) {
               
-    let { page_number, layer_counter, layer_has_changed, MAX_LAYERS, number_of_buttons, MAX_PAGES } = page_parameters
+    let { page_number, layer_counter, MAX_LAYERS, MAX_PAGES } = page_parameters
 
     const page_down_el = document.querySelector('.page-down'); // '<'
     const page_up_el = document.querySelector('.page-up'); // '>'

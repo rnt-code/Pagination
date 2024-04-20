@@ -1,5 +1,5 @@
-import { buildMainContainers } from "./build/buildMainContainers.js";
 import { buildButtonsContainer } from './build/buildButtonsContainers.js';
+import { buildMainContainers } from "./build/buildMainContainers.js";
 import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer.js';
 import { buildTable } from './build/buildTable.js';
 import { buttonLogic } from "./templates/buttonLogic.js";
@@ -7,13 +7,14 @@ import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
 import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
 import { layerBackward } from "./templates/layerBackward.js";
 import { layerForward } from "./templates/layerForward.js";
-import { pageForward } from "./templates/pageForward.js";
 import { pageBackward } from "./templates/pageBackward.js";
-import { renderNoDataFound } from './templates/renderNoDataFound.js';
+import { pageForward } from "./templates/pageForward.js";
 import { renderInitialList } from "./templates/renderInitialList.js";
-import { renderOnePageList } from "./templates/renderOnePageList.js";
 import { renderList } from "./templates/renderList.js";
+import { renderNoDataFound } from './templates/renderNoDataFound.js';
+import { renderOnePageList } from "./templates/renderOnePageList.js";
 
+//** version 1.2, 2024-04-20*/
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
     let page_parameters = {

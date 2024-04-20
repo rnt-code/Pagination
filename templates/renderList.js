@@ -6,7 +6,7 @@ import { tableFiller } from "../utility/tableFiller.js";
 
 function renderList(data, head_titles, page_parameters, records_quantity) {
 
-    let { page_number, layer_counter, layer_has_changed, MAX_LAYERS, number_of_buttons, MAX_PAGES } = page_parameters
+    let { page_number, MAX_PAGES } = page_parameters
 
     const records_to_show_el = document.getElementById('records-to-show');
     let records_to_show = Number(records_to_show_el.value)
