@@ -114,9 +114,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     buttons_list.forEach(function(button) {
                         button.addEventListener('click', function(event) {
                             event.preventDefault();
-                            page_parameters.page_number = Number(event.target.id);
-                            buttonLogic(page_parameters);
-                            renderList();
+                            if(event.target.id !== '') {
+                                page_parameters.page_number = Number(event.target.id);
+                                buttonLogic(page_parameters);
+                                renderList();
+                            }
                             return false
                         })
                     })
