@@ -1,5 +1,5 @@
 /*contenedor principal de la app*/
-#place-for-list, #list-title {
+#place-for-list {
     display: flex;
     flex-direction: column;
 }
