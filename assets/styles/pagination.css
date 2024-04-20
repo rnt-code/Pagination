@@ -80,7 +80,7 @@ a.pagelink:active {
 #top-info, #bottom-info {
     width: 70%;
     align-self: center;
-    text-align: left;
+    text-align: right;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #metrics-top, #metrics-bottom {
