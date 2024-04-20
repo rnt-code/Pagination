@@ -12,7 +12,12 @@ function getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons) {
         ending_in = number_of_buttons;
     }
 
-    return [starting_at, ending_in]
+    number_of_buttons = ending_in - starting_at + 1
+    return {
+        'starting_at': starting_at, 
+        'ending_in': ending_in,
+        'number_of_buttons': number_of_buttons
+    }
 }
 
 export { getLimitsOfButtonsToDraw }

@@ -1,4 +1,4 @@
-function getfinalNumberOfButtons(number_of_buttons) {
+function NumberOfButtonsParser(number_of_buttons) {
 
     //si lo que ingresa no es un número, entonces toma el valor por defecto = 6
     if(typeof(number_of_buttons) != 'number') {
@@ -22,4 +22,4 @@ function getfinalNumberOfButtons(number_of_buttons) {
     return number_of_buttons
 }
 
-export { getfinalNumberOfButtons }
+export { NumberOfButtonsParser }
