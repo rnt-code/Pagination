@@ -14,7 +14,9 @@ import { renderList } from "./templates/renderList.js";
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderOnePageList } from "./templates/renderOnePageList.js";
 
-//** version 1.2, 2024-04-20*/
+//** App. version 1.2, 2024-04-20 - Ramón Taboada*/
+//** GitHub: https://github.com/rnt-code/Pagination */
+
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
 
     let page_parameters = {
@@ -25,11 +27,11 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
             'number_of_buttons':0, 
             'MAX_PAGES':0
     }
-   
+    
     const place_for_list = document.getElementById('place-for-list');
     const exist = !!place_for_list;
     if(exist) {
-        
+
         let head_titles = getTableHeadTitles(custom_head_titles, data);
 
         //**Limpia el contenedor de la app*/
@@ -87,7 +89,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
-            
+                
                 page_up_el.addEventListener("click", function(event) {
                     event.preventDefault()
                     page_parameters = pageForward(page_parameters);
@@ -95,7 +97,7 @@ function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = u
                     renderList(data, head_titles, page_parameters, records_quantity)
                     return false
                 })
-            
+                
                 layer_up_el.addEventListener('click', function(event) {
                     event.preventDefault()
                     page_parameters = layerForward(page_parameters)
