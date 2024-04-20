@@ -150,7 +150,9 @@ Y por último en su archivo `main.js` deberá cargar la app con la línea `impor
         </footer>
         <script type="module" src="./main.js"></script>
     </body>
-</html>```
+</html>
+```
+
 
 ###Versiones
 
