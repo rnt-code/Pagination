@@ -1,4 +1,4 @@
-import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
+import { paintSelectedButton } from "../templates/paintSelectedButton.js";
 
 function buttonLogic(page_parameters) {
               

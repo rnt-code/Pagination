@@ -1,4 +1,4 @@
-import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
+import { paintSelectedButton } from "../templates/paintSelectedButton.js";
 import { renderButtons } from "./renderButtons.js";
 
 //Retroceso (<) de 1 página en 1

@@ -9,7 +9,7 @@ import { NumberOfButtonsParser } from "../utility/NumberOfButtonsParser.js";
 import { getMaxLayers } from "../utility/getMaxLayers.js";
 import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js";
 import { renderButtons } from "./renderButtons.js";
-import { paintSelectedButton } from "../src/scripts/paintSelectedButton.js";
+import { paintSelectedButton } from "../templates/paintSelectedButton.js";
 
 function renderInitialList(data, head_titles, init_number_of_buttons) {
 
