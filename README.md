@@ -122,6 +122,10 @@ NOTA: De igual modo, el plug-in siempre determina automáticamente la cantidad d
 Arriba se especificó el formato para los títulos, si este no se especifica, la funcion `builddatatable()` intentará obtenerlos de las cabeceras de `data`. Las cabeceras son las claves de los objetos.
 
 Para que la app pueda desplegarse, en su `index.html` deberá reservar un div con un id `place-for-list`: ```<div id="place-for-list"></div>```. Abajo puede ver un ejemplo.
+
+Además en su archivo `main.js` deberá cargar la app con la línea `import { buildDataTable } from './buildDataTable.js'`
+
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
