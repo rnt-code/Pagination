@@ -121,6 +121,8 @@ NOTA: De igual modo, el plug-in siempre determina automáticamente la cantidad d
 `custom_header`
 Arriba se especificó el formato para los títulos, si este no se especifica, la funcion `builddatatable()` intentará obtenerlos de las cabeceras de `data`. Las cabeceras son las claves de los objetos.
 
+### Despliegue de la app
+
 Para que la app pueda desplegarse, en su `index.html` deberá reservar un div con un id `place-for-list`: ```<div id="place-for-list"></div>```.
 
 De igual modo, la app necesita el archivo css: `pagination.css`, el cual debera cargarse con su index.html: `<link rel="stylesheet" href="./css/pagination.css">`
