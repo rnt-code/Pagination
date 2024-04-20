@@ -140,6 +140,7 @@ Para que la app pueda desplegarse, en su `index.html` deberá reservar un div co
         </main>
         <footer>
         </footer>
+        <script type="module" src="./main.js"></script>
     </body>
 </html>
 ```
