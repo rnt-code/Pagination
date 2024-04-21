@@ -4767,7 +4767,7 @@ const data4 = []
 const number_of_buttons = 6;
 
 refresh_button1_el.addEventListener('click', function() {
-    buildDataTable(data1, number_of_buttons, custom_head_titles1);
+    buildDataTable(data1, 4, custom_head_titles1);
     title.textContent = 'Lista 1'
     return false
 })
@@ -4777,7 +4777,7 @@ refresh_button2_el.addEventListener('click', function() {
     return false
 })
 refresh_button3_el.addEventListener('click', function() {
-    buildDataTable(data3, number_of_buttons, custom_head_titles3);
+    buildDataTable(data3, 8, custom_head_titles3);
     title.textContent = 'Lista 3'
     return false
 })
