@@ -4,7 +4,7 @@ function getLimitsOfButtonsToDraw(page_number, MAX_PAGES, number_of_buttons) {
     let ending_in
 
     if(number_of_buttons >= MAX_PAGES) {
-        starting_at = page_number; //page_number =  1
+        starting_at = page_number;
         ending_in = MAX_PAGES;
     }
     else {

@@ -1,15 +1,15 @@
+import { buildTableBodyAndMetricsContainers } from "../build/buildTableBodyAndMetricsContainers.js";
 import { cleanUpContainersForRegisters } from "../utility/cleanUpContainersForRegisters.js";
-import { renderUpDownButtons } from "./renderUpDownButtons.js";
+import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js";
+import { getMaxLayers } from "../utility/getMaxLayers.js";
 import { getMaxPages } from "../utility/getMaxPages.js";
 import { getOnePageData } from "../utility/getOnePageData.js";
-import { buildTableBodyAndMetricsContainers } from "../build/buildTableBodyAndMetricsContainers.js";
-import { renderTableBody } from "./renderTableBody.js";
-import { renderMetrics } from "./renderMetrics.js";
-import { tableFiller } from "../utility/tableFiller.js";
-import { getMaxLayers } from "../utility/getMaxLayers.js";
-import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js";
-import { renderButtons } from "./renderButtons.js";
 import { paintSelectedButton } from "../templates/paintSelectedButton.js";
+import { renderButtons } from "./renderButtons.js";
+import { renderMetrics } from "./renderMetrics.js";
+import { renderTableBody } from "./renderTableBody.js";
+import { renderUpDownButtons } from "./renderUpDownButtons.js";
+import { tableFiller } from "../utility/tableFiller.js";
 
 function renderOnePageList(data, head_titles, init_number_of_buttons, page_number) {
     
@@ -34,7 +34,7 @@ function renderOnePageList(data, head_titles, init_number_of_buttons, page_numbe
     let { starting_at, ending_in, number_of_buttons } = paging_buttons;
 
     renderButtons(starting_at, ending_in);
-    paintSelectedButton(page_number); //si page_number = 0, oculta los botones
+    paintSelectedButton(page_number);
 
     //**Lógica de encendido y apagado de botones de navegación*/
     const page_down_el = document.querySelector('.page-down'); // '<'

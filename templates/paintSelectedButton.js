@@ -11,8 +11,8 @@ function paintSelectedButton(page_number) {
             selected_buttton_el.classList.remove('selected');
         }
         
-        button_el.classList.add('selected');
         button_el.style.color = 'black';
+        button_el.classList.add('selected');
     }
 }
 

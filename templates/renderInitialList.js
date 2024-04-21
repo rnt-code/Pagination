@@ -1,15 +1,15 @@
-import { renderRecordsToShow } from "./renderRecordsToShow.js";
-import { renderUpDownButtons } from "./renderUpDownButtons.js";
-import { getMaxPages } from "../utility/getMaxPages.js";
-import { getOnePageData } from "../utility/getOnePageData.js";
-import { renderDataTable } from "./renderDataTable.js";
-import { renderMetrics } from "./renderMetrics.js";
-import { tableFiller } from "../utility/tableFiller.js";
-import { NumberOfButtonsParser } from "../utility/NumberOfButtonsParser.js";
 import { getMaxLayers } from "../utility/getMaxLayers.js";
 import { getLimitsOfButtonsToDraw } from "../utility/getLimitsOfButtonsToDraw.js";
-import { renderButtons } from "./renderButtons.js";
+import { getMaxPages } from "../utility/getMaxPages.js";
+import { getOnePageData } from "../utility/getOnePageData.js";
+import { NumberOfButtonsParser } from "../utility/NumberOfButtonsParser.js";
 import { paintSelectedButton } from "../templates/paintSelectedButton.js";
+import { renderButtons } from "./renderButtons.js";
+import { renderDataTable } from "./renderDataTable.js";
+import { renderMetrics } from "./renderMetrics.js";
+import { renderRecordsToShow } from "./renderRecordsToShow.js";
+import { renderUpDownButtons } from "./renderUpDownButtons.js";
+import { tableFiller } from "../utility/tableFiller.js";
 
 function renderInitialList(data, head_titles, init_number_of_buttons) {
 
@@ -51,10 +51,8 @@ function renderInitialList(data, head_titles, init_number_of_buttons) {
     let paging_buttons = getLimitsOfButtonsToDraw(page_number, MAX_PAGES, numbButtonsParsed);
     let { starting_at, ending_in, number_of_buttons } = paging_buttons
 
-    //console.log('Initial paging buttons:', paging_buttons)
-
     renderButtons(starting_at, ending_in);
-    paintSelectedButton(page_number); //si page_number = 0, oculta los botones
+    paintSelectedButton(page_number);
 
     //**Lógica de encendido y apagado de botones de navegación para la página inicial*/
     //Son los botones de avance/retroceso de páginas y de capas
@@ -81,8 +79,8 @@ function renderInitialList(data, head_titles, init_number_of_buttons) {
         'page_number': page_number,
         'layer_counter': layer_counter,
         'layer_has_changed':false,
-        'MAX_LAYERS':MAX_LAYERS, 
-        'number_of_buttons': number_of_buttons, 
+        'MAX_LAYERS':MAX_LAYERS,
+        'number_of_buttons': number_of_buttons,
         'MAX_PAGES':MAX_PAGES
     }
 }
