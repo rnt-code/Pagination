@@ -1,4 +1,4 @@
-documents/*.dtmp
-documents/*.bkp
+**/documents/*.dtmp
+**/documents/*.bkp
 *.dtmp
 *.bkp
