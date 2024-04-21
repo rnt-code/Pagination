@@ -4,7 +4,7 @@ import { buildRecordsToShowContainer } from './build/buildRecordsToShowContainer
 import { buildTable } from './build/buildTable.js';
 import { buttonLogic } from "./templates/buttonLogic.js";
 import { cleanUpAppContainer } from './utility/cleanUpAppContainer.js';
-import { getTableHeadTitles } from './utility/getTableHeadTitles.js'
+import { getTableHeadTitles } from './utility/getTableHeadTitles.js';
 import { layerBackward } from "./templates/layerBackward.js";
 import { layerForward } from "./templates/layerForward.js";
 import { pageBackward } from "./templates/pageBackward.js";
