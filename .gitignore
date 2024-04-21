@@ -1,3 +1,2 @@
-/bootstrap
-/icons
-connect_db.php
+/documents/*.bkp
+/documents/*.dtmp
