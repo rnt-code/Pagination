@@ -14,7 +14,7 @@ import { renderList } from "./templates/renderList.js";
 import { renderNoDataFound } from './templates/renderNoDataFound.js';
 import { renderOnePageList } from "./templates/renderOnePageList.js";
 
-//** App. version 1.2, 2024-04-20 - Ramón Taboada*/
+//** App. version 1.2, 2024-04-20 - Ramón Taboada */
 //** GitHub: https://github.com/rnt-code/Pagination */
 
 function buildDataTable(data = [], number_of_buttons = 0, custom_head_titles = undefined) {
