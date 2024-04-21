@@ -10,34 +10,40 @@
         <title>Pagination</title>
     </head>
     <body>
-        <header>
-            <h1>Aplicación para el paginado de datos</h1>
-            <label>Ejemplo de un array de objetos con el que funciona esta app:</label><br>
-            <section>
-                <code>data = [</code><br>
-                <code>{ key1: 'value11', key2: 'value12', key3: 'value13',..., keym: 'value1m' },</code><br>
-                <code>{ key1: 'value21', key2: 'value22', key3: 'value23',..., keym: 'value2m' },</code><br>
-                <code>.</code><br>
-                <code>.</code><br>
-                <code>.</code><br>
-                <code>{ key1: 'valuen1', key2: 'valuen2', key3: 'valuen3',..., keym: 'valuenm' }]</code><br>
-            </section>
-            <br>
-            <label>Más info en: <code><a href="https://github.com/rnt-code/Pagination" target="_blank">https://github.com/rnt-code/Pagination</a></code></label>
-        </header>
-        <hr>
-        <nav>
-            <label>Press buttons to list: </label>
-            <input type="button" value="Lista 1" id="refresh-button1">
-            <input type="button" value="Lista 2" id="refresh-button2">
-            <input type="button" value="Lista 3" id="refresh-button3">
-            <input type="button" value="Lista 4" id="refresh-button4">
-            <input type="button" value="Limpiar" id="cleanUp" style="color:rgb(0, 0, 255); background-color: rgb(255, 0, 0);">
-        </nav>
-        <section>
-            <div id="list-title"><h2 id="title"></h2></div>
-            <div id="place-for-list"></div>
-        </section>
+        <table>
+            <tr>
+                <td>data</td>
+                <td>Headers</td>
+                <td>Buttons per page</td>
+                <td>#page</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="data-input" style="font-size:10pt;height:420px;width:200px;"></td>
+                <td><input type="text" id="headers-input" style="font-size:10pt;height:120px;width:200px;"></td>
+                <td><input type="text" id="buttons-per-page" style="font-size:10pt;height:20px;width:200px;"></td>
+                <td><input type="text" id="page-to-show" style="font-size:10pt;height:20px;width:200px;"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Calcular" onclick="calculate()">
+        <br>
+        <br>
+        <table>
+                <tr>
+                    <td>Cantidad de registros</td>
+                    <td>Datos de una página</td>
+                    <td>MAX-LAYERS</td>
+                    <td>MAX-PAGES</td>
+                    <td>Botones a mostrar</td>
+                </tr>
+                <tr>
+                    <td><input id="records-quantity"></td>
+                    <td><input id="one_page_data"></td>
+                    <td><input id="max-layers"></td>
+                    <td><input id="max-pages"></td>
+                    <td><input id="buttons-to-show"></td>
+                </tr>
+        </table>
         <footer>
         </footer>
         <script type="module" src="./main.js"></script>
