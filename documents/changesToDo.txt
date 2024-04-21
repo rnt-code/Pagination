@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+..\assets\styles\pagnation.css
+
+Cmabiar
+#place-for-list {
+    display: flex;
+    flex-direction: column;
+}
+por
+#item3 {
+    display: flex;
+    flex-direction: column;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+..\build\buildMainContainers.js
+
+cambiar
+3 const place_for_list_el = document.getElementById('place-for-list');
+por
+3 const place_for_list_el = document.getElementById('item3');
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+..\utility\cleanUpAppContainers.js
+
+cambiar
+3 const place_for_list = document.getElementById("place-for-list");
+por
+const place_for_list = document.getElementById("item3");
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+.\buildDataTable.js
+
+cambiar
+31 const place_for_list = document.getElementById('place-for-list');
+por
+31 const place_for_list = document.getElementById('item3');
+
+Opcional: 
+cambiar
+135 console.error('El index.html debería contener el elemento: <div id="place-for-list"></div>')
+por
+135 console.error('El index.html debería contener el elemento: <div id="item3"></div>')
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
